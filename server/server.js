@@ -8,6 +8,8 @@ app.use(express.json());
 // import the database ---------------------
 const db = require('./config/connection')
 
+// import auth ----------
+// const { authMiddleware } = require('./utils/auth');
 
 // import GraphQl --------------------------
 const { ApolloServer } = require('apollo-server-express')
@@ -16,7 +18,7 @@ const startServer = async () => {
   const server = new ApolloServer({
     typeDefs,
     resolvers,
-    context: authMiddleware
+    context: ""
   });
 
   await server.start();
@@ -24,6 +26,8 @@ const startServer = async () => {
 
   console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
 };
+
+startServer()
 
 
 db.once('open', () => {
