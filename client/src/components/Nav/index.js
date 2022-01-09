@@ -11,7 +11,7 @@ export default function Nav(props) {
         {/* Logo  */}
         <div className="flex md:px-2 md:px-1 items-center">
           <img src={logo} alt={`${BrandName} logo`} className="bg-white w-6 mr-1" />
-          <h1 className="w-full text-center text-black font-bold text-xl whitespace-nowrap">{BrandName}</h1>
+          <h1 className="w-full text-center text-black font-bold text-xl whitespace-nowrap text-black">{BrandName}</h1>
         </div>
         {/* Nav links  */}
         <div>
