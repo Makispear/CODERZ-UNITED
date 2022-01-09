@@ -1,26 +1,27 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/images/logo192.png"
+import Home from "../../pages/Home"
 
 export default function Nav(props) {
   const { BrandName } = props
   return (
     <header>
-      <nav className="w-full flex justify-between px-10">
+      <nav className="w-full flex flex-wrap justify-between p-4 sm:p-6 md:p-12">
         {/* Logo  */}
-        <div className="flex px-2 items-center">
-          <img src={logo} alt={`${BrandName} logo`} className="bg-white w-6" />
-          <h1 className="w-full text-center text-black font-bold text-xl">{BrandName}</h1>
+        <div className="flex md:px-2 md:px-1 items-center">
+          <img src={logo} alt={`${BrandName} logo`} className="bg-white w-6 mr-1" />
+          <h1 className="w-full text-center text-black font-bold text-xl whitespace-nowrap">{BrandName}</h1>
         </div>
         {/* Nav links  */}
         <div>
           <ul className="flex">
-            <li>Sign up</li>
-            <li>Login</li>
+            <NavLink to={<Home />} className="mr-3">Sign up</NavLink >
+            <NavLink to={<Home />}>Login</NavLink >
           </ul>
         </div>
 
       </nav>
-    </header>
+    </header >
   )
 }; 
