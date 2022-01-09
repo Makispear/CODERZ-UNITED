@@ -11,7 +11,7 @@ function App() {
       <Router>
         <Nav BrandName={BrandName} />
         <Routes>
-          <Route path="/Home" element={<Home />} />
+          <Route path="/" element={<Home />} />
         </Routes>
       </Router>
     </div>

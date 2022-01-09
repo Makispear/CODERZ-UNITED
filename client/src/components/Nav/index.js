@@ -1,6 +1,5 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import Home from "../../pages/Home"
 import logo from "../../assets/images/logo.png"
 
 export default function Nav(props) {
@@ -16,11 +15,11 @@ export default function Nav(props) {
         {/* Nav links  */}
         <div>
           <ul className="flex">
-            <NavLink to={"/Home"} className="mr-3 font-semibold">Sign up</NavLink >
-            <NavLink to={"Home"} className="font-semibold">Login</NavLink >
+            <NavLink to={"/"} className="mr-3 font-semibold">Sign up</NavLink >
+            <NavLink to={"/"} className="font-semibold">Login</NavLink >
           </ul>
         </div>
       </nav>
-    </header >
+    </header>
   )
 }; 
