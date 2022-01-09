@@ -10,7 +10,8 @@ module.exports = {
       black: 'rgb(0,0,0)',
       white: 'rgb(255,255,255)',
       darkGray: "rgb(99,99,99)",
-      pink: 'rgb(233,12,218)',
+      pink: 'rgb(233,12,218)'
+      // pink: 'rgb(233,12,218)',
     }
   },
   plugins: [],

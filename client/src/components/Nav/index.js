@@ -16,11 +16,10 @@ export default function Nav(props) {
         {/* Nav links  */}
         <div>
           <ul className="flex">
-            <NavLink to={<Home />} className="mr-3">Sign up</NavLink >
-            <NavLink to={<Home />}>Login</NavLink >
+            <NavLink to={"/Home"} className="mr-3">Sign up</NavLink >
+            <NavLink to={"Home"}>Login</NavLink >
           </ul>
         </div>
-
       </nav>
     </header >
   )
