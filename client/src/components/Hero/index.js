@@ -4,7 +4,7 @@ import logo from "../../assets/images/logo.png"
 
 export default function Hero() {
   return (
-    <section>
+    <section className="">
       <div className="h-max sm:py-10 px-3 my-10 lg:py-10 flex flex-wrap w-full justify-center lg:justify-center sm:p-1 sm:justify-center sm:mx-auto align-top">
         <div className="w-4/5 sm:w-5/6 md:w-3/5 mt-14">
           <div>
