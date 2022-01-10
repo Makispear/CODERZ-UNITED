@@ -10,13 +10,13 @@ export default function Nav(props) {
         {/* Logo  */}
         <div className="flex md:px-1 items-center">
           <img src={logo} alt={`${BrandName} logo`} className="bg-black w-10 mr-2" />
-          <h1 className="w-full text-center font-bold text-xl blackspace-nowrap text-white tracking-wider">{BrandName}</h1>
+          <h1 className="w-full text-center font-bold text-xl space-nowrap text-white tracking-wider">{BrandName}</h1>
         </div>
         {/* Nav links  */}
         <div>
           <ul className="flex">
-            <NavLink to={"/"} className="mr-3 font-semibold text-secondary">Sign up</NavLink >
-            <NavLink to={"/"} className="font-semibold text-secondary">Login</NavLink >
+            <NavLink to={"/"} className="mr-3 font-semibold text-secondary hover:text-tertiary">Sign up</NavLink >
+            <NavLink to={"/"} className="font-semibold text-secondary hover:text-tertiary">Login</NavLink >
           </ul>
         </div>
       </nav>
