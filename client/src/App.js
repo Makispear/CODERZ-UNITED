@@ -3,6 +3,7 @@ import './App.css';
 import Footer from "./components/Footer";
 import Nav from './components/Nav';
 import Home from "./pages/Home";
+import Signup from "./pages/Signup";
 
 function App() {
   const BrandName = "CODERS UNITED"
@@ -13,8 +14,9 @@ function App() {
         <Nav BrandName={BrandName} />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/signup" element={<Signup />} />
         </Routes>
-        <Footer BrandName={BrandName} />
+        {/* <Footer BrandName={BrandName} /> */}
       </Router>
     </div>
   );
