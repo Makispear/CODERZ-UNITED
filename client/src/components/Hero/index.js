@@ -1,5 +1,7 @@
-import GhostButton from "../GhostButton"
-import Button from "../Button"
+import PrimaryButton from "../Buttons/black/Primary"
+import SecondaryButton from "../Buttons/black/Secondary"
+// import PrimaryButton from "../Buttons/tertiary/Primary"
+// import SecondaryButton from "../Buttons/tertiary/Secondary"
 import logo from "../../assets/images/logo.png"
 
 export default function Hero() {
@@ -14,9 +16,11 @@ export default function Hero() {
         </div>
         <div className="sm:mx-10 sm:py-6 flex mt-14">
           <div className=" mr-9">
-            <Button props={{ buttonName: "GET STARTED" }} />
+            <PrimaryButton props={{ buttonName: "GET STARTED" }} />
           </div>
-          <GhostButton props={{ buttonName: "LEARN MORE" }} />
+          <div>
+            <SecondaryButton props={{ buttonName: "LEARN MORE" }} />
+          </div>
         </div>
       </div>
       <div className="sm:mx-10 flex justify-center w-max">
