@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
+import Copyright from "../Copyright";
 
-export default function Footer(props) {
-  const { BrandName } = props
+export default function Footer() {
   return (
     <footer className="w-full flex flex-col bg-tertiary">
       <div className="w-full flex flex-wrap justify-between p-40 pb-5">
@@ -11,18 +11,18 @@ export default function Footer(props) {
           <div className="">
             <h2 className="text-white font-bold text-4xl">FOLLOW US ON SOCIAL MEDIA</h2>
             <ul className="text-white flex mt-3">
-              <NavLink to={"/"} className=" mr-3">LinkedIn</NavLink >
-              <NavLink to={"/"} className=" mr-3">Instagram</NavLink >
-              <NavLink to={"/"} className=" mr-3">Facebook</NavLink >
+              <NavLink to={"/"} className="text-black mr-3 font-semibold uppercase">LinkedIn</NavLink >
+              <NavLink to={"/"} className="text-black mr-3 font-semibold uppercase">Instagram</NavLink >
+              <NavLink to={"/"} className="text-black mr-3 font-semibold uppercase">Facebook</NavLink >
             </ul>
           </div>
           {/* contact  */}
           <div className="mt-14">
             <h2 className="text-white text-4xl font-bold">CONTACT US</h2>
             <ul className="text-white flex flex-col">
-              <NavLink to={"/"} className="text-white mt-3">Email</NavLink >
-              <NavLink to={"/"} className="text-white mt-3">Link</NavLink >
-              <NavLink to={"/"} className="text-white mt-3">Link</NavLink >
+              <NavLink to={"/"} className="text-black mt-3">Email</NavLink >
+              <NavLink to={"/"} className="text-black mt-3">Link</NavLink >
+              <NavLink to={"/"} className="text-black mt-3">Link</NavLink >
             </ul>
           </div>
         </div>
@@ -38,7 +38,7 @@ export default function Footer(props) {
 
 
       <div className="text-black w-full flex justify-center mb-5">
-        <p>© 2022, Copyright All rights reserved for <a className="text-black  underline" href="https://makispear.github.io/Makispear/">Maki A. Maki</a> and <a href="#" className="text-white ">{BrandName}</a></p>
+        <Copyright />
       </div>
     </footer>
   )
