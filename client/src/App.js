@@ -8,7 +8,7 @@ function App() {
   const BrandName = "CODERS UNITED"
 
   return (
-    <div>
+    <div className="bg-black">
       <Router>
         <Nav BrandName={BrandName} />
         <Routes>
