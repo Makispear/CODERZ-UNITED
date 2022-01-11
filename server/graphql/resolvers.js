@@ -19,6 +19,23 @@ const resolvers = {
       const token = signToken(user);
       return { user, token };
     },
+
+    login: async (parent, { email, password }) => {
+      const user = await User.find({ email, password })
+
+      if (!user) {
+        throw new error("Incorrect login information.")
+      }
+
+      const correctPassword = await User.isCorrectPassword(password)
+
+      if (!correctPassword) {
+        throw new error("incorrect login information")
+      }
+
+      const token = signToken(user);
+      return { token, user };
+    }
   }
 }
 

@@ -32,7 +32,6 @@ export default function SignupForm() {
     event.preventDefault();
 
     try {
-      console.log(formState, "35")
       const { data } = await createUser({
         variables: { ...formState },
       });

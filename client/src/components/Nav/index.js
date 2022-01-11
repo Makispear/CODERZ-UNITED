@@ -1,12 +1,18 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/images/logo.png"
+import Auth from "../../utils/auth";
 
 export default function Nav(props) {
   const { BrandName } = props
+  const logout = (event) => {
+    event.preventDefault();
+    Auth.logout();
+  };
+
   return (
     <header>
-      <nav className="w-full flex flex-wrap justify-between p-4 sm:p-6 md:p-12">
+      <nav className="w-full flex flex-wrap justify-between p-4 sm:p-6 md:p-12 bg-black">
         {/* Logo  */}
         {/* <div > */}
         <NavLink className="flex md:px-1 items-center" to={"/"}>
@@ -17,8 +23,16 @@ export default function Nav(props) {
         {/* Nav links  */}
         <div>
           <ul className="flex">
-            <NavLink to={"/signup"} className="mr-3 font-semibold text-secondary hover:text-tertiary">Sign up</NavLink >
-            <NavLink to={"/login"} className="font-semibold text-secondary hover:text-tertiary">Login</NavLink >
+            {!Auth.loggedIn() ?
+              <li>
+                <NavLink to={"/signup"} className="mr-3 font-semibold text-secondary hover:text-tertiary">Sign up</NavLink>
+                <NavLink to={"/login"} className="font-semibold text-secondary hover:text-tertiary">Login</NavLink>
+              </li>
+              :
+              <li>
+                <button title="Logout" className="mr-3 font-semibold text-secondary border-none hover:text-tertiary" onClick={logout}>Logout</button>
+              </li>
+            }
           </ul>
         </div>
       </nav>
