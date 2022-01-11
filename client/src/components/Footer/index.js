@@ -32,7 +32,7 @@ export default function Footer() {
           <h2 className="text-white text-4xl">SIGNUP FOR OUR WEEKLY NEWSLETTER</h2>
           <div className="w-100 h-12 flex justify-end mt-3">
             <input className="w-full text-xl p-2" />
-            <PrimaryButton />
+            <PrimaryButton props={{ buttonName: "SUBSCRIBE" }} />
           </div>
         </div>
       </div>

@@ -7,7 +7,7 @@ export default function Quotes() {
     date: "Updated Dec 27, 2020, 9:39 AM"
   }
   const source2 = {
-    title: "Apple CEO Tim Cook even said in 2019 that about half of Apple's US employment last year was made up of people who did not have a four-year degree.  Google, Apple, and IBM are among the companies that don't require a college degree for certain positions, according to Glassdoor.",
+    title: "Apple CEO Tim Cook even said in 2019 that about half of Apple's US employment last year was made up of people who did not have a four-year degree.",
     source: "Allana Akhtar Updated Dec 27, 2020, 9:39 AM - INSIDER",
     date: "Updated Dec 27, 2020, 9:39 AM"
   }
@@ -40,9 +40,9 @@ export default function Quotes() {
           </div>
         </div>
       </div>
-      <div className="text-tertiary flex flex-wrap justify-center p-4 text-center font-bold">
+      <div className="text-white flex flex-wrap justify-center p-4 text-center font-bold">
         <h2 className=" text-4xl uppercase mt-5">
-          So what are you waiting for?
+          You get the point <span className="text-tertiary">!</span>
         </h2>
       </div>
     </section>

@@ -1,4 +1,5 @@
 const { User } = require('../models')
+const { signToken, authMiddleware } = require("../utils/auth");
 
 const resolvers = {
   Query: {
@@ -7,15 +8,17 @@ const resolvers = {
     }
   },
   Mutation: {
-    signup: async (parent, args) => {
-      const createdUser = await User.create(args)
+    createUser: async (parent, args) => {
+      const user = await User.create(args);
 
-      if (!createdUser) {
-        throw new Error("Something went wrong when signing up. Please try again.")
+      if (!user) {
+        throw new Error(
+          "Something went wrong when signing up. Please try again."
+        );
       }
-
-      return { createdUser }
-    }
+      const token = signToken(user);
+      return { user, token };
+    },
   }
 }
 

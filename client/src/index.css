@@ -2,10 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  /* outline: 3px solid pink; */
+
+:root {
+  --primary-color: 39,40,47;
+  --secondary-color: 204,204,204;
+  --black: 0,0,0;
+  --tertiary-color: 0,169,226;
+  /* --black: 255,255,255; */
+  --grey: 61,61,61;
+  --pink: 233,12,218;
 }
 
+
+*::selection {
+  /* outline: 3px solid pink; */
+  /* background-color: rgb(var(--white)); */
+  /* color: rgb(var(--pink-color)); */
+}
+
+h2 {
+  font-size: xx-large !important;
+}
 
 /* 
 body {
@@ -22,13 +39,3 @@ code {
     monospace;
 }
  */
-
- /* :root {
-  --primary-color: 39,40,47;
-  --secondary-color: 204,204,204;
-  --black: 0,0,0;
-  --tertiary-color: 0,169,226;
-  --black: 255,255,255;
-  --grey: 61,61,61;
-  --pink: 233,12,218;
-} */

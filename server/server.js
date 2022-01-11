@@ -4,12 +4,14 @@ const PORT = process.env.PORT || 3001
 const app = express()
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+const { authMiddleware } = require('./utils/auth');
+
+const path = require('path')
 
 // import the database ---------------------
 const db = require('./config/connection')
 
 // import auth ----------
-// const { authMiddleware } = require('./utils/auth');
 
 // import GraphQl --------------------------
 const { ApolloServer } = require('apollo-server-express')
@@ -18,7 +20,7 @@ const startServer = async () => {
   const server = new ApolloServer({
     typeDefs,
     resolvers,
-    context: ""
+    context: authMiddleware
   });
 
   await server.start();
@@ -28,6 +30,13 @@ const startServer = async () => {
 };
 
 startServer()
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
+
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, '../client/build')));
+}
 
 
 db.once('open', () => {

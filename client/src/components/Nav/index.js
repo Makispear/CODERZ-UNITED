@@ -17,7 +17,7 @@ export default function Nav(props) {
         {/* Nav links  */}
         <div>
           <ul className="flex">
-            <NavLink to={"/Signup"} className="mr-3 font-semibold text-secondary hover:text-tertiary">Sign up</NavLink >
+            <NavLink to={"/signup"} className="mr-3 font-semibold text-secondary hover:text-tertiary">Sign up</NavLink >
             <NavLink to={"/login"} className="font-semibold text-secondary hover:text-tertiary">Login</NavLink >
           </ul>
         </div>
