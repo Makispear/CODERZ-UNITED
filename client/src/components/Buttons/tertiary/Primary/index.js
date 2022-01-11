@@ -1,4 +1,4 @@
-export default function Primary({ props }) {
+export default function PrimaryButton({ props }) {
   if (!props) {
     return (
       <button className="bg-black hover:border-black font-bold px-6 py-2 border-tertiary border-2 text-white tracking-widest">Button</button>
