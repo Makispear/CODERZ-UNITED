@@ -26,20 +26,25 @@ export default function LoginForm() {
     } catch (e) {
       console.error(e);
     }
-    if (error) {
-    }
   };
 
 
   return (
     <form className="bg-tertiary flex flex-col p-3" onSubmit={handleLoginSubmit}>
+      {error &&
+        <div className="flex flex-col p-2 bg-red-500 text-white">
+          <p>
+            {error.message}
+          </p>
+        </div>
+      }
       <div className="flex flex-col p-2">
         <label htmlFor="email" className="font-bold text-xl" >Email</label>
-        <input type="email" name="email" onBlur={handleChange} className="p-1" />
+        <input type="email" name="email" onChange={handleChange} className="p-1" />
       </div>
       <div className="flex flex-col p-2">
         <label htmlFor="password" className="font-bold text-xl" >Password</label>
-        <input type="password" name="password" placeholder="●●●●●●●●" className="p-1" onBlur={handleChange} />
+        <input type="password" name="password" placeholder="●●●●●●●●" className="p-1" onChange={handleChange} />
       </div>
       {/* <div className="p-2 font-semibold">
         <input type="checkbox" name="trainer-confirm" id="trainer-yes" className="mr-1" />
