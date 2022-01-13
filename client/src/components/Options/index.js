@@ -4,7 +4,7 @@ import design from "../../assets/images/design.jpg"
 
 export default function Options() {
   return (
-    <section className="w-full min-h-screen">
+    <section className="w-full min-h-screen sm:py-10 px-3">
 
       <div className="pl-5 sm:pl-40">
         <h2 className="text-4xl font-bold text-white">LEARN ANY STACK <span className="text-tertiary">...</span></h2>
@@ -14,7 +14,7 @@ export default function Options() {
         {/* here are the options section  */}
         <div className="flex flex-col items-center mt-10 mx-5 ">
           <img className="rounded-full w-60 h-60" src={design} alt="Design" />
-          <h3 className="w-max border-tertiary border-b-4 border-t-4  text-3xl my-3 font-semibold text-secondary">DESIGN</h3>
+          <h3 className="w-max border-tertiary border-b-4 border-t-4 text-3xl my-3 font-semibold text-secondary">DESIGN</h3>
           <p className="text-center w-96 font-light text-md text-secondary leading-7">
             A web designer is an IT professional who is responsible for designing the layout, visual appearance and the usability of a website. A good web designer needs to have both creative graphic skills and technical skills.
           </p>

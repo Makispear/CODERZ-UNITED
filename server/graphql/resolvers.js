@@ -12,7 +12,7 @@ const resolvers = {
     createUser: async (parent, args) => {
       const user = await User.create(args);
       if (!user) {
-        throw new Error(
+        throw new AuthenticationError(
           "Something went wrong when signing up. Please try again."
         );
       }

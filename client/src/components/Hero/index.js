@@ -6,7 +6,7 @@ import logo from "../../assets/images/logo.png"
 
 export default function Hero() {
   return (
-    <section className=" sm:py-10 sm:p-28 px-3 my-10 lg:py-10 flex flex-wrap w-full justify-center lg:justify-center sm:p-1 sm:justify-center sm:mx-auto align-top bg-black">
+    <section className="sm:py-10 px-3 my-10 lg:py-10 flex flex-wrap w-full justify-center lg:justify-center sm:p-1 sm:justify-center sm:mx-auto align-top bg-black">
       <div className="w-4/5 sm:w-5/6 md:w-3/5 mt-14 sm:border-t-2 sm:border-l-2 sm:border-secondary h-max">
         <div>
           <h1 className="sm:w-2/3 text-4xl sm:text-6xl font-bold mx-auto sm:m-10 tracking-wide text-white">LEARN WEB DEVELOPMENT & DESIGN</h1>

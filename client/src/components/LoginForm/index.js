@@ -39,11 +39,19 @@ export default function LoginForm() {
         </div>
       }
       <div className="flex flex-col p-2">
-        <label htmlFor="email" className="font-bold text-xl" >Email</label>
+        {error ?
+          <label htmlFor="email" className="font-bold text-xl"><span className="text-red-500">* </span>Email</label>
+          :
+          <label htmlFor="email" className="font-bold text-xl">Email</label>
+        }
         <input type="email" name="email" onChange={handleChange} className="p-1" />
       </div>
       <div className="flex flex-col p-2">
-        <label htmlFor="password" className="font-bold text-xl" >Password</label>
+        {error ?
+          <label htmlFor="password" className="font-bold text-xl"><span className="text-red-500">* </span>Password</label>
+          :
+          <label htmlFor="password" className="font-bold text-xl">Password</label>
+        }
         <input type="password" name="password" placeholder="●●●●●●●●" className="p-1" onChange={handleChange} />
       </div>
       {/* <div className="p-2 font-semibold">
