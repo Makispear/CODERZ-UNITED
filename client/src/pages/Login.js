@@ -1,4 +1,3 @@
-// import PrimaryButton from "../components/Buttons/tertiary/Primary";
 import LoginForm from "../components/LoginForm"
 
 export default function Login() {

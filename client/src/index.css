@@ -11,17 +11,17 @@
   --secondary-color: 204,204,204;
   --black: 0,0,0;
   --tertiary-color: 0,169,226;
-  /* --black: 255,255,255; */
+  --white: 255,255,255;
   --grey: 61,61,61;
   --pink: 233,12,218;
 }
 
-/* 
+
 * {
-  outline: 3px solid rgb(176, 196, 0) !important;
-  background-color: rgb(var(--white));
-  color: rgb(var(--pink-color));
-} */
+  /* outline: 3px solid rgb(176, 196, 0) !important; */
+  /* background-color: rgb(var(--white)); */
+  /* color: rgb(var(--pink-color)); */
+}
 
 h1, .h1-style {
   font-size: clamp(2rem, 5vw, 4rem);
@@ -54,6 +54,7 @@ p {
 }
 
 
+/* this is for the option section  */
 .option-container > div{
   width: clamp(300px, 25vw 500px) !important;
 }
@@ -65,6 +66,9 @@ p {
 
 body {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(var(--secondary-color));
   /* font-family: 'Nunito', sans-serif; */
   /* -webkit-font-smoothing: antialiased; */
   /* -moz-osx-font-smoothing: grayscale; */

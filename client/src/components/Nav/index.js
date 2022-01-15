@@ -15,10 +15,17 @@ export default function Nav(props) {
       <nav className="w-full flex flex-wrap justify-between p-4 sm:p-6 md:p-12 bg-black">
         {/* Logo  */}
         {/* <div > */}
-        <NavLink className="flex md:px-1 items-center" to={"/"}>
-          <img src={logo} alt={`${BrandName} logo`} className="bg-black w-10 mr-2" />
-          <span className="w-full text-center font-bold text-xl space-nowrap text-white tracking-wider">{BrandName}</span>
-        </NavLink>
+        {Auth.loggedIn() ?
+          <NavLink className="flex md:px-1 items-center" to={"/getting_started"}>
+            <img src={logo} alt={`${BrandName} logo`} className="bg-black w-10 mr-2" />
+            <span className="w-full text-center font-bold text-xl space-nowrap text-white tracking-wider">{BrandName}</span>
+          </NavLink>
+          :
+          <NavLink className="flex md:px-1 items-center" to={"/"}>
+            <img src={logo} alt={`${BrandName} logo`} className="bg-black w-10 mr-2" />
+            <span className="w-full text-center font-bold text-xl space-nowrap text-white tracking-wider">{BrandName}</span>
+          </NavLink>
+        }
         {/* </div> */}
         {/* Nav links  */}
         <div>

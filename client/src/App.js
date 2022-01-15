@@ -7,6 +7,7 @@ import Nav from './components/Nav';
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import GettingStarted from "./pages/GettingStarted";
 
 function App() {
   const BrandName = "CODERZ UNITED"
@@ -37,11 +38,12 @@ function App() {
         <div className="bg-black">
           <Nav BrandName={BrandName} />
           <Routes>
+            <Route path="/getting_started" element={<GettingStarted />} />
             <Route path="/" element={<Home />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
           </Routes>
-          {/* <Footer BrandName={BrandName} /> */}
+          <Footer BrandName={BrandName} />
         </div>
       </Router>
     </ApolloProvider>
