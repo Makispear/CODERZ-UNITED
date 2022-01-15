@@ -1,6 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lobster&family=Nunito&display=swap');
 
 
 :root {
@@ -13,29 +16,68 @@
   --pink: 233,12,218;
 }
 
-
-*::selection {
-  /* outline: 3px solid pink; */
-  /* background-color: rgb(var(--white)); */
-  /* color: rgb(var(--pink-color)); */
-}
-
-h2 {
-  font-size: xx-large !important;
-}
-
 /* 
+* {
+  outline: 3px solid rgb(176, 196, 0) !important;
+  background-color: rgb(var(--white));
+  color: rgb(var(--pink-color));
+} */
+
+h1, .h1-style {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-family: 'Nunito', sans-serif;
+}
+
+h2, .h2-style {
+  font-size: clamp(1.5rem, 2vw, 3rem) !important;
+  font-family: 'Nunito', sans-serif;
+}
+
+h3, .h3-style {
+  font-size: clamp(1.3rem, 1.5vw, 2rem) !important;
+  font-family: 'Nunito', sans-serif;
+}
+
+
+p {
+  font-size: clamp(1rem, 1vw, 1.5rem);
+  font-family: 'Nunito', sans-serif;
+}
+
+
+
+/* buttons  */
+.button-style {
+  padding: 0.55em 1.4em;
+  width: max-content;
+  letter-spacing: normal !important;
+}
+
+
+.option-container > div{
+  width: clamp(300px, 25vw 500px) !important;
+}
+
+.paragraph-width {
+  width: 300px;
+}
+
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  /* font-family: 'Nunito', sans-serif; */
+  /* -webkit-font-smoothing: antialiased; */
+  /* -moz-osx-font-smoothing: grayscale; */
+} 
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
- */
+
+.design-font {
+  font-family: 'Abril Fatface', cursive;
+  /* font-family: 'Nunito', sans-serif; */
+}
+
