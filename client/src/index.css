@@ -68,7 +68,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: rgb(var(--secondary-color));
+  background-color: rgb(var(--white)) !important;
   /* font-family: 'Nunito', sans-serif; */
   /* -webkit-font-smoothing: antialiased; */
   /* -moz-osx-font-smoothing: grayscale; */
@@ -83,5 +83,32 @@ code {
 .design-font {
   font-family: 'Abril Fatface', cursive;
   /* font-family: 'Nunito', sans-serif; */
+}
+
+.checkMark {
+  width: 40px;
+  height: 40px;
+  background-color: rgb(var(--white));
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.checkMark > .marked {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgb(var(--black));
+}
+
+.checkMark > .unMarked {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+  border-radius: 50%;
+  /* background-color: rgb(var(--black)); */
 }
 

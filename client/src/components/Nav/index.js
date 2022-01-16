@@ -12,7 +12,7 @@ export default function Nav(props) {
 
   return (
     <header>
-      <nav className="w-full flex flex-wrap justify-between p-4 sm:p-6 md:p-12 bg-black">
+      <nav className="w-full flex flex-wrap justify-between align-center p-4 sm:p-6 md:p-12 bg-black">
         {/* Logo  */}
         {/* <div > */}
         {Auth.loggedIn() ?
@@ -27,15 +27,17 @@ export default function Nav(props) {
           </NavLink>
         }
         {/* </div> */}
+
         {/* Nav links  */}
         <div>
           <ul className="flex">
-            {!Auth.loggedIn() ?
+            {!Auth.loggedIn() &&
               <li>
                 <NavLink to={"/signup"} className="mr-3 font-semibold text-secondary hover:text-tertiary">Sign up</NavLink>
                 <NavLink to={"/login"} className="font-semibold text-secondary hover:text-tertiary">Login</NavLink>
               </li>
-              :
+            }
+            {Auth.loggedIn() &&
               <li>
                 <button title="Logout" className="mr-3 font-semibold text-secondary border-none hover:text-tertiary" onClick={logout}>Logout</button>
               </li>
