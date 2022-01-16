@@ -3,7 +3,7 @@ import PreModules from "../components/PreModules";
 
 export default function GettingStarted() {
   return (
-    <main className="bg-white">
+    <main>
       <WelcomeUser />
       <PreModules />
     </main>

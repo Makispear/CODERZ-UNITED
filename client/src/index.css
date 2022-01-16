@@ -11,16 +11,17 @@
   --secondary-color: 204,204,204;
   --black: 0,0,0;
   --tertiary-color: 0,169,226;
+  --tertiary-color-dark: 0,132,181;
   --white: 255,255,255;
   --grey: 61,61,61;
   --pink: 233,12,218;
 }
 
 
-* {
-  /* outline: 3px solid rgb(176, 196, 0) !important; */
-  /* background-color: rgb(var(--white)); */
-  /* color: rgb(var(--pink-color)); */
+section *::selection {
+  color: rgb(var(--black));
+  background-color: #FFFF00;
+  border: 2px solid red;
 }
 
 h1, .h1-style {
@@ -40,10 +41,15 @@ h3, .h3-style {
 
 
 p {
-  font-size: clamp(1rem, 1vw, 1.5rem);
+  font-size: clamp(18px, 1vw, 1.5rem) !important;
   font-family: 'Nunito', sans-serif;
 }
 
+.link {
+  color: rgb(var(--pink));
+  text-decoration: underline;
+  font-weight: bold;
+}
 
 
 /* buttons  */
@@ -86,29 +92,49 @@ code {
 }
 
 .checkMark {
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
   background-color: rgb(var(--white));
   display: grid;
   place-items: center;
+  border: 1px solid black;
   border-radius: 50%;
   flex-shrink: 0;
 }
 
 .checkMark > .marked {
   flex-shrink: 0;
-  width: 20px;
-  height: 20px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  background-color: rgb(var(--black));
+  /* background-color: rgb(var(--black)); */
+  background-color: black;
 }
 
 .checkMark > .unMarked {
   flex-shrink: 0;
-  width: 20px;
-  height: 20px;
+  width: 10px;
+  height: 10px;
   border: 2px solid black;
   border-radius: 50%;
-  /* background-color: rgb(var(--black)); */
 }
 
+.warning-word {
+  color: red;
+  font-weight: bold;
+}
+
+.careful-word {
+  color: orange;
+  font-weight: bold;
+}
+
+.positive-word {
+  color: rgb(5, 100, 5);
+  font-weight: bold;
+}
+
+.new-word {
+  color: rgb(27, 79, 156);
+  font-weight: bold;
+}

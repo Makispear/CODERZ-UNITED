@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import GettingStarted from "./pages/GettingStarted";
+import FrequentlyAskedQuestions from "./pages/getting_started_modules/FrequentlyAskedQuestions"
 
 function App() {
   const BrandName = "CODERZ UNITED"
@@ -42,6 +43,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/frequently_asked_questions" element={<FrequentlyAskedQuestions />} />
           </Routes>
           <Footer BrandName={BrandName} />
         </div>
