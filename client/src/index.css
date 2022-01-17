@@ -75,7 +75,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-color: rgb(var(--white)) !important;
-  /* font-family: 'Nunito', sans-serif; */
+  font-family: 'Roboto', sans-serif;
   /* -webkit-font-smoothing: antialiased; */
   /* -moz-osx-font-smoothing: grayscale; */
 } 
@@ -98,7 +98,7 @@ code {
   display: grid;
   place-items: center;
   border: 1px solid black;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   flex-shrink: 0;
 }
 
@@ -106,7 +106,7 @@ code {
   flex-shrink: 0;
   width: 10px;
   height: 10px;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   /* background-color: rgb(var(--black)); */
   background-color: black;
 }
@@ -116,7 +116,7 @@ code {
   width: 10px;
   height: 10px;
   border: 2px solid black;
-  border-radius: 50%;
+  /* border-radius: 50%; */
 }
 
 .warning-word {
