@@ -76,8 +76,12 @@ export default function FrequentlyAskedQuestions() {
         <p className="w-full text-darkGray">
           A web designer.
         </p>
-        <p className="">
-          Most people come into web development after looking at cool-looking websites. If you are more into the design aspect of the website and not so much into functionality, coding, and data, then web design is more suited for you. On the other hand, if you are more into logic, data, and programming in general, web development is the better choice.</p>
+        <p className="w-full text-darkGray">
+          Most people come into web development after looking at cool-looking websites. If you are more into the design aspect of the website and not so much into functionality, coding, and data, then web design is more suited for you. On the other hand, if you are more into logic, data, and programming in general, web development is the better choice.
+        </p>
+        <p className="w-full careful-word">
+          Note: Although we will be designing websites that won't be our primary focus!
+        </p>
       </div>
 
       <div className="text-start flex flex-col my-1 p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 items-start w-full">
