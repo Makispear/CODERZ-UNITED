@@ -15,9 +15,7 @@ const db = require('./config/connection')
 
 // import GraphQl --------------------------
 const { ApolloServer } = require('apollo-server-express')
-
 const { typeDefs, resolvers } = require('./graphql');
-
 const startServer = async () => {
   const server = new ApolloServer({
     typeDefs,
@@ -33,13 +31,14 @@ const startServer = async () => {
 
 startServer()
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/build/index.html'));
-});
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
 }
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/build/index.html"));
+});
 
 db.once('open', () => {
   app.listen(PORT, () => console.log(`API server running on port ${PORT}!`));
