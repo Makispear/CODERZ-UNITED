@@ -21,7 +21,8 @@
     "url": "https://github.com/Makispear/project-1/issues"
   },
   "engines": {
-    "node": "17.3.1"
+    "node": "17.3.1",
+    "npm": "8.1.4"
   },
   "homepage": "https://github.com/Makispear/project-1#readme",
   "dependencies": {
