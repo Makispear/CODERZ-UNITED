@@ -43,7 +43,7 @@
     ]
   },
   "description": "This is project 1",
-  "main": "index.js",
+  "main": "server.js",
   "devDependencies": {
     "autoprefixer": "^10.4.0",
     "eslint-plugin-react-hooks": "^4.3.0",
