@@ -4,7 +4,7 @@ import design from "../../assets/images/design.jpg"
 
 export default function Options() {
   return (
-    <section className="w-full min-h-auto p-sm:py-10 px-3 my-5">
+    <section className="w-full min-h-auto p-sm:py-10 px-3 my-5 bg-black">
 
       <div className="pl-5 sm:pl-20">
         <h2 className="font-bold text-white">LEARN ANY STACK <span className="text-tertiary">...</span></h2>
