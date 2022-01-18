@@ -43,14 +43,20 @@
     ]
   },
   "description": "This is project 1",
-  "main": "server.js",
+  "main": "index.js",
   "devDependencies": {
     "autoprefixer": "^10.4.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "postcss": "^8.4.5",
     "tailwindcss": "^3.0.7"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "Learn To Code",
+    "Learn Code",
+    "Coding Course",
+    "Web Development Course",
+    "Learn Web Development"
+  ],
+  "author": "Maki A. Maki",
   "license": "ISC"
 }
