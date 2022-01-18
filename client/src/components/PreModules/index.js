@@ -33,11 +33,11 @@ export default function PreModules() {
           </div>
         </NavLink>
 
-        <NavLink to={"/"}>
+        <NavLink to={"/installations"}>
           <div className="flex justify-between items-center p-5 border-2 border-black text-black bg-tertiaryDark">
             <div>
               <h3>
-                <span className="font-bold capitalize">1. Web development:</span> Is this for me?
+                <span className="font-bold capitalize">2. Installations:</span> Getting the tools?
               </h3>
             </div>
           </div>

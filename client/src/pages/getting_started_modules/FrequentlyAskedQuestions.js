@@ -1,10 +1,10 @@
-import PrimaryButton from "../../components/Buttons/light/Primary";
-import SecondaryButton from "../../components/Buttons/light/Secondary";
+// import PrimaryButton from "../../components/Buttons/light/Primary";
+// import SecondaryButton from "../../components/Buttons/light/Secondary";
 
-export default function FrequentlyAskedQuestions() {
+export default function Installations() {
 
-  const markAsRead = () => {
-
+  const goBack = () => {
+    window.history.back()
   }
 
 
@@ -119,11 +119,11 @@ export default function FrequentlyAskedQuestions() {
           Web development is an always-evolving field and requires learning new concepts. It also requires you to be able to work long hours in front of a screen.
         </p>
       </div>
-      <div className="w-full flex items p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900">
-        <form className="flex flex-row my-1 justify-between w-full" onSubmit={markAsRead()}>
-          <SecondaryButton props={{ buttonName: "Back" }} />
-          <PrimaryButton props={{ buttonName: "Mark Complete" }} />
-        </form>
+      <div className="flex my-1 justify-between w-full items p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900">
+
+        <button className="bg-transparent text-black button-style border-2 border-tertiary hover:border-black font-semibold uppercase" onClick={goBack}>back</button>
+
+        <button className="bg-black font-bold text-white button-style border-2 border-secondary hover:border-black uppercase tracking-wider">mark complete</button>
       </div>
 
     </section>

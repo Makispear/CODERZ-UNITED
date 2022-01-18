@@ -40,17 +40,17 @@ export default function LoginForm() {
       }
       <div className="flex flex-col p-2">
         {error ?
-          <label htmlFor="email" className="font-bold text-xl"><span className="text-red-500">* </span>Email</label>
+          <label htmlFor="email" className=" text-xl"><span className="text-red-500">* </span>Email</label>
           :
-          <label htmlFor="email" className="font-bold text-xl">Email</label>
+          <label htmlFor="email" className=" text-xl">Email</label>
         }
-        <input type="email" name="email" onChange={handleChange} className="p-1" />
+        <input type="email" name="email" placeholder="someone@example.com" onChange={handleChange} className="p-1" />
       </div>
       <div className="flex flex-col p-2">
         {error ?
-          <label htmlFor="password" className="font-bold text-xl"><span className="text-red-500">* </span>Password</label>
+          <label htmlFor="password" className=" text-xl"><span className="text-red-500">* </span>Password</label>
           :
-          <label htmlFor="password" className="font-bold text-xl">Password</label>
+          <label htmlFor="password" className=" text-xl">Password</label>
         }
         <input type="password" name="password" placeholder="●●●●●●●●" className="p-1" onChange={handleChange} />
       </div>
@@ -59,10 +59,10 @@ export default function LoginForm() {
         <label for="trainer-yes">Remember me</label>
       </div> */}
       <div className="flex flex-col p-2">
-        <PrimaryButton props={{ buttonName: "LOGIN" }} />
+        <PrimaryButton props={{ buttonName: "UNITE AGAIN" }} />
       </div>
-      <div className="flex flex-col p-2 text-white font-semibold">
-        <p>New to Coderz united? <a href="/signup" className="underline">Sign up</a> and unite with us</p>
+      <div className="flex flex-col p-2 text-black ">
+        <p>New to Coderz United? <a href="/signup" className="text-white underline">Sign up.</a></p>
       </div>
     </form>
   )

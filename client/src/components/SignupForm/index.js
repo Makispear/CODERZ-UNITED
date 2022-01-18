@@ -51,33 +51,33 @@ export default function SignupForm() {
       }
       <div className="flex flex-col p-2">
         {error ?
-          <label htmlFor="firstName" className="font-bold text-xl"><span className="text-red-500">* </span>First Name</label>
+          <label htmlFor="firstName" className="text-xl"><span className="text-red-500">* </span>First Name</label>
           :
-          <label htmlFor="firstName" className="font-bold text-xl">First Name</label>
+          <label htmlFor="firstName" className="text-xl">First Name</label>
         }
-        <input type="text" name="firstName" id="firstName" placeholder="ex: John" className="p-1" onBlur={handleChange} />
+        <input type="text" name="firstName" id="firstName" placeholder="John" className="p-1" onBlur={handleChange} />
       </div>
       <div className="flex flex-col p-2">
         {error ?
-          <label htmlFor="lastName" className="font-bold text-xl"><span className="text-red-500">* </span>Last Name</label>
+          <label htmlFor="lastName" className="text-xl"><span className="text-red-500">* </span>Last Name</label>
           :
-          <label htmlFor="lastName" className="font-bold text-xl">Last Name</label>
+          <label htmlFor="lastName" className="text-xl">Last Name</label>
         }
-        <input type="text" name="lastName" placeholder="ex: Smith" className="p-1" onBlur={handleChange} />
+        <input type="text" name="lastName" placeholder="Smith" className="p-1" onBlur={handleChange} />
       </div>
       <div className="flex flex-col p-2">
         {error ?
-          <label htmlFor="email" className="font-bold text-xl"><span className="text-red-500">* </span>Email</label>
+          <label htmlFor="email" className="text-xl"><span className="text-red-500">* </span>Email</label>
           :
-          <label htmlFor="email" className="font-bold text-xl">Email</label>
+          <label htmlFor="email" className="text-xl">Email</label>
         }
-        <input type="email" name="email" onBlur={handleChange} className="p-1" />
+        <input type="email" name="email" placeholder="someone@example.com" onBlur={handleChange} className="p-1" />
       </div>
       <div className="flex flex-col p-2">
         {error ?
-          <label htmlFor="password" className="font-bold text-xl"><span className="text-red-500">* </span>Password</label>
+          <label htmlFor="password" className="text-xl"><span className="text-red-500">* </span>Password</label>
           :
-          <label htmlFor="password" className="font-bold text-xl">Password</label>
+          <label htmlFor="password" className="text-xl">Password</label>
         }
         <input type="password" name="password" placeholder="●●●●●●●●" className="p-1" onBlur={handleChange} />
       </div>
@@ -86,10 +86,10 @@ export default function SignupForm() {
         <label for="trainer-yes">Remember me</label>
       </div> */}
       <div className="flex flex-col p-2">
-        <PrimaryButton props={{ buttonName: "SIGN UP" }} />
+        <PrimaryButton props={{ buttonName: "UNITE" }} />
       </div>
-      <div className="flex flex-col p-2 text-white font-semibold">
-        <p>Already United before? <a href="/login" className="underline">Login</a> instead.</p>
+      <div className="flex flex-col p-2 text-black">
+        <p>Already United? <a href="/login" className="underline text-white">Login</a> instead.</p>
       </div>
     </form>
   )

@@ -1,15 +1,18 @@
-const getYearNow = () => {
-  let year = () => new Date().getFullYear()
-  if (year === "2022") {
+const getYearNow = year => {
+  if (year === 2022) {
     return
+  } else {
+    return `- ${year}`
   }
-  return "-", year
 }
+
+const yearNow = () => new Date().getFullYear()
+console.log(yearNow)
 
 export default function Copyright() {
   return (
     <p className="bg-tertiary text-white">
-      Copyright<span className="font-bold">&copy;</span> 2022{getYearNow()} <a href="#" className="text-white hover:underline">CODERSZ UNITED</a> All Rights Reserved.
+      Copyright <span className="font-bold">&copy;</span> 2022{getYearNow(yearNow())} Coderz United All Rights Reserved.
     </p>
   )
 }

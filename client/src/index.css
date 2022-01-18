@@ -15,8 +15,13 @@
   --white: 255,255,255;
   --grey: 61,61,61;
   --pink: 233,12,218;
+
+  --primary-font: 'Nunito', sans-serif
 }
 
+* {
+  font-family: var(--primary-font);
+}
 
 section *::selection {
   color: rgb(var(--black));
@@ -26,23 +31,19 @@ section *::selection {
 
 h1, .h1-style {
   font-size: clamp(2rem, 5vw, 4rem);
-  font-family: 'Nunito', sans-serif;
 }
 
 h2, .h2-style {
   font-size: clamp(1.5rem, 2vw, 3rem) !important;
-  font-family: 'Nunito', sans-serif;
 }
 
 h3, .h3-style {
   font-size: clamp(1.3rem, 1.5vw, 2rem) !important;
-  font-family: 'Nunito', sans-serif;
 }
 
 
 p {
   font-size: clamp(18px, 1vw, 1.5rem) !important;
-  font-family: 'Nunito', sans-serif;
 }
 
 .link {
@@ -75,7 +76,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-color: rgb(var(--black)) !important;
-  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
   /* -webkit-font-smoothing: antialiased; */
   /* -moz-osx-font-smoothing: grayscale; */
 } 
@@ -88,7 +89,6 @@ code {
 
 .design-font {
   font-family: 'Abril Fatface', cursive;
-  /* font-family: 'Nunito', sans-serif; */
 }
 
 .checkMark {

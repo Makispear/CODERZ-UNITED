@@ -4,7 +4,7 @@ export default function Board() {
 
       <div className="hidden sm:grid place-content-center bg-green-800 h-90 sm:border-black sm:border-4">
         {/* show only on desktop  */}
-        <ul className="grid h-full h2-style text-white text-2xl text-start sm:text-start sm:text-6xl place-content-center gap-3">
+        <ul className="grid h-full h2-style text-white h1-style text-start sm:text-start place-content-center gap-3">
           <li>1. WALK-THROUGH VIDEOS</li>
           <li>2. EXAMPLES</li>
           <li>3. DEEPER DIVES INTO CONCEPTS</li>
@@ -14,7 +14,7 @@ export default function Board() {
 
       {/* show only on mobile  */}
       <div className="grid sm:hidden place-content-center bg-green-800 h-90 sm:border-black sm:border-4">
-        <ul className="visible sm:hidden h-full h2-style text-white text-2xl text-start sm:text-start sm:text-6xl place-content-center gap-3">
+        <ul className="visible sm:hidden h-full h2-style text-white h1-style text-start sm:text-start place-content-center gap-3">
           <li>1. WALK-THROUGH VIDEOS</li>
           <li>2. EXAMPLES</li>
           <li>3. DEEPER DIVES INTO CONCEPTS</li>

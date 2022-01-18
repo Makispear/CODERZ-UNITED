@@ -5,6 +5,12 @@ export default function WelcomeUser() {
   const { loading, data } = useQuery(QUERY_ME);
   const myData = data?.me || {};
 
+  if (loading) {
+    <section className="bg-black flex p-5">
+      <p className="h3-style text-white">Welcome back!👋</p>
+    </section>
+  }
+
   return (
     <section className="bg-black flex p-5">
       <p className="h3-style text-white">Welcome back {myData.firstName}!👋</p>
