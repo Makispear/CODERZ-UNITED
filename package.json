@@ -20,6 +20,9 @@
   "bugs": {
     "url": "https://github.com/Makispear/project-1/issues"
   },
+  "engines": {
+    "node": "17.3.1"
+  },
   "homepage": "https://github.com/Makispear/project-1#readme",
   "dependencies": {
     "apollo-server-express": "^3.5.0",
