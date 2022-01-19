@@ -10,31 +10,37 @@ export default function LearnMore() {
         <h1>About Coderz United</h1>
       </div>
 
-      <div className="p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 flex flex-col gap-5 font-bold">
-        <h2 className="text-tertiary">Our Mission</h2>
+      <div className="indent-8 p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 flex flex-col gap-5 text-secondary">
+        <p className="w-full text-secondary">
+          Coderz United is an educational institution founded in Connecticut in 2022. Its vision is to bring high-quality educational content to everybody everywhere. Coderz United is the ultimate solution for coders who can't afford the expensive university classes but still want a high-level education.
+        </p>
       </div>
 
-      <div className="p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 flex flex-col gap-5 text-secondary">
-        <h3 className="h2-style">
-          Coderz United has two main Missions:
-        </h3>
-        <ul>
-          - Making every United Coder succeed.
+      <div className="p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 flex flex-col gap-5 text-white">
+        <h2>
+          Our Mission
+        </h2>
+        <ul className="text-secondary">
           <li>
+            <p>
+              - To bring educational content that everyone can access.
+            </p>
           </li>
           <li>
-            - Uniting with Educational institutions
+            <p>
+              - To bring high-quality content to replace high-level University courses.
+            </p>
           </li>
         </ul>
 
       </div>
 
       <div className="text-start flex flex-col my-1 p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 items-start w-full">
-        <h2 className="text-white font-semibold mb-2 h3-style">
-          Our Values
+        <h2>
+          Our Values & Promise
         </h2>
         <p className="w-full text-secondary">
-          We value Honestly and trust! Building tech leading educational institution is what we bring!
+          We value <span className="text-tertiary">trust</span> and <span className="text-tertiary">unity.</span> Our promise is to bring content that will help the world evolve into something great.
         </p>
       </div>
 

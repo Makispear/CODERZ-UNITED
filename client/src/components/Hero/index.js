@@ -20,7 +20,7 @@ export default function Hero() {
           <h2 className="sm:mx-10 text-l mt-5 sm:text-2xl text-secondary font-light leading-none">CODERZ UNITED's mission is your success!</h2>
         </div>
         <div className="gap-2 flex flex-wrap m-14">
-          <PrimaryButton props={{ buttonName: "GET STARTED" }} />
+          <Link to="/signup" className="button-style bg-white hover:border-white font-bold border-black border-2 text-black tracking-widest uppercase">Get started</Link>
           <Link to="/learn_more" className="bg-transparent text-secondary button-style border-2 border-tertiary hover:border-secondary font-semibold uppercase">learn more</Link>
         </div>
       </div>
