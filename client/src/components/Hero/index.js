@@ -2,9 +2,12 @@ import PrimaryButton from "../Buttons/black/Primary"
 import SecondaryButton from "../Buttons/black/Secondary"
 // import PrimaryButton from "../Buttons/tertiary/Primary"
 // import SecondaryButton from "../Buttons/tertiary/Secondary"
-import logo from "../../assets/images/logo.png"
+import logo from "../../assets/images/logo.svg"
+import LearnMore from "../../pages/LearnMore"
+import { Link } from "react-router-dom"
 
 export default function Hero() {
+
   return (
     <section className="sm:py-10 px-3 my-5 flex flex-wrap w-full justify-center sm:p-1 sm:mx-auto align-top bg-black text-center sm:text-left">
       <div className="w-full sm:w-full md:w-2/3 lg:w-7/12
@@ -18,7 +21,7 @@ export default function Hero() {
         </div>
         <div className="gap-2 flex flex-wrap m-14">
           <PrimaryButton props={{ buttonName: "GET STARTED" }} />
-          <SecondaryButton props={{ buttonName: "LEARN MORE" }} />
+          <Link to="/learn_more" className="bg-transparent text-secondary button-style border-2 border-tertiary hover:border-secondary font-semibold uppercase">learn more</Link>
         </div>
       </div>
 

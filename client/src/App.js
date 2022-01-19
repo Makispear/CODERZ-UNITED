@@ -10,6 +10,7 @@ import Signup from "./pages/Signup";
 import GettingStarted from "./pages/GettingStarted";
 import FrequentlyAskedQuestions from "./pages/getting_started_modules/FrequentlyAskedQuestions"
 import Installations from "./pages/getting_started_modules/Installations"
+import LearnMore from "./pages/LearnMore";
 // Footer -----------------------------------
 import Footer from "./components/Footer";
 
@@ -48,6 +49,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/frequently_asked_questions" element={<FrequentlyAskedQuestions />} />
           <Route path="/installations" element={<Installations />} />
+          <Route path="/learn_more" element={<LearnMore />} />
         </Routes>
         <Footer BrandName={BrandName} />
       </Router>

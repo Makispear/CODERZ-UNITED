@@ -1,9 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* Nunito font  */
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lobster&family=Nunito&display=swap');
+
+
+/* EB garamound font  */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
 
 
 :root {
@@ -24,6 +31,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'EB Garamond', serif;
 }
 
 section *::selection {
@@ -34,19 +42,28 @@ section *::selection {
 
 h1, .h1-style {
   font-size: clamp(2rem, 5vw, 4rem);
+  font-family: 'EB Garamond', serif;
 }
 
 h2, .h2-style {
   font-size: clamp(1.5rem, 2vw, 3rem) !important;
+  font-family: 'EB Garamond', serif;
 }
 
 h3, .h3-style {
   font-size: clamp(1.3rem, 1.5vw, 2rem) !important;
+  font-family: var(--primary-font), serif;
 }
 
 
-p {
+p, ul, li {
   font-size: clamp(18px, 1vw, 1.5rem) !important;
+  font-family: var(--primary-font), serif;
+}
+
+span, .link {
+  font-family: var(--primary-font), serif;
+
 }
 
 .link {
