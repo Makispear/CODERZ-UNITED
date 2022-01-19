@@ -24,26 +24,26 @@ export default function Quotes() {
       <div className="w-full p-10 sm:p-28 flex flex-wrap flex-col justify-between">
         <div className="flex justify-between flex-wrap h-full w-full mt-5">
           <div className="grid place-items-center">
-            <h2 className="text-4xl font-bold uppercase text-white mt-5">why study 4 years just to start <span className="text-tertiary">?</span></h2>
+            <h2 className="font-bold uppercase text-white mt-5">Education is evolving <span className="text-tertiary">..</span></h2>
           </div>
           <SingleQuote props={source1} />
         </div>
         <div className="flex justify-between flex-wrap h-full w-full mt-5">
           <SingleQuote props={source2} />
           <div className="grid place-items-center">
-            <h2 className="text-4xl font-bold text-white uppercase mt-5">College is not the only way <span className="text-tertiary">!</span></h2>
+            <h2 className="font-bold text-white uppercase mt-5">There are other ways <span className="text-tertiary">!</span></h2>
           </div>
           <div className="flex justify-between flex-wrap h-full w-full mt-5">
             <div className="grid place-items-center">
-              <h2 className="text-4xl font-bold text-white uppercase mt-5">Here's another one <span className="text-tertiary">...</span></h2>
+              <h2 className="font-bold text-white uppercase mt-5">Here's another one <span className="text-tertiary">...</span></h2>
             </div>
             <SingleQuote props={source3} />
           </div>
         </div>
       </div>
-      <div className="text-white flex flex-wrap justify-center p-4 text-center font-bold">
-        <h2 className=" text-4xl uppercase mt-5">
-          You get the point <span className="text-tertiary">!</span>
+      <div className="w-full text-white flex flex-wrap justify-center p-4 text-center font-bold">
+        <h2 className="uppercase mt-5">
+          Lets revolutionize education <span className="text-tertiary">!</span>
         </h2>
       </div>
     </section>

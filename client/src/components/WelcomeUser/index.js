@@ -7,13 +7,13 @@ export default function WelcomeUser() {
 
   if (loading) {
     <section className="bg-black flex p-5">
-      <p className="h3-style text-white">Welcome back!👋</p>
+      <p className="text-white">Welcome back!👋</p>
     </section>
   }
 
   return (
     <section className="bg-black flex p-5">
-      <p className="h3-style text-white">Welcome back {myData.firstName}!👋</p>
+      <p className="text-white">Welcome back, {myData.firstName}!</p>
     </section>
   )
 } 

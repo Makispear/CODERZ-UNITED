@@ -14,7 +14,7 @@ export default function PreModules() {
 
 
       <div className="w-full flex lg:w-900 justify-end mt-10 text-secondary">
-        <h3>(1/4) completed</h3>
+        <p>(1/4) completed</p>
       </div>
 
       {/* Modules  */}
@@ -23,9 +23,9 @@ export default function PreModules() {
         <NavLink to={"/frequently_asked_questions"}>
           <div className="flex justify-between items-center p-5 border-2 border-black bg-tertiary hover:bg-secondary">
             <div>
-              <h3>
+              <p>
                 <span className="font-bold capitalize">1. Frequently asked Questions - </span> Is this course for you?
-              </h3>
+              </p>
             </div>
             <div className="checkMark">
               <div className="marked"></div>
@@ -36,9 +36,9 @@ export default function PreModules() {
         <NavLink to={"/installations"}>
           <div className="flex justify-between items-center p-5 border-2 border-black text-black bg-tertiaryDark">
             <div>
-              <h3>
+              <p>
                 <span className="font-bold capitalize">2. Installations:</span> Getting the tools?
-              </h3>
+              </p>
             </div>
           </div>
         </NavLink>
@@ -46,9 +46,9 @@ export default function PreModules() {
         <NavLink to={"/"}>
           <div className="flex justify-between items-center p-5 border-2 border-black text-black bg-tertiaryDark">
             <div>
-              <h3>
+              <p>
                 <span className="font-bold capitalize">1. Web development:</span> Is this for me?
-              </h3>
+              </p>
             </div>
           </div>
         </NavLink>
@@ -56,9 +56,9 @@ export default function PreModules() {
         <NavLink to={"/"}>
           <div className="flex justify-between items-center p-5 border-2 border-black text-black bg-tertiaryDark">
             <div>
-              <h3>
+              <p>
                 <span className="font-bold capitalize">1. Web development:</span> Is this for me?
-              </h3>
+              </p>
             </div>
           </div>
         </NavLink>

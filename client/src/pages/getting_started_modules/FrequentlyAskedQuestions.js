@@ -1,5 +1,4 @@
-// import PrimaryButton from "../../components/Buttons/light/Primary";
-// import SecondaryButton from "../../components/Buttons/light/Secondary";
+import NoteMessage from '../../components/NoteMessage'
 
 export default function Installations() {
 
@@ -20,7 +19,7 @@ export default function Installations() {
 
         <p>Web development is more than just a job. It is a lifestyle. Once you enter the world of web development, you need to keep up with the growing tech to remain a valuable asset to a company. You should be immersed in web development and encounter it almost daily. One of the things that can help you engage is to follow people on social media who are into web development or are already working as web developers. Subscribe to a YouTube channel that keeps you up with new technologies and updates.</p>
 
-        <p className="h2-style underline">Here are 10 of the most commonly asked questions people ask before starting web development.</p>
+        <p className="h3-style underline">Here are 10 of the most commonly asked questions people ask before starting web development.</p>
       </div>
 
       <div className="text-start flex flex-col my-1 p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 items-start w-full">
@@ -28,7 +27,7 @@ export default function Installations() {
           1. What is web development? And what is a web developer?
         </h2>
         <p className="w-full text-darkGray">
-          A web developer is a person who codes a website utilizing tools Like <span className="new-word"> HTML, CSS,</span> and  <span className="new-word">Javascript.</span>
+          A web developer is a person who codes a website utilizing tools Like HTML, CSS, and  Javascript.
         </p>
       </div>
 
@@ -71,17 +70,21 @@ export default function Installations() {
 
       <div className="text-start flex flex-col my-1 p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 items-start w-full">
         <h2 className="text-black font-semibold mb-2 h3-style">
-          6. What a web developer <span className="warning-word">isn't?</span>
+          6. What a web developer is<span className="warning-word">n't?</span>
         </h2>
-        <p className="w-full text-darkGray">
+        <p className="w-full warning-word">
           A web designer.
         </p>
         <p className="w-full text-darkGray">
           Most people come into web development after looking at cool-looking websites. If you are more into the design aspect of the website and not so much into functionality, coding, and data, then web design is more suited for you. On the other hand, if you are more into logic, data, and programming in general, web development is the better choice.
         </p>
-        <p className="w-full careful-word">
-          Note: Although we will be designing websites that won't be our primary focus!
-        </p>
+        {/* Note Message  */}
+        <NoteMessage
+          props={{
+            name: "Notice",
+            note: "Although we will be designing websites that won't be our primary focus!"
+          }}
+        />
       </div>
 
       <div className="text-start flex flex-col my-1 p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 items-start w-full">
@@ -113,10 +116,10 @@ export default function Installations() {
 
       <div className="text-start flex flex-col my-1 p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 items-start w-full">
         <h2 className="text-black font-semibold mb-2 h3-style">
-          10. How do I know web development <span className="warning-word">isn't</span> for me?
+          10. How do I know web development is<span className="warning-word">n't</span> for me?
         </h2>
         <p className="w-full text-darkGray">
-          Web development is an always-evolving field and requires learning new concepts. It also requires you to be able to work long hours in front of a screen.
+          Web development is an always-evolving field and requires continuous learning of new concepts and updates. It also requires you to work for long hours in front of a screen.
         </p>
       </div>
       <div className="flex my-1 justify-between w-full items p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900">

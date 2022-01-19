@@ -12,6 +12,8 @@
 /* EB garamound font  */
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
 
 :root {
   --primary-color: 39,40,47;
@@ -23,7 +25,12 @@
   --grey: 61,61,61;
   --pink: 233,12,218;
 
-  --primary-font: 'Nunito', sans-serif
+  --primary-font: 'Raleway', sans-serif;
+  --logo-font: 'EB garamond', sans-serif;
+}
+
+.logo-font {
+  font-family: var(--logo-font);
 }
    
 * {
@@ -31,7 +38,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'EB Garamond', serif;
+  font-family: var(--primary-font), serif;
 }
 
 section *::selection {
@@ -42,34 +49,30 @@ section *::selection {
 
 h1, .h1-style {
   font-size: clamp(2rem, 5vw, 4rem);
-  font-family: 'EB Garamond', serif;
 }
 
 h2, .h2-style {
-  font-size: clamp(1.5rem, 2vw, 3rem) !important;
-  font-family: 'EB Garamond', serif;
+  font-size: clamp(1.5rem, 4vw, 3rem) !important;
 }
 
 h3, .h3-style {
-  font-size: clamp(1.3rem, 1.5vw, 2rem) !important;
-  font-family: var(--primary-font), serif;
+  font-size: clamp(1.3rem, 3vw, 2rem) !important;
 }
 
 
-p, ul {
-  font-size: clamp(18px, 1vw, 1.5rem) !important;
-  font-family: var(--primary-font), serif;
+p, .p-style {
+  font-size: clamp(1.2rem, 2vw, 1.3rem) !important;
 }
 
-span, .link {
-  font-family: var(--primary-font), serif;
-
-}
 
 .link {
-  color: rgb(var(--pink));
-  text-decoration: underline;
-  font-weight: bold;
+  color: rgb(var(--tertiary-color));
+  font-style: italic;
+}
+
+.link:hover {
+  color: inherit;
+  font-style: italic;
 }
 
 
@@ -141,7 +144,6 @@ code {
 
 .warning-word {
   color: red;
-  font-weight: bold;
 }
 
 .careful-word {
@@ -158,3 +160,4 @@ code {
   color: rgb(27, 79, 156);
   font-weight: bold;
 }
+
