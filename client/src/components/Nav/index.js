@@ -33,13 +33,13 @@ export default function Nav(props) {
           <ul className="flex">
             {!Auth.loggedIn() &&
               <li>
-                <NavLink to={"/signup"} className="mr-3 font-semibold text-secondary hover:text-tertiary">Sign up</NavLink>
-                <NavLink to={"/login"} className="font-semibold text-secondary hover:text-tertiary">Login</NavLink>
+                <NavLink to={"/signup"} className="mr-3 text-secondary hover:text-tertiary">Sign up</NavLink>
+                <NavLink to={"/login"} className="text-secondary hover:text-tertiary">Login</NavLink>
               </li>
             }
             {Auth.loggedIn() &&
               <li>
-                <button title="Logout" className="mr-3 font-semibold text-secondary border-none hover:text-tertiary" onClick={logout}>Logout</button>
+                <button title="Logout" className="mr-3 text-secondary border-none hover:text-tertiary" onClick={logout}>Logout</button>
               </li>
             }
           </ul>

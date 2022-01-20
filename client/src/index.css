@@ -6,7 +6,6 @@
 /* Nunito font  */
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lobster&family=Nunito&display=swap');
 
 
 /* EB garamound font  */
@@ -52,7 +51,7 @@ h1, .h1-style {
 }
 
 h2, .h2-style {
-  font-size: clamp(1.5rem, 4vw, 3rem) !important;
+  font-size: clamp(1.5rem, 3.5vw, 2.5rem) !important;
 }
 
 h3, .h3-style {
@@ -63,6 +62,35 @@ h3, .h3-style {
 p, .p-style {
   font-size: clamp(1.2rem, 2vw, 1.3rem) !important;
 }
+
+
+li {
+  padding: 10px;
+}
+
+.style-module-section {
+  color: black;
+  z-index: 50;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  text-align: start;
+}
+
+@media only screen and (min-width: 640px) {
+  .style-module-section {
+    padding-top: 5rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .style-module-section {
+    padding-top: 10rem;
+  }
+}
+
 
 
 .link {
@@ -109,6 +137,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lobster&family=Nunito&display=swap');
 
 .design-font {
   font-family: 'Abril Fatface', cursive;
@@ -157,7 +187,7 @@ code {
 }
 
 .new-word {
-  color: rgb(27, 79, 156);
+  color: rgb(0, 63, 156);
   font-weight: bold;
 }
 

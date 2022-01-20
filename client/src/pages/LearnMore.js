@@ -1,8 +1,6 @@
-export default function LearnMore() {
+import { goBack } from "../utils/previousPage"
 
-  const goBack = () => {
-    window.history.back()
-  }
+export default function LearnMore() {
 
   return (
     <section className="text-white z-50 w-full bg-black flex flex-col items-center text-start sm:pt-20 md:pt-40">
@@ -46,10 +44,7 @@ export default function LearnMore() {
 
 
       <div className="flex my-1 justify-between w-full items p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900">
-
-        <button className="bg-transparent text-secondary button-style border-2 border-tertiary hover:border-secondary font-semibold uppercase" onClick={goBack}>back</button>
-
-        {/* <button className="button-style bg-white hover:border-white font-bold border-black border-2 text-black tracking-widest uppercase">mark complete</button> */}
+        <button className="bg-transparent text-secondary button-style border border-tertiary hover:border-secondary font-light uppercase" onClick={goBack}>back</button>
       </div>
 
     </section>

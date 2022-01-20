@@ -17,11 +17,11 @@ export default function Hero() {
           <h1 className="font-bold mx-auto sm:m-10 tracking-wide text-white leading-none">LEARN WEB DEVELOPMENT & DESIGN</h1>
         </div>
         <div>
-          <h2 className="sm:mx-10 text-l mt-5 sm:text-2xl text-secondary font-light leading-none">CODERZ UNITED's mission is your success!</h2>
+          <h2 className="sm:mx-10 text-l mt-5 sm:text-2xl text-secondary font-light">Coderz United's mission is your success!</h2>
         </div>
         <div className="gap-2 flex flex-wrap m-14">
           <Link to="/signup" className="button-style bg-white hover:border-white font-bold border-black border-2 text-black tracking-widest uppercase">Get started</Link>
-          <Link to="/learn_more" className="bg-transparent text-secondary button-style border-2 border-tertiary hover:border-secondary font-semibold uppercase">learn more</Link>
+          <Link to="/learn_more" className="bg-transparent text-secondary button-style border border-tertiary hover:border-secondary font-light uppercase">learn more</Link>
         </div>
       </div>
 

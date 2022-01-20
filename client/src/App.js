@@ -9,7 +9,8 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import GettingStarted from "./pages/GettingStarted";
 import FrequentlyAskedQuestions from "./pages/getting_started_modules/FrequentlyAskedQuestions"
-import Installations from "./pages/getting_started_modules/Installations"
+import VSCode from "./pages/getting_started_modules/installations/VSCode";
+import GitHub from "./pages/getting_started_modules/installations/GitHub";
 import LearnMore from "./pages/LearnMore";
 // Footer -----------------------------------
 import Footer from "./components/Footer";
@@ -43,12 +44,14 @@ function App() {
         <Nav BrandName={BrandName} />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/getting_started" element={<GettingStarted />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/frequently_asked_questions" element={<FrequentlyAskedQuestions />} />
-          <Route path="/installations" element={<Installations />} />
+
+          {/* Getting started Modules  */}
+          <Route path="/getting_started" element={<GettingStarted />} />
+          <Route path="/getting_started/installations/frequently_asked_questions" element={<FrequentlyAskedQuestions />} />
+          <Route path="/getting_started/installations/VSCode" element={<VSCode />} />
+          <Route path="/getting_started/installations/GitHub" element={<GitHub />} />
           <Route path="/learn_more" element={<LearnMore />} />
         </Routes>
         <Footer BrandName={BrandName} />

@@ -7,7 +7,7 @@ export default function NoteMessage({ props }) {
         <span className="text-3xl">⚠</span>
         <h2 className="h3-style careful-word">{name}:</h2>
       </div>
-      <div className="flex justify-center text-center border-b-2 border-orange-400 ">
+      <div className="flex justify-center text-start border-b-2 border-orange-400 ">
         <p className="">
           {note}
         </p>

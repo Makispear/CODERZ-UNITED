@@ -1,11 +1,11 @@
 export default function SecondaryButton({ props }) {
   if (!props) {
     return (
-      <button className="bg-transparent font-semibold hover:border-secondary button-style border-black border-2 text-black tracking-widest">Button</button>
+      <button className="bg-transparent font-light hover:border-secondary button-style border-black border text-black">Button</button>
     )
   }
   const { buttonName } = props
   return (
-    <button className="bg-transparent font-semibold hover:border-secondary button-style border-black border-2 text-black tracking-widest">{buttonName}</button>
+    <button className="bg-transparent font-light hover:border-secondary button-style border-black border text-black">{buttonName}</button>
   )
 }

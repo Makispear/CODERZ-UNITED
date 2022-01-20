@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import CheckMark from "../CheckMark";
 
 export default function PreModules() {
   return (
@@ -8,7 +9,7 @@ export default function PreModules() {
           Getting Started
         </h1>
         <p className="text-center text-secondary">
-          This is the first step! Every united coder gets the previlage of having a great head start! 🙂
+          This is the first step! Every united coder gets the privilege of having a great head start! 🙂
         </p>
       </div>
 
@@ -20,26 +21,25 @@ export default function PreModules() {
       {/* Modules  */}
       <div className="w-full flex sm:w-600 md:w-700 lg:w-900 flex-col bg-black gap-4 text-black">
 
-        <NavLink to={"/frequently_asked_questions"}>
+        <NavLink to={"/getting_started/installations/frequently_asked_questions"}>
           <div className="flex justify-between items-center p-5 border-2 border-black bg-tertiary hover:bg-secondary">
             <div>
               <p>
                 <span className="font-bold capitalize">1. Frequently asked Questions - </span> Is this course for you?
               </p>
             </div>
-            <div className="checkMark">
-              <div className="marked"></div>
-            </div>
+            <CheckMark props={{ marked: true }} />
           </div>
         </NavLink>
 
-        <NavLink to={"/installations"}>
-          <div className="flex justify-between items-center p-5 border-2 border-black text-black bg-tertiaryDark">
+        <NavLink to={"/getting_started/installations/VSCode"}>
+          <div className="flex justify-between items-center p-5 border-2 border-black text-black bg-tertiary hover:bg-secondary">
             <div>
               <p>
-                <span className="font-bold capitalize">2. Installations:</span> Getting the tools?
+                <span className="font-bold capitalize">2. Installations - </span> Getting your computer ready.
               </p>
             </div>
+            <CheckMark props={{ marked: false }} />
           </div>
         </NavLink>
 

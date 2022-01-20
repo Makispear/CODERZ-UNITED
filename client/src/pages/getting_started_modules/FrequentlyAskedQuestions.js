@@ -1,17 +1,17 @@
 import NoteMessage from '../../components/NoteMessage'
+import PageTracker from '../../components/PageTracker'
+import { goBack } from '../../utils/previousPage'
 
 export default function Installations() {
 
-  const goBack = () => {
-    window.history.back()
-  }
+
 
 
   return (
-    <section className="text-black z-50 w-full bg-white flex flex-col items-center text-start sm:pt-20 md:pt-40">
+    <section className="style-module-section">
 
       <div className="w-full flex justify-center font-bold my-10 text-center capitalize">
-        <h1>Frequently asked Questions</h1>
+        <h1>Frequently asked Questions <PageTracker props={{ page: "1.1.1" }} /></h1>
       </div>
 
       <div className="p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 flex flex-col gap-5">
@@ -19,7 +19,7 @@ export default function Installations() {
 
         <p>Web development is more than just a job. It is a lifestyle. Once you enter the world of web development, you need to keep up with the growing tech to remain a valuable asset to a company. You should be immersed in web development and encounter it almost daily. One of the things that can help you engage is to follow people on social media who are into web development or are already working as web developers. Subscribe to a YouTube channel that keeps you up with new technologies and updates.</p>
 
-        <p className="h3-style underline">Here are 10 of the most commonly asked questions people ask before starting web development.</p>
+        <p className="font-bold">Here are 10 of the most commonly asked questions people ask before starting web development:</p>
       </div>
 
       <div className="text-start flex flex-col my-1 p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 items-start w-full">
@@ -124,7 +124,7 @@ export default function Installations() {
       </div>
       <div className="flex my-1 justify-between w-full items p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900">
 
-        <button className="bg-transparent text-black button-style border-2 border-tertiary hover:border-black font-semibold uppercase" onClick={goBack}>back</button>
+        <button className="bg-transparent text-black button-style border border-tertiary hover:border-black font-light uppercase" onClick={goBack}>back</button>
 
         <button className="bg-black font-bold text-white button-style border-2 border-secondary hover:border-black uppercase tracking-wider">mark complete</button>
       </div>
