@@ -12,7 +12,7 @@ export default function Nav(props) {
 
   return (
     <header>
-      <nav className="w-full flex flex-wrap justify-between align-center p-4 sm:p-6 md:p-12 bg-black">
+      <nav className="w-full flex justify-between align-center p-4 sm:p-6 md:p-12 bg-black">
         {/* Logo  */}
         {/* <div > */}
         {Auth.loggedIn() ?
