@@ -22,7 +22,7 @@ export default function PreModules() {
       {/* Modules  */}
       <div className="w-full flex sm:w-600 md:w-700 lg:w-900 flex-col bg-black gap-4 text-black">
 
-        <NavLink to={"/getting_started/installations/frequently_asked_questions"}>
+        <NavLink to={"/all_modules/getting_started/installations/frequently_asked_questions"}>
           <div className="flex justify-between items-center p-5 border-2 border-black bg-tertiary hover:bg-secondary">
             <div>
               <p>
@@ -33,7 +33,7 @@ export default function PreModules() {
           </div>
         </NavLink>
 
-        <NavLink to={"/getting_started/installations/VSCode"}>
+        <NavLink to={"/all_modules/getting_started/installations/VSCode"}>
           <div className="flex justify-between items-center p-5 border-2 border-black text-black bg-tertiary hover:bg-secondary">
             <div>
               <p>
@@ -44,7 +44,7 @@ export default function PreModules() {
           </div>
         </NavLink>
 
-        <NavLink to={"/"}>
+        <NavLink to={"/getting_started"}>
           <div className="flex justify-between items-center p-5 border-2 border-black text-black bg-tertiaryDark">
             <div>
               <p>
@@ -54,7 +54,7 @@ export default function PreModules() {
           </div>
         </NavLink>
 
-        <NavLink to={"/"}>
+        <NavLink to={"/getting_started"}>
           <div className="flex justify-between items-center p-5 border-2 border-black text-black bg-tertiaryDark">
             <div>
               <p>
