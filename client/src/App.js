@@ -3,16 +3,29 @@ import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from "@ap
 import { setContext } from "@apollo/client/link/context";
 
 import Nav from './components/Nav';
-// Routes -----------------------------------
+// Routes ***********************************************
+// Logged Out 
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-import GettingStarted from "./pages/GettingStarted";
-import FrequentlyAskedQuestions from "./pages/getting_started_modules/FrequentlyAskedQuestions"
-import VSCode from "./pages/getting_started_modules/installations/VSCode";
-import GitHub from "./pages/getting_started_modules/installations/GitHub";
 import LearnMore from "./pages/LearnMore";
-// Footer -----------------------------------
+
+// after logging in
+import AllModules from "./pages/AllModules/AllModules";
+
+// if getting started 1.0
+import GettingStarted from "./pages/AllModules/getting_started_modules/GettingStarted"
+// >>> 
+//1.1.0
+import FrequentlyAskedQuestions from "./pages/AllModules/getting_started_modules/FrequentlyAskedQuestions"
+//1.1.2
+import VSCode from "./pages/AllModules/getting_started_modules/installations/VSCode";
+import GitHub from "./pages/AllModules/getting_started_modules/installations/GitHub";
+
+// if getting started
+// import CourseModules from "./pages/AllModules/course_modules/CourseModules";
+
+// Footer ***********************************************
 import Footer from "./components/Footer";
 
 function App() {
@@ -46,13 +59,15 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/learn_more" element={<LearnMore />} />
 
           {/* Getting started Modules  */}
-          <Route path="/getting_started" element={<GettingStarted />} />
-          <Route path="/getting_started/installations/frequently_asked_questions" element={<FrequentlyAskedQuestions />} />
-          <Route path="/getting_started/installations/VSCode" element={<VSCode />} />
-          <Route path="/getting_started/installations/GitHub" element={<GitHub />} />
-          <Route path="/learn_more" element={<LearnMore />} />
+          <Route path="/all_modules" element={<AllModules />} />
+          <Route path="/all_modules/getting_started" element={<GettingStarted />} />
+          <Route path="/all_modules/getting_started/installations/frequently_asked_questions" element={<FrequentlyAskedQuestions />} />
+          <Route path="/all_modules/getting_started/installations/VSCode" element={<VSCode />} />
+          <Route path="/all_modules/getting_started/installations/GitHub" element={<GitHub />} />
+          <Route path="/all_modules/learn_more" element={<LearnMore />} />
         </Routes>
         <Footer BrandName={BrandName} />
       </Router>

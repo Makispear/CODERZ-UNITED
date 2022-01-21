@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom"
-import PageTracker from "../../../components/PageTracker"
-import { goBack } from "../../../utils/previousPage"
+import PageTracker from "../../../../components/PageTracker"
+import { goBack } from "../../../../utils/previousPage"
 
 export default function VSCode() {
 

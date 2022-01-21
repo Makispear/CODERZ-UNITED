@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import CheckMark from "../CheckMark";
+import { goBack } from "../../utils/previousPage";
 
 export default function PreModules() {
   return (
@@ -62,6 +63,10 @@ export default function PreModules() {
             </div>
           </div>
         </NavLink>
+
+        <div className="flex justify-between w-full items my-10">
+          <button className="bg-transparent text-secondary button-style border border-tertiary hover:border-secondary font-light uppercase" onClick={goBack}>back</button>
+        </div>
 
       </div>
 

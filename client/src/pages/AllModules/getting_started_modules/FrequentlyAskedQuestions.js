@@ -1,6 +1,6 @@
-import NoteMessage from '../../components/NoteMessage'
-import PageTracker from '../../components/PageTracker'
-import { goBack } from '../../utils/previousPage'
+import NoteMessage from '../../../components/NoteMessage'
+import PageTracker from '../../../components/PageTracker'
+import { goBack } from '../../../utils/previousPage'
 
 export default function Installations() {
 

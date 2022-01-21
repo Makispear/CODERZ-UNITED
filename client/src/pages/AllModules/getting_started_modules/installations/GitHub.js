@@ -1,7 +1,7 @@
-import { goBack } from "../../../utils/previousPage"
+import { goBack } from "../../../../utils/previousPage"
 import { NavLink } from "react-router-dom"
-import PageTracker from "../../../components/PageTracker"
-import InfoMessage from "../../../components/InfoMessage"
+import PageTracker from "../../../../components/PageTracker"
+import InfoMessage from "../../../../components/InfoMessage"
 
 export default function GitHub() {
   return (
