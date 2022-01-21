@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom"
+import BreadCrumb from "../../../../components/BreadCrumb"
 import PageTracker from "../../../../components/PageTracker"
 import { goBack } from "../../../../utils/previousPage"
 
@@ -10,8 +11,10 @@ export default function VSCode() {
       <div className="w-full flex justify-center font-bold my-10 text-center capitalize">
         <h1>Installations <PageTracker props={{ page: "1.2.1" }} /></h1>
       </div>
-
       <div className="p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 flex flex-col gap-5">
+        <div className="w-full flex lg:w-900 justify-start mt-10 text-secondary">
+          <BreadCrumb props={{ color: 'darkGray' }} />
+        </div>
         <h2>
           Install A Code Editor
         </h2>
@@ -44,7 +47,7 @@ export default function VSCode() {
 
       <div className="flex my-1 justify-between w-full items p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900">
         <button className="bg-transparent text-black button-style border border-tertiary hover:border-black font-light uppercase" onClick={goBack}>back</button>
-        <NavLink to="/getting_started/installations/GitHub" className="bg-black font-bold text-white button-style border-2 border-secondary hover:border-black uppercase tracking-wider">next</NavLink>
+        <NavLink to="/all_modules/getting_started/installations/GitHub/" className="bg-black font-bold text-white button-style border-2 border-secondary hover:border-black uppercase tracking-wider">next</NavLink>
       </div>
 
     </section >

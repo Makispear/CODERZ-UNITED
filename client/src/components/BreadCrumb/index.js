@@ -1,7 +1,26 @@
-export default function BreadCrumb() {
+export default function BreadCrumb({ props }) {
+
+  const { color } = props
 
   // get the url path RESULT:   /all_modules/getting_started/
   const pathName = window.location.pathname
+
+  // // initial list for the BreadCrumb urls 
+  // let listOfLinksInOrder = []
+  // const getLink = () => {
+
+  //   ArrayOfWords.forEach(word => {
+  //     if (!listOfLinksInOrder.length) {
+  //       listOfLinksInOrder.push(word)
+  //       return
+  //     } else {
+  //       let previousString = listOfLinksInOrder.join('/')
+  //       let addNewWord = `/${word}`
+  //       listOfLinksInOrder.push(previousString.concat(addNewWord))
+  //     }
+  //   })
+  //   return listOfLinksInOrder
+  // }
 
   // make an array of letters between every (/) character RESULT:   ['all_modules', 'getting_started']
   const ArrayOfWords = pathName.substring(
@@ -24,26 +43,30 @@ export default function BreadCrumb() {
       } else {
         tempNewWord = tempNewWord + word[i]
       }
-
     }
     // capitalize and push to arrayOfLinks
-    let finalWords = tempNewWord[0].toUpperCase() + tempNewWord.slice(1, tempNewWord.length).toLowerCase()
+    let finalWords = tempNewWord.toUpperCase()
     ArrayOfLinks.push(finalWords)
   })
 
-  const getLink = () => {
-    let listOfLinksInOrder = []
 
-    ArrayOfWords.forEach()
-  }
+
 
 
   const render = () => {
-    const result = ArrayOfLinks.map((element, index) => {
+    const result = ArrayOfLinks.map((element, index, array) => {
+      if (index === array.length - 1) {
+        return (
+          <li key={index} className="flex justify-center">
+            <span className={`text-tertiary`}>&gt;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <p className="font-bold text-tertiary text-xsm">{element}</p>
+          </li>
+        )
+      }
       return (
-        <li key={index} className="text-white flex">
-          <a href={getLink()}>{element}</a>
-          <span className="text-tertiary">&nbsp;&nbsp;&nbsp;&nbsp;&gt;</span>
+        <li key={index} className="flex justify-center">
+          <span className={`text-tertiary`}>&gt;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          <p className="text-xsm">{element}</p>
         </li>
       )
     })
@@ -51,7 +74,7 @@ export default function BreadCrumb() {
   }
 
   return (
-    <ul className="w-full bg-black flex p-5">
+    <ul className={`hidden text-${color} md:flex border-y overflow-x-auto scroll-smooth border-${color} w-auto text-xsm bg-transparent flex-nowrap justify-start mb-7`}>
       {render()}
     </ul>
   )

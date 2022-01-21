@@ -23,10 +23,11 @@ import VSCode from "./pages/AllModules/getting_started_modules/installations/VSC
 import GitHub from "./pages/AllModules/getting_started_modules/installations/GitHub";
 
 // if getting started
-// import CourseModules from "./pages/AllModules/course_modules/CourseModules";
+
 
 // Footer ***********************************************
 import Footer from "./components/Footer";
+import CourseModules from "./pages/AllModules/course_modules/CourseModules";
 
 function App() {
   const BrandName = "CODERZ UNITED"
@@ -60,14 +61,17 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
           <Route path="/learn_more" element={<LearnMore />} />
+          {/* <Route path="/all_modules/learn_more" element={<LearnMore />} /> */}
 
           {/* Getting started Modules  */}
-          <Route path="/all_modules" element={<AllModules />} />
+          <Route path="/all_modules/" element={<AllModules />} />
           <Route path="/all_modules/getting_started" element={<GettingStarted />} />
-          <Route path="/all_modules/getting_started/installations/frequently_asked_questions" element={<FrequentlyAskedQuestions />} />
+          <Route path="/all_modules/getting_started/frequently_asked_questions" element={<FrequentlyAskedQuestions />} />
           <Route path="/all_modules/getting_started/installations/VSCode" element={<VSCode />} />
           <Route path="/all_modules/getting_started/installations/GitHub" element={<GitHub />} />
-          <Route path="/all_modules/learn_more" element={<LearnMore />} />
+
+          {/* Course Modules  */}
+          <Route path="/all_modules/course_modules" element={<CourseModules />} />
         </Routes>
         <Footer BrandName={BrandName} />
       </Router>

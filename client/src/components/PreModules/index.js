@@ -1,10 +1,14 @@
 import { NavLink } from "react-router-dom";
 import CheckMark from "../CheckMark";
 import { goBack } from "../../utils/previousPage";
+import BreadCrumb from "../BreadCrumb";
 
 export default function PreModules() {
   return (
     <section className="flex flex-col w-full items-center p-2 sm:p-7 md:p-32 bg-black text-white">
+      <div className="w-full flex lg:w-900 justify-start mt-10 text-secondary">
+        <BreadCrumb props={{ color: 'secondary' }} />
+      </div>
       <div className="flex flex-col items-center">
         <h1>
           Getting Started
@@ -22,7 +26,7 @@ export default function PreModules() {
       {/* Modules  */}
       <div className="w-full flex sm:w-600 md:w-700 lg:w-900 flex-col bg-black gap-4 text-black">
 
-        <NavLink to={"/all_modules/getting_started/installations/frequently_asked_questions"}>
+        <NavLink to={"/all_modules/getting_started/frequently_asked_questions/"}>
           <div className="flex justify-between items-center p-5 border-2 border-black bg-tertiary hover:bg-secondary">
             <div>
               <p>
@@ -33,7 +37,7 @@ export default function PreModules() {
           </div>
         </NavLink>
 
-        <NavLink to={"/all_modules/getting_started/installations/VSCode"}>
+        <NavLink to={"/all_modules/getting_started/installations/VSCode/"}>
           <div className="flex justify-between items-center p-5 border-2 border-black text-black bg-tertiary hover:bg-secondary">
             <div>
               <p>

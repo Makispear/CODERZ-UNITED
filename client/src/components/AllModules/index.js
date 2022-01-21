@@ -1,9 +1,13 @@
 import { NavLink } from "react-router-dom";
+import BreadCrumb from "../BreadCrumb";
 import CheckMark from "../CheckMark";
 
 export default function AllModules() {
   return (
     <section className="flex flex-col w-full items-center p-2 sm:p-7 md:p-32 bg-black text-white">
+      {/* <div className="w-full flex lg:w-900 justify-start mt-10 text-secondary">
+        <BreadCrumb props={{ color: 'secondary' }} />
+      </div> */}
       <div className="flex flex-col items-center">
         <h1>
           All Modules
@@ -12,6 +16,7 @@ export default function AllModules() {
           Lets make the best out of every modules!
         </p>
       </div>
+
 
 
       <div className="w-full flex lg:w-900 justify-end mt-10 text-secondary">
@@ -32,7 +37,7 @@ export default function AllModules() {
           </div>
         </NavLink>
 
-        <NavLink to={"/all_modules/course_modules"}>
+        <NavLink to={"/all_modules/course_modules/"}>
           <div className="flex justify-between items-center p-5 border-2 border-black text-black bg-tertiary hover:bg-secondary">
             <div>
               <p>

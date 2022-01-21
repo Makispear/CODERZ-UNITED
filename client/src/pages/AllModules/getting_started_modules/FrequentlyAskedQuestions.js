@@ -1,3 +1,4 @@
+import BreadCrumb from '../../../components/BreadCrumb'
 import NoteMessage from '../../../components/NoteMessage'
 import PageTracker from '../../../components/PageTracker'
 import { goBack } from '../../../utils/previousPage'
@@ -10,11 +11,13 @@ export default function Installations() {
   return (
     <section className="style-module-section">
 
+
       <div className="w-full flex justify-center font-bold my-10 text-center capitalize">
         <h1>Frequently asked Questions <PageTracker props={{ page: "1.1.1" }} /></h1>
       </div>
 
       <div className="p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 flex flex-col gap-5">
+        <BreadCrumb props={{ color: 'darkGray' }} />
         <p><span className="font-bold">Welcome to the course!</span> We are excited to unite and be a part of your web development journey. Before we get started, let's get all the questions you might have answered. We also want to make sure that you're on the right career path.</p>
 
         <p>Web development is more than just a job. It is a lifestyle. Once you enter the world of web development, you need to keep up with the growing tech to remain a valuable asset to a company. You should be immersed in web development and encounter it almost daily. One of the things that can help you engage is to follow people on social media who are into web development or are already working as web developers. Subscribe to a YouTube channel that keeps you up with new technologies and updates.</p>
