@@ -18,12 +18,12 @@ export default function Nav(props) {
         {Auth.loggedIn() ?
           <NavLink className="flex md:px-1 items-center p-style" to={"/all_modules/"}>
             <img src={logo} alt={`${BrandName} logo`} className="bg-black w-10 mr-2" />
-            <span className="w-full text-center font-bold logo-font space-nowrap text-white tracking-wider">{BrandName}</span>
+            <span className="hidden sm:inline w-full text-center font-bold logo-font space-nowrap text-white tracking-wider">{BrandName}</span>
           </NavLink>
           :
           <NavLink className="flex md:px-1 items-center p-style" to={"/"}>
             <img src={logo} alt={`${BrandName} logo`} className="bg-black w-10 mr-2" />
-            <span className="w-full text-center font-bold logo-font space-nowrap text-white tracking-wider">{BrandName}</span>
+            <span className="hidden sm:inline w-full text-center font-bold logo-font space-nowrap text-white tracking-wider">{BrandName}</span>
           </NavLink>
         }
         {/* </div> */}
