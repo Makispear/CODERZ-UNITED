@@ -37,7 +37,7 @@ export default function PreModules() {
           </div>
         </NavLink>
 
-        <NavLink to={"/all_modules/getting_started/installations/VSCode/"}>
+        <NavLink to={"/all_modules/getting_started/installations/vs_code/"}>
           <div className="flex justify-between items-center p-5 border-2 border-black text-black bg-tertiary hover:bg-secondary">
             <div>
               <p>

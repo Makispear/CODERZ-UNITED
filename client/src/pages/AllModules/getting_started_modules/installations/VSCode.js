@@ -47,7 +47,7 @@ export default function VSCode() {
 
       <div className="flex my-1 justify-between w-full items p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900">
         <button className="bg-transparent text-black button-style border border-tertiary hover:border-black font-light uppercase" onClick={goBack}>back</button>
-        <NavLink to="/all_modules/getting_started/installations/GitHub/" className="bg-black font-bold text-white button-style border-2 border-secondary hover:border-black uppercase tracking-wider">next</NavLink>
+        <NavLink to="/all_modules/getting_started/installations/github/" className="bg-black font-bold text-white button-style border-2 border-secondary hover:border-black uppercase tracking-wider">next</NavLink>
       </div>
 
     </section >

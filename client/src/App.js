@@ -67,8 +67,8 @@ function App() {
           <Route path="/all_modules/" element={<AllModules />} />
           <Route path="/all_modules/getting_started" element={<GettingStarted />} />
           <Route path="/all_modules/getting_started/frequently_asked_questions" element={<FrequentlyAskedQuestions />} />
-          <Route path="/all_modules/getting_started/installations/VSCode" element={<VSCode />} />
-          <Route path="/all_modules/getting_started/installations/GitHub" element={<GitHub />} />
+          <Route path="/all_modules/getting_started/installations/vs_code" element={<VSCode />} />
+          <Route path="/all_modules/getting_started/installations/github" element={<GitHub />} />
 
           {/* Course Modules  */}
           <Route path="/all_modules/course_modules" element={<CourseModules />} />
