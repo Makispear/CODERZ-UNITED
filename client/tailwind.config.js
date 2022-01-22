@@ -49,7 +49,6 @@ module.exports = {
       },
       backgroundImage: theme => ({
         'blackGradient': "url('/src/assets/images/black.jpg')",
-        'computer': "url('/src/assets/images/computer.jpg')",
       }),
     },
   },

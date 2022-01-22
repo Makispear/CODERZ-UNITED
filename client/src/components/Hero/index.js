@@ -1,10 +1,15 @@
+import PrimaryButton from "../Buttons/black/Primary"
+import SecondaryButton from "../Buttons/black/Secondary"
+// import PrimaryButton from "../Buttons/tertiary/Primary"
+// import SecondaryButton from "../Buttons/tertiary/Secondary"
 import logo from "../../assets/images/logo.svg"
+import LearnMore from "../../pages/LearnMore"
 import { Link } from "react-router-dom"
 
 export default function Hero() {
 
   return (
-    <section className="mt-20 sm:mt-40 sm:py-10 px-3 my-5 flex flex-wrap w-full justify-center sm:p-1 sm:mx-auto align-top bg-black text-center sm:text-left">
+    <section className="sm:py-10 px-3 my-5 flex flex-wrap w-full justify-center sm:p-1 sm:mx-auto align-top bg-black text-center sm:text-left">
       <div className="w-full sm:w-full md:w-2/3 lg:w-7/12
                        align-center
                       mt-14 sm:border-t-2 lg:border-l-2 sm:border-secondary h-max">

@@ -3,7 +3,7 @@ import { goBack } from "../utils/previousPage"
 export default function LearnMore() {
 
   return (
-    <section className="text-white z-50 w-full bg-image flex flex-col items-center text-start pt-20 sm:pt-40">
+    <section className="text-white z-50 w-full bg-image flex flex-col items-center text-start sm:pt-20 md:pt-40">
       <div className="w-full flex justify-center font-bold my-10 text-center capitalize">
         <h1>About Coderz United</h1>
       </div>

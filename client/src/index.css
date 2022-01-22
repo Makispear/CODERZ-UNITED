@@ -31,13 +31,6 @@
 .logo-font {
   font-family: var(--logo-font);
 }
-
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
    
 * {
   /* font-family: var(--primary-font); */
@@ -84,7 +77,6 @@ li {
   flex-flow: column nowrap;
   align-items: center;
   text-align: start;
-  margin-top: 5rem;
 }
 
 .style-page-section {
@@ -194,8 +186,6 @@ code {
   border: 2px solid black;
   /* border-radius: 50%; */
 }
-
-
 
 .warning-word {
   color: red;
