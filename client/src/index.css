@@ -206,3 +206,16 @@ code {
   font-weight: bold;
 }
 
+.bg-image {
+  background-image: url('./assets//images/black.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+.bg-image-flipped {
+  background-image: url('./assets//images/blackFlipped.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}

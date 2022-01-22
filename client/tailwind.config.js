@@ -46,7 +46,10 @@ module.exports = {
       height: {
         "90%": "90%",
         "90": "90vh"
-      }
+      },
+      backgroundImage: theme => ({
+        'blackGradient': "url('/src/assets/images/black.jpg')",
+      }),
     },
   },
   plugins: [],

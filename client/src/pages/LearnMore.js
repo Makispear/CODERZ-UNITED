@@ -3,7 +3,7 @@ import { goBack } from "../utils/previousPage"
 export default function LearnMore() {
 
   return (
-    <section className="text-white z-50 w-full bg-black flex flex-col items-center text-start sm:pt-20 md:pt-40">
+    <section className="text-white z-50 w-full bg-image flex flex-col items-center text-start sm:pt-20 md:pt-40">
       <div className="w-full flex justify-center font-bold my-10 text-center capitalize">
         <h1>About Coderz United</h1>
       </div>
@@ -41,6 +41,8 @@ export default function LearnMore() {
           We value <span className="text-tertiary">trust</span> and <span className="text-tertiary">unity.</span> Our promise is to bring content that will help the world evolve into something great.
         </p>
       </div>
+
+
 
 
       <div className="flex my-1 justify-between w-full items p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900">

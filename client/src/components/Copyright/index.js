@@ -12,7 +12,7 @@ export default function Copyright() {
   let theYearToday = new Date().getFullYear()
 
   return (
-    <p className="bg-tertiary text-white">
+    <p className="bg-transparent text-secondary text-xsm">
       Copyright<span className="font-bold">&copy;</span> 2022{getYearNow(theYearToday)} <span className="text-white">Coderz United</span> All Rights Reserved.
     </p>
   )
