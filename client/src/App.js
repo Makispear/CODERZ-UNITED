@@ -52,6 +52,7 @@ function App() {
     cache: new InMemoryCache(),
   });
 
+
   return (
     <ApolloProvider client={client}>
       <Router>
@@ -65,8 +66,8 @@ function App() {
 
           {/* Getting started Modules  */}
           <Route path="/all_modules/" element={<AllModules />} />
-          <Route path="/all_modules/getting_started" element={<GettingStarted />} />
-          <Route path="/all_modules/getting_started/frequently_asked_questions" element={<FrequentlyAskedQuestions />} />
+          <Route path="/all_modules/getting_started/" element={<GettingStarted />} />
+          <Route path="/all_modules/getting_started/frequently_asked_questions/" element={<FrequentlyAskedQuestions />} />
           <Route path="/all_modules/getting_started/installations/vs_code" element={<VSCode />} />
           <Route path="/all_modules/getting_started/installations/github" element={<GitHub />} />
 
