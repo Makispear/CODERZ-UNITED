@@ -20,7 +20,7 @@ export default function Quotes() {
 
   return (
     <section className="p-sm:5 py-10 px-3 my-5
-                        flex flex-col w-screen bg-darkGray ">
+                        flex flex-col w-full bg-darkGray">
       <div className="w-full p-10 sm:p-28 flex flex-wrap flex-col justify-between">
         <div className="flex justify-between flex-wrap h-full w-full mt-5">
           <div className="grid place-items-center">
