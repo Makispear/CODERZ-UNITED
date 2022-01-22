@@ -33,7 +33,7 @@
 }
    
 * {
-  /* font-family: var(--primary-font); */
+  /* outline: 3px solid green; */
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -157,6 +157,11 @@ code {
 
 .design-font {
   font-family: 'Abril Fatface', cursive;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+.chalk-font {
+  font-family: 'Fredericka the Great', cursive;
 }
 
 .checkMark {

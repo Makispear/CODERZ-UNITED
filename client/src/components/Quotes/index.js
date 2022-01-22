@@ -19,22 +19,22 @@ export default function Quotes() {
 
 
   return (
-    <section className="p-sm:5 py-10 px-3 my-5
+    <section className="py-10 sm:px-3 my-5
                         flex flex-col w-full bg-darkGray">
       <div className="w-full p-10 sm:p-28 flex flex-wrap flex-col justify-between">
-        <div className="flex justify-between flex-wrap h-full w-full mt-5">
-          <div className="grid place-items-center">
+        <div className="flex justify-around flex-wrap h-full w-full mt-5">
+          <div className="grid place-items-center ">
             <h2 className="font-bold uppercase text-white mt-5">Education is evolving <span className="text-tertiary">..</span></h2>
           </div>
           <SingleQuote props={source1} />
         </div>
-        <div className="flex justify-between flex-wrap h-full w-full mt-5">
+        <div className="flex justify-around flex-wrap h-full w-full mt-5">
           <SingleQuote props={source2} />
-          <div className="grid place-items-center">
+          <div className="grid place-items-center ">
             <h2 className="font-bold text-white uppercase mt-5">There are other ways <span className="text-tertiary">!</span></h2>
           </div>
-          <div className="flex justify-between flex-wrap h-full w-full mt-5">
-            <div className="grid place-items-center">
+          <div className="flex justify-around flex-wrap h-full w-full mt-5">
+            <div className="grid place-items-center ">
               <h2 className="font-bold text-white uppercase mt-5">Here's another one <span className="text-tertiary">...</span></h2>
             </div>
             <SingleQuote props={source3} />

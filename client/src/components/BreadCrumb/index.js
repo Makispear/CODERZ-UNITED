@@ -1,6 +1,5 @@
 export default function BreadCrumb({ props }) {
 
-
   const { color } = props
 
   // get the url path RESULT:   /all_modules/getting_started/
@@ -47,7 +46,7 @@ export default function BreadCrumb({ props }) {
       if (index === array.length - 1) {
         return (
           <li key={index} className="flex justify-center">
-            <span className={`text-tertiary`}>&gt;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span className="text-tertiary">&gt;&nbsp;&nbsp;&nbsp;&nbsp;</span>
             <p className="font-bold text-tertiary text-xsm">{element}</p>
           </li>
         )
@@ -55,7 +54,7 @@ export default function BreadCrumb({ props }) {
       } else if (index === array.length - 2) {
         return (
           <li key={index} className="flex justify-center">
-            <span className={`text-tertiary`}>&gt;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span className="text-tertiary">&gt;&nbsp;&nbsp;&nbsp;&nbsp;</span>
             <p className="text-xsm">{element}</p>
           </li>
         )
@@ -63,7 +62,7 @@ export default function BreadCrumb({ props }) {
       } else {
         return (
           <li key={index} className="hidden md:flex justify-center">
-            <span className={`text-tertiary`}>&gt;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span className="text-tertiary">&gt;&nbsp;&nbsp;&nbsp;&nbsp;</span>
             <p className="text-xsm">{element}</p>
           </li>
         )
