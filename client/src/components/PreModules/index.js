@@ -4,6 +4,7 @@ import { goBack } from "../../utils/previousPage";
 import BreadCrumb from "../BreadCrumb";
 
 export default function PreModules() {
+
   return (
     <section className="flex flex-col w-full items-center p-2 sm:p-7 md:p-32 bg-black text-white">
       <div className="w-full flex lg:w-900 justify-start mt-10 text-secondary">

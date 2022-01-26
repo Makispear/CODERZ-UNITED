@@ -1,6 +1,12 @@
 const { gql } = require('apollo-server-express')
 
 const typeDefs = gql`
+  type CompletedLessons {
+    lessonName: String
+    lessonNumber: String
+    completedDate: String
+  }
+
   type User {
     _id: ID
     firstName: String
@@ -8,11 +14,13 @@ const typeDefs = gql`
     email: String
     password: String
     username: String
+    completedLessons : [CompletedLessons]
   }
   
   type Query {
     users: [User]
     me: User
+    getCompletedLessons: User
   }
 
   type Auth {
@@ -30,6 +38,11 @@ const typeDefs = gql`
     ): Auth
 
     login(email: String!, password: String!): Auth
+
+    markLessonComplete(
+      lessonName: String!
+      lessonNumber: String!
+    ): User
   }
 `
 

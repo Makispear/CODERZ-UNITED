@@ -30,3 +30,14 @@ export const LOGIN = gql`
     }
   }
 `
+
+export const MARK_COMPLETED_LESSON = gql`
+mutation MarkLessonComplete($lessonName: String!, $lessonNumber: String!) {
+  markLessonComplete(lessonName: $lessonName, lessonNumber: $lessonNumber) {
+    completedLessons {
+      lessonName
+      lessonNumber
+    }
+  }
+}
+`

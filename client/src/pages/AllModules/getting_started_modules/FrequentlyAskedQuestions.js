@@ -2,8 +2,30 @@ import BreadCrumb from '../../../components/BreadCrumb'
 import NoteMessage from '../../../components/NoteMessage'
 import PageTracker from '../../../components/PageTracker'
 import { goBack } from '../../../utils/previousPage'
+// import { GET_COMPLETED_LESSONS } from '../../../utils/queries'
+import { MARK_COMPLETED_LESSON } from '../../../utils/mutations'
+import { useMutation } from '@apollo/client'
+// import {useQuery } from '@apollo/client'
 
 export default function Installations() {
+  // const { loading, data } = useQuery(GET_COMPLETED_LESSONS)
+  const [markComplete] = useMutation(MARK_COMPLETED_LESSON)
+  document.title = "Frequently Asked Questions | Getting Started"
+
+  // const myData = data?.getCompletedLessons.completedLessons || null
+
+  const completeLesson = () => {
+    try {
+      markComplete({
+        variables: {
+          lessonName: "Frequently Asked Questions",
+          lessonNumber: '1.1.1'
+        }
+      })
+    } catch (err) {
+      console.log(err)
+    }
+  }
 
 
 
@@ -15,6 +37,7 @@ export default function Installations() {
       <div className="w-full flex justify-center font-bold my-10 text-center capitalize">
         <h1>Frequently asked Questions <PageTracker props={{ page: "1.1.1" }} /></h1>
       </div>
+
 
       <div className="p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 flex flex-col gap-5">
         <BreadCrumb props={{ color: 'darkGray' }} />
@@ -129,7 +152,11 @@ export default function Installations() {
 
         <button className="bg-transparent text-black button-style border border-tertiary hover:border-black font-light uppercase" onClick={goBack}>back</button>
 
-        <button className="bg-black font-bold text-white button-style border-2 border-secondary hover:border-black uppercase tracking-wider">mark complete</button>
+
+        <button className="bg-black font-bold text-white button-style border-2 border-secondary hover:border-black uppercase tracking-wider" onClick={completeLesson}>mark complete</button>
+
+        {/* <button className="bg-black font-bold text-white button-style border-2 border-secondary hover:border-black uppercase tracking-wider">mark complete</button> */}
+
       </div>
 
     </section>

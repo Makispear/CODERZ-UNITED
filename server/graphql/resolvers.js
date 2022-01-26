@@ -8,20 +8,27 @@ const resolvers = {
       return User.find()
     },
 
-    me: async (parent, args, context) => {
+    me: async (_, __, context) => {
       if (context.user) {
-        const userData = await User.findOne({ _id: context.user._id }).select("-__v -password")
+        const userData = await User.findOne({ _id: context.user._id }).select("-__v -password").populate('completedLessons')
         return userData;
       }
-      throw new AuthenticationError("Not logged in");
+      throw new AuthenticationError("Please login to continue.");
+    },
 
+    getCompletedLessons: async (_, __, context) => {
+      if (context.user) {
+        const userData = await User.findOne({ _id: context.user._id }).populate('completedLessons')
+        return userData
+      }
+      throw new AuthenticationError("Please login to continue.");
     }
   },
 
 
   Mutation: {
-    createUser: async (parent, args) => {
-      const user = await User.create(args);
+    createUser: async (_, args) => {
+      const user = await User.create(args)
       if (!user) {
         throw new AuthenticationError("Something went wrong when signing up. Please try again.");
       }
@@ -29,7 +36,7 @@ const resolvers = {
       return { user, token };
     },
 
-    login: async (parent, { email, password }) => {
+    login: async (_, { email, password }) => {
       const user = await User.findOne({ email });
       if (!user) {
         throw new AuthenticationError("Incorrect login information");
@@ -40,6 +47,21 @@ const resolvers = {
       }
       const token = signToken(user);
       return { token, user };
+    },
+
+    // User can mark a  lesson as complete: This will add that lesson to the completedLessons Document
+    // TODO fix duplicate
+    markLessonComplete: async (_, args, context) => {
+      if (context.user) {
+        const updatedUser = await User.findByIdAndUpdate(
+          { _id: context.user._id },
+          { $addToSet: { completedLessons: args } },
+          { new: true, runValidators: true }
+        ).populate('completedLessons')
+
+        return updatedUser;
+      }
+      throw new AuthenticationError("Please login to continue.");
     },
   }
 }

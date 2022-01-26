@@ -1,6 +1,27 @@
 const { Schema, model } = require('mongoose')
 const bcrypt = require('bcrypt');
 
+const lessonSchema = new Schema(
+  {
+    _id: {
+      type: Schema.Types.ObjectId
+    },
+    lessonName: {
+      type: String,
+    },
+    completedDate: {
+      type: String,
+      default: Date.now,
+    },
+    lessonNumber: {
+      type: String,
+    }
+  },
+  {
+    toJSON: { getters: true },
+  }
+)
+
 const userSchema = new Schema(
   {
     firstName: {
@@ -19,10 +40,14 @@ const userSchema = new Schema(
     password: {
       type: String,
       required: true
-    }
+    },
+    completedLessons: [
+      lessonSchema
+    ]
   },
   {
-    toJSON: { virtuals: true }
+    toJSON: { virtuals: true },
+    versionKey: false
   }
 )
 
