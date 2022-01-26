@@ -228,17 +228,17 @@ code {
 input, button, .button-style {
   border-radius: 2px;
 }
-
-form input {
+ 
+input {
   background-color: rgb(var(--grey));
   color: black;
 }
-
-form input::placeholder {
+ 
+input::placeholder {
   color: rgb(var(--white), 0.6);
 }
 
-form input:focus{
+input:focus{
   background-color: rgba(var(--white), 0.6);
   outline: 2px solid rgb(var(--tertiary-color));
 }
