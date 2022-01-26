@@ -1,4 +1,4 @@
-import PrimaryButton from "../Buttons/tertiary/Primary";
+import SecondaryButton from "../Buttons/black/Secondary";
 import { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { LOGIN } from "../../utils/mutations";
@@ -30,9 +30,9 @@ export default function LoginForm() {
 
 
   return (
-    <form className="bg-tertiary flex flex-col p-3" onSubmit={handleLoginSubmit}>
+    <form className=" flex flex-col p-3" onSubmit={handleLoginSubmit}>
       {error &&
-        <div className="flex flex-col p-2 bg-red-500 text-white">
+        <div className="flex flex-col p-2 bg-red-500 text-secondary">
           <p>
             {error.message}
           </p>
@@ -40,17 +40,17 @@ export default function LoginForm() {
       }
       <div className="flex flex-col p-2">
         {error ?
-          <label htmlFor="email" className=" text-xl"><span className="text-red-500">* </span>Email</label>
+          <label htmlFor="email" className=" text-xl text-secondary"><span className="text-red-500">* </span>Email</label>
           :
-          <label htmlFor="email" className=" text-xl">Email</label>
+          <label htmlFor="email" className=" text-xl text-secondary">Email</label>
         }
         <input type="email" name="email" placeholder="someone@example.com" onChange={handleChange} className="p-1" />
       </div>
       <div className="flex flex-col p-2">
         {error ?
-          <label htmlFor="password" className=" text-xl"><span className="text-red-500">* </span>Password</label>
+          <label htmlFor="password" className=" text-xl text-secondary"><span className="text-red-500">* </span>Password</label>
           :
-          <label htmlFor="password" className=" text-xl">Password</label>
+          <label htmlFor="password" className=" text-xl text-secondary">Password</label>
         }
         <input type="password" name="password" placeholder="●●●●●●●●" className="p-1" onChange={handleChange} />
       </div>
@@ -59,10 +59,10 @@ export default function LoginForm() {
         <label for="trainer-yes">Remember me</label>
       </div> */}
       <div className="flex flex-col p-2">
-        <PrimaryButton props={{ buttonName: "UNITE AGAIN" }} />
+        <SecondaryButton props={{ buttonName: "UNITE AGAIN" }} />
       </div>
-      <div className="flex flex-col p-2 text-black ">
-        <p>New to Coderz United? <a href="/signup" className="text-white underline">Sign up.</a></p>
+      <div className="flex flex-col p-2 mt-6 text-darkGray ">
+        <p>New to Coderz United? <a href="/signup" className="link">Sign up.</a></p>
       </div>
     </form>
   )

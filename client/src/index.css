@@ -224,3 +224,21 @@ code {
   background-size: cover;
   background-position: top;
 }
+
+input, button, .button-style {
+  border-radius: 2px;
+}
+
+form input {
+  background-color: rgb(var(--grey));
+  color: black;
+}
+
+form input::placeholder {
+  color: rgb(var(--white), 0.6);
+}
+
+form input:focus{
+  background-color: rgba(var(--white), 0.6);
+  outline: 2px solid rgb(var(--tertiary-color));
+}

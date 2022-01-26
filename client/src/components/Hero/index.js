@@ -1,9 +1,4 @@
-import PrimaryButton from "../Buttons/black/Primary"
-import SecondaryButton from "../Buttons/black/Secondary"
-// import PrimaryButton from "../Buttons/tertiary/Primary"
-// import SecondaryButton from "../Buttons/tertiary/Secondary"
 import logo from "../../assets/images/logo.svg"
-import LearnMore from "../../pages/LearnMore"
 import { Link } from "react-router-dom"
 
 export default function Hero() {
@@ -17,9 +12,9 @@ export default function Hero() {
           <h1 className="font-bold mx-auto sm:m-10 tracking-wide text-white leading-none">LEARN WEB DEVELOPMENT & DESIGN</h1>
         </div>
         <div>
-          <h2 className="sm:mx-10 text-l mt-5 sm:text-2xl text-secondary font-light">Coderz United's mission is your success!</h2>
+          <p className="sm:mx-10 text-l mt-5 sm:text-2xl text-secondary font-light">"Two brains are better than one, three brains are better than two." How about every coder united???</p>
         </div>
-        <div className="gap-2 flex flex-wrap m-14">
+        <div className="gap-2 flex justify-center sm:justify-start flex-wrap m-14">
           <Link to="/signup" className="button-style bg-green-600 hover:border-white font-bold border-black border-2 text-white tracking-widest uppercase">Get started</Link>
           <Link to="/learn_more" className="bg-transparent text-secondary button-style border border-tertiary hover:border-secondary font-light uppercase">learn more</Link>
         </div>
