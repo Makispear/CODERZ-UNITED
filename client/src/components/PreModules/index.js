@@ -28,7 +28,7 @@ export default function PreModules() {
       <div className="w-full flex sm:w-600 md:w-700 lg:w-900 flex-col bg-black gap-4 text-black">
 
         <NavLink to={"/all_modules/getting_started/frequently_asked_questions/"}>
-          <div className="flex justify-between items-center p-5 primary-radius border-2 border-secondary bg-secondary hover:border-white hover:bg-white">
+          <div className="flex justify-between items-center p-5 primary-radius border-2 bg-secondary hover:border-white hover:bg-white">
             <div>
               <p>
                 <span className="font-bold capitalize">1. Frequently asked Questions - </span> Is this course for you?
@@ -39,7 +39,7 @@ export default function PreModules() {
         </NavLink>
 
         <NavLink to={"/all_modules/getting_started/installations/vs_code/"}>
-          <div className="flex justify-between items-center p-5 primary-radius border-2 border-secondary bg-secondary hover:border-white hover:bg-white">
+          <div className="flex justify-between items-center p-5 primary-radius border-2 bg-secondary hover:border-white hover:bg-white">
             <div>
               <p>
                 <span className="font-bold capitalize">2. Installations - </span> Getting your computer ready.
@@ -70,7 +70,7 @@ export default function PreModules() {
         </NavLink>
 
         <div className="flex justify-between w-full items my-10">
-          <button className="bg-transparent text-secondary button-style border border-tertiary hover:border-secondary font-light uppercase" onClick={goBack}>back</button>
+          <button className="bg-transparent text-secondary button-style border border-tertiary hover font-light uppercase" onClick={goBack}>back</button>
         </div>
 
       </div>

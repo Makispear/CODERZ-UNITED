@@ -45,7 +45,7 @@ export default function AllModules() {
       <div className="w-full mt-10 flex sm:w-600 md:w-700 lg:w-900 flex-col bg-black gap-4 text-black">
 
         <NavLink to={"/all_modules/getting_started/"}>
-          <div className="flex justify-between items-center p-5 primary-radius border-2 border-secondary bg-secondary hover:border-white hover:bg-white">
+          <div className="flex justify-between items-center p-5 primary-radius border-2 bg-secondary hover:border-white hover:bg-white">
             <div>
               <p>
                 <span className="font-bold capitalize">1 . Getting started - </span>Pre work
@@ -56,7 +56,7 @@ export default function AllModules() {
         </NavLink>
 
         <NavLink to={"/all_modules/course_modules/"}>
-          <div className="flex justify-between items-center p-5 primary-radius border-2 border-inherit text-black bg-secondary hover:bg-white">
+          <div className="flex justify-between items-center p-5 primary-radius border-2 text-black bg-secondary hover:bg-white">
             <div>
               <p>
                 <span className="font-bold capitalize">2. Course Modules - </span> Lets start Coding.
@@ -69,7 +69,7 @@ export default function AllModules() {
         <NavLink to={'#'} className="locked">
           <div className="flex justify-between items-center p-5 primary-radius border-2 border-darkGray bg-darkGray opacity-50">
             <div>
-              <p className="text-secondary">
+              <p className="text-black">
                 <span className="font-bold capitalize">1 . Getting started - </span>Pre work
               </p>
             </div>
