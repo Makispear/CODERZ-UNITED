@@ -5,6 +5,8 @@ import { goBack } from "../../../../utils/previousPage"
 
 export default function VSCode() {
 
+  document.title = 'Install VS Code | Getting Started'
+
   return (
     <section className="style-module-section">
 

@@ -2,6 +2,8 @@
 import SignupForm from "../components/SignupForm"
 
 export default function Signup() {
+
+  document.title = "Signup | Coderz United"
   return (
     <section className="bg-black w-full grid place-items-center">
       <div className="flex flex-col items-center gap-5">

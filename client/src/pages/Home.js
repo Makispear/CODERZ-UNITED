@@ -4,6 +4,7 @@ import Options from "../components/Options";
 import Quotes from "../components/Quotes"
 
 export default function Home() {
+  document.title = "Coderz United | Learn Web Development & Design"
 
   return (
     <main>

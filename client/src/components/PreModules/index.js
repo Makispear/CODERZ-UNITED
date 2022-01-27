@@ -5,6 +5,7 @@ import BreadCrumb from "../BreadCrumb";
 
 export default function PreModules() {
 
+
   return (
     <section className="flex flex-col w-full items-center p-2 sm:p-7 md:p-32 bg-black text-white">
       <div className="w-full flex lg:w-900 justify-start mt-10 text-secondary">
@@ -18,6 +19,8 @@ export default function PreModules() {
           <span className="text-tertiary">Congratulations on taking the bold first step!</span> This section will get you prepared to start coding like a pro. We want to make sure you have all the tools you'll need from the start.
         </p>
       </div>
+
+
 
 
       <div className="w-full flex lg:w-900 justify-end mt-10 text-secondary">

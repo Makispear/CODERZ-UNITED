@@ -5,6 +5,9 @@ import InfoMessage from "../../../../components/InfoMessage"
 import BreadCrumb from "../../../../components/BreadCrumb"
 
 export default function GitHub() {
+
+  document.title = 'Join GitHub | Getting Started'
+
   return (
     <section className="style-module-section">
       <div className="w-full flex justify-center font-bold my-10 text-center capitalize">

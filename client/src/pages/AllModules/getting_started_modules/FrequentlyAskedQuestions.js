@@ -10,7 +10,7 @@ import { useMutation } from '@apollo/client'
 export default function Installations() {
   // const { loading, data } = useQuery(GET_COMPLETED_LESSONS)
   const [markComplete] = useMutation(MARK_COMPLETED_LESSON)
-  document.title = "Frequently Asked Questions | Getting Started"
+  document.title = "FAQ | Getting Started"
 
   // const myData = data?.getCompletedLessons.completedLessons || null
 
