@@ -14,8 +14,8 @@ export default function PreModules() {
         <h1>
           Getting Started
         </h1>
-        <p className="text-center text-secondary">
-          This is the first step! Every united coder gets the privilege of having a great head start! 🙂
+        <p className="w-full sm:w-600 text-center md:w-700 lg:w-900 bg-black gap-4">
+          <span className="text-tertiary">Congratulations on taking the bold first step!</span> This section will get you prepared to start coding like a pro. We want to make sure you have all the tools you'll need from the start.
         </p>
       </div>
 
@@ -28,7 +28,7 @@ export default function PreModules() {
       <div className="w-full flex sm:w-600 md:w-700 lg:w-900 flex-col bg-black gap-4 text-black">
 
         <NavLink to={"/all_modules/getting_started/frequently_asked_questions/"}>
-          <div className="flex justify-between items-center p-5 border-2 border-black bg-tertiary hover:bg-secondary">
+          <div className="flex justify-between items-center p-5 primary-radius border-2 border-secondary bg-secondary hover:border-white hover:bg-white">
             <div>
               <p>
                 <span className="font-bold capitalize">1. Frequently asked Questions - </span> Is this course for you?
@@ -39,7 +39,7 @@ export default function PreModules() {
         </NavLink>
 
         <NavLink to={"/all_modules/getting_started/installations/vs_code/"}>
-          <div className="flex justify-between items-center p-5 border-2 border-black text-black bg-tertiary hover:bg-secondary">
+          <div className="flex justify-between items-center p-5 primary-radius border-2 border-secondary bg-secondary hover:border-white hover:bg-white">
             <div>
               <p>
                 <span className="font-bold capitalize">2. Installations - </span> Getting your computer ready.
@@ -49,8 +49,8 @@ export default function PreModules() {
           </div>
         </NavLink>
 
-        <NavLink to={"/getting_started"}>
-          <div className="flex justify-between items-center p-5 border-2 border-black text-black bg-tertiaryDark">
+        <NavLink to={"#"} className="locked">
+          <div className="flex justify-between items-center p-5 primary-radius border-2 border-darkGray bg-darkGray opacity-50">
             <div>
               <p>
                 <span className="font-bold capitalize">1. Web development:</span> Is this for me?
@@ -59,8 +59,8 @@ export default function PreModules() {
           </div>
         </NavLink>
 
-        <NavLink to={"/getting_started"}>
-          <div className="flex justify-between items-center p-5 border-2 border-black text-black bg-tertiaryDark">
+        <NavLink to={"#"} className="locked">
+          <div className="flex justify-between items-center p-5 primary-radius border-2 border-darkGray bg-darkGray opacity-50">
             <div>
               <p>
                 <span className="font-bold capitalize">1. Web development:</span> Is this for me?

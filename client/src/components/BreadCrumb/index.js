@@ -73,7 +73,7 @@ export default function BreadCrumb({ props }) {
   }
 
   return (
-    <ul className={`text-${color} flex border-y overflow-x-auto scroll-smooth border-${color} w-auto text-xsm bg-transparent flex-nowrap justify-start mb-7`}>
+    <ul className={`text-${color} hidden md:flex border-y overflow-x-auto scroll-smooth border-${color} w-auto text-xsm bg-transparent flex-nowrap justify-start mb-7`}>
       {render()}
     </ul>
   )

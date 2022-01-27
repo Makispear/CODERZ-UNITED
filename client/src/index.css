@@ -178,9 +178,7 @@ code {
 .checkMark > .marked {
   flex-shrink: 0;
   width: 10px;
-  height: 10px;
-  /* border-radius: 50%; */
-  /* background-color: rgb(var(--black)); */
+  height: 10px;  /* background-color: rgb(var(--black)); */
   background-color: black;
 }
 
@@ -225,9 +223,9 @@ code {
   background-position: top;
 }
 
-input, button, .button-style {
+/* input, button, .button-style {
   border-radius: 2px;
-}
+} */
  
 input {
   background-color: rgb(var(--grey));
@@ -241,4 +239,13 @@ input::placeholder {
 input:focus{
   background-color: rgba(var(--white), 0.6);
   outline: 2px solid rgb(var(--tertiary-color));
+}
+
+.primary-radius {
+  border-radius: 2px !important;
+}
+
+.locked {
+  cursor: not-allowed;
+  
 }

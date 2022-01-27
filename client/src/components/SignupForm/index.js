@@ -55,7 +55,7 @@ export default function SignupForm() {
           :
           <label htmlFor="firstName" className="text-xl text-secondary">First Name</label>
         }
-        <input type="text" name="firstName" id="firstName" placeholder="John" className="p-1" onBlur={handleChange} />
+        <input type="text" name="firstName" id="firstName" placeholder="John" className="p-1 primary-radius" onBlur={handleChange} />
       </div>
       <div className="flex flex-col p-2">
         {error ?
@@ -63,7 +63,7 @@ export default function SignupForm() {
           :
           <label htmlFor="lastName" className="text-xl text-secondary">Last Name</label>
         }
-        <input type="text" name="lastName" placeholder="Smith" className="p-1" onBlur={handleChange} />
+        <input type="text" name="lastName" placeholder="Smith" className="p-1 primary-radius" onBlur={handleChange} />
       </div>
       <div className="flex flex-col p-2">
         {error ?
@@ -71,7 +71,7 @@ export default function SignupForm() {
           :
           <label htmlFor="email" className="text-xl text-secondary">Email</label>
         }
-        <input type="email" name="email" placeholder="someone@example.com" onBlur={handleChange} className="p-1" />
+        <input type="email" name="email" placeholder="someone@example.com" onBlur={handleChange} className="p-1 primary-radius" />
       </div>
       <div className="flex flex-col p-2">
         {error ?
@@ -79,7 +79,7 @@ export default function SignupForm() {
           :
           <label htmlFor="password" className="text-xl text-secondary">Password</label>
         }
-        <input type="password" name="password" placeholder="●●●●●●●●" className="p-1" onBlur={handleChange} />
+        <input type="password" name="password" placeholder="●●●●●●●●" className="p-1 primary-radius" onBlur={handleChange} />
       </div>
       {/* <div className="p-2 font-semibold">
         <input type="checkbox" name="trainer-confirm" id="trainer-yes" className="mr-1" />
