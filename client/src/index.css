@@ -249,3 +249,11 @@ input:focus{
   cursor: not-allowed;
   
 }
+
+.expand-transition {
+  transition: height 0.2s;
+}
+
+.hide-me {
+  display: none;
+}
