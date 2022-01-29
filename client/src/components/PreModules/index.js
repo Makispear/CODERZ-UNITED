@@ -19,9 +19,6 @@ export default function PreModules() {
         </p>
       </div>
 
-
-
-
       <div className="w-full flex lg:w-900 justify-end mt-10 text-secondary">
         <p>(1/4) completed</p>
       </div>
@@ -29,97 +26,78 @@ export default function PreModules() {
       {/* Modules  */}
       <div className="w-full flex sm:w-600 md:w-700 lg:w-900 flex-col bg-black gap-4 text-black">
 
-        {/* <div>
-          <div className="flex justify-between items-center p-5 primary-radius border-2 bg-secondary hover:border-white hover:bg-white">
-            <NavLink to={"/all_modules/getting_started/frequently_asked_questions/"}>
-              <div>
-                <p>
-                  <span className="font-bold capitalize">1. Frequently asked Questions - </span> Is this course for you?
-                </p>
-              </div>
-              <CheckMark props={{ marked: true }} />
-            </NavLink>
-          </div>
-          <div className="installation-lessons hidden">
-            <NavLink to={"/all_modules/getting_started/installations/vs_code/"} className="flex gap-3 items-center ml-5 p-1 primary-radius bg-secondary text-black hover:bg-white" >
-              <CheckMark props={{ marked: true }} /> Install VS Code
-            </NavLink>
-            <NavLink to={"/all_modules/getting_started/installations/github/"} className="flex gap-3 items-center ml-5 p-1 primary-radius bg-secondary text-black hover:bg-white" >
-              <CheckMark props={{ marked: false }} /> Sign up to GitHub
-            </NavLink>
-          </div>
-        </div> */}
-
-        <div className="flex flex-col cursor-pointer select-none" onClick={() => menuExpander(".faq-lessons", ".faq-lessons-expander", "1")}>
+        <div className="flex flex-col cursor-pointer select-none" onClick={() => menuExpander(".faq-lessons", ".faq-lessons-expander")}>
           <div>
             <div>
               <div className="flex justify-between items-center p-3 primary-radius border-x-2 bg-secondary">
                 <div>
-                  <p>
-                    <span className="font-bold capitalize">1. Frequently asked Questions - </span> Is this course for you?
-                  </p>
+                  <button className="font-bold capitalize">
+                    <span className="faq-lessons-expander">➤</span> Frequently asked Questions
+                  </button>
                 </div>
                 <CheckMark props={{ marked: true }} />
               </div>
             </div>
 
-            <button className="bg-secondary primary-radius flex px-2 faq-lessons-expander w-full border-b-2 border-black">
-              ➤ View 1 lessons
-            </button>
           </div>
 
           <div className="faq-lessons hidden">
-            <NavLink to={"/all_modules/getting_started/frequently_asked_questions/"} className="flex gap-3 items-center ml-5 p-1 primary-radius bg-secondary text-black hover:bg-white" >
-              <CheckMark props={{ marked: true }} /> Intro To Web Development
+            <NavLink to={"/all_modules/getting_started/frequently_asked_questions/"} className="flex px-3 m-2 justify-start p-3 primary-radius bg-secondary text-black hover:bg-white" >
+              <div className="mr-1 scale-50">
+                <CheckMark props={{ marked: true }} />
+              </div>
+              Intro To Web Development
             </NavLink>
           </div>
         </div>
 
-        <div className="flex flex-col cursor-pointer select-none" onClick={() => menuExpander(".installation-lessons", ".installation-lessons-expander", "2")}>
+        <div className="flex flex-col cursor-pointer select-none" onClick={() => menuExpander(".installation-lessons", ".installation-lessons-expander")}>
           <div>
             <div>
               <div className="flex justify-between items-center p-3 primary-radius border-x-2 bg-secondary">
                 <div>
-                  <p>
-                    <span className="font-bold capitalize">2. Installations - </span> Getting your computer ready.
-                  </p>
+                  <button className="font-bold capitalize">
+                    <span className="installation-lessons-expander">➤</span> Installations
+                  </button>
                 </div>
                 <CheckMark props={{ marked: false }} />
               </div>
             </div>
 
-            <button className="bg-secondary primary-radius flex px-2 installation-lessons-expander w-full border-b-2 border-black">
-              ➤ View 2 lessons
-            </button>
           </div>
 
           <div className="installation-lessons hidden">
-            <NavLink to={"/all_modules/getting_started/installations/vs_code/"} className="flex gap-3 items-center ml-5 p-1 primary-radius bg-secondary text-black hover:bg-white" >
-              <CheckMark props={{ marked: true }} /> Install VS Code
+            <NavLink to={"/all_modules/getting_started/installations/vs_code/"} className="flex px-3 m-2 justify-start p-3 primary-radius bg-secondary text-black hover:bg-white" >
+              <div className="mr-1 scale-50">
+                <CheckMark props={{ marked: true }} />
+              </div>
+              Install VS Code
             </NavLink>
-            <NavLink to={"/all_modules/getting_started/installations/github/"} className="flex gap-3 items-center ml-5 p-1 primary-radius bg-secondary text-black hover:bg-white" >
-              <CheckMark props={{ marked: false }} /> Sign up to GitHub
+            <NavLink to={"/all_modules/getting_started/installations/github/"} className="flex px-3 m-2 justify-start p-3 primary-radius bg-secondary text-black hover:bg-white" >
+              <div className="mr-1 scale-50">
+                <CheckMark props={{ marked: false }} />
+              </div>
+              Sign up to GitHub
             </NavLink>
           </div>
         </div>
 
-
-        <NavLink to={"#"} className="locked">
+        <NavLink to={"#"} className="locked" title="Completion of previous lessons are required to unlock this lesson.">
           <div className="flex justify-between items-center p-5 primary-radius border-2 border-darkGray bg-darkGray opacity-50">
             <div>
-              <p>
-                <span className="font-bold capitalize">1. Web development:</span> Is this for me?
-              </p>
+              <button className="font-bold capitalize">
+                <span>Locked</span>
+              </button>
             </div>
           </div>
         </NavLink>
 
-        <NavLink to={"#"} className="locked">
+        <NavLink to={"#"} className="locked" title="Completion of previous lessons are required to unlock this lesson.">
           <div className="flex justify-between items-center p-5 primary-radius border-2 border-darkGray bg-darkGray opacity-50">
             <div>
-              <p>
-                <span className="font-bold capitalize">1. Web development:</span> Is this for me?
-              </p>
+              <button className="font-bold capitalize">
+                <span>Locked</span>
+              </button>
             </div>
           </div>
         </NavLink>
