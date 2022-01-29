@@ -24,12 +24,12 @@ export default function PreModules() {
       </div>
 
       {/* Modules  */}
-      <div className="w-full flex sm:w-600 md:w-700 lg:w-900 flex-col bg-black gap-4 text-black">
+      <div className="w-full flex sm:w-600 md:w-700 lg:w-900 flex-col bg-black gap-6 text-black">
 
         <div className="flex flex-col cursor-pointer select-none" onClick={() => menuExpander(".faq-lessons", ".faq-lessons-expander")}>
           <div>
             <div>
-              <div className="flex justify-between items-center p-3 primary-radius border-x-2 bg-secondary">
+              <div className="flex justify-between items-center py-5 px-2 primary-radius border-x-2 bg-secondary hover:bg-white">
                 <div>
                   <button className="font-bold capitalize">
                     <span className="faq-lessons-expander">➤</span> Frequently asked Questions
@@ -41,9 +41,9 @@ export default function PreModules() {
 
           </div>
 
-          <div className="faq-lessons hidden">
-            <NavLink to={"/all_modules/getting_started/frequently_asked_questions/"} className="flex px-3 m-2 justify-start p-3 primary-radius bg-secondary text-black hover:bg-white" >
-              <div className="mr-1 scale-50">
+          <div className="faq-lessons hidden border-t-2 border-black">
+            <NavLink to={"/all_modules/getting_started/frequently_asked_questions/"} className="flex justify-start py-3 pl-10 primary-radius bg-secondary text-black hover:bg-white" >
+              <div className="mr-1 scale-75 brightness-100">
                 <CheckMark props={{ marked: true }} />
               </div>
               Intro To Web Development
@@ -54,7 +54,7 @@ export default function PreModules() {
         <div className="flex flex-col cursor-pointer select-none" onClick={() => menuExpander(".installation-lessons", ".installation-lessons-expander")}>
           <div>
             <div>
-              <div className="flex justify-between items-center p-3 primary-radius border-x-2 bg-secondary">
+              <div className="flex justify-between items-center py-5 px-2 primary-radius border-x-2 bg-secondary hover:bg-white">
                 <div>
                   <button className="font-bold capitalize">
                     <span className="installation-lessons-expander">➤</span> Installations
@@ -66,15 +66,15 @@ export default function PreModules() {
 
           </div>
 
-          <div className="installation-lessons hidden">
-            <NavLink to={"/all_modules/getting_started/installations/vs_code/"} className="flex px-3 m-2 justify-start p-3 primary-radius bg-secondary text-black hover:bg-white" >
-              <div className="mr-1 scale-50">
+          <div className="installation-lessons hidden border-t-2 border-black">
+            <NavLink to={"/all_modules/getting_started/installations/vs_code/"} className="flex justify-start py-3 pl-10 primary-radius bg-secondary text-black hover:bg-white" >
+              <div className="mr-1 scale-75 brightness-100">
                 <CheckMark props={{ marked: true }} />
               </div>
               Install VS Code
             </NavLink>
-            <NavLink to={"/all_modules/getting_started/installations/github/"} className="flex px-3 m-2 justify-start p-3 primary-radius bg-secondary text-black hover:bg-white" >
-              <div className="mr-1 scale-50">
+            <NavLink to={"/all_modules/getting_started/installations/github/"} className="flex justify-start py-3 pl-10 primary-radius bg-secondary text-black hover:bg-white" >
+              <div className="mr-1 scale-75 brightness-100">
                 <CheckMark props={{ marked: false }} />
               </div>
               Sign up to GitHub
@@ -83,7 +83,7 @@ export default function PreModules() {
         </div>
 
         <NavLink to={"#"} className="locked" title="Completion of previous lessons are required to unlock this lesson.">
-          <div className="flex justify-between items-center p-5 primary-radius border-2 border-darkGray bg-darkGray opacity-50">
+          <div className="flex justify-between items-center py-5 px-2 primary-radius border-2 border-darkGray bg-darkGray opacity-50">
             <div>
               <button className="font-bold capitalize">
                 <span>Locked</span>
@@ -93,7 +93,7 @@ export default function PreModules() {
         </NavLink>
 
         <NavLink to={"#"} className="locked" title="Completion of previous lessons are required to unlock this lesson.">
-          <div className="flex justify-between items-center p-5 primary-radius border-2 border-darkGray bg-darkGray opacity-50">
+          <div className="flex justify-between items-center py-5 px-2 primary-radius border-2 border-darkGray bg-darkGray opacity-50">
             <div>
               <button className="font-bold capitalize">
                 <span>Locked</span>
@@ -103,7 +103,9 @@ export default function PreModules() {
         </NavLink>
 
         <div className="flex justify-between w-full items my-10">
-          <button className="bg-transparent text-secondary button-style border border-tertiary hover font-light uppercase" onClick={goBack}>back</button>
+          <button className="bg-transparent text-secondary button-style border border-tertiary hover font-light capitalize" onClick={goBack}>
+            &lt;&lt; Back
+          </button>
         </div>
 
       </div>

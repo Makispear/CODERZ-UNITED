@@ -6,14 +6,14 @@ import CheckMark from "../CheckMark";
 export default function AllModules() {
 
   const motivationalSayings = [
-    "Lets make this your best investment in your coding journey.. together.",
-    "Can't wait to see you at the end of the tunnel",
-    "Sleep, eat, code... repeat.",
+    "Lets make this your best investment in your coding journey.. together!",
+    "Can't wait to see you at the end of the tunnel!",
+    "Sleep. Eat, Code... Repeat.",
     "Lets start coding!",
-    "Nice seeing you! now lets get it done.",
-    "In unity we trust.",
-    "Anything is possible when we are united.",
-    "two heads are better than one. Three heads are better than two. But how about every coder united?"
+    "Nice seeing you! Now lets get it done!",
+    "In unity we trust!",
+    "Anything is possible when we are united!",
+    "two heads are better than one. Three heads are better than two. But how about every coder united?!"
   ]
 
   useEffect(() => {
