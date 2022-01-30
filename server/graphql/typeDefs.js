@@ -12,7 +12,7 @@ const typeDefs = gql`
     firstName: String
     lastName: String
     email: String
-    password: String
+    isNewsLetter: Boolean
     username: String
     completedLessons : [CompletedLessons]
   }
@@ -43,6 +43,8 @@ const typeDefs = gql`
       lessonName: String!
       lessonNumber: String!
     ): User
+
+    joinNewsLetter(isNewsLetter: Boolean): User
   }
 `
 
