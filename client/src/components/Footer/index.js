@@ -5,6 +5,7 @@ import { QUERY_ME } from "../../utils/queries";
 import { useQuery, useMutation } from "@apollo/client";
 import { JOIN_NEWS_LETTER } from "../../utils/mutations";
 import { useState } from "react/cjs/react.development";
+import Auth from "../../utils/auth";
 
 export default function Footer() {
 
@@ -70,7 +71,8 @@ export default function Footer() {
         </div>
         {/* right side  */}
 
-        {!myData.isNewsLetter &&
+        {/* if logged in but not signed to newsletter  */}
+        {Auth.loggedIn() && !myData.isNewsLetter &&
           <div>
             <h2 className="text-white h3-style capitalize">Sign up for our newsletter</h2>
             <form className="w-100 h-12 flex justify-end mt-3" onSubmit={handleSignupSubmit}>
@@ -80,13 +82,26 @@ export default function Footer() {
           </div>
         }
 
-        {myData.isNewsLetter &&
+        {/* if logged in and signed to newsletter  */}
+        {Auth.loggedIn() && myData.isNewsLetter &&
 
           <div>
-            <p className="text-white h3-style capitalize">You are subscribed to our newsletter</p>
+            <p className="text-white h3-style capitalize">Make sure to check out our newsletter</p>
             <button className="button-style text-white border border-tertiary">Unsubscribe</button>
           </div>
         }
+
+        {/* if not logged in  */}
+        {!Auth.loggedIn() &&
+          <div>
+            <h2 className="text-white h3-style capitalize">Sign up for our newsletter</h2>
+            <form className="w-100 h-12 flex justify-end mt-3" onSubmit={handleSignupSubmit}>
+              <input className="w-full p-2 primary-radius" onChange={handleChange} />
+              <SecondaryButton props={{ buttonName: "Subscribe" }} />
+            </form>
+          </div>
+        }
+
       </div>
 
 
