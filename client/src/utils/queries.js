@@ -6,16 +6,7 @@ export const QUERY_ME = gql`
       isNewsLetter
       firstName
       lastName
-    }
-  }
-`
-export const GET_COMPLETED_LESSONS = gql`
-  query getCompletedLessons {
-    getCompletedLessons {
-      completedLessons {
-        lessonName
-        lessonNumber
-      }
+      email
     }
   }
 `

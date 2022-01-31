@@ -47,4 +47,12 @@ export const JOIN_NEWS_LETTER = gql`
       isNewsLetter
     }
   }
-` 
+`
+
+export const Leave_News_Letter = gql`
+  mutation Mutation($isNewsLetter: Boolean) {
+    leaveNewsLetter(isNewsLetter: $isNewsLetter) {
+      isNewsLetter
+    }
+  }
+`

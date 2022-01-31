@@ -12,11 +12,10 @@ export default function Footer() {
   // query if signed to newsletter 
   const { loading, data } = useQuery(QUERY_ME);
   const myData = data?.me || {};
-  console.log(myData.isNewsLetter)
+  // console.log(myData.isNewsLetter)
 
   const [formState, setFormState] = useState({
-
-    // rememberMe: false
+    email: ""
   })
 
   // join newsletter mutation 
@@ -26,12 +25,12 @@ export default function Footer() {
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormState({
-      ...formState,
       [name]: value,
     });
+    console.log(formState)
   };
 
-  const handleSignupSubmit = async event => {
+  const subscribeToNewsletter = async event => {
     event.preventDefault();
 
     try {
@@ -43,6 +42,8 @@ export default function Footer() {
       console.error(e);
     }
   };
+
+
 
 
   return (
@@ -75,8 +76,8 @@ export default function Footer() {
         {Auth.loggedIn() && !myData.isNewsLetter &&
           <div>
             <h2 className="text-white h3-style capitalize">Sign up for our newsletter</h2>
-            <form className="w-100 h-12 flex justify-end mt-3" onSubmit={handleSignupSubmit}>
-              <input className="w-full p-2 primary-radius" onChange={handleChange} />
+            <form className="w-100 h-12 flex justify-end mt-3" onSubmit={subscribeToNewsletter}>
+              <input type="email" name="email" className="w-full p-2 primary-radius" />
               <SecondaryButton props={{ buttonName: "Subscribe" }} />
             </form>
           </div>
@@ -84,10 +85,9 @@ export default function Footer() {
 
         {/* if logged in and signed to newsletter  */}
         {Auth.loggedIn() && myData.isNewsLetter &&
-
           <div>
             <p className="text-white h3-style capitalize">Make sure to check out our newsletter</p>
-            <button className="button-style text-white border border-tertiary">Unsubscribe</button>
+            {/* <button className="button-style text-white border border-tertiary">Unsubscribe</button> */}
           </div>
         }
 
@@ -95,8 +95,8 @@ export default function Footer() {
         {!Auth.loggedIn() &&
           <div>
             <h2 className="text-white h3-style capitalize">Sign up for our newsletter</h2>
-            <form className="w-100 h-12 flex justify-end mt-3" onSubmit={handleSignupSubmit}>
-              <input className="w-full p-2 primary-radius" onChange={handleChange} />
+            <form className="w-100 h-12 flex justify-end mt-3" onSubmit={subscribeToNewsletter}>
+              <input type="email" name="email" className="w-full p-2 primary-radius" onBlur={handleChange} />
               <SecondaryButton props={{ buttonName: "Subscribe" }} />
             </form>
           </div>

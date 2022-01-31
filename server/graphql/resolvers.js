@@ -74,7 +74,8 @@ const resolvers = {
         return updatedUser
       }
       throw new AuthenticationError("Please login to continue.");
-    }
+    },
+
   }
 }
 

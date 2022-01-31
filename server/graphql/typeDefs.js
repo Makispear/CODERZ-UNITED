@@ -46,6 +46,8 @@ const typeDefs = gql`
     ): User
 
     joinNewsLetter(isNewsLetter: Boolean): User
+
+
   }
 `
 
