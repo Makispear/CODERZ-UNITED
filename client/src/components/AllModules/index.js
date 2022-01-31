@@ -13,7 +13,8 @@ export default function AllModules() {
     "Nice seeing you! Now lets get it done!",
     "In unity we trust!",
     "Anything is possible when we are united!",
-    "two heads are better than one. Three heads are better than two. But how about every coder united?!"
+    "Two heads are better than one. Three heads are better than two. How about every coder united?!",
+    "On your marks! Git commit.. PUSH!!"
   ]
 
   useEffect(() => {

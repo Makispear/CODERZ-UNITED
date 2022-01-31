@@ -41,6 +41,10 @@ const userSchema = new Schema(
       type: String,
       required: true
     },
+    isNewsLetter: {
+      type: Boolean,
+      default: false
+    },
     completedLessons: [
       lessonSchema
     ]

@@ -41,3 +41,10 @@ mutation MarkLessonComplete($lessonName: String!, $lessonNumber: String!) {
   }
 }
 `
+export const JOIN_NEWS_LETTER = gql`
+  mutation JoinNewsLetter($isNewsLetter: Boolean) {
+    joinNewsLetter(isNewsLetter: $isNewsLetter) {
+      isNewsLetter
+    }
+  }
+` 

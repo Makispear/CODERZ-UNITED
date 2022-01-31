@@ -2,7 +2,7 @@ export default function InfoMessage({ props }) {
   const { name, note } = props
 
   return (
-    <div className="w-full p-2 my-4">
+    <aside className="w-full p-2 my-4">
       <div className="border-t-2 border-new flex items-center new-word mb-2 px-2">
         <span className="text-3xl w-10 border-2 rounded-full mr-4 text-center text-new">ℹ</span>
         <h2 className="h3-style new-word">{name}:</h2>
@@ -12,6 +12,6 @@ export default function InfoMessage({ props }) {
           {note}
         </p>
       </div>
-    </div>
+    </aside>
   )
 }

@@ -25,7 +25,7 @@ export default function Quotes() {
 
         <div className="flex justify-around flex-wrap h-full w-full mt-5">
           <div className="grid place-items-center ">
-            <h2 className="font-bold uppercase text-white mt-5">Listen to the leaders<span className="text-tertiary"> ...</span></h2>
+            <h2 className="font-bold capitalize text-white mt-5">Listen to the leaders<span className="text-tertiary"> ...</span></h2>
           </div>
           <SingleQuote props={source1} />
         </div>
@@ -33,11 +33,11 @@ export default function Quotes() {
         <div className="flex justify-around flex-wrap h-full w-full mt-5">
           <SingleQuote props={source2} />
           <div className="grid place-items-center ">
-            <h2 className="font-bold text-white uppercase mt-5">And Tech companies<span className="text-tertiary"> !</span></h2>
+            <h2 className="font-bold text-white capitalize mt-5">And Tech companies<span className="text-tertiary"> !</span></h2>
           </div>
           <div className="flex justify-around flex-wrap h-full w-full mt-5">
             <div className="grid place-items-center ">
-              <h2 className="font-bold text-white uppercase mt-5">And Google<span className="text-tertiary"> ..?</span></h2>
+              <h2 className="font-bold text-white capitalize mt-5">And Google<span className="text-tertiary"> ..?</span></h2>
             </div>
             <SingleQuote props={source3} />
           </div>
@@ -45,7 +45,7 @@ export default function Quotes() {
 
       </div>
       <div className="w-full text-white flex flex-wrap justify-center p-4 text-center font-bold">
-        <h2 className="uppercase mt-5">
+        <h2 className="capitalize mt-5">
           What are you waiting for?<a href="/signup" className="link"> Signup </a>/<a href="/login" className="link">Login </a>now.
         </h2>
       </div>

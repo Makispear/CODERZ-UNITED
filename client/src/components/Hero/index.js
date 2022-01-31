@@ -9,7 +9,7 @@ export default function Hero() {
                        align-center
                       mt-14 sm:border-t-2 lg:border-l-2 sm:border-secondary h-max">
         <div>
-          <h1 className="font-bold mx-auto sm:m-10 tracking-wide text-white leading-none">LEARN WEB DEVELOPMENT & DESIGN</h1>
+          <h1 className="font-bold mx-auto sm:m-10 tracking-wide text-white leading-none capitalize">Learn web development  & design</h1>
         </div>
         <div>
           <p className="sm:mx-10 text-l mt-5 sm:text-2xl text-secondary font-light">"Two brains are better than one, three brains are better than two." How about every coder united???</p>
