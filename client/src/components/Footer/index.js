@@ -37,6 +37,7 @@ export default function Footer() {
       await joinNewsLetter({
         variables: { ...formState },
       });
+      window.location.reload()
       // Auth.login(data.createUser.token);
     } catch (e) {
       console.error(e);
@@ -48,30 +49,30 @@ export default function Footer() {
 
   return (
     <footer className="w-full flex flex-col bg-image-flipped mt-20">
-      <div className="w-full flex flex-wrap justify-between gap-5 p-10 sm:px-28 md-mx-40 pb-5">
+      <div className="w-full flex flex-wrap justify-around gap-5 p-10 sm:px-28 md-mx-40 pb-5">
         {/* left side  */}
         <div className="flex flex-col">
           {/* social media  */}
           <div>
             <h2 className="text-white h3-style capitalize">Follow us on social media</h2>
             <ul className="text-darkGray  flex mt-3">
-              <NavLink to={"/"} className="mr-3 font-lighter hover:text-secondary">LinkedIn</NavLink >
-              <NavLink to={"/"} className="mr-3 font-lighter hover:text-secondary">Instagram</NavLink >
-              <NavLink to={"/"} className="mr-3 font-lighter hover:text-secondary">Facebook</NavLink >
+              <NavLink to={"#"} className="mr-3 font-lighter link-dark">LinkedIn</NavLink >
+              <NavLink to={"#"} className="mr-3 font-lighter link-dark">Instagram</NavLink >
+              <NavLink to={"#"} className="mr-3 font-lighter link-dark">Facebook</NavLink >
+              <NavLink to={"#"} className="mr-3 font-lighter link-dark">YouTube</NavLink >
             </ul>
           </div>
           {/* contact  */}
           <div className="mt-14 ">
             <h2 className="text-white h3-style capitalize">Contact us</h2>
             <ul className="text-darkGray  flex flex-col">
-              <NavLink to={"#"} className="mt-3 hover:text-secondary">Email</NavLink >
-              <NavLink to={"#"} className="mt-3 hover:text-secondary">Whatsapp</NavLink >
-              <NavLink to={"#"} className="mt-3 hover:text-secondary">Text Message</NavLink >
+              <NavLink to={"#"} className="mt-3 link-dark">Email</NavLink >
+              <NavLink to={"#"} className="mt-3 link-dark">Whatsapp</NavLink >
+              <NavLink to={"#"} className="mt-3 link-dark">SMS</NavLink >
             </ul>
           </div>
         </div>
         {/* right side  */}
-
         {/* if logged in but not signed to newsletter  */}
         {Auth.loggedIn() && !myData.isNewsLetter &&
           <div>
@@ -101,6 +102,7 @@ export default function Footer() {
             </form>
           </div>
         }
+
 
       </div>
 

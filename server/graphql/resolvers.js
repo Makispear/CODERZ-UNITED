@@ -64,16 +64,22 @@ const resolvers = {
       throw new AuthenticationError("Please login to continue.");
     },
 
-    joinNewsLetter: async (_, args, context) => {
+    joinNewsLetter: async (_, { email }, context) => {
       if (context.user) {
         const updatedUser = await User.findOneAndUpdate(
-          { _id: context.user._id },
+          { email: context.user.email },
+          { $set: { isNewsLetter: true } },
+          { new: true }
+        )
+        return updatedUser
+      } else {
+        const updatedUser = await User.findOneAndUpdate(
+          { email: email },
           { $set: { isNewsLetter: true } },
           { new: true }
         )
         return updatedUser
       }
-      throw new AuthenticationError("Please login to continue.");
     },
 
   }

@@ -45,7 +45,7 @@ const typeDefs = gql`
       lessonNumber: String!
     ): User
 
-    joinNewsLetter(isNewsLetter: Boolean): User
+    joinNewsLetter(email: String): User
 
 
   }

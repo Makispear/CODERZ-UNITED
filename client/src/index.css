@@ -118,6 +118,15 @@ li {
   font-style: italic;
 }
 
+.link-dark {
+  color: rgb(var(--grey-color));
+  font-style: italic;
+}
+
+.link-dark:hover {
+  color: rgb(var(--tertiary-color));
+  font-style: italic;
+}
 
 /* buttons  */
 .button-style {

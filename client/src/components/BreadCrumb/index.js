@@ -35,7 +35,8 @@ export default function BreadCrumb({ props }) {
       }
     }
     // capitalize and push to arrayOfLinks
-    let finalWords = tempNewWord.toUpperCase()
+    let one = tempNewWord.split(' ')
+    let finalWords = one.map(word => word[0].toUpperCase() + word.substring(1, word.length).toLowerCase() + " ")
     ArrayOfLinks.push(finalWords)
   })
 
@@ -47,7 +48,7 @@ export default function BreadCrumb({ props }) {
         return (
           <li key={index} className="flex justify-center">
             <span className="text-tertiary">&gt;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-            <p className="font-bold text-tertiary text-xsm">{element}</p>
+            <p className="text-tertiary text-xsm">{element}</p>
           </li>
         )
         // if the link is the second last make it visible on mobile
