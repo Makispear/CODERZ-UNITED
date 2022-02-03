@@ -2,26 +2,30 @@ import BreadCrumb from '../../../components/BreadCrumb'
 import NoteMessage from '../../../components/NoteMessage'
 import PageTracker from '../../../components/PageTracker'
 import { goBack } from '../../../utils/previousPage'
-// import { GET_COMPLETED_LESSONS } from '../../../utils/queries'
 import { MARK_COMPLETED_LESSON } from '../../../utils/mutations'
 import { useMutation } from '@apollo/client'
-// import {useQuery } from '@apollo/client'
+import { useQuery } from '@apollo/client'
+import { GET_COMPLETED_LESSONS } from '../../../utils/queries'
 
 export default function Installations() {
-  // const { loading, data } = useQuery(GET_COMPLETED_LESSONS)
+  const Lesson_title = "Frequently Asked Questions"
+  const { loading, data } = useQuery(GET_COMPLETED_LESSONS)
   const [markComplete] = useMutation(MARK_COMPLETED_LESSON)
   document.title = "FAQ | Getting Started"
+  let showMarkCompleteButton = true
 
-  // const myData = data?.getCompletedLessons.completedLessons || null
+  const myData = data?.getCompletedLessons.completedLessons || null
+  console.log(myData)
 
   const completeLesson = () => {
     try {
       markComplete({
         variables: {
-          lessonName: "Frequently Asked Questions",
+          lessonName: Lesson_title,
           lessonNumber: '1.1.1'
         }
       })
+      window.location.reload()
     } catch (err) {
       console.log(err)
     }
@@ -29,13 +33,24 @@ export default function Installations() {
 
 
 
+  if (myData) {
+    myData.forEach(lesson => {
+      console.log("loops")
+      if (lesson.lessonName === Lesson_title) {
+        showMarkCompleteButton = false
+        return
+      }
+    });
+  }
+
+  console.log(showMarkCompleteButton)
 
   return (
     <section className="style-module-section">
 
 
       <div className="w-full flex justify-center font-bold my-10 text-center capitalize">
-        <h1>Frequently asked Questions <PageTracker props={{ page: "1.1.1" }} /></h1>
+        <h1>{Lesson_title} <PageTracker props={{ page: "1.1.1" }} /></h1>
       </div>
 
 
@@ -153,9 +168,14 @@ export default function Installations() {
         <button className="bg-transparent text-black button-style border border-tertiary hover:border-black font-light capitalize" onClick={goBack}>&lt;&lt; Back</button>
 
 
-        <button className="bg-black font-bold text-white button-style border-2 border-secondary hover:border-black capitalize tracking-wider" onClick={completeLesson}>mark complete ✔ </button>
+        {showMarkCompleteButton &&
+          <button className="bg-black font-bold text-white button-style border-2 border-secondary hover:border-black capitalize tracking-wider" onClick={completeLesson}>mark complete ✔ </button>
+        }
+        {!showMarkCompleteButton &&
+          <p className="button-style bg-secondary">completed ✔ </p>
+        }
 
-        {/* <button className="bg-black font-bold text-white button-style border-2 border-secondary hover:border-black capitalize tracking-wider">mark complete</button> */}
+
 
       </div>
 
