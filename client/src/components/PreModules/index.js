@@ -3,8 +3,31 @@ import CheckMark from "../CheckMark";
 import { goBack } from "../../utils/previousPage";
 import BreadCrumb from "../BreadCrumb";
 import { menuExpander } from "../../utils/menuExpander";
+import { useQuery } from "@apollo/client";
+import { GET_COMPLETED_LESSONS } from "../../utils/queries";
 
 export default function PreModules() {
+  const { loading, data } = useQuery(GET_COMPLETED_LESSONS)
+  const myData = data?.getCompletedLessons.completedLessons || null
+
+  const lessonsArr = [
+    {
+      lessonName: 'Frequently Asked Questions',
+      marked: false
+    }
+  ]
+
+  if (myData) {
+    myData.forEach((lesson, index) => {
+      if (lesson.lessonName === lessonsArr[index].lessonName) {
+        lessonsArr[index].marked = true
+        console.log(lessonsArr[index].marked)
+        return
+      }
+    });
+  }
+
+
   return (
     <section className="flex flex-col w-full items-center p-2 sm:p-7 md:p-32 bg-black text-white">
       <div className="w-full flex lg:w-900 justify-start mt-10 text-secondary">
@@ -35,7 +58,7 @@ export default function PreModules() {
                     <span className="faq-lessons-expander">➤</span> Frequently asked Questions
                   </button>
                 </div>
-                <CheckMark props={{ marked: true }} />
+                <CheckMark props={{ marked: lessonsArr[0].marked }} />
               </div>
             </div>
 
@@ -44,7 +67,7 @@ export default function PreModules() {
           <div className="faq-lessons hidden border-t-2 border-black">
             <NavLink to={"/all_modules/getting_started/frequently_asked_questions/"} className="flex justify-start py-3 pl-10 primary-radius bg-secondary text-black hover:bg-white" >
               <div className="mr-1 scale-75 brightness-100">
-                <CheckMark props={{ marked: true }} />
+                <CheckMark props={{ marked: lessonsArr[0].marked }} />
               </div>
               Intro To Web Development
             </NavLink>

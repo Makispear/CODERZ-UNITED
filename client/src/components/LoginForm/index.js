@@ -15,6 +15,7 @@ export default function LoginForm() {
       [name]: value,
     });
   };
+
   const handleLoginSubmit = async event => {
     event.preventDefault();
     try {
@@ -27,7 +28,6 @@ export default function LoginForm() {
       console.error(e);
     }
   };
-
 
   return (
     <form className=" flex flex-col p-3" onSubmit={handleLoginSubmit}>

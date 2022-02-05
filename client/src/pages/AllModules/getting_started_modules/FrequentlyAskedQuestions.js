@@ -35,7 +35,6 @@ export default function Installations() {
 
   if (myData) {
     myData.forEach(lesson => {
-      console.log("loops")
       if (lesson.lessonName === Lesson_title) {
         showMarkCompleteButton = false
         return
