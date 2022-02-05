@@ -14,17 +14,22 @@ export default function PreModules() {
     {
       lessonName: 'Frequently Asked Questions',
       marked: false
+    },
+    {
+      lessonName: 'Installations',
+      marked: false
     }
   ]
 
   if (myData) {
-    myData.forEach((lesson, index) => {
-      if (lesson.lessonName === lessonsArr[index].lessonName) {
-        lessonsArr[index].marked = true
-        console.log(lessonsArr[index].marked)
-        return
+    for (let i = 0; i < myData.length; i++) {
+      for (let j = 0; j < lessonsArr.length; j++) {
+        if (myData[i].lessonName === lessonsArr[j].lessonName) {
+          lessonsArr[j].marked = true
+          console.log(lessonsArr)
+        }
       }
-    });
+    }
   }
 
 
@@ -58,7 +63,8 @@ export default function PreModules() {
                     <span className="faq-lessons-expander">➤</span> Frequently asked Questions
                   </button>
                 </div>
-                <CheckMark props={{ marked: lessonsArr[0].marked }} />
+                {lessonsArr[0].marked && <CheckMark props={{ marked: true }} />}
+                {!lessonsArr[0].marked && <CheckMark props={{ marked: false }} />}
               </div>
             </div>
 
@@ -92,7 +98,7 @@ export default function PreModules() {
           <div className="installation-lessons hidden border-t-2 border-black">
             <NavLink to={"/all_modules/getting_started/installations/vs_code/"} className="flex justify-start py-3 pl-10 primary-radius bg-secondary text-black hover:bg-white" >
               <div className="mr-1 scale-75 brightness-100">
-                <CheckMark props={{ marked: true }} />
+                <CheckMark props={{ marked: false }} />
               </div>
               Install VS Code
             </NavLink>
