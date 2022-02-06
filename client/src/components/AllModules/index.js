@@ -52,7 +52,7 @@ export default function AllModules() {
                 <span className="font-bold capitalize">1 . Getting started - </span>Pre work
               </p>
             </div>
-            <CheckMark props={{ marked: true }} />
+            <CheckMark props={{ marked: false }} />
           </div>
         </NavLink>
 

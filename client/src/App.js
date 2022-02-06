@@ -28,6 +28,8 @@ import GitHub from "./pages/AllModules/getting_started_modules/installations/Git
 // Footer ***********************************************
 import Footer from "./components/Footer";
 import CourseModules from "./pages/AllModules/course_modules/CourseModules";
+import ScrollToTop from "./utils/scrollToTop";
+import NotFound from "./utils/NotFound";
 
 function App() {
   const BrandName = "CODERZ UNITED"
@@ -56,6 +58,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
+        <ScrollToTop />
         <Nav BrandName={BrandName} />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -73,6 +76,7 @@ function App() {
 
           {/* Course Modules  */}
           <Route path="/all_modules/course_modules" element={<CourseModules />} />
+          <Route path='*' exact={true} element={<NotFound />} />
         </Routes>
         <Footer BrandName={BrandName} />
       </Router>

@@ -6,16 +6,17 @@ import { MARK_COMPLETED_LESSON } from '../../../utils/mutations'
 import { useMutation } from '@apollo/client'
 import { useQuery } from '@apollo/client'
 import { GET_COMPLETED_LESSONS } from '../../../utils/queries'
+import { NavLink } from 'react-router-dom'
 
 export default function Installations() {
   const Lesson_title = "Frequently Asked Questions"
   const { loading, data } = useQuery(GET_COMPLETED_LESSONS)
   const [markComplete] = useMutation(MARK_COMPLETED_LESSON)
   document.title = "FAQ | Getting Started"
-  let showMarkCompleteButton = true
+  let showMarkCompleteButton = false
+  let showButton = false
 
   const myData = data?.getCompletedLessons.completedLessons || null
-  console.log(myData)
 
   const completeLesson = () => {
     try {
@@ -24,8 +25,11 @@ export default function Installations() {
           lessonName: Lesson_title,
           lessonNumber: '1.1.1'
         }
+      }).then((result) => {
+        if (result) {
+          window.location.href = "/all_modules/getting_started/installations/vs_code/";
+        }
       })
-      window.location.reload()
     } catch (err) {
       console.log(err)
     }
@@ -34,15 +38,29 @@ export default function Installations() {
 
 
   if (myData) {
-    myData.forEach(lesson => {
-      if (lesson.lessonName === Lesson_title) {
-        showMarkCompleteButton = false
+    let isFound = false;
+
+    for (let i = 0; i < myData.length; i++) {
+      if (myData[i].lessonName !== Lesson_title) {
         return
       }
-    });
+
+      if (myData[i].lessonName === Lesson_title) {
+        isFound = true
+      }
+      break
+    }
+
+    if (isFound) {
+      showButton = true;
+      showMarkCompleteButton = false
+    } else {
+      showButton = true;
+      showMarkCompleteButton = true
+    }
+
   }
 
-  console.log(showMarkCompleteButton)
 
   return (
     <section className="style-module-section">
@@ -167,11 +185,13 @@ export default function Installations() {
         <button className="bg-transparent text-black button-style border border-tertiary hover:border-black font-light capitalize" onClick={goBack}>&lt;&lt; Back</button>
 
 
-        {showMarkCompleteButton &&
-          <button className="bg-black font-bold text-white button-style border-2 border-secondary hover:border-black capitalize tracking-wider" onClick={completeLesson}>mark complete ✔ </button>
+        {showMarkCompleteButton && showButton &&
+          <div className='flex'>
+            <button className="bg-green-600 font-bold text-white button-style border-2 border-secondary hover:border-black capitalize tracking-wider" onClick={completeLesson}>complete &amp; next </button>
+          </div>
         }
-        {!showMarkCompleteButton &&
-          <p className="button-style bg-secondary">completed ✔ </p>
+        {!showMarkCompleteButton && showButton &&
+          <NavLink to="/all_modules/getting_started/installations/vs_code/" className="bg-black font-bold text-white button-style border-2 border-secondary hover:border-black capitalize tracking-wider">next &gt;&gt;</NavLink>
         }
 
 
