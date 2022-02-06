@@ -130,9 +130,10 @@ li {
 
 /* buttons  */
 .button-style {
-  padding: 0.55em 1.4em;
-  width: max-content;
+  padding: 0.5em 1em;
+  width: fit-content;
   letter-spacing: normal !important;
+  white-space: nowrap;
 }
 
 

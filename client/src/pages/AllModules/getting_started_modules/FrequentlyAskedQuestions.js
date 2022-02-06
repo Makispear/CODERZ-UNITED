@@ -132,13 +132,10 @@ export default function Installations() {
 
       <div className="text-start flex flex-col my-1 p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 items-start w-full">
         <h2 className="text-black font-semibold mb-2 h3-style">
-          6. What a web developer is<span className="warning-word">n't?</span>
+          6. What a web developer <span className="warning-word">isn't?</span>
         </h2>
-        <p className="w-full warning-word">
-          A web designer.
-        </p>
         <p className="w-full text-darkGray">
-          Most people come into web development after looking at cool-looking websites. If you are more into the design aspect of the website and not so much into functionality, coding, and data, then web design is more suited for you. On the other hand, if you are more into logic, data, and programming in general, web development is the better choice.
+          - A Web Designer. Most people come into web development after looking at cool-looking websites. If you are more into the design aspect of the website and not so much into functionality, coding, and data, then web design is more suited for you. On the other hand, if you are more into logic, data, and programming in general, web development is the better choice.
         </p>
         {/* Note Message  */}
         <NoteMessage
@@ -178,7 +175,7 @@ export default function Installations() {
 
       <div className="text-start flex flex-col my-1 p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 items-start w-full">
         <h2 className="text-black font-semibold mb-2 h3-style">
-          10. How do I know web development is<span className="warning-word">n't</span> for me?
+          10. How do I know web development <span className="warning-word">isn't</span> for me?
         </h2>
         <p className="w-full text-darkGray">
           Web development is an always-evolving field and requires continuous learning of new concepts and updates. It also requires you to work for long hours in front of a screen.
@@ -187,7 +184,7 @@ export default function Installations() {
       <div className="flex my-1 justify-between w-full items p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900">
 
 
-        <NavLink to="/all_modules/getting_started/" className="bg-transparent text-black button-style border border-tertiary hover:border-black font-light capitalize">&lt;&lt; Back</NavLink>
+        <NavLink to="/all_modules/getting_started/" className="button-style bg-transparent text-black button-style border border-tertiary hover:border-black font-light capitalize">&lt;&lt; Back</NavLink>
 
 
         {showMarkCompleteButton && showButton &&
@@ -196,7 +193,7 @@ export default function Installations() {
           </div>
         }
         {!showMarkCompleteButton && showButton &&
-          <NavLink to="/all_modules/getting_started/" className="bg-transparent text-black button-style border border-tertiary hover:border-black font-light capitalize">next &gt;&gt;</NavLink>
+          <NavLink to="/all_modules/getting_started/" className="button-style bg-transparent text-black button-style border border-tertiary hover:border-black font-light capitalize">next &gt;&gt;</NavLink>
         }
 
 
