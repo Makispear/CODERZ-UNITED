@@ -27,7 +27,7 @@ export default function Installations() {
         }
       }).then((result) => {
         if (result) {
-          window.location.href = "/all_modules/getting_started/installations/vs_code/";
+          window.location.href = "/all_modules/getting_started/";
         }
       })
 
@@ -186,16 +186,17 @@ export default function Installations() {
       </div>
       <div className="flex my-1 justify-between w-full items p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900">
 
-        <button className="bg-transparent text-black button-style border border-tertiary hover:border-black font-light capitalize" onClick={goBack}>&lt;&lt; Back</button>
+
+        <NavLink to="/all_modules/getting_started/" className="bg-transparent text-black button-style border border-tertiary hover:border-black font-light capitalize">&lt;&lt; back to menu</NavLink>
 
 
         {showMarkCompleteButton && showButton &&
           <div className='flex'>
-            <button className="bg-green-600 font-bold text-white button-style border-2 border-secondary hover:border-black capitalize tracking-wider" onClick={completeLesson}>complete &amp; next </button>
+            <button className="bg-tertiary font-bold text-white button-style border-2 border-secondary hover:border-tertiary capitalize tracking-wider" onClick={completeLesson}>Complete &amp; next </button>
           </div>
         }
         {!showMarkCompleteButton && showButton &&
-          <NavLink to="/all_modules/getting_started/installations/vs_code/" className="bg-black font-bold text-white button-style border-2 border-secondary hover:border-black capitalize tracking-wider">next &gt;&gt;</NavLink>
+          <NavLink to="/all_modules/getting_started/" className="bg-transparent text-black button-style border border-tertiary hover:border-black font-light capitalize">next &gt;&gt;</NavLink>
         }
 
 

@@ -15,7 +15,8 @@ module.exports = {
         pink: 'rgb(233,12,218)',
         new: 'rgb(0, 63, 156)',
         careful: 'orange',
-        warning: 'red'
+        warning: 'red',
+        green: "rgb(0, 153, 0)"
       },
       width: {
         // '100': '100px',

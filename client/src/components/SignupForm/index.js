@@ -86,7 +86,7 @@ export default function SignupForm() {
         <label for="trainer-yes">Remember me</label>
       </div> */}
       <div className="flex flex-col p-2">
-        <SecondaryButton props={{ buttonName: "UNITE" }} />
+        <button className="bg-tertiary font-bold text-white button-style border-2 border-secondary hover:border-tertiary capitalize tracking-wider">Sign up </button>
       </div>
       <div className="flex flex-col p-2 mt-6 text-darkGray">
         <p>Already United? <a href="/login" className="link">Login</a> instead.</p>

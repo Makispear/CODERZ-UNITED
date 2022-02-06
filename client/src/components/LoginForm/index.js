@@ -59,7 +59,7 @@ export default function LoginForm() {
         <label for="trainer-yes">Remember me</label>
       </div> */}
       <div className="flex flex-col p-2">
-        <SecondaryButton props={{ buttonName: "UNITE AGAIN" }} />
+        <button className="bg-tertiary font-bold text-white button-style border-2 border-secondary hover:border-tertiary capitalize tracking-wider">Login</button>
       </div>
       <div className="flex flex-col p-2 mt-6 text-darkGray ">
         <p>New to Coderz United? <a href="/signup" className="link">Sign up.</a></p>
