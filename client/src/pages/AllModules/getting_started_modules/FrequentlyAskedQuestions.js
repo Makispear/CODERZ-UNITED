@@ -11,7 +11,7 @@ import { NavLink } from 'react-router-dom'
 export default function Installations() {
   const Lesson_title = "Frequently Asked Questions"
   const { loading, data } = useQuery(GET_COMPLETED_LESSONS)
-  const [markComplete] = useMutation(MARK_COMPLETED_LESSON)
+  const [markComplete, { error }] = useMutation(MARK_COMPLETED_LESSON)
   document.title = "FAQ | Getting Started"
   let showMarkCompleteButton = false
   let showButton = false
@@ -30,12 +30,16 @@ export default function Installations() {
           window.location.href = "/all_modules/getting_started/installations/vs_code/";
         }
       })
-    } catch (err) {
-      console.log(err)
+
+
+    } catch (error) {
+      console.log(error.message)
     }
   }
 
-
+  if (error) {
+    alert(error.message)
+  }
 
   if (myData) {
     let isFound = false;
