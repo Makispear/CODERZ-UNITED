@@ -134,6 +134,7 @@ li {
   width: fit-content;
   letter-spacing: normal !important;
   white-space: nowrap;
+  border-radius: 2px !important;
 }
 
 
@@ -249,6 +250,7 @@ code {
 input {
   background-color: rgb(var(--grey));
   color: black;
+  border-radius: 2px !important;
 }
  
 input::placeholder {
