@@ -7,7 +7,7 @@ import { useQuery } from "@apollo/client";
 import { GET_COMPLETED_LESSONS } from "../../utils/queries";
 
 export default function PreModules() {
-  const { loading, data } = useQuery(GET_COMPLETED_LESSONS)
+  const { data } = useQuery(GET_COMPLETED_LESSONS)
   const myData = data?.getCompletedLessons.completedLessons || null
 
   const lessonsArr = [
@@ -16,7 +16,11 @@ export default function PreModules() {
       marked: false
     },
     {
-      lessonName: 'Installations',
+      lessonName: 'Install VS Code',
+      marked: false
+    },
+    {
+      lessonName: 'Sign up to GitHub',
       marked: false
     }
   ]
@@ -26,7 +30,6 @@ export default function PreModules() {
       for (let j = 0; j < lessonsArr.length; j++) {
         if (myData[i].lessonName === lessonsArr[j].lessonName) {
           lessonsArr[j].marked = true
-          console.log(lessonsArr)
         }
       }
     }
@@ -63,8 +66,7 @@ export default function PreModules() {
                     <span className="faq-lessons-expander">➤</span> Frequently asked Questions
                   </button>
                 </div>
-                {lessonsArr[0].marked && <CheckMark props={{ marked: true }} />}
-                {!lessonsArr[0].marked && <CheckMark props={{ marked: false }} />}
+                {lessonsArr[0].marked ? <CheckMark props={{ marked: true }} /> : <CheckMark props={{ marked: false }} />}
               </div>
             </div>
 
@@ -89,7 +91,7 @@ export default function PreModules() {
                     <span className="installation-lessons-expander">➤</span> Installations
                   </button>
                 </div>
-                <CheckMark props={{ marked: false }} />
+                {lessonsArr[1].marked && lessonsArr[2].marked ? <CheckMark props={{ marked: true }} /> : <CheckMark props={{ marked: false }} />}
               </div>
             </div>
 
@@ -98,13 +100,13 @@ export default function PreModules() {
           <div className="installation-lessons hidden border-t-2 border-black">
             <NavLink to={"/all_modules/getting_started/installations/vs_code/"} className="flex justify-start py-3 pl-10 primary-radius bg-secondary text-black hover:bg-white" >
               <div className="mr-1 scale-75 brightness-100">
-                <CheckMark props={{ marked: false }} />
+                {lessonsArr[1].marked ? <CheckMark props={{ marked: true }} /> : <CheckMark props={{ marked: false }} />}
               </div>
               Install VS Code
             </NavLink>
             <NavLink to={"/all_modules/getting_started/installations/github/"} className="flex justify-start py-3 pl-10 primary-radius bg-secondary text-black hover:bg-white" >
               <div className="mr-1 scale-75 brightness-100">
-                <CheckMark props={{ marked: false }} />
+                {lessonsArr[2].marked ? <CheckMark props={{ marked: true }} /> : <CheckMark props={{ marked: false }} />}
               </div>
               Sign up to GitHub
             </NavLink>

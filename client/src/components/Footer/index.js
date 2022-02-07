@@ -10,7 +10,7 @@ import Auth from "../../utils/auth";
 export default function Footer() {
 
   // query if signed to newsletter 
-  const { loading, data } = useQuery(QUERY_ME);
+  const { data } = useQuery(QUERY_ME);
   const myData = data?.me || {};
   // console.log(myData.isNewsLetter)
 
@@ -19,7 +19,7 @@ export default function Footer() {
   })
 
   // join newsletter mutation 
-  const [joinNewsLetter, { error }] = useMutation(JOIN_NEWS_LETTER)
+  const [joinNewsLetter] = useMutation(JOIN_NEWS_LETTER)
 
 
   const handleChange = (event) => {

@@ -28,7 +28,7 @@ export default function BreadCrumb({ props }) {
 
     for (let i = 0; i < word.length; i++) {
 
-      if (word[i] == '_') {
+      if (word[i] === '_') {
         tempNewWord = tempNewWord.concat(" ")
       } else {
         tempNewWord = tempNewWord + word[i]

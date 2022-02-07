@@ -1,7 +1,7 @@
 import BreadCrumb from '../../../components/BreadCrumb'
 import NoteMessage from '../../../components/NoteMessage'
 import PageTracker from '../../../components/PageTracker'
-import { goBack } from '../../../utils/previousPage'
+// import { goBack } from '../../../utils/previousPage'
 import { MARK_COMPLETED_LESSON } from '../../../utils/mutations'
 import { useMutation } from '@apollo/client'
 import { useQuery } from '@apollo/client'
@@ -30,8 +30,6 @@ export default function Installations() {
           window.location.href = "/all_modules/getting_started/";
         }
       })
-
-
     } catch (error) {
       console.log(error.message)
     }
@@ -45,10 +43,6 @@ export default function Installations() {
     let isFound = false;
 
     for (let i = 0; i < myData.length; i++) {
-      if (myData[i].lessonName !== Lesson_title) {
-        return
-      }
-
       if (myData[i].lessonName === Lesson_title) {
         isFound = true
       }
@@ -184,7 +178,7 @@ export default function Installations() {
       <div className="flex my-1 justify-between w-full items p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900">
 
 
-        <NavLink to="/all_modules/getting_started/" className="button-style bg-transparent text-black button-style border border-tertiary hover:border-black font-light capitalize">&lt;&lt; Back</NavLink>
+        <NavLink to="/all_modules/getting_started/" className="bg-transparent text-black button-style border border-tertiary hover:border-black font-light capitalize">&lt;&lt; Back</NavLink>
 
 
         {showMarkCompleteButton && showButton &&
@@ -193,7 +187,7 @@ export default function Installations() {
           </div>
         }
         {!showMarkCompleteButton && showButton &&
-          <NavLink to="/all_modules/getting_started/" className="button-style bg-transparent text-black button-style border border-tertiary hover:border-black font-light capitalize">next &gt;&gt;</NavLink>
+          <NavLink to="/all_modules/getting_started/" className="bg-transparent text-black button-style border border-tertiary hover:border-black font-light capitalize">next &gt;&gt;</NavLink>
         }
 
 

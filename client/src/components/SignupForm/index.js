@@ -1,4 +1,3 @@
-import SecondaryButton from "../Buttons/black/Secondary";
 import { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { CREATE_USER } from "../../utils/mutations";

@@ -1,12 +1,61 @@
-import { goBack } from "../../../../utils/previousPage"
 import { NavLink } from "react-router-dom"
 import PageTracker from "../../../../components/PageTracker"
 import InfoMessage from "../../../../components/InfoMessage"
 import BreadCrumb from "../../../../components/BreadCrumb"
+import { useMutation, useQuery } from "@apollo/client"
+import { GET_COMPLETED_LESSONS } from "../../../../utils/queries"
+import { MARK_COMPLETED_LESSON } from "../../../../utils/mutations"
 
 export default function GitHub() {
-
+  const Lesson_title = "Sign up to GitHub"
+  const { data } = useQuery(GET_COMPLETED_LESSONS)
+  const [markComplete, { error }] = useMutation(MARK_COMPLETED_LESSON)
   document.title = 'Join GitHub | Getting Started'
+  let showMarkCompleteButton = false
+  let showButton = false
+
+  const myData = data?.getCompletedLessons.completedLessons || null
+
+  const completeLesson = () => {
+    try {
+      markComplete({
+        variables: {
+          lessonName: Lesson_title,
+          lessonNumber: '1.2.2'
+        }
+      }).then((result) => {
+        if (result) {
+          window.location.href = "/all_modules/getting_started/";
+        }
+      })
+    } catch (error) {
+      console.log(error.message)
+    }
+  }
+
+  if (error) {
+    alert(error.message)
+  }
+
+  if (myData) {
+    let isFound = false;
+
+    for (let i = 0; i < myData.length; i++) {
+      if (myData[i].lessonName === Lesson_title) {
+        isFound = true
+        break
+      }
+    }
+
+    if (isFound) {
+      showButton = true;
+      showMarkCompleteButton = false
+    } else {
+      showButton = true;
+      showMarkCompleteButton = true
+    }
+
+  }
 
   return (
     <section className="style-module-section">
@@ -63,8 +112,17 @@ export default function GitHub() {
       </div>
 
       <div className="flex my-1 justify-between w-full items p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900">
-        <button className="bg-transparent text-black button-style border border-tertiary hover:border-black font-light capitalize" onClick={goBack}>&lt;&lt; Back</button>
-        <NavLink to="/getting_started/installations/GitHub" className="bg-black font-bold text-white button-style border-2 border-secondary hover:border-black capitalize tracking-wider">next &gt;</NavLink>
+
+        <NavLink to="/all_modules/getting_started/installations/vs_code/" className="bg-transparent text-black button-style border border-tertiary hover:border-black font-light capitalize">&lt;&lt; Back</NavLink>
+
+        {showMarkCompleteButton && showButton &&
+          <div className='flex'>
+            <button className="bg-tertiary font-bold text-white button-style border-2 border-secondary hover:border-tertiary capitalize tracking-wider" onClick={completeLesson}>Complete &amp; next </button>
+          </div>
+        }
+        {!showMarkCompleteButton && showButton &&
+          <NavLink to="/all_modules/getting_started//all_modules/getting_started/" className="bg-transparent text-black button-style border border-tertiary hover:border-black font-light capitalize">next &gt;&gt;</NavLink>
+        }
       </div>
 
     </section >
