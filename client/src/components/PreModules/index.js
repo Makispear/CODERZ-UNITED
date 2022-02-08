@@ -134,9 +134,7 @@ export default function PreModules() {
         </NavLink>
 
         <div className="flex justify-between w-full items my-10">
-          <button className="bg-transparent text-secondary button-style border border-tertiary hover font-light capitalize" onClick={goBack}>
-            &lt;&lt; Back
-          </button>
+          <NavLink to="/all_modules/" className="bg-transparent text-secondary button-style border border-tertiary hover:border-secondary font-light capitalize">&lt;&lt; Back</NavLink>
         </div>
 
       </div>
