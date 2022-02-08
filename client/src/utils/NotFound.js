@@ -1,4 +1,3 @@
-import { goBack } from "./previousPage";
 import Auth from "../utils/auth"
 import { NavLink } from "react-router-dom";
 

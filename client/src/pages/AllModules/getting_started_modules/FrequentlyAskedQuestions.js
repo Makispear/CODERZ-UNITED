@@ -1,7 +1,6 @@
 import BreadCrumb from '../../../components/BreadCrumb'
 import NoteMessage from '../../../components/NoteMessage'
 import PageTracker from '../../../components/PageTracker'
-// import { goBack } from '../../../utils/previousPage'
 import { MARK_COMPLETED_LESSON } from '../../../utils/mutations'
 import { useMutation } from '@apollo/client'
 import { useQuery } from '@apollo/client'
@@ -10,7 +9,7 @@ import { NavLink } from 'react-router-dom'
 
 export default function Installations() {
   const Lesson_title = "Frequently Asked Questions"
-  const { loading, data } = useQuery(GET_COMPLETED_LESSONS)
+  const { data } = useQuery(GET_COMPLETED_LESSONS)
   const [markComplete, { error }] = useMutation(MARK_COMPLETED_LESSON)
   document.title = "FAQ | Getting Started"
   let showMarkCompleteButton = false
@@ -92,7 +91,7 @@ export default function Installations() {
           2. What will I learn in this course?
         </h2>
         <p className="w-full text-darkGray">
-          You will be learning a bunch of new technologies to see the curriculum. Here is the <a className="link" href="#">table of content</a>
+          You will be learning a bunch of new technologies to see the curriculum. Here is the <a href="notFound" className="link" >table of content</a>
         </p>
       </div>
 
@@ -111,7 +110,7 @@ export default function Installations() {
           4. Do I need to be good at math to become a web developer?
         </h2>
         <p className="w-full text-darkGray">
-          No. You don't need to be good at math to become a web developer, however you need to be able to think logically and critically to be able to problem solve and <a className="link" target="_blank" href="https://www.google.com/search?q=debug+meaning">debug</a>.
+          No. You don't need to be good at math to become a web developer, however you need to be able to think logically and critically to be able to problem solve and <a className="link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?q=debug+meaning">debug</a>.
         </p>
       </div>
 

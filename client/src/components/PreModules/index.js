@@ -1,6 +1,5 @@
 import { NavLink } from "react-router-dom";
 import CheckMark from "../CheckMark";
-import { goBack } from "../../utils/previousPage";
 import BreadCrumb from "../BreadCrumb";
 import { menuExpander } from "../../utils/menuExpander";
 import { useQuery } from "@apollo/client";
@@ -13,15 +12,18 @@ export default function PreModules() {
   const lessonsArr = [
     {
       lessonName: 'Frequently Asked Questions',
-      marked: false
+      marked: false,
+      isLocked: false
     },
     {
       lessonName: 'Install VS Code',
-      marked: false
+      marked: false,
+      isLocked: true
     },
     {
       lessonName: 'Sign up to GitHub',
-      marked: false
+      marked: false,
+      isLocked: true
     }
   ]
 
@@ -30,9 +32,13 @@ export default function PreModules() {
       for (let j = 0; j < lessonsArr.length; j++) {
         if (myData[i].lessonName === lessonsArr[j].lessonName) {
           lessonsArr[j].marked = true
+          if (lessonsArr.length !== j + 1) {
+            lessonsArr[j + 1].isLocked = false
+          }
         }
       }
     }
+    console.table(lessonsArr)
   }
 
 
@@ -55,9 +61,9 @@ export default function PreModules() {
       </div>
 
       {/* Modules  */}
-      <div className="w-full flex sm:w-600 md:w-700 lg:w-900 flex-col bg-black gap-6 text-black">
+      <div className="w-full flex sm:w-600 md:w-700 lg:w-900 flex-col bg-black text-black">
 
-        <div className="flex flex-col cursor-pointer select-none" onClick={() => menuExpander(".faq-lessons", ".faq-lessons-expander")}>
+        <div className="flex flex-col cursor-pointer select-none mt-5" onClick={() => menuExpander(".faq-lessons", ".faq-lessons-expander")}>
           <div>
             <div>
               <div className="flex justify-between items-center py-5 px-2 primary-radius border-x-2 bg-secondary hover:bg-white">
@@ -71,18 +77,17 @@ export default function PreModules() {
             </div>
 
           </div>
-
-          <div className="faq-lessons hidden border-t-2 border-black">
-            <NavLink to={"/all_modules/getting_started/frequently_asked_questions/"} className="flex justify-start py-3 pl-10 primary-radius bg-secondary text-black hover:bg-white" >
-              <div className="mr-1 scale-75 brightness-100">
-                <CheckMark props={{ marked: lessonsArr[0].marked }} />
-              </div>
-              Intro To Web Development
-            </NavLink>
-          </div>
+        </div>
+        <div className="faq-lessons hidden border-t-2 border-black mb-10 pl-1">
+          <NavLink to={"/all_modules/getting_started/frequently_asked_questions/"} className="flex justify-start py-3 pl-10 primary-radius bg-secondary text-black hover:bg-white" >
+            <div className="mr-1 scale-75 brightness-100">
+              <CheckMark props={{ marked: lessonsArr[0].marked }} />
+            </div>
+            Intro To Web Development
+          </NavLink>
         </div>
 
-        <div className="flex flex-col cursor-pointer select-none" onClick={() => menuExpander(".installation-lessons", ".installation-lessons-expander")}>
+        <div className="flex flex-col cursor-pointer select-none mt-5" onClick={() => menuExpander(".installation-lessons", ".installation-lessons-expander")}>
           <div>
             <div>
               <div className="flex justify-between items-center py-5 px-2 primary-radius border-x-2 bg-secondary hover:bg-white">
@@ -97,41 +102,34 @@ export default function PreModules() {
 
           </div>
 
-          <div className="installation-lessons hidden border-t-2 border-black">
-            <NavLink to={"/all_modules/getting_started/installations/vs_code/"} className="flex justify-start py-3 pl-10 primary-radius bg-secondary text-black hover:bg-white" >
-              <div className="mr-1 scale-75 brightness-100">
-                {lessonsArr[1].marked ? <CheckMark props={{ marked: true }} /> : <CheckMark props={{ marked: false }} />}
-              </div>
-              Install VS Code
-            </NavLink>
-            <NavLink to={"/all_modules/getting_started/installations/github/"} className="flex justify-start py-3 pl-10 primary-radius bg-secondary text-black hover:bg-white" >
-              <div className="mr-1 scale-75 brightness-100">
-                {lessonsArr[2].marked ? <CheckMark props={{ marked: true }} /> : <CheckMark props={{ marked: false }} />}
-              </div>
-              Sign up to GitHub
-            </NavLink>
-          </div>
+        </div>
+        <div className="installation-lessons hidden border-t-2 border-black mb-10 pl-1">
+          <NavLink to={`${lessonsArr[1].isLocked ? "#" : "/all_modules/getting_started/installations/vs_code/"}`}
+            className={`
+                ${lessonsArr[1].isLocked ?
+                "locked flex justify-start py-3 pl-10 primary-radius bg-darkGray brightness-75"
+                :
+                "flex justify-start py-3 pl-10 primary-radius bg-secondary text-black hover:bg-white"}
+                `} >
+            <div className="mr-1 scale-75 brightness-100">
+              {lessonsArr[1].marked ? <CheckMark props={{ marked: true }} /> : <CheckMark props={{ marked: false }} />}
+            </div>
+            Install VS Code
+          </NavLink>
+          <NavLink to={`${lessonsArr[2].isLocked ? "#" : "/all_modules/getting_started/installations/github/"}`}
+            className={`
+                ${lessonsArr[2].isLocked ?
+                "locked flex justify-start py-3 pl-10 primary-radius bg-darkGray brightness-75"
+                :
+                "flex justify-start py-3 pl-10 primary-radius bg-secondary text-black hover:bg-white"}
+                `} >
+            <div className="mr-1 scale-75 brightness-100">
+              {lessonsArr[2].marked ? <CheckMark props={{ marked: true }} /> : <CheckMark props={{ marked: false }} />}
+            </div>
+            Sign up to GitHub
+          </NavLink>
         </div>
 
-        <NavLink to={"#"} className="locked" title="Completion of previous lessons are required to unlock this lesson.">
-          <div className="flex justify-between items-center py-5 px-2 primary-radius border-2 border-darkGray bg-darkGray opacity-50">
-            <div>
-              <button className="font-bold capitalize">
-                <span>Locked</span>
-              </button>
-            </div>
-          </div>
-        </NavLink>
-
-        <NavLink to={"#"} className="locked" title="Completion of previous lessons are required to unlock this lesson.">
-          <div className="flex justify-between items-center py-5 px-2 primary-radius border-2 border-darkGray bg-darkGray opacity-50">
-            <div>
-              <button className="font-bold capitalize">
-                <span>Locked</span>
-              </button>
-            </div>
-          </div>
-        </NavLink>
 
         <div className="flex justify-between w-full items my-10">
           <NavLink to="/all_modules/" className="bg-transparent text-secondary button-style border border-tertiary hover:border-secondary font-light capitalize">&lt;&lt; Back</NavLink>

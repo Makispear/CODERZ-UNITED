@@ -7,7 +7,7 @@ import { GET_COMPLETED_LESSONS } from "../../../../utils/queries"
 
 export default function VSCode() {
   const Lesson_title = "Install VS Code"
-  const { loading, data } = useQuery(GET_COMPLETED_LESSONS)
+  const { data } = useQuery(GET_COMPLETED_LESSONS)
   const [markComplete, { error }] = useMutation(MARK_COMPLETED_LESSON)
   document.title = 'Install VS Code | Getting Started'
   let showMarkCompleteButton = false
@@ -77,7 +77,7 @@ export default function VSCode() {
         </p>
         <p>
           Let's download Visual Studio Code (also known as VS Code). VS Code is a
-          code editor owned by Microsoft and is one of the best if not the best Code Editors web developers use. It's also free and has a ton of great features. Let's go ahead and download it now. Here is the link to the  <a className="link" href="https://code.visualstudio.com/download">download VS Code</a>.
+          code editor owned by Microsoft and is one of the best if not the best Code Editors web developers use. It's also free and has a ton of great features. Let's go ahead and download it now. Here is the link to the <a className="link" target="_blank" rel="noopener noreferrer" href="https://code.visualstudio.com/download">download VS Code</a>.
         </p>
 
         <p>
