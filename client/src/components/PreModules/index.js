@@ -4,6 +4,7 @@ import BreadCrumb from "../BreadCrumb";
 import { menuExpander } from "../../utils/menuExpander";
 import { useQuery } from "@apollo/client";
 import { GET_COMPLETED_LESSONS } from "../../utils/queries";
+import { markComplete } from "../../utils/markComplete";
 
 export default function PreModules() {
   const { data } = useQuery(GET_COMPLETED_LESSONS)
@@ -27,23 +28,11 @@ export default function PreModules() {
     }
   ]
 
-  if (myData) {
-    for (let i = 0; i < myData.length; i++) {
-      for (let j = 0; j < lessonsArr.length; j++) {
-        if (myData[i].lessonName === lessonsArr[j].lessonName) {
-          lessonsArr[j].marked = true
-          if (lessonsArr.length !== j + 1) {
-            lessonsArr[j + 1].isLocked = false
-          }
-        }
-      }
-    }
-    console.table(lessonsArr)
-  }
+  markComplete(myData, lessonsArr)
 
 
   return (
-    <section className="flex flex-col w-full items-center p-2 sm:p-7 md:p-32 bg-black text-white">
+    <section className="style-page-section">
       <div className="w-full flex lg:w-900 justify-start mt-10 text-secondary">
         <BreadCrumb props={{ color: 'secondary' }} />
       </div>

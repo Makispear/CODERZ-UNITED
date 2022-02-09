@@ -22,7 +22,7 @@ export default function AllModules() {
 
 
   return (
-    <section className="flex flex-col w-full items-center p-2 sm:p-7 md:p-32 bg-black text-white">
+    <section className="style-page-section">
 
       <div className="flex flex-col items-center mt-5">
         <h1>

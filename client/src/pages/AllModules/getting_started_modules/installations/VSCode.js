@@ -57,7 +57,7 @@ export default function VSCode() {
   }
 
   return (
-    <section className="style-module-section">
+    <section className="style-module-section highlight">
 
       <div className="w-full flex justify-center font-bold my-10 text-center capitalize">
         <h1>Installations <PageTracker props={{ page: "1.2.1" }} /></h1>

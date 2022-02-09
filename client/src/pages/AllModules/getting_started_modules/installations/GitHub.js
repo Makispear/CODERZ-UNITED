@@ -58,7 +58,7 @@ export default function GitHub() {
   }
 
   return (
-    <section className="style-module-section">
+    <section className="style-module-section highlight">
       <div className="w-full flex justify-center font-bold my-10 text-center capitalize">
         <h1>Installations <PageTracker props={{ page: '1.2.2' }} /></h1>
       </div>

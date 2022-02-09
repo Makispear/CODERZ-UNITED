@@ -1,51 +1,72 @@
+/* =========================== IMPORTS ========================= */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 /* Nunito font  */
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
-
-
-
 /* EB garamound font  */
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lobster&family=Nunito&display=swap');
+/* ==================== CUSTOMIZATIONS ======================== */
 :root {
-  --primary-color: 39,40,47;
-  --secondary-color: 204,204,204;
-  --black: 0,0,0;
-  --tertiary-color: 0,169,226;
-  --tertiary-color-dark: 0,132,181;
-  --white: 255,255,255;
-  --grey: 61,61,61;
-  --pink: 233,12,218;
-
-  --primary-font: 'Raleway', sans-serif;
-  --logo-font: 'EB garamond', sans-serif;
+  /* colors  */
+    --primary-color: 39,40,47;
+    --secondary-color: 204,204,204;
+    --black: 0,0,0;
+    --tertiary-color: 0,169,226;
+    --tertiary-color-dark: 0,132,181;
+    --white: 255,255,255;
+    --grey: 61,61,61;
+    --pink: 233,12,218;
+  /* fonts  */
+    --primary-font: 'Raleway', sans-serif;
+    --logo-font: 'EB garamond', sans-serif;
 }
+/* ====================== GENERIC STYLES ======================= */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(var(--black)) !important;
+  font-family: var(--primary-font), serif;
+} 
 
 .logo-font {
   font-family: var(--logo-font);
 }
    
 * {
-  /* outline: 3px solid green; */
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: var(--primary-font), serif;
 }
 
-section *::selection {
-  color: rgb(var(--black));
-  background-color: #FFFF00;
-  border: 2px solid red;
+.primary-radius {
+  border-radius: 2px !important;
 }
 
+.locked {
+  cursor: not-allowed;
+}
+
+.bg-image {
+  background-image: url('./assets//images/black.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+.bg-image-flipped {
+  background-image: url('./assets//images/blackFlipped.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+/* ===================== TEXT STYLES ========================= */
 h1, .h1-style {
   font-size: clamp(2rem, 5vw, 4rem);
 }
@@ -58,16 +79,26 @@ h3, .h3-style {
   font-size: clamp(1.3rem, 3vw, 2rem) !important;
 }
 
-
 p, .p-style {
   font-size: clamp(1.2rem, 2vw, 1.3rem) !important;
 }
 
+.text-xsm {
+  font-size: 12px !important;
+}
+
+.design-font {
+  font-family: 'Abril Fatface', cursive;
+}
+
+.chalk-font {
+  font-family: 'Fredericka the Great', cursive;
+}
 
 li {
   padding: 10px;
 }
-
+/* ================== SINGLE LESSON PAGE STYLINGS =========================== */
 .style-module-section {
   color: black;
   z-index: 50;
@@ -79,19 +110,9 @@ li {
   text-align: start;
 }
 
-.style-page-section {
-  color: white;
-  z-index: 50;
-  width: 100%;
-  background-color: black;
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  text-align: start;
-}
-
-.text-xsm {
-  font-size: 12px !important;
+.style-module-section *::selection {
+  color: rgb(var(--black));
+  background-color: #FFFF00;
 }
 
 @media only screen and (min-width: 640px) {
@@ -105,9 +126,31 @@ li {
     padding-top: 10rem;
   }
 }
+/* ================== MODULES STYLINGS ======================= */
+.style-page-section {
+  color: white;
+  z-index: 50;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  text-align: start;
+  padding: 0.5rem;
+}
 
+@media only screen and (min-width: 640px) {
+  .style-page-section {
+    padding: 1.75rem;
+  }
+}
 
-
+@media only screen and (min-width: 768px) {
+  .style-page-section {
+    padding: 8rem;
+  }
+}
+/* =================== LINKS ===================== */
 .link {
   color: rgb(var(--tertiary-color));
   font-style: italic;
@@ -127,8 +170,7 @@ li {
   color: rgb(var(--tertiary-color));
   font-style: italic;
 }
-
-/* buttons  */
+/* =================== BUTTONS ===================== */
 .button-style {
   padding: 0.5em 1em;
   width: fit-content;
@@ -136,9 +178,7 @@ li {
   white-space: nowrap;
   border-radius: 2px !important;
 }
-
-
-/* this is for the option section  */
+/* ============= OPTIONS COMPONENT STYLING =============== */
 .option-container > div{
   width: clamp(300px, 25vw 500px) !important;
 }
@@ -146,36 +186,7 @@ li {
 .paragraph-width {
   width: 300px;
 }
-
-
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background-color: rgb(var(--black)) !important;
-  /* font-family: 'Roboto', sans-serif; */
-  /* -webkit-font-smoothing: antialiased; */
-  /* -moz-osx-font-smoothing: grayscale; */
-} 
-
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lobster&family=Nunito&display=swap');
-
-.design-font {
-  font-family: 'Abril Fatface', cursive;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
-.chalk-font {
-  font-family: 'Fredericka the Great', cursive;
-}
-
-
+/* ============= CHECK MARK STYLING =============== */
 .checkMark {
   position: relative;
   display: grid;
@@ -184,7 +195,6 @@ code {
   height: 20px;
   border: 1px solid black;
 }
-
 
 .checkMark > .marked::before {
   position: absolute;
@@ -209,14 +219,13 @@ code {
   transform: translateX(7px) translateY(11px) rotate(-45deg);
   transform-origin: left bottom;
 }
-
+/* ============= WORD HIGHLIGHTING =============== */
 .warning-word {
   color: red;
 }
 
 .careful-word {
   color: orange;
-  
 }
 
 .positive-word {
@@ -228,25 +237,7 @@ code {
   color: rgb(0, 63, 156);
   font-weight: bold;
 }
-
-.bg-image {
-  background-image: url('./assets//images/black.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-}
-
-.bg-image-flipped {
-  background-image: url('./assets//images/blackFlipped.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
-}
-
-/* input, button, .button-style {
-  border-radius: 2px;
-} */
- 
+/* ============= INPUT STYLES =============== */
 input {
   background-color: rgb(var(--grey));
   color: black;
@@ -257,23 +248,8 @@ input::placeholder {
   color: rgb(var(--white), 0.6);
 }
 
-input:focus{
+input:focus {
   background-color: rgba(var(--white), 0.6);
   outline: 2px solid rgb(var(--tertiary-color));
 }
-
-.primary-radius {
-  border-radius: 2px !important;
-}
-
-.locked {
-  cursor: not-allowed;
-}
-
-.expand-transition {
-  transition: height 0.2s;
-}
-
-.hide-me {
-  display: none;
-}
+/* =================================================== */
