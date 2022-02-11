@@ -68,7 +68,7 @@ export default function AllModules() {
       {/* Modules  */}
       <div className="w-full mt-10 flex sm:w-600 md:w-700 lg:w-900 flex-col bg-black gap-4 text-black">
 
-        <NavLink to={"/all_modules/getting_started/"} props={lessonsArr}>
+        <NavLink to={"/all_modules/getting_started/"}>
         <div>
             <div>
               <div className="flex justify-between items-center p-5 primary-radius border-2 text-black bg-secondary hover:bg-white">
