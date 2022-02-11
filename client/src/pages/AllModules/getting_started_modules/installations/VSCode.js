@@ -62,14 +62,14 @@ export default function VSCode() {
     <section className="style-module-section highlight">
 
       <div className="w-full flex justify-center font-bold my-10 text-center capitalize">
-        <h1>Installations <PageTracker props={{ page: Lesson_Number }} /></h1>
+        <h1>Installations</h1>
       </div>
       <div className="p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 flex flex-col gap-5">
         <div className="w-full flex lg:w-900 justify-start mt-10 text-secondary">
           <BreadCrumb props={{ color: 'darkGray' }} />
         </div>
         <h2>
-          Install VS Code
+          Install VS Code <PageTracker props={{ page: Lesson_Number }} />
         </h2>
       </div>
 

@@ -12,7 +12,7 @@ export default function PreModules() {
 
   const lessonsArr = [
     {
-      lessonName: 'Frequently Asked Questions',
+      lessonName: 'FAQ',
       isCompleted: false,
       isLocked: false
     },
@@ -63,7 +63,7 @@ export default function PreModules() {
               <div className="flex justify-between items-center py-5 px-2 primary-radius border-x-2 bg-secondary hover:bg-white">
                 <div>
                   <button className="font-bold capitalize">
-                    <span className="faq-lessons-expander">➤</span> Frequently asked Questions
+                    <span className="faq-lessons-expander">➤</span> Intro To Web Development
                   </button>
                 </div>
                 {lessonsArr[0].isCompleted ? <CheckMark props={{ marked: true }} /> : <CheckMark props={{ marked: false }} />}
@@ -77,7 +77,7 @@ export default function PreModules() {
             <div className="mr-1 scale-75 brightness-100">
               <CheckMark props={{ marked: lessonsArr[0].isCompleted }} />
             </div>
-            Intro To Web Development
+            {lessonsArr[0].lessonName}
           </NavLink>
         </div>
         {/* Installations  */}

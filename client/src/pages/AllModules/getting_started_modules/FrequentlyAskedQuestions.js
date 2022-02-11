@@ -7,7 +7,7 @@ import { GET_COMPLETED_LESSONS } from '../../../utils/queries'
 import { NavLink } from 'react-router-dom'
 
 export default function Installations() {
-  const Lesson_title = "Frequently Asked Questions"
+  const Lesson_title = "FAQ"
   const Lesson_Number = "1.1.1"
   const { data } = useQuery(GET_COMPLETED_LESSONS)
   const [markComplete, { error }] = useMutation(MARK_COMPLETED_LESSON)
@@ -63,12 +63,20 @@ export default function Installations() {
 
 
       <div className="w-full flex justify-center font-bold my-10 text-center capitalize">
-        <h1>{Lesson_title} <PageTracker props={{ page: Lesson_Number }} /></h1>
+        <h1>Intro To Web Development</h1>
+        {/* <h1>Intro To Web Development <PageTracker props={{ page: Lesson_Number }} /></h1> */}
+      </div>
+      <div className="p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 flex flex-col gap-5">
+        <div className="w-full flex lg:w-900 justify-start mt-10 text-secondary">
+          <BreadCrumb props={{ color: 'darkGray' }} />
+        </div>
+        <h2>
+          {Lesson_title} <PageTracker props={{ page: Lesson_Number }} />
+        </h2>
       </div>
 
 
       <div className="p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 flex flex-col gap-5">
-        <BreadCrumb props={{ color: 'darkGray' }} />
         <p><span className="font-bold">Welcome to the course!</span> We are excited to unite and be a part of your web development journey. Before we get started, let's get all the questions you might have answered. We also want to make sure that you're on the right career path.</p>
 
         <p>Web development is more than just a job. It is a lifestyle. Once you enter the world of web development, you need to keep up with the growing tech to remain a valuable asset to a company. You should be immersed in web development and encounter it almost daily. One of the things that can help you engage is to follow people on social media who are into web development or are already working as web developers. Subscribe to a YouTube channel that keeps you up with new technologies and updates.</p>

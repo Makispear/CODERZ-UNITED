@@ -61,12 +61,16 @@ export default function Chrome() {
   return (
     <section className="style-module-section">
 
-      <div className="w-full flex justify-center font-bold my-10 text-center capitalize">
-        <h1>{Lesson_title} <PageTracker props={{ page: Lesson_Number }} /></h1>
+      <div className="p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 flex flex-col gap-5">
+        <div className="w-full flex lg:w-900 justify-start mt-10 text-secondary">
+          <BreadCrumb props={{ color: 'darkGray' }} />
+        </div>
+        <h2>
+          {Lesson_title}
+        </h2>
       </div>
 
       <div className="p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 flex flex-col gap-5">
-        <BreadCrumb props={{ color: 'darkGray' }} />
         <p>Since we are web developers, we'll need a web browser to work. The most popular web browser is Google Chrome. Luckily since you are already reading these sentences on a web browser, there's a 66% chance you're reading this on Google chrome. If that's the case, feel free and mark this lesson complete to continue to the next one.</p>
 
         <InfoMessage props={{
