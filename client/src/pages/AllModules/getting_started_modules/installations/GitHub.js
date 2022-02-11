@@ -8,9 +8,10 @@ import { MARK_COMPLETED_LESSON } from "../../../../utils/mutations"
 
 export default function GitHub() {
   const Lesson_title = "Sign up to GitHub"
+  const Lesson_Number = '1.2.2'
   const { data } = useQuery(GET_COMPLETED_LESSONS)
   const [markComplete, { error }] = useMutation(MARK_COMPLETED_LESSON)
-  document.title = 'Join GitHub | Getting Started'
+  document.title = `Join GitHub | Getting Started' | Lesson ${Lesson_Number}`
   let showMarkCompleteButton = false
   let showButton = false
 
@@ -20,12 +21,12 @@ export default function GitHub() {
     try {
       markComplete({
         variables: {
-          lessonName: Lesson_title,
-          lessonNumber: '1.2.2'
+          lessonName: Lesson_title.trim(),
+          lessonNumber: Lesson_Number.trim()
         }
       }).then((result) => {
         if (result) {
-          window.location.href = "/all_modules/getting_started/";
+          window.location.href = "/all_modules/getting_started/installations/chrome/";
         }
       })
     } catch (error) {
@@ -60,7 +61,7 @@ export default function GitHub() {
   return (
     <section className="style-module-section highlight">
       <div className="w-full flex justify-center font-bold my-10 text-center capitalize">
-        <h1>Installations <PageTracker props={{ page: '1.2.2' }} /></h1>
+        <h1>Installations <PageTracker props={{ page: Lesson_Number }} /></h1>
       </div>
 
       <div className="p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 flex flex-col gap-5">
@@ -93,7 +94,7 @@ export default function GitHub() {
           </li>
         </ol>
 
-        <InfoMessage props={{ name: "Info", note: "In web development, we often say pull instead of download and push instead of upload." }} />
+        <InfoMessage props={{ name: "Info", note: 'In web development, we often say pull instead of download and push instead of upload. Therefore "push your code" means "upload your code to GitHub"' }} />
 
         <p>
           <a className="link" href="https://github.com/join">Link to GitHub signup page</a>
@@ -121,7 +122,7 @@ export default function GitHub() {
           </div>
         }
         {!showMarkCompleteButton && showButton &&
-          <NavLink to="/all_modules/getting_started//all_modules/getting_started/" className="bg-transparent text-black button-style border border-tertiary hover:border-black font-light capitalize">next &gt;&gt;</NavLink>
+          <NavLink to="/all_modules/getting_started/installations/chrome/" className="bg-transparent text-black button-style border border-tertiary hover:border-black font-light capitalize">next &gt;&gt;</NavLink>
         }
       </div>
 

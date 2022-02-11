@@ -30,6 +30,7 @@ import Footer from "./components/Footer";
 import CourseModules from "./pages/AllModules/course_modules/CourseModules";
 import ScrollToTop from "./utils/scrollToTop";
 import NotFound from "./utils/NotFound";
+import Chrome from "./pages/AllModules/getting_started_modules/installations/Chrome";
 
 function App() {
   const BrandName = "CODERZ UNITED"
@@ -71,8 +72,9 @@ function App() {
           <Route path="/all_modules/" element={<AllModules />} />
           <Route path="/all_modules/getting_started/" element={<GettingStarted />} />
           <Route path="/all_modules/getting_started/frequently_asked_questions/" element={<FrequentlyAskedQuestions />} />
-          <Route path="/all_modules/getting_started/installations/vs_code" element={<VSCode />} />
-          <Route path="/all_modules/getting_started/installations/github" element={<GitHub />} />
+          <Route path="/all_modules/getting_started/installations/vs_code/" element={<VSCode />} />
+          <Route path="/all_modules/getting_started/installations/github/" element={<GitHub />} />
+          <Route path="/all_modules/getting_started/installations/chrome/" element={<Chrome />} />
 
           {/* Course Modules  */}
           <Route path="/all_modules/course_modules" element={<CourseModules />} />

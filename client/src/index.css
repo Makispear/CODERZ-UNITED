@@ -4,252 +4,269 @@
 @tailwind utilities;
 
 /* Nunito font  */
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 /* EB garamound font  */
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lobster&family=Nunito&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lobster&family=Nunito&display=swap");
 /* ==================== CUSTOMIZATIONS ======================== */
 :root {
-  /* colors  */
-    --primary-color: 39,40,47;
-    --secondary-color: 204,204,204;
-    --black: 0,0,0;
-    --tertiary-color: 0,169,226;
-    --tertiary-color-dark: 0,132,181;
-    --white: 255,255,255;
-    --grey: 61,61,61;
-    --pink: 233,12,218;
-  /* fonts  */
-    --primary-font: 'Raleway', sans-serif;
-    --logo-font: 'EB garamond', sans-serif;
+	/* colors  */
+	--primary-color: 39, 40, 47;
+	--secondary-color: 204, 204, 204;
+	--black: 0, 0, 0;
+	--tertiary-color: 0, 169, 226;
+	--tertiary-color-dark: 0, 132, 181;
+	--white: 255, 255, 255;
+	--grey: 61, 61, 61;
+	--pink: 233, 12, 218;
+	/* fonts  */
+	--primary-font: "Raleway", sans-serif;
+	--logo-font: "EB garamond", sans-serif;
 }
 /* ====================== GENERIC STYLES ======================= */
 body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background-color: rgb(var(--black)) !important;
-  font-family: var(--primary-font), serif;
-} 
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background-color: rgb(var(--black)) !important;
+	font-family: var(--primary-font), serif;
+}
 
 .logo-font {
-  font-family: var(--logo-font);
+	font-family: var(--logo-font);
 }
-   
+
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: var(--primary-font), serif;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: var(--primary-font), serif;
 }
 
 .primary-radius {
-  border-radius: 2px !important;
+	border-radius: 2px !important;
 }
 
 .locked {
-  cursor: not-allowed;
+	cursor: not-allowed;
 }
 
 .bg-image {
-  background-image: url('./assets//images/black.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
+	background-image: url("./assets//images/black.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom;
 }
 
 .bg-image-flipped {
-  background-image: url('./assets//images/blackFlipped.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
+	background-image: url("./assets//images/blackFlipped.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top;
 }
 /* ===================== TEXT STYLES ========================= */
-h1, .h1-style {
-  font-size: clamp(2rem, 5vw, 4rem);
+h1,
+.h1-style {
+	font-size: clamp(2rem, 5vw, 4rem);
 }
 
-h2, .h2-style {
-  font-size: clamp(1.5rem, 3.5vw, 2.5rem) !important;
+h2,
+.h2-style {
+	font-size: clamp(1.5rem, 3.5vw, 2.5rem) !important;
 }
 
-h3, .h3-style {
-  font-size: clamp(1.3rem, 3vw, 2rem) !important;
+h3,
+.h3-style {
+	font-size: clamp(1.3rem, 3vw, 2rem) !important;
 }
 
-p, .p-style {
-  font-size: clamp(1.2rem, 2vw, 1.3rem) !important;
+p,
+.p-style {
+	font-size: clamp(1.2rem, 2vw, 1.3rem) !important;
 }
 
 .text-xsm {
-  font-size: 12px !important;
+	font-size: 12px !important;
 }
 
 .design-font {
-  font-family: 'Abril Fatface', cursive;
+	font-family: "Abril Fatface", cursive;
 }
 
 .chalk-font {
-  font-family: 'Fredericka the Great', cursive;
+	font-family: "Fredericka the Great", cursive;
 }
 
 li {
-  padding: 10px;
+	padding: 10px;
 }
 /* ================== SINGLE LESSON PAGE STYLINGS =========================== */
 .style-module-section {
-  color: black;
-  z-index: 50;
-  width: 100%;
-  background-color: white;
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  text-align: start;
+	color: black;
+	z-index: 50;
+	width: 100%;
+	background-color: white;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	text-align: start;
 }
 
 .style-module-section *::selection {
-  color: rgb(var(--black));
-  background-color: #FFFF00;
+	color: rgb(var(--black));
+	background-color: #ffff00;
 }
 
 @media only screen and (min-width: 640px) {
-  .style-module-section {
-    padding-top: 5rem;
-  }
+	.style-module-section {
+		padding-top: 5rem;
+	}
 }
 
 @media only screen and (min-width: 768px) {
-  .style-module-section {
-    padding-top: 10rem;
-  }
+	.style-module-section {
+		padding-top: 10rem;
+	}
 }
 /* ================== MODULES STYLINGS ======================= */
 .style-page-section {
-  color: white;
-  z-index: 50;
-  width: 100%;
-  background-color: black;
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  text-align: start;
-  padding: 0.5rem;
+	color: white;
+	z-index: 50;
+	width: 100%;
+	background-color: black;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	text-align: start;
+	padding: 0.5rem;
 }
 
 @media only screen and (min-width: 640px) {
-  .style-page-section {
-    padding: 1.75rem;
-  }
+	.style-page-section {
+		padding: 1.75rem;
+	}
 }
 
 @media only screen and (min-width: 768px) {
-  .style-page-section {
-    padding: 8rem;
-  }
+	.style-page-section {
+		padding: 8rem;
+	}
 }
 /* =================== LINKS ===================== */
 .link {
-  color: rgb(var(--tertiary-color));
-  font-style: italic;
+	color: rgb(var(--tertiary-color));
+	font-style: italic;
 }
 
 .link:hover {
-  color: inherit;
-  font-style: italic;
+	color: inherit;
+	font-style: italic;
 }
 
 .link-dark {
-  color: rgb(var(--grey-color));
-  font-style: italic;
+	color: rgb(var(--grey-color));
+	font-style: italic;
 }
 
 .link-dark:hover {
-  color: rgb(var(--tertiary-color));
-  font-style: italic;
+	color: rgb(var(--tertiary-color));
+	font-style: italic;
 }
 /* =================== BUTTONS ===================== */
 .button-style {
-  padding: 0.5em 1em;
-  width: fit-content;
-  letter-spacing: normal !important;
-  white-space: nowrap;
-  border-radius: 2px !important;
+	padding: 0.5em 1em;
+	width: fit-content;
+	letter-spacing: normal !important;
+	white-space: nowrap;
+	border-radius: 2px !important;
 }
 /* ============= OPTIONS COMPONENT STYLING =============== */
-.option-container > div{
-  width: clamp(300px, 25vw 500px) !important;
+.option-container > div {
+	width: clamp(300px, 25vw 500px) !important;
 }
 
 .paragraph-width {
-  width: 300px;
+	width: 300px;
 }
 /* ============= CHECK MARK STYLING =============== */
 .checkMark {
-  position: relative;
-  display: grid;
-  place-items: left;
-  width: 20px;
-  height: 20px;
-  border: 1px solid black;
+	position: relative;
+	display: grid;
+	place-items: left;
+	width: 20px;
+	height: 20px;
+	border: 1px solid black;
 }
 
 .checkMark > .marked::before {
-  position: absolute;
-  left: 0;
-  top: 30%;
-  height: 50%;
-  width: 3px;
-  background-color: #108306;
-  content: "";
-  transform: translateX(6px) rotate(-45deg);
-  transform-origin: left bottom;
+	position: absolute;
+	left: 0;
+	top: 30%;
+	height: 50%;
+	width: 3px;
+	background-color: #108306;
+	content: "";
+	transform: translateX(6px) rotate(-45deg);
+	transform-origin: left bottom;
 }
 
 .checkMark > .marked::after {
-  position: absolute;
-  left: 0;
-  bottom: 1;
-  height: 3px;
-  width: 120%;
-  background-color: #108306;
-  content: "";
-  transform: translateX(7px) translateY(11px) rotate(-45deg);
-  transform-origin: left bottom;
+	position: absolute;
+	left: 0;
+	bottom: 1;
+	height: 3px;
+	width: 120%;
+	background-color: #108306;
+	content: "";
+	transform: translateX(7px) translateY(11px) rotate(-45deg);
+	transform-origin: left bottom;
 }
 /* ============= WORD HIGHLIGHTING =============== */
 .warning-word {
-  color: red;
+	color: red;
+	font-weight: bold;
 }
 
 .careful-word {
-  color: orange;
+	color: orange;
+	font-weight: bold;
 }
 
 .positive-word {
-  color: rgb(5, 100, 5);
-  font-weight: bold;
+	color: rgb(5, 100, 5);
+	font-weight: bold;
 }
 
 .new-word {
-  color: rgb(0, 63, 156);
-  font-weight: bold;
+	color: rgb(0, 63, 156);
+	font-weight: bold;
+}
+
+.keyboard-key {
+	/* background-color: rgb(238, 238, 238); */
+	color: rgb(38, 142, 150);
+	padding: 0 3px;
+	border: 1px solid;
+	border-radius: 5px;
+	font-size: 0.8em;
+	word-spacing: -2px;
+	white-space: nowrap;
 }
 /* ============= INPUT STYLES =============== */
 input {
-  background-color: rgb(var(--grey));
-  color: black;
-  border-radius: 2px !important;
+	background-color: rgb(var(--grey));
+	color: black;
+	border-radius: 2px !important;
 }
- 
+
 input::placeholder {
-  color: rgb(var(--white), 0.6);
+	color: rgb(var(--white), 0.6);
 }
 
 input:focus {
-  background-color: rgba(var(--white), 0.6);
-  outline: 2px solid rgb(var(--tertiary-color));
+	background-color: rgba(var(--white), 0.6);
+	outline: 2px solid rgb(var(--tertiary-color));
 }
 /* =================================================== */

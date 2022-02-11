@@ -2,16 +2,16 @@ import BreadCrumb from '../../../components/BreadCrumb'
 import NoteMessage from '../../../components/NoteMessage'
 import PageTracker from '../../../components/PageTracker'
 import { MARK_COMPLETED_LESSON } from '../../../utils/mutations'
-import { useMutation } from '@apollo/client'
-import { useQuery } from '@apollo/client'
+import { useMutation, useQuery } from '@apollo/client'
 import { GET_COMPLETED_LESSONS } from '../../../utils/queries'
 import { NavLink } from 'react-router-dom'
 
 export default function Installations() {
   const Lesson_title = "Frequently Asked Questions"
+  const Lesson_Number = "1.1.1"
   const { data } = useQuery(GET_COMPLETED_LESSONS)
   const [markComplete, { error }] = useMutation(MARK_COMPLETED_LESSON)
-  document.title = "FAQ | Getting Started"
+  document.title = `FAQ | Getting Started | Lesson ${Lesson_Number}`
   let showMarkCompleteButton = false
   let showButton = false
 
@@ -21,8 +21,8 @@ export default function Installations() {
     try {
       markComplete({
         variables: {
-          lessonName: Lesson_title,
-          lessonNumber: '1.1.1'
+          lessonName: Lesson_title.trim(),
+          lessonNumber: Lesson_Number.trim()
         }
       }).then((result) => {
         if (result) {
@@ -63,7 +63,7 @@ export default function Installations() {
 
 
       <div className="w-full flex justify-center font-bold my-10 text-center capitalize">
-        <h1>{Lesson_title} <PageTracker props={{ page: "1.1.1" }} /></h1>
+        <h1>{Lesson_title} <PageTracker props={{ page: Lesson_Number }} /></h1>
       </div>
 
 

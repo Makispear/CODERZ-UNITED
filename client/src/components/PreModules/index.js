@@ -13,17 +13,22 @@ export default function PreModules() {
   const lessonsArr = [
     {
       lessonName: 'Frequently Asked Questions',
-      marked: false,
+      isCompleted: false,
       isLocked: false
     },
     {
       lessonName: 'Install VS Code',
-      marked: false,
+      isCompleted: false,
       isLocked: true
     },
     {
       lessonName: 'Sign up to GitHub',
-      marked: false,
+      isCompleted: false,
+      isLocked: true
+    },
+    {
+      lessonName: 'Install Google Chrome',
+      isCompleted: false,
       isLocked: true
     }
   ]
@@ -51,7 +56,7 @@ export default function PreModules() {
 
       {/* Modules  */}
       <div className="w-full flex sm:w-600 md:w-700 lg:w-900 flex-col bg-black text-black">
-
+        {/* FAQ  */}
         <div className="flex flex-col cursor-pointer select-none mt-5" onClick={() => menuExpander(".faq-lessons", ".faq-lessons-expander")}>
           <div>
             <div>
@@ -61,7 +66,7 @@ export default function PreModules() {
                     <span className="faq-lessons-expander">➤</span> Frequently asked Questions
                   </button>
                 </div>
-                {lessonsArr[0].marked ? <CheckMark props={{ marked: true }} /> : <CheckMark props={{ marked: false }} />}
+                {lessonsArr[0].isCompleted ? <CheckMark props={{ marked: true }} /> : <CheckMark props={{ marked: false }} />}
               </div>
             </div>
 
@@ -70,12 +75,12 @@ export default function PreModules() {
         <div className="faq-lessons hidden border-t-2 border-black mb-10 pl-1">
           <NavLink to={"/all_modules/getting_started/frequently_asked_questions/"} className="flex justify-start py-3 pl-10 primary-radius bg-secondary text-black hover:bg-white" >
             <div className="mr-1 scale-75 brightness-100">
-              <CheckMark props={{ marked: lessonsArr[0].marked }} />
+              <CheckMark props={{ marked: lessonsArr[0].isCompleted }} />
             </div>
             Intro To Web Development
           </NavLink>
         </div>
-
+        {/* Installations  */}
         <div className="flex flex-col cursor-pointer select-none mt-5" onClick={() => menuExpander(".installation-lessons", ".installation-lessons-expander")}>
           <div>
             <div>
@@ -85,7 +90,7 @@ export default function PreModules() {
                     <span className="installation-lessons-expander">➤</span> Installations
                   </button>
                 </div>
-                {lessonsArr[1].marked && lessonsArr[2].marked ? <CheckMark props={{ marked: true }} /> : <CheckMark props={{ marked: false }} />}
+                {lessonsArr[1].isCompleted && lessonsArr[2].isCompleted && lessonsArr[3].isCompleted ? <CheckMark props={{ marked: true }} /> : <CheckMark props={{ marked: false }} />}
               </div>
             </div>
 
@@ -101,9 +106,9 @@ export default function PreModules() {
                 "flex justify-start py-3 pl-10 primary-radius bg-secondary text-black hover:bg-white"}
                 `} >
             <div className="mr-1 scale-75 brightness-100">
-              {lessonsArr[1].marked ? <CheckMark props={{ marked: true }} /> : <CheckMark props={{ marked: false }} />}
+              {lessonsArr[1].isCompleted ? <CheckMark props={{ marked: true }} /> : <CheckMark props={{ marked: false }} />}
             </div>
-            Install VS Code
+            {lessonsArr[1].lessonName}
           </NavLink>
           <NavLink to={`${lessonsArr[2].isLocked ? "#" : "/all_modules/getting_started/installations/github/"}`}
             className={`
@@ -113,9 +118,23 @@ export default function PreModules() {
                 "flex justify-start py-3 pl-10 primary-radius bg-secondary text-black hover:bg-white"}
                 `} >
             <div className="mr-1 scale-75 brightness-100">
-              {lessonsArr[2].marked ? <CheckMark props={{ marked: true }} /> : <CheckMark props={{ marked: false }} />}
+              {lessonsArr[2].isCompleted ? <CheckMark props={{ marked: true }} /> : <CheckMark props={{ marked: false }} />}
             </div>
-            Sign up to GitHub
+            {lessonsArr[2].lessonName}
+          </NavLink>
+
+
+          <NavLink to={`${lessonsArr[3].isLocked ? "#" : "/all_modules/getting_started/installations/chrome/"}`}
+            className={`
+                ${lessonsArr[3].isLocked ?
+                "locked flex justify-start py-3 pl-10 primary-radius bg-darkGray brightness-75"
+                :
+                "flex justify-start py-3 pl-10 primary-radius bg-secondary text-black hover:bg-white"}
+                `} >
+            <div className="mr-1 scale-75 brightness-100">
+              {lessonsArr[3].isCompleted ? <CheckMark props={{ marked: true }} /> : <CheckMark props={{ marked: false }} />}
+            </div>
+            {lessonsArr[3].lessonName}
           </NavLink>
         </div>
 
