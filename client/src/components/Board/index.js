@@ -4,7 +4,7 @@ export default function Board() {
 
       <div className="hidden sm:grid place-content-center h-90 bg-chalkboard bg-no-repeat bg-contain bg-center">
         {/* show only on desktop  */}
-        <ul className="grid h-full text-white h3-style text-start sm:text-start place-content-center gap-3">
+        <ul className="grid h-full text-white h2-style text-start sm:text-start place-content-center gap-3">
           <li className="chalk-font capitalize">1. Walk-through videos</li>
           <li className="chalk-font capitalize">2. Examples</li>
           <li className="chalk-font capitalize">3. Deeper dives into concepts</li>
@@ -14,7 +14,7 @@ export default function Board() {
 
       {/* show only on mobile  */}
       <div className="grid sm:hidden place-content-center bg-chalkboard bg-no-repeat bg-contain bg-center">
-        <ul className="visible sm:hidden h-full text-white h3-style text-start sm:text-start place-content-center gap-3">
+        <ul className="visible sm:hidden h-full text-white h2-style text-start sm:text-start place-content-center gap-3">
           <li className="chalk-font capitalize">1. Walk-through videos</li>
           <li className="chalk-font capitalize">2. Examples</li>
           <li className="chalk-font capitalize">3. Deeper dives into concepts</li>

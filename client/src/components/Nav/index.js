@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import logo from "../../assets/images/logo.svg"
+import logo from "../../assets/images/blue(1).svg"
 import Auth from "../../utils/auth";
 
 export default function Nav(props) {
