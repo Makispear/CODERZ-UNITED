@@ -1,7 +1,7 @@
 import { useQuery } from "@apollo/client";
 import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import {markComplete} from "../../utils/markComplete";
+import { markComplete } from "../../utils/markComplete";
 import { GET_COMPLETED_LESSONS } from "../../utils/queries";
 import CheckMark from "../CheckMark";
 
@@ -69,7 +69,7 @@ export default function AllModules() {
       <div className="w-full mt-10 flex sm:w-600 md:w-700 lg:w-900 flex-col bg-black gap-4 text-black">
 
         <NavLink to={"/all_modules/getting_started/"}>
-        <div>
+          <div>
             <div>
               <div className="flex justify-between items-center p-5 primary-radius border-2 text-black bg-secondary hover:bg-white">
                 <div>
@@ -77,7 +77,7 @@ export default function AllModules() {
                     1. Getting Started
                   </p>
                 </div>
-                {lessonsArr[0].isCompleted && lessonsArr[1].isCompleted && lessonsArr[2].isCompleted && lessonsArr[3].isCompleted  ? <CheckMark props={{ marked: true }} /> : <CheckMark props={{ marked: false }} />}
+                {lessonsArr[0].isCompleted && lessonsArr[1].isCompleted && lessonsArr[2].isCompleted && lessonsArr[3].isCompleted ? <CheckMark props={{ marked: true }} /> : <CheckMark props={{ marked: false }} />}
               </div>
             </div>
 
@@ -95,7 +95,7 @@ export default function AllModules() {
           </div>
         </NavLink>
 
-        <NavLink to={'#'} className="locked">
+        {/* <NavLink to={'#'} className="locked">
           <div className="flex justify-between items-center p-5 primary-radius border-2 border-darkGray bg-darkGray opacity-50">
             <div>
               <p className="text-black">
@@ -103,7 +103,7 @@ export default function AllModules() {
               </p>
             </div>
           </div>
-        </NavLink>
+        </NavLink> */}
 
 
       </div>

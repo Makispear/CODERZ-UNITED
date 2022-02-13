@@ -1,5 +1,5 @@
 import { goBack } from "../utils/previousPage"
-import logo from "../assets/images/white(1).svg"
+import logo from "../assets/images/Group 2.png"
 
 export default function LearnMore() {
 
@@ -9,7 +9,7 @@ export default function LearnMore() {
     <section className="text-white z-50 w-full bg-image flex flex-col items-center text-start sm:pt-20 md:pt-40">
       <div className="w-full flex flex-col justify-center font-bold my-10 text-center capitalize">
         <div className="sm:mx-10 flex justify-center w-auto">
-          <img className="h-28 sm:h-44" src={logo} alt="Huge logo" />
+          <img className="w-28 sm:w-44" src={logo} alt="Huge logo" />
         </div>
         <h1 className="text-white">About Coderz United</h1>
       </div>
