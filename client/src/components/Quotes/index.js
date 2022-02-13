@@ -20,7 +20,7 @@ export default function Quotes() {
 
   return (
     <section className="py-10 sm:px-3
-                        flex flex-col w-full bg-darkGray">
+                        flex flex-col w-full bg-black">
       <div className="w-full p-10 sm:p-28 flex flex-wrap flex-col justify-between">
 
         <div className="flex justify-around flex-wrap h-full w-full mt-5">

@@ -21,6 +21,7 @@
 	--white: 255, 255, 255;
 	--grey: 61, 61, 61;
 	--pink: 233, 12, 218;
+	--highlight: 255, 255, 0;
 	/* fonts  */
 	--primary-font: "Raleway", sans-serif;
 	--logo-font: "EB garamond", sans-serif;
@@ -86,6 +87,7 @@ h3,
 p,
 .p-style {
 	font-size: clamp(1.2rem, 2vw, 1.3rem) !important;
+	line-height: 1.6 !important;
 }
 
 .text-xsm {
@@ -105,10 +107,10 @@ li {
 }
 /* ================== SINGLE LESSON PAGE STYLINGS =========================== */
 .style-module-section {
-	color: black;
+	color: rgb(var(--black));
 	z-index: 50;
 	width: 100%;
-	background-color: white;
+	background-color: rgb(var(--white));
 	display: flex;
 	flex-flow: column nowrap;
 	align-items: center;
@@ -117,7 +119,7 @@ li {
 
 .style-module-section *::selection {
 	color: rgb(var(--black));
-	background-color: #ffff00;
+	background-color: rgb(var(--highlight));
 }
 
 @media only screen and (min-width: 640px) {
@@ -133,16 +135,17 @@ li {
 }
 /* ================== MODULES STYLINGS ======================= */
 .style-page-section {
-	color: white;
+	color: rgb(var(--white));
 	z-index: 50;
 	width: 100%;
-	background-color: black;
+	background-color: rgb(var(--black));
 	display: flex;
 	flex-flow: column nowrap;
 	align-items: center;
 	text-align: start;
 	padding: 0.5rem;
 }
+
 
 @media only screen and (min-width: 640px) {
 	.style-page-section {
@@ -198,7 +201,7 @@ li {
 	place-items: left;
 	width: 20px;
 	height: 20px;
-	border: 1px solid black;
+	border: 1px solid rgb(var(--black));
 }
 
 .checkMark > .marked::before {
@@ -258,7 +261,7 @@ li {
 /* ============= INPUT STYLES =============== */
 input {
 	background-color: rgb(var(--grey));
-	color: black;
+	color: rgb(var(--black));
 	border-radius: 2px !important;
 }
 

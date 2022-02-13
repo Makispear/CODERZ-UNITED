@@ -61,7 +61,7 @@ export default function VSCode() {
   return (
     <section className="style-module-section highlight">
 
-      <div className="w-full flex justify-center font-bold my-10 text-center capitalize">
+      <div className="w-full flex justify-center font-bold p-10 text-center capitalize bg-blackGradient bg-no-repeat bg-cover bg-center">
         <h1>Installations</h1>
       </div>
       <div className="p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 flex flex-col gap-5">
@@ -98,88 +98,88 @@ export default function VSCode() {
         </p>
 
         <p>
-        VS Code offers a lot of extensions you can download that enhance your coding experience. We recommend you take some time to customize your version of VS Code to give your work some taste.
+          VS Code offers a lot of extensions you can download that enhance your coding experience. We recommend you take some time to customize your version of VS Code to give your work some taste.
         </p>
         <p>
-        To open the extension section of VS Code, press <span className="keyboard-key">Ctrl + Shift + x</span> in Windows or <span className="keyboard-key">Command + Option + x</span> in Mac.
+          To open the extension section of VS Code, press <span className="keyboard-key">Ctrl + Shift + x</span> in Windows or <span className="keyboard-key">Command + Option + x</span> in Mac.
         </p>
 
         <p>
-        Here are some extensions you can look for in the extensions marketplace in VS Code:
+          Here are some extensions you can look for in the extensions marketplace in VS Code:
         </p>
       </div>
 
       <div className="text-start flex flex-col my-1 p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 items-start w-full">
         <h2 className="text-black font-semibold mb-2 h3-style">
-        1. Bracket Pair Colinizer 2
+          1. Bracket Pair Colinizer 2
         </h2>
         <p className="w-full text-darkGray">
-        It helps visualize which opening bracket belongs to which.
+          It helps visualize which opening bracket belongs to which.
         </p>
       </div>
 
       <div className="text-start flex flex-col my-1 p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 items-start w-full">
         <h2 className="text-black font-semibold mb-2 h3-style">
-        2. Code Spell Checker
+          2. Code Spell Checker
         </h2>
         <p className="w-full text-darkGray">
-        warns you when you have spelled incorrectly. this extension can be helpful for checking typos on your paragraphs or headings. In fact this paragraph was written and checked by this exact extension.
+          warns you when you have spelled incorrectly. this extension can be helpful for checking typos on your paragraphs or headings. In fact this paragraph was written and checked by this exact extension.
         </p>
       </div>
 
       <div className="text-start flex flex-col my-1 p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 items-start w-full">
         <h2 className="text-black font-semibold mb-2 h3-style">
-        3. Palocode-2020
+          3. Palocode-2020
         </h2>
         <p className="w-full text-darkGray">
-        A good way to capture code snippets. Very helpful when trying to share a piece of code when asking for help. Also used when sharing code on social media platforms.
+          A good way to capture code snippets. Very helpful when trying to share a piece of code when asking for help. Also used when sharing code on social media platforms.
         </p>
       </div>
 
       <div className="text-start flex flex-col my-1 p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 items-start w-full">
         <h2 className="text-black font-semibold mb-2 h3-style">
-        4. Better Comments
+          4. Better Comments
         </h2>
         <p className="w-full text-darkGray">
-        Highlights your TODO comments and more.
+          Highlights your TODO comments and more.
         </p>
       </div>
 
       <div className="text-start flex flex-col my-1 p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 items-start w-full">
         <h2 className="text-black font-semibold mb-2 h3-style">
-        5. Auto Rename Tag
+          5. Auto Rename Tag
         </h2>
         <p className="w-full text-darkGray">
-        Saves you the hustle of finding the closing tag you need to change after changing the opening tag.
+          Saves you the hustle of finding the closing tag you need to change after changing the opening tag.
         </p>
       </div>
 
       <div className="text-start flex flex-col my-1 p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 items-start w-full">
         <h2 className="text-black font-semibold mb-2 h3-style">
-        6. :emojisense:
+          6. :emojisense:
         </h2>
         <p className="w-full text-darkGray">
-        Easy way to add emojis without leaving your code editor.
+          Easy way to add emojis without leaving your code editor.
         </p>
       </div>
 
       <div className="text-start flex flex-col my-1 p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 items-start w-full">
         <h2 className="text-black font-semibold mb-2 h3-style">
-        7. DotENV
+          7. DotENV
         </h2>
         <p className="w-full text-darkGray">
-        Adds color coding to your <span className="new-word">.env</span> (environment) file
+          Adds color coding to your <span className="new-word">.env</span> (environment) file
         </p>
       </div>
 
       <div className="text-start flex flex-col my-1 p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 items-start w-full">
-    <InfoMessage 
-     props={{
-      name: "Fun Fact",
-      note: "These extensions are made by developers and you can make your own too!"
-    }}
-    />
-    </div>
+        <InfoMessage
+          props={{
+            name: "Fun Fact",
+            note: "These extensions are made by developers and you can make your own too!"
+          }}
+        />
+      </div>
 
       <div className="flex my-1 justify-between w-full items p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900">
 

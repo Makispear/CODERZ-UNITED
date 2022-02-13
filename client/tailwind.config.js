@@ -50,7 +50,7 @@ module.exports = {
       },
       backgroundImage: theme => ({
         'blackGradient': "url('/src/assets/images/black.jpg')",
-        'chalkboard': "url('/src/assets/images/chalkboard.png')",
+        'chalkboard': "url('/src/assets/images/board.webp')",
         'rightArrow': "url('/src/assets/images/rightArrow.png')"
       }),
     },

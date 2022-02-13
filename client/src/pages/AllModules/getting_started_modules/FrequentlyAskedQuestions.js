@@ -62,7 +62,7 @@ export default function Installations() {
     <section className="style-module-section">
 
 
-      <div className="w-full flex justify-center font-bold my-10 text-center capitalize">
+      <div className="w-full flex justify-center font-bold p-10 text-center capitalize bg-blackGradient bg-no-repeat bg-cover bg-center">
         <h1>Intro To Web Development</h1>
         {/* <h1>Intro To Web Development <PageTracker props={{ page: Lesson_Number }} /></h1> */}
       </div>
