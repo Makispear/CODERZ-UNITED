@@ -1,4 +1,5 @@
 import { goBack } from "../utils/previousPage"
+import logo from "../assets/images/white(1).svg"
 
 export default function LearnMore() {
 
@@ -6,8 +7,11 @@ export default function LearnMore() {
 
   return (
     <section className="text-white z-50 w-full bg-image flex flex-col items-center text-start sm:pt-20 md:pt-40">
-      <div className="w-full flex justify-center font-bold my-10 text-center capitalize">
-        <h1>About Coderz United</h1>
+      <div className="w-full flex flex-col justify-center font-bold my-10 text-center capitalize">
+        <div className="sm:mx-10 flex justify-center w-auto">
+          <img className="h-28 sm:h-44" src={logo} alt="Huge logo" />
+        </div>
+        <h1 className="text-white">About Coderz United</h1>
       </div>
 
       <div className="indent-8 p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 flex flex-col gap-5 text-secondary">
