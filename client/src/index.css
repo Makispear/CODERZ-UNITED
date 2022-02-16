@@ -27,6 +27,10 @@
 	--logo-font: "EB garamond", sans-serif;
 }
 /* ====================== GENERIC STYLES ======================= */
+
+.full-screen-img {
+	min-width: 90vw;
+}
 body {
 	margin: 0;
 	padding: 0;

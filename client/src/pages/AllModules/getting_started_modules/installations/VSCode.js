@@ -1,4 +1,5 @@
 import { useMutation, useQuery } from "@apollo/client"
+import { useState } from "react"
 import { NavLink } from "react-router-dom"
 import BreadCrumb from "../../../../components/BreadCrumb"
 import InfoMessage from "../../../../components/InfoMessage"
@@ -58,6 +59,15 @@ export default function VSCode() {
 
   }
 
+
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  const toggleImage = (img) => {
+    setIsModalOpen(!isModalOpen)
+  }
+
+
+
   return (
     <section className="style-module-section highlight">
 
@@ -81,9 +91,16 @@ export default function VSCode() {
           Let's download Visual Studio Code (also known as VS Code). VS Code is a
           code editor owned by Microsoft and is one of the best if not the best Code Editor web developers use. It's also free and has a ton of great features. Let's go ahead and download it now. Here is the link to the <a className="link" target="_blank" rel="noopener noreferrer" href="https://code.visualstudio.com/download">download VS Code</a>.
         </p>
-
+        <div className={`flex justify-center primary-radius cursor-pointer`}>
+          <img
+            src="https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/getstarted_page.png"
+            alt="VS Code Interface from Microsoft's website"
+            className={`cursor-pointer p-2 border border-black ${isModalOpen ? "full-screen-img" : "w-300"}`}
+            onClick={() => toggleImage()}
+          />
+        </div>
         <p>
-          What the video below on how to download and install VS Code
+          watch the video on how to download and install VS Code.
         </p>
 
         <p>
