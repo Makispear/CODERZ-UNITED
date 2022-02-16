@@ -6,6 +6,7 @@ import InfoMessage from "../../../../components/InfoMessage"
 import PageTracker from "../../../../components/PageTracker"
 import { MARK_COMPLETED_LESSON } from "../../../../utils/mutations"
 import { GET_COMPLETED_LESSONS } from "../../../../utils/queries"
+import extentionSearchBarPic from "../../../../assets/images/extension_search.png"
 
 export default function VSCode() {
   const Lesson_title = "Install VS Code"
@@ -118,8 +119,17 @@ export default function VSCode() {
           VS Code offers a lot of extensions you can download that enhance your coding experience. We recommend you take some time to customize your version of VS Code to give your work some taste.
         </p>
         <p>
-          To open the extension section of VS Code, press <span className="keyboard-key">Ctrl + Shift + x</span> in Windows or <span className="keyboard-key">Command + Option + x</span> in Mac.
+          To open the extension section of VS Code, press <span className="keyboard-key">Ctrl + Shift + x</span> in Windows or <span className="keyboard-key">Command + Option + x</span> in Mac. A search bar will be shown on the top left corner of VS Code
         </p>
+
+        <div className={`flex justify-center primary-radius cursor-pointer`}>
+          <img
+            src={extentionSearchBarPic}
+            alt="Extension search bar in VS Code"
+            className={`cursor-pointer p-2 border border-black ${isModalOpen ? "full-screen-img" : "w-300"}`}
+            onClick={() => toggleImage()}
+          />
+        </div>
 
         <p>
           Here are some extensions you can look for in the extensions marketplace in VS Code:
@@ -193,7 +203,7 @@ export default function VSCode() {
         <InfoMessage
           props={{
             name: "Fun Fact",
-            note: "These extensions are made by developers and you can make your own too!"
+            note: "These extensions are made by developers and you can make your own too! We will see these extensions in action when we start coding soon."
           }}
         />
       </div>
