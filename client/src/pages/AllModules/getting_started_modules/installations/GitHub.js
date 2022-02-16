@@ -66,7 +66,7 @@ export default function GitHub() {
           <BreadCrumb props={{ color: 'darkGray' }} />
         </div>
         <h2>
-          Sign up to GitHub <PageTracker props={{ page: Lesson_Number }} />
+          {Lesson_title} <PageTracker props={{ page: Lesson_Number }} />
         </h2>
       </div>
 

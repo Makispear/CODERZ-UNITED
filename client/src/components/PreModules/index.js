@@ -30,6 +30,11 @@ export default function PreModules() {
       lessonName: 'Install Google Chrome',
       isCompleted: false,
       isLocked: true
+    },
+    {
+      lessonName: 'Install Git',
+      isCompleted: false,
+      isLocked: true
     }
   ]
 
@@ -90,7 +95,7 @@ export default function PreModules() {
                     <span className="installation-lessons-expander">➤</span> Installations
                   </button>
                 </div>
-                {lessonsArr[1].isCompleted && lessonsArr[2].isCompleted && lessonsArr[3].isCompleted ? <CheckMark props={{ marked: true }} /> : <CheckMark props={{ marked: false }} />}
+                {lessonsArr[1].isCompleted && lessonsArr[2].isCompleted && lessonsArr[3].isCompleted && lessonsArr[4].isCompleted ? <CheckMark props={{ marked: true }} /> : <CheckMark props={{ marked: false }} />}
               </div>
             </div>
 
@@ -122,8 +127,6 @@ export default function PreModules() {
             </div>
             {lessonsArr[2].lessonName}
           </NavLink>
-
-
           <NavLink to={`${lessonsArr[3].isLocked ? "#" : "/all_modules/getting_started/installations/chrome/"}`}
             className={`
                 ${lessonsArr[3].isLocked ?
@@ -135,6 +138,18 @@ export default function PreModules() {
               {lessonsArr[3].isCompleted ? <CheckMark props={{ marked: true }} /> : <CheckMark props={{ marked: false }} />}
             </div>
             {lessonsArr[3].lessonName}
+          </NavLink>
+          <NavLink to={`${lessonsArr[4].isLocked ? "#" : "/all_modules/getting_started/installations/git/"}`}
+            className={`
+                ${lessonsArr[4].isLocked ?
+                "locked flex justify-start py-3 pl-10 primary-radius bg-darkGray brightness-75"
+                :
+                "flex justify-start py-3 pl-10 primary-radius bg-secondary text-black hover:bg-white"}
+                `} >
+            <div className="mr-1 scale-75 brightness-100">
+              {lessonsArr[4].isCompleted ? <CheckMark props={{ marked: true }} /> : <CheckMark props={{ marked: false }} />}
+            </div>
+            {lessonsArr[4].lessonName}
           </NavLink>
         </div>
 

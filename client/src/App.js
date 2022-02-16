@@ -21,6 +21,8 @@ import FrequentlyAskedQuestions from "./pages/AllModules/getting_started_modules
 //1.1.2
 import VSCode from "./pages/AllModules/getting_started_modules/installations/VSCode";
 import GitHub from "./pages/AllModules/getting_started_modules/installations/GitHub";
+import Chrome from "./pages/AllModules/getting_started_modules/installations/Chrome";
+import Git from "./pages/AllModules/getting_started_modules/installations/Git";
 
 // if getting started
 
@@ -30,7 +32,6 @@ import Footer from "./components/Footer";
 import CourseModules from "./pages/AllModules/course_modules/CourseModules";
 import ScrollToTop from "./utils/scrollToTop";
 import NotFound from "./utils/NotFound";
-import Chrome from "./pages/AllModules/getting_started_modules/installations/Chrome";
 
 function App() {
   const BrandName = "CODERZ UNITED"
@@ -75,6 +76,7 @@ function App() {
           <Route path="/all_modules/getting_started/installations/vs_code/" element={<VSCode />} />
           <Route path="/all_modules/getting_started/installations/github/" element={<GitHub />} />
           <Route path="/all_modules/getting_started/installations/chrome/" element={<Chrome />} />
+          <Route path="/all_modules/getting_started/installations/git/" element={<Git />} />
 
           {/* Course Modules  */}
           <Route path="/all_modules/course_modules" element={<CourseModules />} />

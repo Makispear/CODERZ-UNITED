@@ -6,7 +6,8 @@ import InfoMessage from "../../../../components/InfoMessage"
 import PageTracker from "../../../../components/PageTracker"
 import { MARK_COMPLETED_LESSON } from "../../../../utils/mutations"
 import { GET_COMPLETED_LESSONS } from "../../../../utils/queries"
-import extentionSearchBarPic from "../../../../assets/images/extension_search.png"
+import extensionSearchBarPic from "../../../../assets/images/extension_search.png"
+import viewBar from "../../../../assets/images/vscode_view_tab.png"
 
 export default function VSCode() {
   const Lesson_title = "Install VS Code"
@@ -80,7 +81,7 @@ export default function VSCode() {
           <BreadCrumb props={{ color: 'darkGray' }} />
         </div>
         <h2>
-          Install VS Code <PageTracker props={{ page: Lesson_Number }} />
+          {Lesson_title} <PageTracker props={{ page: Lesson_Number }} />
         </h2>
       </div>
 
@@ -118,13 +119,13 @@ export default function VSCode() {
         <p>
           VS Code offers a lot of extensions you can download that enhance your coding experience. We recommend you take some time to customize your version of VS Code to give your work some taste.
         </p>
-        <p>
-          To open the extension section of VS Code, press <span className="keyboard-key">Ctrl + Shift + x</span> in Windows or <span className="keyboard-key">Command + Option + x</span> in Mac. A search bar will be shown on the top left corner of VS Code
-        </p>
 
+        <p>
+          To open the extension section of VS Code, hover over the <span className="keyboard-key">View</span> link on the menu bar and select <span className="keyboard-key">Extensions</span>.
+        </p>
         <div className={`flex justify-center primary-radius cursor-pointer`}>
           <img
-            src={extentionSearchBarPic}
+            src={viewBar}
             alt="Extension search bar in VS Code"
             className={`cursor-pointer p-2 border border-black ${isModalOpen ? "full-screen-img" : "w-300"}`}
             onClick={() => toggleImage()}
@@ -132,6 +133,19 @@ export default function VSCode() {
         </div>
 
         <p>
+          Or you can press <span className="keyboard-key">Ctrl + Shift + x</span> in Windows or <span className="keyboard-key">Command + Option + x</span> in Mac. A search bar will appear on the top left corner of VS Code:
+        </p>
+
+        <div className={`flex justify-center primary-radius cursor-pointer`}>
+          <img
+            src={extensionSearchBarPic}
+            alt="Extension search bar in VS Code"
+            className={`cursor-pointer p-2 border border-black ${isModalOpen ? "full-screen-img" : "w-300"}`}
+            onClick={() => toggleImage()}
+          />
+        </div>
+
+        <p className="font-bold">
           Here are some extensions you can look for in the extensions marketplace in VS Code:
         </p>
       </div>

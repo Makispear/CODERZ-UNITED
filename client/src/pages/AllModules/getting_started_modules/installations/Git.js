@@ -1,17 +1,16 @@
-import { useMutation, useQuery } from "@apollo/client"
 import { NavLink } from "react-router-dom"
-import BreadCrumb from "../../../../components/BreadCrumb"
-import InfoMessage from "../../../../components/InfoMessage"
 import PageTracker from "../../../../components/PageTracker"
-import { MARK_COMPLETED_LESSON } from "../../../../utils/mutations"
+import BreadCrumb from "../../../../components/BreadCrumb"
+import { useMutation, useQuery } from "@apollo/client"
 import { GET_COMPLETED_LESSONS } from "../../../../utils/queries"
+import { MARK_COMPLETED_LESSON } from "../../../../utils/mutations"
 
-export default function Chrome() {
-  const Lesson_title = "Install Google Chrome"
-  const Lesson_Number = "1.2.3"
+export default function Git() {
+  const Lesson_title = "Install Git"
+  const Lesson_Number = '1.2.4'
   const { data } = useQuery(GET_COMPLETED_LESSONS)
   const [markComplete, { error }] = useMutation(MARK_COMPLETED_LESSON)
-  document.title = `Install Google Chrome | Getting Started | Lesson ${Lesson_Number}`
+  document.title = `Install Git | Getting Started' | Lesson ${Lesson_Number}`
   let showMarkCompleteButton = false
   let showButton = false
 
@@ -26,7 +25,7 @@ export default function Chrome() {
         }
       }).then((result) => {
         if (result) {
-          window.location.href = "/all_modules/getting_started/installations/git/";
+          window.location.href = "/all_modules/getting_started/";
         }
       })
     } catch (error) {
@@ -59,32 +58,27 @@ export default function Chrome() {
   }
 
   return (
-    <section className="style-module-section">
+    <section className="style-module-section highlight">
 
       <div className="p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 flex flex-col gap-5">
         <div className="w-full flex lg:w-900 justify-start mt-10 text-secondary">
           <BreadCrumb props={{ color: 'darkGray' }} />
         </div>
         <h2>
-          {Lesson_title}
+          {Lesson_title} <PageTracker props={{ page: Lesson_Number }} />
         </h2>
       </div>
 
       <div className="p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 flex flex-col gap-5">
-        <p>Since we are web developers, we'll need a web browser to work. The most popular web browser is Google Chrome. Luckily since you are already reading these sentences on a web browser, there's a 66% chance you're reading this on Google chrome. If that's the case, feel free and mark this lesson complete to continue to the next one.</p>
+        <p>To start working with Git we need a terminal. If you are using MacOS you should have a terminal already. With windows we'll need to download Git Bash. Git as it's stated in the Git website <q className="font-bold">is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.</q></p>
 
-        <InfoMessage props={{
-          name: "Notice",
-          note: "It is okay if you want to use other web browsers. Since most of your potential visitors will be on Chrome, it's best to test how our code works with it."
-        }} />
+        <p>Git helps us control our codebase versions. This can come in handy if we ever break our code. Then we can roll back to the older version on the code and start over. Sometimes when the <span className="">code broke</span>, it's easier to find where it happened when you can look at different versions of that code. We'll look more into Git and how to use it after <span className="underline-dots" title="Getting Started">this</span> module</p>
 
-        <p>Here is the link to <a href="https://www.google.com/chrome/" target="_blank" rel="noopener noreferrer" className="link">download Google Chrome</a>.
-        </p>
       </div>
 
       <div className="flex my-1 justify-between w-full items p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900">
 
-        <NavLink to="/all_modules/getting_started/installations/github/" className="bg-transparent text-black button-style border border-tertiary hover:border-black font-light capitalize">&lt;&lt; Back</NavLink>
+        <NavLink to="/all_modules/getting_started/installations/chrome/" className="bg-transparent text-black button-style border border-tertiary hover:border-black font-light capitalize">&lt;&lt; Back</NavLink>
 
         {showMarkCompleteButton && showButton &&
           <div className='flex'>
@@ -92,10 +86,10 @@ export default function Chrome() {
           </div>
         }
         {!showMarkCompleteButton && showButton &&
-          <NavLink to="/all_modules/getting_started/installations/git/" className="bg-transparent text-black button-style border border-tertiary hover:border-black font-light capitalize">next &gt;&gt;</NavLink>
+          <NavLink to="/all_modules/getting_started/installations/chrome/" className="bg-transparent text-black button-style border border-tertiary hover:border-black font-light capitalize">next &gt;&gt;</NavLink>
         }
-
       </div>
-    </section>
+
+    </section >
   )
 }

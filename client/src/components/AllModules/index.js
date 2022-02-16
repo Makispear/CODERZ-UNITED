@@ -42,6 +42,11 @@ export default function AllModules() {
       lessonName: 'Install Google Chrome',
       isCompleted: false,
       isLocked: true
+    },
+    {
+      lessonName: 'Install Git',
+      isCompleted: false,
+      isLocked: true
     }
   ]
 
@@ -77,7 +82,7 @@ export default function AllModules() {
                     1. Getting Started
                   </p>
                 </div>
-                {lessonsArr[0].isCompleted && lessonsArr[1].isCompleted && lessonsArr[2].isCompleted && lessonsArr[3].isCompleted ? <CheckMark props={{ marked: true }} /> : <CheckMark props={{ marked: false }} />}
+                {lessonsArr[0].isCompleted && lessonsArr[1].isCompleted && lessonsArr[2].isCompleted && lessonsArr[3].isCompleted && lessonsArr[4].isCompleted ? <CheckMark props={{ marked: true }} /> : <CheckMark props={{ marked: false }} />}
               </div>
             </div>
 
@@ -94,17 +99,6 @@ export default function AllModules() {
             <CheckMark props={{ marked: false }} />
           </div>
         </NavLink>
-
-        {/* <NavLink to={'#'} className="locked">
-          <div className="flex justify-between items-center p-5 primary-radius border-2 border-darkGray bg-darkGray opacity-50">
-            <div>
-              <p className="text-black">
-                <span className="font-bold capitalize">1 . Getting started - </span>Pre work
-              </p>
-            </div>
-          </div>
-        </NavLink> */}
-
 
       </div>
 

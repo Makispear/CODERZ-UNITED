@@ -51,15 +51,6 @@ export default function BreadCrumb({ props }) {
             <p className="text-tertiary text-xsm">{element}</p>
           </li>
         )
-        // if the link is the second last make it visible on mobile
-      } else if (index === array.length - 2) {
-        return (
-          <li key={index} className="flex justify-center">
-            <span className="text-tertiary">&gt;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-            <p className="text-xsm">{element}</p>
-          </li>
-        )
-        // else style it normally
       } else {
         return (
           <li key={index} className="hidden md:flex justify-center">
@@ -74,7 +65,7 @@ export default function BreadCrumb({ props }) {
   }
 
   return (
-    <ul className={`text-${color} hidden md:flex border-y overflow-x-auto scroll-smooth border-${color} w-auto text-xsm bg-transparent flex-nowrap justify-start mb-7`}>
+    <ul className={`text-${color} hidden md:flex border-b overflow-x-auto scroll-smooth border-${color} border-opacity-50 w-full text-xsm bg-transparent flex-nowrap justify-start mb-7`}>
       {render()}
     </ul>
   )

@@ -54,6 +54,14 @@ body {
 	border-radius: 2px !important;
 }
 
+.underline-dots {
+	border-bottom: 2px dotted rgb(38, 142, 150);
+}
+
+.underline-dots[title]:hover::after {
+	color: red;
+}
+
 .locked {
 	cursor: not-allowed;
 }
