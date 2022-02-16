@@ -27,10 +27,6 @@
 	--logo-font: "EB garamond", sans-serif;
 }
 /* ====================== GENERIC STYLES ======================= */
-
-.full-screen-img {
-	min-width: 90vw;
-}
 body {
 	margin: 0;
 	padding: 0;
@@ -113,6 +109,32 @@ p,
 li {
 	padding: 10px;
 }
+
+/* ================== IMAGE STYLINGS =========================== */
+.full-screen-img {
+	min-width: 90vw;
+}
+
+@media only screen and (min-width: 640px) {
+	.full-screen-img {
+		min-width: 90vw;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.full-screen-img {
+		min-width: unset;
+		max-width: 750px;
+	}
+}
+
+@media only screen and (min-width: 1400px) {
+	.full-screen-img {
+		min-width: unset;
+		max-width: 1100px;
+	}
+}
+
 /* ================== SINGLE LESSON PAGE STYLINGS =========================== */
 .style-module-section {
 	color: rgb(var(--black));

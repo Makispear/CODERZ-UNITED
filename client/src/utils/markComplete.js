@@ -11,8 +11,6 @@ module.exports = {
           }
         }
       }
-      console.clear()
-      console.table(lessonsArr)
       return
     }
   }
