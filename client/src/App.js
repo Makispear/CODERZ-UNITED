@@ -32,6 +32,7 @@ import Footer from "./components/Footer";
 import CourseModules from "./pages/AllModules/course_modules/CourseModules";
 import ScrollToTop from "./utils/scrollToTop";
 import NotFound from "./utils/NotFound";
+import Auth from "./utils/auth";
 
 function App() {
   const BrandName = "CODERZ UNITED"
@@ -62,26 +63,31 @@ function App() {
       <Router>
         <ScrollToTop />
         <Nav BrandName={BrandName} />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/learn_more" element={<LearnMore />} />
-          {/* <Route path="/all_modules/learn_more" element={<LearnMore />} /> */}
+        {!Auth.loggedIn() &&
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/learn_more" element={<LearnMore />} />
+          </Routes>
+        }
 
-          {/* Getting started Modules  */}
-          <Route path="/all_modules/" element={<AllModules />} />
-          <Route path="/all_modules/getting_started/" element={<GettingStarted />} />
-          <Route path="/all_modules/getting_started/frequently_asked_questions/" element={<FrequentlyAskedQuestions />} />
-          <Route path="/all_modules/getting_started/installations/vs_code/" element={<VSCode />} />
-          <Route path="/all_modules/getting_started/installations/github/" element={<GitHub />} />
-          <Route path="/all_modules/getting_started/installations/chrome/" element={<Chrome />} />
-          <Route path="/all_modules/getting_started/installations/git/" element={<Git />} />
+        {Auth.loggedIn() &&
+          <Routes>
+            {/* Getting started Modules  */}
+            <Route path="/all_modules/" element={<AllModules />} />
+            <Route path="/all_modules/getting_started/" element={<GettingStarted />} />
+            <Route path="/all_modules/getting_started/frequently_asked_questions/" element={<FrequentlyAskedQuestions />} />
+            <Route path="/all_modules/getting_started/installations/vs_code/" element={<VSCode />} />
+            <Route path="/all_modules/getting_started/installations/github/" element={<GitHub />} />
+            <Route path="/all_modules/getting_started/installations/chrome/" element={<Chrome />} />
+            <Route path="/all_modules/getting_started/installations/git/" element={<Git />} />
 
-          {/* Course Modules  */}
-          <Route path="/all_modules/course_modules" element={<CourseModules />} />
-          <Route path='*' exact={true} element={<NotFound />} />
-        </Routes>
+            {/* Course Modules  */}
+            <Route path="/all_modules/course_modules" element={<CourseModules />} />
+            <Route path='*' exact={true} element={<NotFound />} />
+          </Routes>
+        }
         <Footer BrandName={BrandName} />
       </Router>
     </ApolloProvider>
