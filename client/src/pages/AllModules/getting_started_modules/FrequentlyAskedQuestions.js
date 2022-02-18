@@ -5,6 +5,7 @@ import { MARK_COMPLETED_LESSON } from '../../../utils/mutations'
 import { useMutation, useQuery } from '@apollo/client'
 import { GET_COMPLETED_LESSONS } from '../../../utils/queries'
 import { NavLink } from 'react-router-dom'
+import Reference from '../../../utils/Reference'
 
 export default function Installations() {
   const Lesson_title = "FAQ"
@@ -117,7 +118,7 @@ export default function Installations() {
           4. Do I need to be good at math to become a web developer?
         </h2>
         <p className="w-full text-darkGray">
-          No. You don't need to be good at math to become a web developer, however you need to be able to think logically and critically to be able to problem solve and <a className="link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/search?q=debug+meaning">debug</a>.
+          No. You don't need to be good at math to become a web developer, however you need to be able to think logically and critically to be able to problem solve and <Reference props={{ word: "debug", ref: "Identify and remove errors" }} />.
         </p>
       </div>
 
@@ -151,7 +152,7 @@ export default function Installations() {
           7. Why should I become a web developer?
         </h2>
         <p className="w-full text-darkGray">
-          Web developers make a decent living and are in very high demand. Especially since Covid-19, more companies are transitioning to online services.
+          Web developers make a decent living and are in very high demand. Especially since the <Reference props={{ word: "Gloabal Pandemic", ref: "Covid-19" }} />, more companies are transitioning to online services.
         </p>
       </div>
 

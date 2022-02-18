@@ -55,11 +55,30 @@ body {
 }
 
 .underline-dots {
-	border-bottom: 2px dotted rgb(38, 142, 150);
+	border-bottom: 2px dotted rgb(var(--tertiary-color));
 }
 
-.underline-dots[title]:hover::after {
-	color: red;
+.underline-dots:hover {
+	border-bottom: 2px solid rgb(var(--tertiary-color));
+}
+
+.underline-dots + .reference {
+	position: absolute;
+	content: "";
+	color: black;
+	height: 0;
+	white-space: nowrap;
+	width: 100;
+	overflow: hidden;
+	transition: height 0.1s;
+	background-color: rgb(var(--white));
+}
+
+.underline-dots:hover + .reference {
+	padding: 5px 5px;
+	border: 1px solid rgb(var(--tertiary-color));
+	height: auto;
+	overflow: unset
 }
 
 .locked {

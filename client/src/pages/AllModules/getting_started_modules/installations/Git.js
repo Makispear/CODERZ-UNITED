@@ -4,6 +4,7 @@ import BreadCrumb from "../../../../components/BreadCrumb"
 import { useMutation, useQuery } from "@apollo/client"
 import { GET_COMPLETED_LESSONS } from "../../../../utils/queries"
 import { MARK_COMPLETED_LESSON } from "../../../../utils/mutations"
+import Reference from "../../../../utils/Reference"
 
 export default function Git() {
   const Lesson_title = "Install Git"
@@ -72,7 +73,7 @@ export default function Git() {
       <div className="p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 flex flex-col gap-5">
         <p>To start working with Git we need a terminal. If you are using MacOS you should have a terminal already. With windows we'll need to download Git Bash. Git as it's stated in the Git website <q className="font-bold">is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.</q></p>
 
-        <p>Git helps us control our codebase versions. This can come in handy if we ever break our code. Then we can roll back to the older version on the code and start over. Sometimes when the <span className="">code broke</span>, it's easier to find where it happened when you can look at different versions of that code. We'll look more into Git and how to use it after <span className="underline-dots" title="Getting Started">this</span> module</p>
+        <p>Git helps us control our codebase versions. This can come in handy if we ever break our code. Then we can roll back to the older version on the code and start over. Sometimes when the <span className="">code broke</span>, it's easier to find where it happened when you can look at different versions of that code. We'll look more into Git and how to use it after <Reference props={{ word: "this", ref: "The Getting Started Module" }} /> module.</p>
 
       </div>
 
