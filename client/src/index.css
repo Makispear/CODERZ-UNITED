@@ -69,6 +69,8 @@ body {
 	height: 0;
 	white-space: nowrap;
 	width: 100;
+	bottom: 25px;
+	left: 10%;
 	overflow: hidden;
 	transition: height 0.1s;
 	background-color: rgb(var(--white));
