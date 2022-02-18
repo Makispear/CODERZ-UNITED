@@ -56,7 +56,7 @@ export default function PreModules() {
       </div>
 
       <div className="w-full flex lg:w-900 justify-end mt-10 text-secondary">
-        <p>(1/4) completed</p>
+        <p>({lessonsArr.filter(lesson => lesson.isCompleted).length}/{lessonsArr.length}) completed</p>
       </div>
 
       {/* Modules  */}
