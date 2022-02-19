@@ -4,7 +4,7 @@ import Copyright from "../Copyright";
 import { QUERY_ME } from "../../utils/queries";
 import { useQuery, useMutation } from "@apollo/client";
 import { JOIN_NEWS_LETTER } from "../../utils/mutations";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Auth from "../../utils/auth";
 
 export default function Footer() {
@@ -43,8 +43,6 @@ export default function Footer() {
       console.error(e);
     }
   };
-
-
 
 
   return (

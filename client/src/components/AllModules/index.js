@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { markComplete } from "../../utils/markComplete";
 import { GET_COMPLETED_LESSONS } from "../../utils/queries";
+import Reference from "../../utils/Reference";
 import CheckMark from "../CheckMark";
 
 export default function AllModules() {
@@ -65,7 +66,7 @@ export default function AllModules() {
           All Modules
         </h1>
         <p className="text-center text-secondary">
-          {motivationalSayings[Math.floor(Math.random() * motivationalSayings.length)]}
+          "{motivationalSayings[Math.floor(Math.random() * motivationalSayings.length)]}" - <Reference props={{ word: "Yours truly", ref: "The Coderz United Team" }} />
         </p>
       </div>
 

@@ -5,6 +5,7 @@ import { menuExpander } from "../../utils/menuExpander";
 import { useQuery } from "@apollo/client";
 import { GET_COMPLETED_LESSONS } from "../../utils/queries";
 import { markComplete } from "../../utils/markComplete";
+import Reference from "../../utils/Reference";
 
 export default function PreModules() {
   const { data } = useQuery(GET_COMPLETED_LESSONS)
@@ -50,9 +51,21 @@ export default function PreModules() {
         <h1>
           Getting Started
         </h1>
-        <p className="w-full sm:w-600 text-secondary text-center md:w-700 lg:w-900 bg-black gap-4">
-          <span className="font-bold text-white">Congratulations</span> on taking the bold first step! This section will get you prepared to start coding like a pro. We want to make sure you have all the tools you'll need from the start.
-        </p>
+        {/* Welcoming message  */}
+        {lessonsArr[1].isLocked ?
+          <p className="w-full sm:w-600 text-secondary text-center md:w-700 lg:w-900 bg-black gap-4">
+            <span className="font-bold text-white">Congratulations</span> on taking the bold first step! This section will get you prepared to start coding like a pro. We want to make sure you have all the tools you'll need from the start.
+          </p>
+          :
+          lessonsArr.filter(lesson => lesson.isCompleted) === lessonsArr.length ?
+            <p className="w-full sm:w-600 text-secondary text-center md:w-700 lg:w-900 bg-black gap-4">
+              Lets get things up and running!
+            </p>
+            :
+            <p className="w-full sm:w-600 text-secondary text-center md:w-700 lg:w-900 bg-black gap-4">
+              Yaaay!! ({lessonsArr.length}/{lessonsArr.length}). You have finished this module
+            </p>
+        }
       </div>
 
       <div className="w-full flex lg:w-900 justify-end mt-10 text-secondary">

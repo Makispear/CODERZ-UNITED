@@ -8,6 +8,7 @@ import { MARK_COMPLETED_LESSON } from "../../../../utils/mutations"
 import { GET_COMPLETED_LESSONS } from "../../../../utils/queries"
 import extensionSearchBarPic from "../../../../assets/images/extension_search.png"
 import viewBar from "../../../../assets/images/vscode_view_tab.png"
+import Reference from "../../../../utils/Reference"
 
 export default function VSCode() {
   const Lesson_title = "Install VS Code"
@@ -91,7 +92,7 @@ export default function VSCode() {
         </p>
         <p>
           Let's download Visual Studio Code (also known as VS Code). VS Code is a
-          code editor owned by Microsoft and is one of the best if not the best Code Editor web developers use. It's also free and has a ton of great features. Let's go ahead and download it now. Here is the link to the <a className="link" target="_blank" rel="noopener noreferrer" href="https://code.visualstudio.com/download">download VS Code</a>.
+          code editor owned by Microsoft and is one of the best if not the best Code Editor web developers use. It's also free and has a ton of great features. Let's go ahead and download it now. Here is the link to the <a className="link" target="_blank" rel="noopener noreferrer" href="https://code.visualstudio.com/download">download VS Code</a>. After installing, launch VS Code and you should see VS Code's <Reference props={{ word: "UI", ref: "User Interface" }} />.
         </p>
         <div className={`flex justify-center primary-radius cursor-pointer`}>
           <img
@@ -101,20 +102,6 @@ export default function VSCode() {
             onClick={() => toggleImage()}
           />
         </div>
-        <p>
-          watch the video on how to download and install VS Code.
-        </p>
-
-        <p>
-          @@@@@@@@@@@@@@@@@@
-          @@@@@@@@@@@@@@@@@@
-          @@@@@@@@@@@@@@@@@@
-          @@@@@@@@@@@@@@@@@@
-          @@@@@@@@@@@@@@@@@@
-          @@@@@@@@@@@@@@@@@@
-          @@@@@@@@@@@@@@@@@@
-          @@@@@@@@@@@@@@@@@@
-        </p>
 
         <p>
           VS Code offers a lot of extensions you can download that enhance your coding experience. We recommend you take some time to customize your version of VS Code to give your work some taste.
