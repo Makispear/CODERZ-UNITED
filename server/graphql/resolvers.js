@@ -32,8 +32,11 @@ const resolvers = {
       if (!user) {
         throw new AuthenticationError("Something went wrong when signing up. Please try again.");
       }
-      const token = signToken(user);
-      return { user, token };
+
+      const updatedUser = await User.findOneAndUpdate({ email: args.email }, { $addToSet: { logins: { loginTime: Date.now() } } }, { new: true })
+
+      const token = signToken(updatedUser);
+      return { updatedUser, token };
     },
 
     login: async (_, { email, password }) => {
