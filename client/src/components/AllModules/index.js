@@ -83,7 +83,7 @@ export default function AllModules() {
                     1. Getting Started
                   </p>
                 </div>
-                {lessonsArr[0].isCompleted && lessonsArr[1].isCompleted && lessonsArr[2].isCompleted && lessonsArr[3].isCompleted && lessonsArr[4].isCompleted ? <CheckMark props={{ marked: true }} /> : <CheckMark props={{ marked: false }} />}
+                {lessonsArr.filter(lesson => lesson.isCompleted).length === lessonsArr.length ? <CheckMark props={{ marked: true }} /> : <CheckMark props={{ marked: false }} />}
               </div>
             </div>
 

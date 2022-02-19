@@ -7,6 +7,10 @@ const typeDefs = gql`
     completedDate: String
   }
 
+  type Logins {
+    loginTime: String
+  }
+
   type User {
     _id: ID
     firstName: String
@@ -16,6 +20,7 @@ const typeDefs = gql`
     username: String
     isNewsLetter: Boolean
     completedLessons : [CompletedLessons]
+    logins : [Logins]
   }
   
   type Query {
@@ -38,7 +43,7 @@ const typeDefs = gql`
       password: String!
     ): Auth
 
-    login(email: String!, password: String!): Auth
+    login(email: String!, password: String!, loginTime: String): Auth
 
     markLessonComplete(
       lessonName: String!

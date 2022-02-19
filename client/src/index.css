@@ -31,7 +31,7 @@ body {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	background-color: rgb(var(--black)) !important;
+	background-color: rgb(var(--black));
 	font-family: var(--primary-font), serif;
 }
 
@@ -51,15 +51,15 @@ body {
 }
 
 .primary-radius {
-	border-radius: 2px !important;
+	border-radius: 2px;
 }
 
 .underline-dots {
-	border-bottom: 2px dotted rgb(var(--tertiary-color));
+	border-bottom: 1px dotted rgb(var(--tertiary-color));
 }
 
 .underline-dots:hover {
-	border-bottom: 2px solid rgb(var(--tertiary-color));
+	border-bottom: 1px solid rgb(var(--tertiary-color));
 }
 
 .underline-dots + .reference {
@@ -109,22 +109,22 @@ h1,
 
 h2,
 .h2-style {
-	font-size: clamp(1.5rem, 3.5vw, 2.5rem) !important;
+	font-size: clamp(1.5rem, 3.5vw, 2.5rem);
 }
 
 h3,
 .h3-style {
-	font-size: clamp(1.3rem, 3vw, 2rem) !important;
+	font-size: clamp(1.3rem, 3vw, 2rem);
 }
 
 p,
 .p-style {
-	font-size: clamp(1.2rem, 2vw, 1.3rem) !important;
-	line-height: 1.6 !important;
+	font-size: clamp(1.2rem, 2vw, 1.3rem);
+	line-height: 1.6;
 }
 
 .text-xsm {
-	font-size: 12px !important;
+	font-size: 12px;
 }
 
 .design-font {
@@ -240,13 +240,13 @@ li {
 .button-style {
 	padding: 0.5em 1em;
 	width: fit-content;
-	letter-spacing: normal !important;
+	letter-spacing: normal;
 	white-space: nowrap;
-	border-radius: 2px !important;
+	border-radius: 2px;
 }
 /* ============= OPTIONS COMPONENT STYLING =============== */
 .option-container > div {
-	width: clamp(300px, 25vw 500px) !important;
+	width: clamp(300px, 25vw 500px);
 }
 
 .paragraph-width {
@@ -320,7 +320,7 @@ li {
 input {
 	background-color: rgb(var(--grey));
 	color: rgb(var(--black));
-	border-radius: 2px !important;
+	border-radius: 2px;
 }
 
 input::placeholder {

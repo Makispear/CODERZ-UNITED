@@ -22,6 +22,18 @@ const lessonSchema = new Schema(
   }
 )
 
+const loginSchema = new Schema(
+  {
+    loginTime: {
+      type: String,
+      default: Date.now
+    }
+  },
+  {
+    toJSON: { getters: true },
+  }
+)
+
 const userSchema = new Schema(
   {
     firstName: {
@@ -47,6 +59,9 @@ const userSchema = new Schema(
     },
     completedLessons: [
       lessonSchema
+    ],
+    logins: [
+      loginSchema
     ]
   },
   {

@@ -57,19 +57,19 @@ export default function PreModules() {
             <span className="font-bold text-white">Congratulations</span> on taking the bold first step! This section will get you prepared to start coding like a pro. We want to make sure you have all the tools you'll need from the start.
           </p>
           :
-          lessonsArr.filter(lesson => lesson.isCompleted) === lessonsArr.length ?
+          lessonsArr.filter(lesson => lesson.isCompleted).length !== lessonsArr.length ?
             <p className="w-full sm:w-600 text-secondary text-center md:w-700 lg:w-900 bg-black gap-4">
-              Lets get things up and running!
+              Once your computer is set up, we'll start coding.
             </p>
             :
             <p className="w-full sm:w-600 text-secondary text-center md:w-700 lg:w-900 bg-black gap-4">
-              Yaaay!! ({lessonsArr.length}/{lessonsArr.length}). You have finished this module
+              Yaaay!! ({lessonsArr.length}/{lessonsArr.length}). You have finished this module.
             </p>
         }
       </div>
 
       <div className="w-full flex lg:w-900 justify-end mt-10 text-secondary">
-        <p>({lessonsArr.filter(lesson => lesson.isCompleted).length}/{lessonsArr.length}) completed</p>
+        <p className="text-sm">({lessonsArr.filter(lesson => lesson.isCompleted).length}/{lessonsArr.length}) completed</p>
       </div>
 
       {/* Modules  */}

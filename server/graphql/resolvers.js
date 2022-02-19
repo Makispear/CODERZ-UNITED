@@ -10,7 +10,7 @@ const resolvers = {
 
     me: async (_, __, context) => {
       if (context.user) {
-        const userData = await User.findOne({ _id: context.user._id }).select("-__v -password").populate('completedLessons')
+        const userData = await User.findOne({ _id: context.user._id }).select("-__v -password").populate('completedLessons').populate('logins')
         return userData;
       }
       throw new AuthenticationError("Please login to continue.");

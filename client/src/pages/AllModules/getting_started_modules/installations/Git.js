@@ -113,7 +113,7 @@ export default function Git() {
           </div>
         }
         {!showMarkCompleteButton && showButton &&
-          <NavLink to="/all_modules/getting_started/installations/chrome/" className="bg-transparent text-black button-style border border-tertiary hover:border-black font-light capitalize">next &gt;&gt;</NavLink>
+          <NavLink to="/all_modules/getting_started/" className="bg-transparent text-black button-style border border-tertiary hover:border-black font-light capitalize">next &gt;&gt;</NavLink>
         }
       </div>
 
