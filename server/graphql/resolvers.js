@@ -45,8 +45,11 @@ const resolvers = {
       if (!correctPassword) {
         throw new AuthenticationError("Incorrect login information");
       }
-      const token = signToken(user);
-      return { token, user };
+
+      const updatedUser = await User.findOneAndUpdate({ email: email }, { $addToSet: { logins: { loginTime: Date.now() } } }, { new: true })
+
+      const token = signToken(updatedUser);
+      return { token, updatedUser };
     },
 
     // User can mark a  lesson as complete: This will add that lesson to the completedLessons Document

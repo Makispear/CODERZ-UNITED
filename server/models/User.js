@@ -24,6 +24,9 @@ const lessonSchema = new Schema(
 
 const loginSchema = new Schema(
   {
+    _id: {
+      type: Schema.Types.ObjectId
+    },
     loginTime: {
       type: String,
       default: Date.now
