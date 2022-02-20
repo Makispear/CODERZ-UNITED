@@ -10,7 +10,7 @@ const lessonSchema = new Schema(
       type: String,
     },
     completedDate: {
-      type: String,
+      type: Date,
       default: Date.now,
     },
     lessonNumber: {
@@ -28,7 +28,7 @@ const loginSchema = new Schema(
       type: Schema.Types.ObjectId
     },
     loginTime: {
-      type: String,
+      type: Date,
       default: Date.now
     }
   },
@@ -69,6 +69,7 @@ const userSchema = new Schema(
   },
   {
     toJSON: { virtuals: true },
+    timestamps: true,
     versionKey: false
   }
 )
@@ -86,11 +87,6 @@ userSchema.pre('save', async function (next) {
 userSchema.methods.isCorrectPassword = async function (password) {
   return bcrypt.compare(password, this.password);
 };
-
-// get connection count for user sidebar
-userSchema.virtual('connectionCount').get(function () {
-  return this.connections.length;
-});
 
 const User = model('User', userSchema)
 

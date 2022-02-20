@@ -23,7 +23,7 @@ export default function Installations() {
       markComplete({
         variables: {
           lessonName: Lesson_title.trim(),
-          lessonNumber: Lesson_Number.trim()
+          lessonNumber: Lesson_Number.trim(),
         }
       }).then((result) => {
         if (result) {
