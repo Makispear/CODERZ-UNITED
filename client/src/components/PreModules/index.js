@@ -5,7 +5,6 @@ import { menuExpander } from "../../utils/menuExpander";
 import { useQuery } from "@apollo/client";
 import { GET_COMPLETED_LESSONS } from "../../utils/queries";
 import { markComplete } from "../../utils/markComplete";
-import Reference from "../../utils/Reference";
 
 export default function PreModules() {
   const { data } = useQuery(GET_COMPLETED_LESSONS)

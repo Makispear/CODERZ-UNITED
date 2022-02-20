@@ -6,7 +6,9 @@ export const QUERY_ME = gql`
       isNewsLetter
       firstName
       lastName
-      email
+      logins {
+        loginTime
+      }
     }
   }
 `
