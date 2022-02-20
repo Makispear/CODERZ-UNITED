@@ -37,7 +37,7 @@ export default function Options() {
       </div>
 
       <div className="w-full pr-5 sm:pr-20 flex justify-end">
-        <h2 className="text-4xl font-bold text-white capitalize"><span className="text-tertiary">... </span>Or all of them <span className="text-tertiary">:&#41;</span></h2>
+        <h2 className="font-bold text-white capitalize"><span className="text-tertiary">... </span>Or all of them <span className="text-tertiary">:&#41;</span></h2>
       </div>
     </section>
   )
