@@ -1,5 +1,5 @@
 import CourseMaterial from "../../../components/CourseMaterial";
-import BrandName from "../../../utils/BrandName";
+import { BrandName } from "../../../utils/BrandName";
 
 export default function CourseModules() {
 

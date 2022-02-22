@@ -1,8 +1,7 @@
-// import PrimaryButton from "../components/Buttons/tertiary/Primary";
 import SignupForm from "../components/SignupForm"
+import { BrandName } from "../utils/BrandName"
 
-export default function Signup(props) {
-  const { BrandName } = props
+export default function Signup() {
 
   document.title = `Signup | ${BrandName}`
   return (

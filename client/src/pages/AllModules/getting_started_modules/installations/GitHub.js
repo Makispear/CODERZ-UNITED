@@ -11,7 +11,7 @@ export default function GitHub() {
   const Lesson_Number = '1.2.2'
   const { data } = useQuery(GET_COMPLETED_LESSONS)
   const [markComplete, { error }] = useMutation(MARK_COMPLETED_LESSON)
-  document.title = `Join GitHub | Getting Started' | Lesson ${Lesson_Number}`
+  document.title = `Join GitHub | Getting Started | Lesson ${Lesson_Number}`
   let showMarkCompleteButton = false
   let showButton = false
 

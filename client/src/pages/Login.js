@@ -1,7 +1,7 @@
 import LoginForm from "../components/LoginForm"
+import { BrandName } from "../utils/BrandName"
 
-export default function Login(props) {
-  const { BrandName } = props
+export default function Login() {
   document.title = `Login | ${BrandName}`
 
   return (

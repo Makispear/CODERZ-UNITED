@@ -13,7 +13,7 @@ export default function Git() {
   const Lesson_Number = '1.2.4'
   const { data } = useQuery(GET_COMPLETED_LESSONS)
   const [markComplete, { error }] = useMutation(MARK_COMPLETED_LESSON)
-  document.title = `Install Git | Getting Started' | Lesson ${Lesson_Number}`
+  document.title = `Install Git | Getting Started | Lesson ${Lesson_Number}`
   let showMarkCompleteButton = false
   let showButton = false
 
