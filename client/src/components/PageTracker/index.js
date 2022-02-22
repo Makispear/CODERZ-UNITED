@@ -1,6 +1,6 @@
 export default function PageTracker({ props }) {
 
   return (
-    <span className="text-tertiary p-style">{props.page}</span>
+    <span data-testid="pageTracker" className="text-tertiary p-style">{props.page}</span>
   )
 }

@@ -4,7 +4,7 @@ import '@testing-library/jest-dom/extend-expect';
 
 afterEach(cleanup)
 
-describe("options Component", () => {
+describe("'Options' Component", () => {
     it('renders', () => {
         render(<Options />);
     });

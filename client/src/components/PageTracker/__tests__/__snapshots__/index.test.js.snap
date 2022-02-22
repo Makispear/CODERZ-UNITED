@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`'PageTracker' Component Matches snapshot DOM node structure 1`] = `
+<DocumentFragment>
+  <span
+    class="text-tertiary p-style"
+    data-testid="pageTracker"
+  >
+    1.1.1
+  </span>
+</DocumentFragment>
+`;

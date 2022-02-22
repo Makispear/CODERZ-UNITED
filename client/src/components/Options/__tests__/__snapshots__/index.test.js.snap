@@ -1,5 +1,131 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`'Options' Component Matches snapshot DOM node structure 1`] = `
+<DocumentFragment>
+  <section
+    class="w-full min-h-auto p-sm:py-10 px-3 my-5 bg-black"
+  >
+    <div
+      class="pl-5 sm:pl-20"
+    >
+      <h2
+        class="font-bold text-white capitalize"
+      >
+        Learn any stack 
+        <span
+          class="text-tertiary"
+        >
+          ...
+        </span>
+      </h2>
+    </div>
+    <div
+      class="flex flex-wrap w-full justify-center my-10 gap-10 option-container"
+    >
+      <div
+        class="flex flex-col mx-10 items-center"
+      >
+        <img
+          alt="Design"
+          class="rounded-full w-60 h-60"
+          src="design.jpg"
+        />
+        <h3
+          class="w-max border-tertiary border-b-4 border-t-4 text-3xl my-3 font-semibold text-secondary design-font"
+          data-testid="design"
+        >
+          DESIGN
+        </h3>
+        <p
+          class="text-center paragraph-width font-light text-md text-secondary leading-7"
+        >
+          IT professional responsible for designing the layout, visual appearance and the usability of a website.
+        </p>
+      </div>
+      <div
+        class="flex flex-col mx-10 items-center"
+      >
+        <img
+          alt="Front End"
+          class="rounded-full w-60 h-60"
+          src="frontend.jpg"
+        />
+        <h3
+          class="  text-3xl my-3 font-semibold text-secondary"
+          data-testid="frontEnd"
+        >
+          <span
+            class="text-tertiary font-bold"
+          >
+            &lt; 
+          </span>
+          frontEnd
+          <span
+            class="text-tertiary font-bold"
+          >
+             &gt;
+          </span>
+        </h3>
+        <p
+          class="text-center paragraph-width font-light text-md text-secondary leading-7"
+        >
+          Development of the graphical user interface of a website, through the use of HTML, CSS, and JavaScript, so that users can view and interact with the website.
+        </p>
+      </div>
+      <div
+        class="flex flex-col mx-10 items-center"
+      >
+        <img
+          alt="Back End"
+          class="rounded-full w-60 h-60"
+          src="backend.png"
+        />
+        <h3
+          class="text-secondary text-3xl my-3 font-semibold"
+          data-testid="backEnd"
+        >
+          <span
+            class="text-tertiary font-bold"
+          >
+            &lt;/
+          </span>
+           back_end 
+          <span
+            class="text-tertiary font-bold"
+          >
+             &gt;
+          </span>
+        </h3>
+        <p
+          class="text-center paragraph-width font-light text-md text-secondary leading-7"
+        >
+          Makes use of the technology required to develop the products for the backend of any website. Responsible for building the structure of a software application.
+        </p>
+      </div>
+    </div>
+    <div
+      class="w-full pr-5 sm:pr-20 flex justify-end"
+    >
+      <h2
+        class="font-bold text-white capitalize"
+      >
+        <span
+          class="text-tertiary"
+        >
+          ... 
+        </span>
+        Or all of them 
+        <span
+          class="text-tertiary"
+        >
+          :)
+        </span>
+      </h2>
+    </div>
+  </section>
+</DocumentFragment>
+`;
+
 exports[`options Component Matches snapshot DOM node structure 1`] = `
 <DocumentFragment>
   <section
