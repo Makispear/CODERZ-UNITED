@@ -17,6 +17,8 @@ describe("options Component", () => {
     it('has 3 options "Design, Front-End & Back-End"', () => {
         const { getByTestId } = render(<Options />)
 
-        expect(getByTestId('Design')).toHaveTextContent(('Design').toUpperCase())
+        expect(getByTestId('design')).toHaveTextContent(('design').toUpperCase())
+        expect(getByTestId('frontEnd')).toHaveTextContent(('< frontEnd >'))
+        expect(getByTestId('backEnd')).toHaveTextContent(('back_end'))
     })
 })

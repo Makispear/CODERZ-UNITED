@@ -32,7 +32,7 @@ exports[`options Component Matches snapshot DOM node structure 1`] = `
         />
         <h3
           class="w-max border-tertiary border-b-4 border-t-4 text-3xl my-3 font-semibold text-secondary design-font"
-          data-testid="Design"
+          data-testid="design"
         >
           DESIGN
         </h3>
@@ -52,6 +52,7 @@ exports[`options Component Matches snapshot DOM node structure 1`] = `
         />
         <h3
           class="  text-3xl my-3 font-semibold text-secondary"
+          data-testid="frontEnd"
         >
           <span
             class="text-tertiary font-bold"
@@ -81,6 +82,7 @@ exports[`options Component Matches snapshot DOM node structure 1`] = `
         />
         <h3
           class="text-secondary text-3xl my-3 font-semibold"
+          data-testid="backEnd"
         >
           <span
             class="text-tertiary font-bold"
