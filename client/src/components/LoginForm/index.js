@@ -2,9 +2,9 @@ import { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { LOGIN } from "../../utils/mutations";
 import Auth from "../../utils/auth";
+import { BrandName } from "../../utils/BrandName";
 
-export default function LoginForm(props) {
-  const { BrandName } = props
+export default function LoginForm() {
   const [formState, setFormState] = useState({ email: "", password: "" });
   const [login, { error }] = useMutation(LOGIN);
 
