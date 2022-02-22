@@ -1,10 +1,12 @@
 import { useQuery } from "@apollo/client";
 import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import { BrandName } from "../../utils/BrandName";
 import { markComplete } from "../../utils/markComplete";
 import { GET_COMPLETED_LESSONS } from "../../utils/queries";
 import Reference from "../../utils/Reference";
 import CheckMark from "../CheckMark";
+
 
 export default function AllModules() {
 
@@ -16,7 +18,7 @@ export default function AllModules() {
     "Nice seeing you! Now lets get it done!",
     "In unity we trust!",
     "Anything is possible when we are united!",
-    "Two heads are better than one. Three heads are better than two. How about every coder united?!",
+    `Two heads are better than one. Three heads are better than two. How about all ${BrandName.toLowerCase()}?!`,
     "On your marks! Git commit.. PUSH!!"
   ]
 
@@ -54,7 +56,7 @@ export default function AllModules() {
   markComplete(myData, lessonsArr)
 
   useEffect(() => {
-    document.title = "Welcome - All Modules"
+    document.title = `All Modules | ${BrandName}`
   }, [])
 
 
@@ -66,7 +68,7 @@ export default function AllModules() {
           All Modules
         </h1>
         <p className="text-center text-secondary">
-          "{motivationalSayings[Math.floor(Math.random() * motivationalSayings.length)]}" - <Reference props={{ word: "Yours truly", ref: "The Coderz United Team" }} />
+          &quot;{motivationalSayings[Math.floor(Math.random() * motivationalSayings.length)]}&quot; - <Reference props={{ word: "Yours truly", ref: `The Coderz United Team` }} />
         </p>
       </div>
 

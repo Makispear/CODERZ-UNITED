@@ -3,7 +3,8 @@ import { useMutation } from "@apollo/client";
 import { LOGIN } from "../../utils/mutations";
 import Auth from "../../utils/auth";
 
-export default function LoginForm() {
+export default function LoginForm(props) {
+  const { BrandName } = props
   const [formState, setFormState] = useState({ email: "", password: "" });
   const [login, { error }] = useMutation(LOGIN);
 
@@ -61,7 +62,7 @@ export default function LoginForm() {
         <button className="bg-tertiary font-bold text-white button-style border-2 border-secondary hover:border-tertiary capitalize tracking-wider">Login</button>
       </div>
       <div className="flex flex-col p-3 mt-6 text-darkGray ">
-        <p>New to Coderz United? <a href="/signup" className="link">Sign up.</a></p>
+        <p>New to {BrandName}? <a href="/signup" className="link">Sign up.</a></p>
       </div>
     </form>
   )

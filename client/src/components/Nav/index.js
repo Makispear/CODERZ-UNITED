@@ -2,9 +2,9 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/images/blue(1).svg"
 import Auth from "../../utils/auth";
+import { BrandName } from "../../utils/BrandName";
 
-export default function Nav(props) {
-  const { BrandName } = props
+export default function Nav() {
   const logout = (event) => {
     event.preventDefault();
     Auth.logout();
@@ -17,13 +17,13 @@ export default function Nav(props) {
         {/* <div > */}
         {Auth.loggedIn() ?
           <NavLink className="flex md:px-1 items-center p-style" to={"/all_modules/"}>
-            <img src={logo} alt={`${BrandName} logo`} className="bg-black w-10 mr-2" />
-            <span className="hidden sm:inline w-full text-center font-bold logo-font space-nowrap text-white tracking-wider">{BrandName}</span>
+            <img src={logo} alt={`${BrandName.toUpperCase()} logo`} className="bg-black w-10 mr-2" />
+            <span className="hidden sm:inline w-full text-center font-bold logo-font space-nowrap text-white tracking-wider">{BrandName.toUpperCase()}</span>
           </NavLink>
           :
           <NavLink className="flex md:px-1 items-center p-style" to={"/"}>
-            <img src={logo} alt={`${BrandName} logo`} className="bg-black w-10 mr-2" />
-            <span className="hidden sm:inline w-full text-center font-bold logo-font space-nowrap text-white tracking-wider">{BrandName}</span>
+            <img src={logo} alt={`${BrandName.toUpperCase()} logo`} className="bg-black w-10 mr-2" />
+            <span className="hidden sm:inline w-full text-center font-bold logo-font space-nowrap text-white tracking-wider">{BrandName.toUpperCase()}</span>
           </NavLink>
         }
         {/* </div> */}

@@ -1,9 +1,10 @@
 import { goBack } from "../utils/previousPage"
 import logo from "../assets/images/Group 2.png"
+import { BrandName } from "../utils/BrandName"
 
 export default function LearnMore() {
 
-  document.title = "About | Coderz United"
+  document.title = `About | ${BrandName}`
 
   return (
     <section className="text-white z-50 w-full bg-image flex flex-col items-center text-start sm:pt-20 md:pt-40">
@@ -11,12 +12,12 @@ export default function LearnMore() {
         <div className="sm:mx-10 flex justify-center w-auto">
           <img className="w-28 sm:w-44" src={logo} alt="Huge logo" />
         </div>
-        <h1 className="text-white">About Coderz United</h1>
+        <h1 className="text-white">About {BrandName}</h1>
       </div>
 
       <div className="indent-8 p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 flex flex-col gap-5 text-secondary">
         <p className="w-full text-secondary">
-          Coderz United is an educational institution founded in Connecticut in 2022. Its vision is to bring high-quality educational content to everybody everywhere. Coderz United is the ultimate solution for coders who can't afford the expensive university classes but still want a high-level education.
+          {BrandName} is an educational institution founded in Connecticut in 2022. Its vision is to bring high-quality educational content to everybody everywhere. {BrandName} is the ultimate solution for coders who can't afford the expensive university classes but still want a high-level education.
         </p>
       </div>
 

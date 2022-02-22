@@ -1,9 +1,10 @@
 // import PrimaryButton from "../components/Buttons/tertiary/Primary";
 import SignupForm from "../components/SignupForm"
 
-export default function Signup() {
+export default function Signup(props) {
+  const { BrandName } = props
 
-  document.title = "Signup | Coderz United"
+  document.title = `Signup | ${BrandName}`
   return (
     <section className="bg-black w-full grid place-items-center">
       <div className="flex flex-col items-center gap-5">

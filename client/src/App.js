@@ -1,3 +1,4 @@
+
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
@@ -35,7 +36,7 @@ import NotFound from "./utils/NotFound";
 import Auth from "./utils/auth";
 
 function App() {
-  const BrandName = "CODERZ UNITED"
+
 
   const httpLink = createHttpLink({
     // uri: "http://localhost:3001/graphql", 
@@ -62,7 +63,7 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <ScrollToTop />
-        <Nav BrandName={BrandName} />
+        <Nav />
         {!Auth.loggedIn() &&
           <Routes>
             <Route path="/" element={<Home />} />
@@ -88,7 +89,9 @@ function App() {
             <Route path='*' exact={true} element={<NotFound />} />
           </Routes>
         }
-        <Footer BrandName={BrandName} />
+        <Footer />
+
+
       </Router>
     </ApolloProvider>
   );

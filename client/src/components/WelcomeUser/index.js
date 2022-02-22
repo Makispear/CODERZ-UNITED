@@ -1,4 +1,5 @@
 import { useQuery } from "@apollo/client"
+import { BrandName } from "../../utils/BrandName";
 import { QUERY_ME } from "../../utils/queries"
 
 export default function WelcomeUser() {
@@ -15,11 +16,11 @@ export default function WelcomeUser() {
   const checkLoginCondition = () => {
     if (!loginCount) {
       return (
-        <p className="text-white">Welcome to Coderz United!</p>
+        <p className="text-white">Welcome to {BrandName}!</p>
       )
     } else if (loginCount === 1) {
       return (
-        <p className="text-white">Welcome to Coderz United <span className="text-tertiary">{myData.firstName}</span>!</p>
+        <p className="text-white">Welcome to {BrandName} <span className="text-tertiary">{myData.firstName}</span>!</p>
       )
     } else if (loginCount > 1) {
       return (

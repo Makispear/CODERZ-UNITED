@@ -1,5 +1,6 @@
 import logo from "../../assets/images/test.png"
 import { Link } from "react-router-dom"
+import { BrandName } from "../../utils/BrandName"
 
 export default function Hero() {
 
@@ -12,7 +13,7 @@ export default function Hero() {
           <h1 className="font-bold mx-auto sm:m-10 tracking-wide text-white leading-none capitalize">Learn web development  & design</h1>
         </div>
         <div>
-          <p className="sm:mx-10 text-l mt-5 sm:text-2xl text-secondary font-light">"Two brains are better than one, three brains are better than two." How about every coder united???</p>
+          <p className="sm:mx-10 text-l mt-5 sm:text-2xl text-secondary font-light">"Two brains are better than one, three brains are better than two." How about all {BrandName}???</p>
         </div>
         <div className="gap-2 flex justify-center sm:justify-start flex-wrap m-14">
           <Link to="/signup" className="button-style primary-radius bg-tertiary hover:border-tertiary font-bold border-secondary border-2 text-white tracking-widest capitalize">Get started</Link>
