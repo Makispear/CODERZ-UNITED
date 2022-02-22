@@ -1,5 +1,10 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from "@apollo/client";
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  createHttpLink,
+} from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
 
 import Nav from './components/Nav';
@@ -64,16 +69,16 @@ function App() {
         <ScrollToTop />
         <Nav BrandName={BrandName} />
         {!Auth.loggedIn() &&
-          <Routes>
+          <>
             <Route path="/" element={<Home />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
             <Route path="/learn_more" element={<LearnMore />} />
-          </Routes>
+          </>
         }
 
         {Auth.loggedIn() &&
-          <Routes>
+          <>
             {/* Getting started Modules  */}
             <Route path="/all_modules/" element={<AllModules />} />
             <Route path="/all_modules/getting_started/" element={<GettingStarted />} />
@@ -86,7 +91,7 @@ function App() {
             {/* Course Modules  */}
             <Route path="/all_modules/course_modules" element={<CourseModules />} />
             <Route path='*' exact={true} element={<NotFound />} />
-          </Routes>
+          </>
         }
         <Footer BrandName={BrandName} />
       </Router>

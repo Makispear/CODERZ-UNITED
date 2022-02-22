@@ -66,7 +66,7 @@ export default function Chrome() {
           <BreadCrumb props={{ color: 'darkGray' }} />
         </div>
         <h2>
-          {Lesson_title}
+          {Lesson_title} <PageTracker props={{ page: Lesson_Number }} />
         </h2>
       </div>
 

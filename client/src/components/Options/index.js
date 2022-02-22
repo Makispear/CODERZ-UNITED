@@ -15,7 +15,7 @@ export default function Options() {
         {/* here are the options section  */}
         <div className="flex flex-col mx-10 items-center">
           <img className="rounded-full w-60 h-60" src={design} alt="Design" />
-          <h3 className="w-max border-tertiary border-b-4 border-t-4 text-3xl my-3 font-semibold text-secondary design-font">DESIGN</h3>
+          <h3 data-testid="Design" className="w-max border-tertiary border-b-4 border-t-4 text-3xl my-3 font-semibold text-secondary design-font">DESIGN</h3>
           <p className="text-center paragraph-width font-light text-md text-secondary leading-7">
             IT professional responsible for designing the layout, visual appearance and the usability of a website.
           </p>
