@@ -1,63 +1,18 @@
-import { NavLink } from "react-router-dom"
 import PageTracker from "../../../../components/PageTracker"
 import BreadCrumb from "../../../../components/BreadCrumb"
-import { useMutation, useQuery } from "@apollo/client"
-import { GET_COMPLETED_LESSONS } from "../../../../utils/queries"
-import { MARK_COMPLETED_LESSON } from "../../../../utils/mutations"
 import Reference from "../../../../utils/Reference"
 import gitBashInterface from "../../../../assets/images/gitbash_interface.png"
 import { useState } from "react"
+import BackAndNextButtons from "../../../../components/NextAndBackButtons"
 
 export default function Git() {
   const Lesson_title = "Install Git"
   const Lesson_Number = '1.2.4'
-  const { data } = useQuery(GET_COMPLETED_LESSONS)
-  const [markComplete, { error }] = useMutation(MARK_COMPLETED_LESSON)
   document.title = `Install Git | Getting Started | Lesson ${Lesson_Number}`
-  let showMarkCompleteButton = false
-  let showButton = false
 
-  const myData = data?.getCompletedLessons.completedLessons || null
-
-  const completeLesson = () => {
-    try {
-      markComplete({
-        variables: {
-          lessonName: Lesson_title.trim(),
-          lessonNumber: Lesson_Number.trim()
-        }
-      }).then((result) => {
-        if (result) {
-          window.location.href = "/all_modules/getting_started/";
-        }
-      })
-    } catch (error) {
-      console.log(error.message)
-    }
-  }
-
-  if (error) {
-    alert(error.message)
-  }
-
-  if (myData) {
-    let isFound = false;
-
-    for (let i = 0; i < myData.length; i++) {
-      if (myData[i].lessonName === Lesson_title) {
-        isFound = true
-        break
-      }
-    }
-
-    if (isFound) {
-      showButton = true;
-      showMarkCompleteButton = false
-    } else {
-      showButton = true;
-      showMarkCompleteButton = true
-    }
-
+  const nextAndBackObject = {
+    nextLink: "/all_modules/getting_started/",
+    backLink: "/all_modules/getting_started/installations/chrome/"
   }
 
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -103,19 +58,7 @@ export default function Git() {
         />
       </div>
 
-      <div className="flex my-1 justify-between w-full items p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900">
-
-        <NavLink to="/all_modules/getting_started/installations/chrome/" className="bg-transparent text-black button-style border border-tertiary hover:border-black font-light capitalize">&lt;&lt; Back</NavLink>
-
-        {showMarkCompleteButton && showButton &&
-          <div className='flex'>
-            <button className="bg-tertiary font-bold text-white button-style border-2 border-secondary hover:border-tertiary capitalize tracking-wider" onClick={completeLesson}>Complete &amp; next </button>
-          </div>
-        }
-        {!showMarkCompleteButton && showButton &&
-          <NavLink to="/all_modules/getting_started/" className="bg-transparent text-black button-style border border-tertiary hover:border-black font-light capitalize">next &gt;&gt;</NavLink>
-        }
-      </div>
+      <BackAndNextButtons props={nextAndBackObject} />
 
     </section >
   )
