@@ -8,31 +8,49 @@ export default function BackAndNextButtons({ props }) {
     const { backLink, nextLink, Lesson_Number, Lesson_title } = props
     const { data } = useQuery(GET_COMPLETED_LESSONS)
     const [markComplete, { error }] = useMutation(MARK_COMPLETED_LESSON)
+    // buttons show depending on these 2 values below
     let showMarkCompleteButton = false
     let showButton = false
+
+    // completed lessons array from the users data 
     const myData = data?.getCompletedLessons.completedLessons || null
 
-    const completeLesson = () => {
+    // function for marking a lesson complete 
+    const completeLesson = button => {
+        // hide button immediately after click to prevent double marking complete if connection is slow or flawed 
+        button.className = "hidden"
+
         try {
             markComplete({
                 variables: {
                     lessonName: Lesson_title.trim(),
                     lessonNumber: Lesson_Number.trim()
                 }
-            }).then((result) => {
+            }).then(result => {
+                // if mark complete is successful, go to next page 
                 if (result) {
                     window.location.href = nextLink;
                 }
             })
         } catch (error) {
-            console.log(error.message)
+            alert(error)
         }
     }
 
     if (error) {
-        alert(error.message)
+        console.log(error.message)
+        // if can't connect to database 
+        if (error.message === 'Unexpected token P in JSON at position 0') {
+            return alert('Failed to save this lesson as complete. Please try again later! If this issue continues to occur, please contact us!')
+        }
+
+        // if can't connect to internet or react
+        if (error.message === 'Failed to fetch') {
+            return alert('Please check your internet connection and try again!')
+        }
     }
 
+    // checks complete state of this lesson 
     if (myData) {
         let isFound = false;
 
@@ -43,6 +61,7 @@ export default function BackAndNextButtons({ props }) {
             }
         }
 
+        // sets the state of the buttons 
         if (isFound) {
             showButton = true;
             showMarkCompleteButton = false
@@ -50,7 +69,6 @@ export default function BackAndNextButtons({ props }) {
             showButton = true;
             showMarkCompleteButton = true
         }
-
     }
 
     return (
@@ -60,7 +78,7 @@ export default function BackAndNextButtons({ props }) {
 
             {showMarkCompleteButton && showButton &&
                 <div className='flex'>
-                    <button className="bg-tertiary font-bold text-white button-style border-2 border-secondary hover:border-tertiary capitalize tracking-wider" onClick={completeLesson}>Complete &amp; next </button>
+                    <button className="bg-tertiary font-bold text-white button-style border-2 border-secondary hover:border-tertiary capitalize tracking-wider" onClick={event => completeLesson(event.target)}>Complete &amp; next </button>
                 </div>
             }
             {!showMarkCompleteButton && showButton &&
