@@ -5,14 +5,15 @@ import Reference from '../../../utils/Reference'
 import BackAndNextButtons from '../../../components/NextAndBackButtons'
 
 export default function Installations() {
-  const Lesson_title = "FAQ"
-  const Lesson_Number = "1.1.1"
-  document.title = `FAQ | Getting Started | Lesson ${Lesson_Number}`
 
-  const nextAndBackObject = {
+  const lessonInfo = {
+    Lesson_title: "FAQ",
+    Lesson_Number: "1.1.1",
     nextLink: "/all_modules/getting_started/",
-    backLink: "/all_modules/getting_started/"
+    backLink: "/all_modules/getting_started/",
   }
+
+  document.title = `FAQ | Getting Started | Lesson ${lessonInfo.Lesson_Number}`
 
   return (
     <section className="style-module-section">
@@ -27,7 +28,7 @@ export default function Installations() {
           <BreadCrumb props={{ color: 'darkGray' }} />
         </div>
         <h2>
-          {Lesson_title} <PageTracker props={{ page: Lesson_Number }} />
+          {lessonInfo.Lesson_title} <PageTracker props={{ page: lessonInfo.Lesson_Number }} />
         </h2>
       </div>
 
@@ -139,7 +140,7 @@ export default function Installations() {
       </div>
 
 
-      <BackAndNextButtons props={nextAndBackObject} />
+      <BackAndNextButtons props={lessonInfo} />
 
     </section>
   )

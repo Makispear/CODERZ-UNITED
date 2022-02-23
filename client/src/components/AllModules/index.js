@@ -29,27 +29,32 @@ export default function AllModules() {
     {
       lessonName: 'FAQ',
       isCompleted: false,
-      isLocked: false
+      isLocked: false,
+      module: "Getting Started"
     },
     {
       lessonName: 'Install VS Code',
       isCompleted: false,
-      isLocked: true
+      isLocked: true,
+      module: "Getting Started"
     },
     {
       lessonName: 'Sign up to GitHub',
       isCompleted: false,
-      isLocked: true
+      isLocked: true,
+      module: "Getting Started"
     },
     {
       lessonName: 'Install Google Chrome',
       isCompleted: false,
-      isLocked: true
+      isLocked: true,
+      module: "Getting Started"
     },
     {
       lessonName: 'Install Git',
       isCompleted: false,
-      isLocked: true
+      isLocked: true,
+      module: "Getting Started"
     }
   ]
 
@@ -85,7 +90,7 @@ export default function AllModules() {
                     1. Getting Started
                   </p>
                 </div>
-                {lessonsArr.filter(lesson => lesson.isCompleted).length === lessonsArr.length ? <CheckMark props={{ marked: true }} /> : <CheckMark props={{ marked: false }} />}
+                {lessonsArr.filter(lesson => lesson.module == "Getting Started" && lesson.isCompleted).length === lessonsArr.length ? <CheckMark props={{ marked: true }} /> : <CheckMark props={{ marked: false }} />}
               </div>
             </div>
 

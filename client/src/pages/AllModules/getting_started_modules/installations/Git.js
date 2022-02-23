@@ -6,14 +6,15 @@ import { useState } from "react"
 import BackAndNextButtons from "../../../../components/NextAndBackButtons"
 
 export default function Git() {
-  const Lesson_title = "Install Git"
-  const Lesson_Number = '1.2.4'
-  document.title = `Install Git | Getting Started | Lesson ${Lesson_Number}`
 
-  const nextAndBackObject = {
+  const lessonInfo = {
+    Lesson_title: "Install Git",
+    Lesson_Number: '1.2.4',
     nextLink: "/all_modules/getting_started/",
-    backLink: "/all_modules/getting_started/installations/chrome/"
+    backLink: "/all_modules/getting_started/installations/chrome/",
   }
+
+  document.title = `Install Git | Getting Started | Lesson ${lessonInfo.Lesson_Number}`
 
   const [isModalOpen, setIsModalOpen] = useState(false)
 
@@ -29,7 +30,7 @@ export default function Git() {
           <BreadCrumb props={{ color: 'darkGray' }} />
         </div>
         <h2>
-          {Lesson_title} <PageTracker props={{ page: Lesson_Number }} />
+          {lessonInfo.Lesson_title} <PageTracker props={{ page: lessonInfo.Lesson_Number }} />
         </h2>
       </div>
 
@@ -58,7 +59,7 @@ export default function Git() {
         />
       </div>
 
-      <BackAndNextButtons props={nextAndBackObject} />
+      <BackAndNextButtons props={lessonInfo} />
 
     </section >
   )

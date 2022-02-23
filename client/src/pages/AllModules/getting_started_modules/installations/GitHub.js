@@ -1,19 +1,18 @@
-import { NavLink } from "react-router-dom"
 import PageTracker from "../../../../components/PageTracker"
 import InfoMessage from "../../../../components/InfoMessage"
 import BreadCrumb from "../../../../components/BreadCrumb"
 import BackAndNextButtons from "../../../../components/NextAndBackButtons"
 
 export default function GitHub() {
-  const Lesson_title = "Sign up to GitHub"
-  const Lesson_Number = '1.2.2'
-  document.title = `Join GitHub | Getting Started | Lesson ${Lesson_Number}`
 
-  const nextAndBackObject = {
+  const lessonInfo = {
+    Lesson_title: "Sign up to GitHub",
+    Lesson_Number: '1.2.2',
     nextLink: "/all_modules/getting_started/installations/chrome/",
-    backLink: "/all_modules/getting_started/installations/vs_code/"
+    backLink: "/all_modules/getting_started/installations/vs_code/",
   }
 
+  document.title = `Join GitHub | Getting Started | Lesson ${lessonInfo.Lesson_Number}`
 
 
   return (
@@ -24,7 +23,7 @@ export default function GitHub() {
           <BreadCrumb props={{ color: 'darkGray' }} />
         </div>
         <h2>
-          {Lesson_title} <PageTracker props={{ page: Lesson_Number }} />
+          {lessonInfo.Lesson_title} <PageTracker props={{ page: lessonInfo.Lesson_Number }} />
         </h2>
       </div>
 
@@ -67,7 +66,7 @@ export default function GitHub() {
         </p>
       </div>
 
-      <BackAndNextButtons props={nextAndBackObject} />
+      <BackAndNextButtons props={lessonInfo} />
 
     </section >
   )

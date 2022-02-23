@@ -5,11 +5,9 @@ import { MARK_COMPLETED_LESSON } from '../../utils/mutations'
 import { GET_COMPLETED_LESSONS } from '../../utils/queries'
 
 export default function BackAndNextButtons({ props }) {
-    const { backLink, nextLink } = props
+    const { backLink, nextLink, Lesson_Number, Lesson_title } = props
     const { data } = useQuery(GET_COMPLETED_LESSONS)
     const [markComplete, { error }] = useMutation(MARK_COMPLETED_LESSON)
-    const Lesson_title = "Install Git"
-    const Lesson_Number = '1.2.4'
     let showMarkCompleteButton = false
     let showButton = false
     const myData = data?.getCompletedLessons.completedLessons || null

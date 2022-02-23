@@ -8,14 +8,15 @@ import Reference from "../../../../utils/Reference"
 import BackAndNextButtons from "../../../../components/NextAndBackButtons"
 
 export default function VSCode() {
-  const Lesson_title = "Install VS Code"
-  const Lesson_Number = '1.2.1'
-  document.title = `Install VS Code | Getting Started | Lesson ${Lesson_Number}`
 
-  const nextAndBackObject = {
+  const lessonInfo = {
+    Lesson_title: "Install VS Code",
+    Lesson_Number: '1.2.1',
     nextLink: "/all_modules/getting_started/installations/github/",
-    backLink: "/all_modules/getting_started/"
+    backLink: "/all_modules/getting_started/",
   }
+
+  document.title = `Install VS Code | Getting Started | Lesson ${lessonInfo.Lesson_Number}`
 
   const [isModalOpen, setIsModalOpen] = useState(false)
 
@@ -36,7 +37,7 @@ export default function VSCode() {
           <BreadCrumb props={{ color: 'darkGray' }} />
         </div>
         <h2>
-          {Lesson_title} <PageTracker props={{ page: Lesson_Number }} />
+          {lessonInfo.Lesson_title} <PageTracker props={{ page: lessonInfo.Lesson_Number }} />
         </h2>
       </div>
 
@@ -163,7 +164,7 @@ export default function VSCode() {
         />
       </div>
 
-      <BackAndNextButtons props={nextAndBackObject} />
+      <BackAndNextButtons props={lessonInfo} />
 
     </section >
   )

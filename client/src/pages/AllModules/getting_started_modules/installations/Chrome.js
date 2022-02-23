@@ -4,14 +4,15 @@ import BackAndNextButtons from "../../../../components/NextAndBackButtons"
 import PageTracker from "../../../../components/PageTracker"
 
 export default function Chrome() {
-  const Lesson_title = "Install Google Chrome"
-  const Lesson_Number = "1.2.3"
-  document.title = `Install Google Chrome | Getting Started | Lesson ${Lesson_Number}`
 
-  const nextAndBackObject = {
+  const lessonInfo = {
+    Lesson_title: "Install Google Chrome",
+    Lesson_Number: "1.2.3",
     nextLink: "/all_modules/getting_started/installations/git/",
     backLink: "/all_modules/getting_started/installations/github/",
   }
+
+  document.title = `Install Google Chrome | Getting Started | Lesson ${lessonInfo.Lesson_Number}`
 
 
   return (
@@ -22,7 +23,7 @@ export default function Chrome() {
           <BreadCrumb props={{ color: 'darkGray' }} />
         </div>
         <h2>
-          {Lesson_title} <PageTracker props={{ page: Lesson_Number }} />
+          {lessonInfo.Lesson_title} <PageTracker props={{ page: lessonInfo.Lesson_Number }} />
         </h2>
       </div>
 
@@ -38,7 +39,7 @@ export default function Chrome() {
         </p>
       </div>
 
-      <BackAndNextButtons props={nextAndBackObject} />
+      <BackAndNextButtons props={lessonInfo} />
     </section>
   )
 }
