@@ -97,8 +97,8 @@ export default function AllModules() {
           </div>
         </NavLink>
 
-        <NavLink to={"/all_modules/course_modules/"}>
-          <div className="flex justify-between items-center p-5 primary-radius border-2 text-black bg-secondary hover:bg-white">
+        {<NavLink to={`${lessonsArr.filter(lesson => lesson.module == "Getting Started" && lesson.isCompleted).length === lessonsArr.length ? "/all_modules/course_modules/" : "#"}`}>
+          <div className={`${lessonsArr.filter(lesson => lesson.module == "Getting Started" && lesson.isCompleted).length === lessonsArr.length ? "flex justify-between items-center p-5 primary-radius border-2 text-black bg-secondary hover:bg-white" : "locked flex justify-between items-center p-5 primary-radius bg-darkGray brightness-75"}`}>
             <div>
               <p>
                 <span className="font-bold capitalize">2. Course Modules - </span> Lets start Coding.
@@ -106,7 +106,7 @@ export default function AllModules() {
             </div>
             <CheckMark props={{ marked: false }} />
           </div>
-        </NavLink>
+        </NavLink>}
 
       </div>
 
