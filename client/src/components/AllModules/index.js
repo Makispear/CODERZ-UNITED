@@ -1,6 +1,6 @@
 import { useQuery } from "@apollo/client";
 import { useEffect } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { BrandName } from "../../utils/BrandName";
 import { markComplete } from "../../utils/markComplete";
 import { GET_COMPLETED_LESSONS } from "../../utils/queries";

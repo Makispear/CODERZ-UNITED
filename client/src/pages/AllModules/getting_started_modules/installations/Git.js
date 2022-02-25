@@ -4,6 +4,7 @@ import Reference from "../../../../utils/Reference"
 import gitBashInterface from "../../../../assets/images/gitbash_interface.png"
 import { useState } from "react"
 import BackAndNextButtons from "../../../../components/NextAndBackButtons"
+import InfoMessage from "../../../../components/InfoMessage"
 
 export default function Git() {
 
@@ -57,6 +58,9 @@ export default function Git() {
           className={`cursor-pointer p-2 border border-black ${isModalOpen ? "full-screen-img" : "w-300"}`}
           onClick={() => toggleImage()}
         />
+      </div>
+      <div className="p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 flex flex-col gap-5">
+        <InfoMessage props={{ name: "Note", note: "This might look slightly different depending on your the version you downloaded. To check which version of Git Bash you have type in 'git --version' and press Enter." }} />
       </div>
 
       <BackAndNextButtons props={lessonInfo} />
