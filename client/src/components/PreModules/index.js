@@ -6,40 +6,12 @@ import { useQuery } from "@apollo/client";
 import { GET_COMPLETED_LESSONS } from "../../utils/queries";
 import { markComplete } from "../../utils/markComplete";
 
-export default function PreModules() {
+export default function PreModules({ props }) {
+  const lessonsArr = props
   const { data } = useQuery(GET_COMPLETED_LESSONS)
   const myData = data?.getCompletedLessons.completedLessons || null
 
-  const lessonsArr = [
-    {
-      lessonName: 'FAQ',
-      isCompleted: false,
-      isLocked: false
-    },
-    {
-      lessonName: 'Install VS Code',
-      isCompleted: false,
-      isLocked: true
-    },
-    {
-      lessonName: 'Sign up to GitHub',
-      isCompleted: false,
-      isLocked: true
-    },
-    {
-      lessonName: 'Install Google Chrome',
-      isCompleted: false,
-      isLocked: true
-    },
-    {
-      lessonName: 'Install Git',
-      isCompleted: false,
-      isLocked: true
-    }
-  ]
-
   markComplete(myData, lessonsArr)
-
 
   return (
     <section className="style-page-section">
@@ -83,7 +55,7 @@ export default function PreModules() {
                     <span className="faq-lessons-expander">➤</span> Intro To Web Development
                   </button>
                 </div>
-                {lessonsArr[0].isCompleted ? <CheckMark props={{ marked: true }} /> : <CheckMark props={{ marked: false }} />}
+                {lessonsArr.filter(lesson => lesson.section === 'Intro To Web Development').length === lessonsArr.filter(lesson => lesson.isCompleted === true && lesson.section === "Intro To Web Development").length ? <CheckMark props={{ marked: true }} /> : <CheckMark props={{ marked: false }} />}
               </div>
             </div>
 
@@ -107,7 +79,7 @@ export default function PreModules() {
                     <span className="installation-lessons-expander">➤</span> Installations
                   </button>
                 </div>
-                {lessonsArr[1].isCompleted && lessonsArr[2].isCompleted && lessonsArr[3].isCompleted && lessonsArr[4].isCompleted ? <CheckMark props={{ marked: true }} /> : <CheckMark props={{ marked: false }} />}
+                {lessonsArr.filter(lesson => lesson.section === 'Installations').length === lessonsArr.filter(lesson => lesson.isCompleted === true && lesson.section === "Installations").length ? <CheckMark props={{ marked: true }} /> : <CheckMark props={{ marked: false }} />}
               </div>
             </div>
 

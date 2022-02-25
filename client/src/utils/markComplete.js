@@ -1,5 +1,6 @@
 module.exports = {
   markComplete: (myData, lessonsArr) => {
+    // takes in the lessonArray which includes every single lesson & the completedLessons array in the users database 
     if (myData) {
       for (let i = 0; i < myData.length; i++) {
         for (let j = 0; j < lessonsArr.length; j++) {

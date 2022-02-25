@@ -1,6 +1,6 @@
 import { useQuery } from "@apollo/client";
 import { useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { BrandName } from "../../utils/BrandName";
 import { markComplete } from "../../utils/markComplete";
 import { GET_COMPLETED_LESSONS } from "../../utils/queries";
@@ -8,7 +8,8 @@ import Reference from "../../utils/Reference";
 import CheckMark from "../CheckMark";
 
 
-export default function AllModules() {
+export default function AllModules({ props }) {
+  const lessonsArr = props
 
   const motivationalSayings = [
     "Lets make this your best investment in your coding journey.. together!",
@@ -24,39 +25,6 @@ export default function AllModules() {
 
   const { data } = useQuery(GET_COMPLETED_LESSONS)
   const myData = data?.getCompletedLessons.completedLessons || null
-
-  const lessonsArr = [
-    {
-      lessonName: 'FAQ',
-      isCompleted: false,
-      isLocked: false,
-      module: "Getting Started"
-    },
-    {
-      lessonName: 'Install VS Code',
-      isCompleted: false,
-      isLocked: true,
-      module: "Getting Started"
-    },
-    {
-      lessonName: 'Sign up to GitHub',
-      isCompleted: false,
-      isLocked: true,
-      module: "Getting Started"
-    },
-    {
-      lessonName: 'Install Google Chrome',
-      isCompleted: false,
-      isLocked: true,
-      module: "Getting Started"
-    },
-    {
-      lessonName: 'Install Git',
-      isCompleted: false,
-      isLocked: true,
-      module: "Getting Started"
-    }
-  ]
 
   markComplete(myData, lessonsArr)
 
