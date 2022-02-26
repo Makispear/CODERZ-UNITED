@@ -12,7 +12,7 @@ export default function Chrome() {
     backLink: "/all_modules/getting_started/installations/github/",
   }
 
-  document.title = `Install Google Chrome | Getting Started | Lesson ${lessonInfo.Lesson_Number}`
+  document.title = `${lessonInfo.Lesson_title} | Getting Started | Lesson ${lessonInfo.Lesson_Number}`
 
 
   return (

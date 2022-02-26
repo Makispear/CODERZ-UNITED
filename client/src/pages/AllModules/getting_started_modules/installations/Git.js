@@ -15,7 +15,7 @@ export default function Git() {
     backLink: "/all_modules/getting_started/installations/chrome/",
   }
 
-  document.title = `Install Git | Getting Started | Lesson ${lessonInfo.Lesson_Number}`
+  document.title = `${lessonInfo.Lesson_title} | Getting Started | Lesson ${lessonInfo.Lesson_Number}`
 
   const [isModalOpen, setIsModalOpen] = useState(false)
 

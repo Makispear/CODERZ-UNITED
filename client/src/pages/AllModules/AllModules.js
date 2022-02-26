@@ -38,7 +38,8 @@ export default function Modules() {
       isLocked: true,
       section: 'Installations',
       module: "Getting Started"
-    }
+    },
+
   ]
 
   return (

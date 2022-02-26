@@ -13,7 +13,7 @@ export default function Installations() {
     backLink: "/all_modules/getting_started/",
   }
 
-  document.title = `FAQ | Getting Started | Lesson ${lessonInfo.Lesson_Number}`
+  document.title = `${lessonInfo.Lesson_title} | Getting Started | Lesson ${lessonInfo.Lesson_Number}`
 
   return (
     <section className="style-module-section">

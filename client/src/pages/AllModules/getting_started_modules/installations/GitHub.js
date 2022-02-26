@@ -12,7 +12,7 @@ export default function GitHub() {
     backLink: "/all_modules/getting_started/installations/vs_code/",
   }
 
-  document.title = `Join GitHub | Getting Started | Lesson ${lessonInfo.Lesson_Number}`
+  document.title = `${lessonInfo.Lesson_title} | Getting Started | Lesson ${lessonInfo.Lesson_Number}`
 
 
   return (

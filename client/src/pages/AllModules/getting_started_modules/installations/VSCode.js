@@ -16,7 +16,7 @@ export default function VSCode() {
     backLink: "/all_modules/getting_started/",
   }
 
-  document.title = `Install VS Code | Getting Started | Lesson ${lessonInfo.Lesson_Number}`
+  document.title = `${lessonInfo.Lesson_title} | Getting Started | Lesson ${lessonInfo.Lesson_Number}`
 
   const [isModalOpen, setIsModalOpen] = useState(false)
 

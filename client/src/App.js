@@ -34,6 +34,7 @@ import CourseModules from "./pages/AllModules/course_modules/CourseModules";
 import ScrollToTop from "./utils/scrollToTop";
 import NotFound from "./utils/NotFound";
 import Auth from "./utils/auth";
+import CreateRepo from "./pages/AllModules/course_modules/Build_your_first_website/createRepo";
 
 function App() {
 
@@ -86,6 +87,7 @@ function App() {
 
             {/* Course Modules  */}
             <Route path="/all_modules/course_modules" element={<CourseModules />} />
+            <Route path="/all_modules/course_modules/create_repo/" element={<CreateRepo />} />
             <Route path='*' exact={true} element={<NotFound />} />
           </Routes>
         }

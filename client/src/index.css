@@ -1,4 +1,4 @@
-/* =========================== IMPORTS ========================= */
+	/* =========================== IMPORTS ========================= */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -55,11 +55,11 @@ body {
 }
 
 .underline-dots {
-	border-bottom: 1px dotted rgb(var(--tertiary-color));
+	border-bottom: 2px dotted rgb(var(--tertiary-color));
 }
 
 .underline-dots:hover {
-	border-bottom: 1px solid rgb(var(--tertiary-color));
+	border-bottom: 2px solid rgb(var(--tertiary-color));
 }
 
 .underline-dots + .reference {
@@ -313,7 +313,6 @@ li {
 	border: 1px solid;
 	border-radius: 5px;
 	font-size: 0.8em;
-	word-spacing: -2px;
 	white-space: nowrap;
 }
 /* ============= INPUT STYLES =============== */
