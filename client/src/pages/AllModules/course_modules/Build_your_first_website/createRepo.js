@@ -83,6 +83,9 @@ export default function CreateRepo() {
                 <p><span className='font-bold'>Congratulations</span> on creating your very first GitHub <Reference props={{ word: "repo", ref: "Repository" }} />. Now that we have a place to store our code, you can start building your first project.</p>
 
                 <p>Our project is now stored remotely in GitHub. Remote is the place where the project was originally stored. The next step is to <Reference props={{ word: "pull", ref: "Download" }} /> our project from <Reference props={{ word: "remote", ref: "GitHub" }} /></p>
+
+                <InfoMessage props={{ name: "Info", note: 'Do you remember what we say instead of "download from " and "upload to" github? Pull and Push.' }} />
+
             </div>
 
 

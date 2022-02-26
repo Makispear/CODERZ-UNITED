@@ -80,7 +80,8 @@ body {
 	padding: 5px 5px;
 	border: 1px solid rgb(var(--tertiary-color));
 	height: auto;
-	overflow: unset
+	overflow: unset;
+	user-select: none;
 }
 
 .locked {
