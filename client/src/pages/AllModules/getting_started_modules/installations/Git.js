@@ -5,6 +5,7 @@ import gitBashInterface from "../../../../assets/images/gitbash_interface.png"
 import { useState } from "react"
 import BackAndNextButtons from "../../../../components/NextAndBackButtons"
 import InfoMessage from "../../../../components/InfoMessage"
+import { toggleImage } from "../../../../utils/toggleImage"
 
 export default function Git() {
 
@@ -17,11 +18,6 @@ export default function Git() {
 
   document.title = `${lessonInfo.Lesson_title} | Getting Started | Lesson ${lessonInfo.Lesson_Number}`
 
-  const [isModalOpen, setIsModalOpen] = useState(false)
-
-  const toggleImage = (img) => {
-    setIsModalOpen(!isModalOpen)
-  }
 
   return (
     <section className="style-module-section highlight">
@@ -55,8 +51,8 @@ export default function Git() {
         <img
           src={gitBashInterface}
           alt="VS Code Interface from Microsoft's website"
-          className={`cursor-pointer p-2 border border-black ${isModalOpen ? "full-screen-img" : "w-300"}`}
-          onClick={() => toggleImage()}
+          className={`cursor-pointer p-2 border border-black image-toggled-off`}
+          onClick={e => toggleImage(e)}
         />
       </div>
       <div className="p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 flex flex-col gap-5">

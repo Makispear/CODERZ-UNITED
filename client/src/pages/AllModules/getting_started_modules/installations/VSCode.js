@@ -1,4 +1,3 @@
-import { useState } from "react"
 import BreadCrumb from "../../../../components/BreadCrumb"
 import InfoMessage from "../../../../components/InfoMessage"
 import PageTracker from "../../../../components/PageTracker"
@@ -6,6 +5,7 @@ import extensionSearchBarPic from "../../../../assets/images/extension_search.pn
 import viewBar from "../../../../assets/images/vscode_view_tab.png"
 import Reference from "../../../../utils/Reference"
 import BackAndNextButtons from "../../../../components/NextAndBackButtons"
+import { toggleImage } from "../../../../utils/toggleImage"
 
 export default function VSCode() {
 
@@ -18,11 +18,6 @@ export default function VSCode() {
 
   document.title = `${lessonInfo.Lesson_title} | Getting Started | Lesson ${lessonInfo.Lesson_Number}`
 
-  const [isModalOpen, setIsModalOpen] = useState(false)
-
-  const toggleImage = (img) => {
-    setIsModalOpen(!isModalOpen)
-  }
 
 
 
@@ -53,8 +48,8 @@ export default function VSCode() {
           <img
             src="https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/getstarted_page.png"
             alt="VS Code Interface from Microsoft's website"
-            className={`cursor-pointer p-2 border border-black ${isModalOpen ? "full-screen-img" : "w-300"}`}
-            onClick={() => toggleImage()}
+            className={`cursor-pointer p-2 border border-black image-toggled-off`}
+            onClick={e => toggleImage(e)}
           />
         </div>
 
@@ -69,8 +64,8 @@ export default function VSCode() {
           <img
             src={viewBar}
             alt="Extension search bar in VS Code"
-            className={`cursor-pointer p-2 border border-black ${isModalOpen ? "full-screen-img" : "w-300"}`}
-            onClick={() => toggleImage()}
+            className={`cursor-pointer p-2 border border-black image-toggled-off`}
+            onClick={e => toggleImage(e)}
           />
         </div>
 
@@ -82,8 +77,8 @@ export default function VSCode() {
           <img
             src={extensionSearchBarPic}
             alt="Extension search bar in VS Code"
-            className={`cursor-pointer p-2 border border-black ${isModalOpen ? "full-screen-img" : "w-300"}`}
-            onClick={() => toggleImage()}
+            className={`cursor-pointer p-2 border border-black image-toggled-off`}
+            onClick={e => toggleImage(e)}
           />
         </div>
 

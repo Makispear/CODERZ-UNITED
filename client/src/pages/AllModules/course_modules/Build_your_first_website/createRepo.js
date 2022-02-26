@@ -1,12 +1,12 @@
 import BreadCrumb from '../../../../components/BreadCrumb'
 import PageTracker from '../../../../components/PageTracker'
 import BackAndNextButtons from '../../../../components/NextAndBackButtons'
-import { useState } from 'react'
 import NewRepoButton from "../../../../assets/images/github_new_repo_button.png"
 import newRepoForm from "../../../../assets/images/new_repo_form.png"
 import InfoMessage from '../../../../components/InfoMessage'
 import createdRepo from "../../../../assets/images/created_repo.png"
 import Reference from '../../../../utils/Reference'
+import { toggleImage } from '../../../../utils/toggleImage'
 
 export default function CreateRepo() {
 
@@ -19,11 +19,7 @@ export default function CreateRepo() {
 
     document.title = `${lessonInfo.Lesson_title} | Getting Started | Lesson ${lessonInfo.Lesson_Number}`
 
-    const [isModalOpen, setIsModalOpen] = useState(false)
 
-    const toggleImage = (img) => {
-        setIsModalOpen(!isModalOpen)
-    }
 
     return (
         <section className="style-module-section">
@@ -42,41 +38,37 @@ export default function CreateRepo() {
             </div>
 
 
-            {/* <div className="p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 flex flex-col gap-5">
-                <p></p>
-            </div> */}
-
             <div className="p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 flex flex-col gap-5">
                 <p>Lets make our first project. To start a project we need to create a repo. A repo contains all your projects files. To make a repo, login to github and press the Green button on the left corner that says <span className='keyboard-key'>New</span>.</p>
 
-                <div className={`flex justify-center primary-radius cursor-pointer`}>
+                <div className={`flex justify-center primary-radius w-auto`}>
                     <img
                         src={NewRepoButton}
                         alt="VS Code Interface from Microsoft's website"
-                        className={`cursor-pointer p-2 border border-black ${isModalOpen ? "full-screen-img" : "w-300"}`}
-                        onClick={() => toggleImage()}
+                        className={`cursor-pointer p-2 border border-black image-toggled-off`}
+                        onClick={e => toggleImage(e)}
                     />
                 </div>
 
                 <p>This will direct us to fill in the form to create the repo. Fill in the <span className='keyboard-key'>Repository name</span> and tick the Public option to make the repo public. We're also going to <span className='keyboard-key'>Add a README file</span> so make sure you tick that as well.</p>
 
-                <div className={`flex justify-center primary-radius cursor-pointer`}>
+                <div className={`flex justify-center primary-radius w-auto`}>
                     <img
                         src={newRepoForm}
                         alt="VS Code Interface from Microsoft's website"
-                        className={`cursor-pointer p-2 border border-black ${isModalOpen ? "full-screen-img" : "w-300"}`}
-                        onClick={() => toggleImage()}
+                        className={`cursor-pointer p-2 border border-black image-toggled-off`}
+                        onClick={e => toggleImage(e)}
                     />
                 </div>
 
-                <InfoMessage props={{ name: "Info", note: "A README file is a file that developers read to understand more about the project. Think of it as a documentary for your project. That's why it's called 'READ ME!" }} />
+                <InfoMessage props={{ name: "Info", note: "A README file is a file that developers read to understand more about the project. Think of it as a documentary for your project. That's why it's called 'READ ME!'" }} />
 
-                <div className={`flex justify-center primary-radius cursor-pointer`}>
+                <div className={`flex justify-center primary-radius w-auto`}>
                     <img
                         src={createdRepo}
                         alt="VS Code Interface from Microsoft's website"
-                        className={`cursor-pointer p-2 border border-black ${isModalOpen ? "full-screen-img" : "w-300"}`}
-                        onClick={() => toggleImage()}
+                        className={`cursor-pointer p-2 border border-black image-toggled-off`}
+                        onClick={e => toggleImage(e)}
                     />
                 </div>
 
@@ -84,7 +76,7 @@ export default function CreateRepo() {
 
                 <p>Our project is now stored remotely in GitHub. Remote is the place where the project was originally stored. The next step is to <Reference props={{ word: "pull", ref: "Download" }} /> our project from <Reference props={{ word: "remote", ref: "GitHub" }} /></p>
 
-                <InfoMessage props={{ name: "Info", note: 'Do you remember what we say instead of "download from " and "upload to" github? Pull and Push.' }} />
+                <InfoMessage props={{ name: "Info", note: 'Do you remember what we say instead of "download from " and "upload to" github? "Pull from" and "Push to".' }} />
 
             </div>
 

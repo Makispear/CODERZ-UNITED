@@ -19,8 +19,6 @@ export default function CourseMaterial() {
     ]
 
     markComplete(myData, lessonsArr)
-    console.table(myData)
-    console.table(lessonsArr)
 
 
     return (
