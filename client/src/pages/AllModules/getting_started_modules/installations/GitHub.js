@@ -48,22 +48,12 @@ export default function GitHub() {
           </li>
         </ol>
 
-        <InfoMessage props={{ name: "Info", note: 'In web development, we often say pull instead of download and push instead of upload. Therefore "push your code" means "upload your code to GitHub"' }} />
+        <InfoMessage props={{ name: "Info", note: 'In web development, we often use "pull" rather than "download" and "push" instead of "upload"; Therefore, "push your code to" means "upload your code to"; And "pull from" means "download from";' }} />
 
         <p>
-          <a className="link" href="https://github.com/join">Link to GitHub signup page</a>
+          Here is where you can <a className="link" href="https://github.com/join">sign up for GitHub</a>
         </p>
 
-        <p>
-          @@@@@@@@@@@@@@@@@@
-          @@@@@@@@@@@@@@@@@@
-          @@@@@@@@@@@@@@@@@@
-          @@@@@@@@@@@@@@@@@@
-          @@@@@@@@@@@@@@@@@@
-          @@@@@@@@@@@@@@@@@@
-          @@@@@@@@@@@@@@@@@@
-          @@@@@@@@@@@@@@@@@@
-        </p>
       </div>
 
       <BackAndNextButtons props={lessonInfo} />

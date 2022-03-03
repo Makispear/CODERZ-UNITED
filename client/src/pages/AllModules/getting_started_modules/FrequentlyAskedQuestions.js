@@ -34,7 +34,7 @@ export default function Installations() {
 
 
       <div className="p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 flex flex-col gap-5">
-        <p><span className="font-bold">Welcome to the course!</span> We are excited to unite and be a part of your web development journey. Before we get started, let's get all the questions you might have answered. We also want to make sure that you're on the right career path.</p>
+        <p><span className="font-bold">Welcome to the course! </span><Reference props={{ word: "We", ref: "The coderz United Team" }} /> are excited to unite and be a part of your web development journey. Before we get started, let's get you clear about your decision to become a web developer by answering common questions you might have. Getting questions out of the way can help you solidify your choice to become a web developer and remove any hesitance.</p>
 
         <p>Web development is more than just a job. It is a lifestyle. Once you enter the world of web development, you need to keep up with the growing tech to remain a valuable asset to a company. You should be immersed in web development and encounter it almost daily. One of the things that can help you engage is to follow people on social media who are into web development or are already working as web developers. Subscribe to a YouTube channel that keeps you up with new technologies and updates.</p>
 
@@ -46,7 +46,7 @@ export default function Installations() {
           1. What is web development? And what is a web developer?
         </h2>
         <p className="w-full text-darkGray">
-          A web developer is a person who codes a website utilizing tools Like HTML, CSS, and  Javascript.
+          A web developer is a person who codes a website utilizing tools Like HTML, CSS, and  Javascript. Web development is the creating and maintaining web applications like Google Drive, Apple.com, and Samsung Electronics.
         </p>
       </div>
 
@@ -74,7 +74,7 @@ export default function Installations() {
           4. Do I need to be good at math to become a web developer?
         </h2>
         <p className="w-full text-darkGray">
-          No. You don't need to be good at math to become a web developer, however you need to be able to think logically and critically to be able to problem solve and <Reference props={{ word: "debug", ref: "Identify and remove errors" }} />.
+          No. You don't need to be good at maths to become a web developer. However, thinking logically and critically to problem-solve and <Reference props={{ word: "debug", ref: "Identify and remove errors" }} /> is something that you'll be doing very often.
         </p>
       </div>
 
@@ -83,7 +83,7 @@ export default function Installations() {
           5. What tools do I need to become a web developer?
         </h2>
         <p className="w-full text-darkGray">
-          All you need is a computer with at least 8GB of RAM (highly recommended), and an internet connection to your computer.
+          All you need is a computer with at least 8GB of <Reference props={{ word: "RAM", ref: "Random-access memory" }} /> (minimum recommended) and an internet connection to your computer.
         </p>
       </div>
 
@@ -92,13 +92,13 @@ export default function Installations() {
           6. What a web developer <span className="warning-word">isn't?</span>
         </h2>
         <p className="w-full text-darkGray">
-          - A Web Designer. Most people come into web development after looking at cool-looking websites. If you are more into the design aspect of the website and not so much into functionality, coding, and data, then web design is more suited for you. On the other hand, if you are more into logic, data, and programming in general, web development is the better choice.
+          - A Web Designer. Most people come into web development after seeing nice-looking websites. If you are more into the design aspect of the website and not so much into <Reference props={{ word: "functionality", ref: "How things work" }} />, coding, and data, then web design is more suited for you. On the other hand, if you are more into logic, data, and <Reference props={{ word: "programming", ref: "coding" }} /> in general, web development is the better choice.
         </p>
         {/* Note Message  */}
         <NoteMessage
           props={{
             name: "Notice",
-            note: "Although we will be designing websites that won't be our primary focus!"
+            note: "Although you'll be designing websites, that won't be our primary focus!"
           }}
         />
       </div>
@@ -126,7 +126,7 @@ export default function Installations() {
           9. Where do web developers work?
         </h2>
         <p className="w-full text-darkGray">
-          Any company with a website.
+          Simple. <Reference props={{ word: "Anywhere", ref: "Any company that owns and manages a website." }} />.
         </p>
       </div>
 
@@ -135,7 +135,7 @@ export default function Installations() {
           10. How do I know web development <span className="warning-word">isn't</span> for me?
         </h2>
         <p className="w-full text-darkGray">
-          Web development is an always-evolving field and requires continuous learning of new concepts and updates. It also requires you to work for long hours in front of a screen.
+          Web development is an always-evolving field and requires constant learning of new concepts and updates. It also requires you to work for long hours in front of a screen.
         </p>
       </div>
 

@@ -38,11 +38,10 @@ export default function VSCode() {
 
       <div className="p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 flex flex-col gap-5">
         <p>
-          As web developers, Coding is the bread and butter of our work. Therefore it's a good idea to have the best coding tools. We can write our code anywhere; a word document, a text file, or even a notepad. A better alternative is using a code editor. A code editor is a text editor used for writing code. Code editors have many features like color-coding to help us visualize our code better and offer us many extensions to help us be efficient. We will look into the features code editors provide us later in the course.
+          As web developers, Coding is the essence of our work. Thus it's best to have the best coding tools. We can write our code anywhere; a word document, a text file, or even a notepad. A better choice is using a code editor. A code editor is a text editor used for writing code. Code editors have many features like color-coding to assist us in visualizing our code and offer us many extensions to help us with efficiency. We will look into the features it provides us with later in the course.
         </p>
         <p>
-          Let's download Visual Studio Code (also known as VS Code). VS Code is a
-          code editor owned by Microsoft and is one of the best if not the best Code Editor web developers use. It's also free and has a ton of great features. Let's go ahead and download it now. Here is the link to the <a className="link" target="_blank" rel="noopener noreferrer" href="https://code.visualstudio.com/download">download VS Code</a>. After installing, launch VS Code and you should see VS Code's <Reference props={{ word: "UI", ref: "User Interface" }} />.
+          Let's download Visual Studio Code (also known as VS Code). VS Code is a code editor owned by Microsoft and is one of the best if not the best Code Editor web developers use. It's also free and has a ton of great features. Let's go ahead and download it now. Here is the link to <a className="link" target="_blank" rel="noopener noreferrer" href="https://code.visualstudio.com/download">download VS Code</a>. After installing, launch VS Code and you should see VS Code's <Reference props={{ word: "UI", ref: "User Interface" }} />..
         </p>
         <div className={`flex justify-center primary-radius cursor-pointer`}>
           <img
@@ -54,7 +53,7 @@ export default function VSCode() {
         </div>
 
         <p>
-          VS Code offers a lot of extensions you can download that enhance your coding experience. We recommend you take some time to customize your version of VS Code to give your work some taste.
+          VS Code offers a lot of extensions you can download that enhance your coding experience. We recommend you take some time to tailor your version of VS Code to your preference.
         </p>
 
         <p>
@@ -91,17 +90,18 @@ export default function VSCode() {
         <h2 className="text-black font-semibold mb-2 h3-style">
           1. Bracket Pair Colinizer 2
         </h2>
-        <p className="w-full text-darkGray">
+        <p className="w-full">
           It helps visualize which opening bracket belongs to which.
         </p>
       </div>
 
       <div className="text-start flex flex-col my-1 p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 items-start w-full">
         <h2 className="text-black font-semibold mb-2 h3-style">
-          2. Code Spell Checker
+          2. Grammarly (unofficial)
+
         </h2>
-        <p className="w-full text-darkGray">
-          warns you when you have spelled incorrectly. this extension can be helpful for checking typos on your paragraphs or headings. In fact this paragraph was written and checked by this exact extension.
+        <p className="w-full">
+          Warns you when you have spelling errors. This extension can help check typos in your paragraphs or headings.
         </p>
       </div>
 
@@ -109,8 +109,8 @@ export default function VSCode() {
         <h2 className="text-black font-semibold mb-2 h3-style">
           3. Palocode-2020
         </h2>
-        <p className="w-full text-darkGray">
-          A good way to capture code snippets. Very helpful when trying to share a piece of code when asking for help. Also used when sharing code on social media platforms.
+        <p className="w-full">
+          A good way to capture code snippets. Very helpful when trying to share a piece of code when asking for help. Also used when sharing <Reference props={{ word: "code snippets", ref: "Code blocks / peices of code" }} /> on social media platforms.
         </p>
       </div>
 
@@ -118,8 +118,8 @@ export default function VSCode() {
         <h2 className="text-black font-semibold mb-2 h3-style">
           4. Better Comments
         </h2>
-        <p className="w-full text-darkGray">
-          Highlights your TODO comments and more.
+        <p className="w-full">
+          Highlights your TODO <Reference props={{ word: "comments", ref: "Code comments. Stay tuned" }} /> and more.
         </p>
       </div>
 
@@ -127,8 +127,8 @@ export default function VSCode() {
         <h2 className="text-black font-semibold mb-2 h3-style">
           5. Auto Rename Tag
         </h2>
-        <p className="w-full text-darkGray">
-          Saves you the hustle of finding the closing tag you need to change after changing the opening tag.
+        <p className="w-full">
+          Saves you the hustle of finding the <Reference props={{ word: "closing tag", ref: "HTML element. Will explain in later lessons" }} /> you need to change after changing the opening tag and vice versa.
         </p>
       </div>
 
@@ -136,19 +136,18 @@ export default function VSCode() {
         <h2 className="text-black font-semibold mb-2 h3-style">
           6. :emojisense:
         </h2>
-        <p className="w-full text-darkGray">
+        <p className="w-full">
           Easy way to add emojis without leaving your code editor.
+        </p>
+
+      </div>
+
+      <div className="p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 flex flex-col gap-5">
+        <p>
+          There are plenty more. But for now, these are some suggestions to get you going.
         </p>
       </div>
 
-      <div className="text-start flex flex-col my-1 p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 items-start w-full">
-        <h2 className="text-black font-semibold mb-2 h3-style">
-          7. DotENV
-        </h2>
-        <p className="w-full text-darkGray">
-          Adds color coding to your <span className="new-word">.env</span> (environment) file
-        </p>
-      </div>
 
       <div className="text-start flex flex-col my-1 p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 items-start w-full">
         <InfoMessage

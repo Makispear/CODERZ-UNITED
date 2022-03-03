@@ -39,7 +39,7 @@ export default function CreateRepo() {
 
 
             <div className="p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 flex flex-col gap-5">
-                <p>Lets make our first project. To start a project we need to create a repo. A repo contains all your projects files. To make a repo, login to github and press the Green button on the left corner that says <span className='keyboard-key'>New</span>.</p>
+                <p>Let's create our first project. To start a project, You need to create a  <Reference props={{ word: "repo", ref: "Repository" }} />. A repo contains all your projects files. To make a repo, log in to GitHub, and on the homepage, press the green <span className='keyboard-key'>New</span> button on the left corner.</p>
 
                 <div className={`flex justify-center primary-radius w-auto`}>
                     <img
@@ -50,7 +50,7 @@ export default function CreateRepo() {
                     />
                 </div>
 
-                <p>This will direct us to fill in the form to create the repo. Fill in the <span className='keyboard-key'>Repository name</span> and tick the Public option to make the repo public. We're also going to <span className='keyboard-key'>Add a README file</span> so make sure you tick that as well.</p>
+                <p>Fill in the <span className='keyboard-key'>Repository name</span> and make the repo public. You're also going to <span className='keyboard-key'>add a README file</span>, so make sure you tick that as well.</p>
 
                 <div className={`flex justify-center primary-radius w-auto`}>
                     <img
@@ -61,7 +61,7 @@ export default function CreateRepo() {
                     />
                 </div>
 
-                <InfoMessage props={{ name: "Info", note: "A README file is a file that developers read to understand more about the project. Think of it as a documentary for your project. That's why it's called 'READ ME!'" }} />
+                <InfoMessage props={{ name: "Info", note: "A README file is what developers read to understand more about the project. Think of it as a documentary for your project. That's why it's called 'READ ME!'" }} />
 
                 <div className={`flex justify-center primary-radius w-auto`}>
                     <img
@@ -72,11 +72,11 @@ export default function CreateRepo() {
                     />
                 </div>
 
-                <p><span className='font-bold'>Congratulations</span> on creating your very first GitHub <Reference props={{ word: "repo", ref: "Repository" }} />. Now that we have a place to store our code, you can start building your first project.</p>
+                <p><span className='font-bold'>Congratulations</span> on creating your very first GitHub repo. Now that you have a place to store your code, you can start your first project.</p>
 
-                <p>Our project is now stored remotely in GitHub. Remote is the place where the project was originally stored. The next step is to <Reference props={{ word: "pull", ref: "Download" }} /> our project from <Reference props={{ word: "remote", ref: "GitHub" }} /></p>
+                <p>Your project is now stored remotely in GitHub. Remote is where the project is initially stored. The next step is to <Reference props={{ word: "pull", ref: "Download" }} /> your project from <Reference props={{ word: "remote", ref: "GitHub" }} />.</p>
 
-                <InfoMessage props={{ name: "Info", note: 'Do you remember what we say instead of "download from " and "upload to" github? "Pull from" and "Push to".' }} />
+                <InfoMessage props={{ name: "Info", note: 'Do you remember what developers use instead of "download from " and "upload to" Github? "Pull from" and "push to". Knowing this will help you understand git commands better later on.' }} />
 
             </div>
 

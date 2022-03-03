@@ -33,11 +33,11 @@ export default function Git() {
 
       <div className="p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 flex flex-col gap-5">
         <p>
-          To start working with Git we need a terminal. If you are using MacOS you should have a terminal already. With windows we'll need to download Git Bash. Git as it's stated in the Git website <q className="italic">is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.</q>
+          To start working with Git, we need a terminal. If you are using macOS, you should have a terminal already. With Windows, we'll need to download Git Bash. Git, as stated on the Git website, <q>is a free and open-source distributed version control system designed to handle everything from small to large projects with speed and efficiency.</q>
         </p>
 
         <p>
-          Git helps us control our codebase versions. This can come in handy if we ever break our code. Then we can roll back to the older version on the code and start over. Sometimes when the <span className="">code broke</span>, it's easier to find where it happened when you can look at different versions of that code. We'll look more into Git and how to use it after <Reference props={{ word: "this", ref: "The Getting Started Module" }} /> module.
+          Git helps us control our codebase versions. Git comes in handy if we ever break our code. Then we can roll back to the older version of the code and start over. Sometimes when the code breaks, it's easier to find where it happened when you can look at different versions of that code. We'll look more into Git after <Reference props={{ word: "this", ref: "The Getting Started Module" }} /> module.
         </p>
 
         <p>
@@ -56,7 +56,7 @@ export default function Git() {
         />
       </div>
       <div className="p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 flex flex-col gap-5">
-        <InfoMessage props={{ name: "Note", note: "This might look slightly different depending on your the version you downloaded. To check which version of Git Bash you have type in 'git --version' and press Enter." }} />
+        <InfoMessage props={{ name: "Note", note: "The picture might look slightly different depending on the version you downloaded. To check which version of Git Bash you have, type in 'git --version' and press Enter." }} />
       </div>
 
       <BackAndNextButtons props={lessonInfo} />
