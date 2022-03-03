@@ -34,7 +34,7 @@ export default function Nav() {
             {!Auth.loggedIn() &&
               <li>
                 <NavLink to={"/signup"} className="mr-3 text-secondary hover:text-tertiary">Sign up</NavLink>
-                <NavLink to={"/login"} className="text-secondary hover:text-tertiary">Login</NavLink>
+                <NavLink to={"/login"} className="text-secondary hover:text-tertiary">Log in</NavLink>
               </li>
             }
             {Auth.loggedIn() &&

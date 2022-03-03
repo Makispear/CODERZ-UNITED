@@ -46,7 +46,7 @@ export default function Quotes() {
       </div>
       <div className="w-full text-white flex flex-wrap justify-center p-4 text-center font-bold">
         <h2 className="capitalize mt-5">
-          What are you waiting for?<a href="/signup" className="link"> Signup </a>/<a href="/login" className="link">Login </a>now.
+          What are you waiting for?<a href="/signup" className="link"> Signup </a>/<a href="/login" className="link">Log in</a> now.
         </h2>
       </div>
     </section>

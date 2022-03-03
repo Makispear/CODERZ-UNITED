@@ -11,7 +11,7 @@ export default function NotFound() {
         <NavLink to={"/all_modules/"} className="bg-transparent text-secondary button-style border border-tertiary hover:border-secondary font-light capitalize">go to homepage</NavLink>
 
         :
-        <NavLink to={"/login/"} className="bg-transparent text-secondary button-style border border-tertiary hover:border-secondary font-light capitalize">Login</NavLink>
+        <NavLink to={"/login/"} className="bg-transparent text-secondary button-style border border-tertiary hover:border-secondary font-light capitalize">Log In</NavLink>
 
       }
     </div>

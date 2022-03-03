@@ -59,7 +59,7 @@ export default function LoginForm() {
         <label for="trainer-yes">Remember me</label>
       </div> */}
       <div className="flex flex-col p-3">
-        <button className="bg-tertiary font-bold text-white button-style border-2 border-secondary hover:border-tertiary capitalize tracking-wider">Login</button>
+        <button className="bg-tertiary font-bold text-white button-style border-2 border-secondary hover:border-tertiary capitalize tracking-wider">Log in</button>
       </div>
       <div className="flex flex-col p-3 mt-6 text-darkGray ">
         <p>New to {BrandName}? <a href="/signup" className="link">Sign up.</a></p>

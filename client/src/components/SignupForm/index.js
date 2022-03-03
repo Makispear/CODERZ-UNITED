@@ -45,7 +45,7 @@ export default function SignupForm() {
       {error &&
         <div className="flex flex-col p-2 bg-red-500 text-black border-2 border-black">
           <p>Please fill in the required fields</p>
-          <p>If you can't login please try again later!</p>
+          <p>If you can't log in please try again later!</p>
         </div>
       }
       <div className="flex flex-col p-3">
@@ -88,7 +88,7 @@ export default function SignupForm() {
         <button className="bg-tertiary font-bold text-white button-style border-2 border-secondary hover:border-tertiary capitalize tracking-wider">Sign up </button>
       </div>
       <div className="flex flex-col p-2 mt-6 text-darkGray">
-        <p>Already United? <a href="/login" className="link">Login</a> instead.</p>
+        <p>Already United? <a href="/login" className="link">Log in</a> instead.</p>
       </div>
     </form>
   )
