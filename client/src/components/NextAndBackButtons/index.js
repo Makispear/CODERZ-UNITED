@@ -3,7 +3,6 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { MARK_COMPLETED_LESSON } from '../../utils/mutations'
 import { GET_COMPLETED_LESSONS } from '../../utils/queries'
-import Reference from '../../utils/Reference'
 
 export default function BackAndNextButtons({ props }) {
     const { backLink, nextLink, Lesson_Number, Lesson_title } = props

@@ -58,15 +58,15 @@ export default function AllModules({ props }) {
                     1. Getting Started
                   </p>
                 </div>
-                {lessonsArr.filter(lesson => lesson.module == "Getting Started" && lesson.isCompleted).length === lessonsArr.length ? <CheckMark props={{ marked: true }} /> : <CheckMark props={{ marked: false }} />}
+                {lessonsArr.filter(lesson => lesson.module === "Getting Started" && lesson.isCompleted).length === lessonsArr.length ? <CheckMark props={{ marked: true }} /> : <CheckMark props={{ marked: false }} />}
               </div>
             </div>
 
           </div>
         </NavLink>
 
-        {<NavLink to={`${lessonsArr.filter(lesson => lesson.module == "Getting Started" && lesson.isCompleted).length === lessonsArr.length ? "/all_modules/course_modules/" : "#"}`}>
-          <div className={`${lessonsArr.filter(lesson => lesson.module == "Getting Started" && lesson.isCompleted).length === lessonsArr.length ? "flex justify-between items-center p-5 primary-radius border-2 text-black bg-secondary hover:bg-white" : "locked flex justify-between items-center p-5 primary-radius bg-darkGray brightness-75"}`}>
+        {<NavLink to={`${lessonsArr.filter(lesson => lesson.module === "Getting Started" && lesson.isCompleted).length === lessonsArr.length ? "/all_modules/course_modules/" : "#"}`}>
+          <div className={`${lessonsArr.filter(lesson => lesson.module === "Getting Started" && lesson.isCompleted).length === lessonsArr.length ? "flex justify-between items-center p-5 primary-radius border-2 text-black bg-secondary hover:bg-white" : "locked flex justify-between items-center p-5 primary-radius bg-darkGray brightness-75"}`}>
             <div>
               <p>
                 <span className="font-bold capitalize">2. Course Modules - </span> Lets start Coding.
