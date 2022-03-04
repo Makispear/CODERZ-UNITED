@@ -71,9 +71,9 @@ export default function Git() {
           <span className="git-dollar-sign">$</span><span className="code">git config --global user.email <span className="keyboard-key custom-info">your email here</span></span> then press <span className="keyboard-key">Enter</span>. If you don't get an error message, you got it right. If you get an error, that means you probably did something wrong. Make sure to type the command exactly how it is, without the dollar sign. Copying and pasting might help.
         </p>
 
-        <p>To check if you did it correctly, open the config setting by typing in.</p>
+        <p>To check if you did it correctly, open the config setting by typing in
 
-        <p>
+
           <span className="git-dollar-sign">$</span><span className="code">git config --list</span> and look for the line with <span className="keyboard-key">user.name</span> and <span className="keyboard-key">user.email</span>. They should be equal to what your input was. To escape the list press <span className="keyboard-key">Q</span>
         </p>
 
