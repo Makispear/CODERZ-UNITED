@@ -44,7 +44,7 @@ export default function CreateRepo() {
                 <div className={`flex justify-center primary-radius w-auto`}>
                     <img
                         src={NewRepoButton}
-                        alt="VS Code Interface from Microsoft's website"
+                        alt="Showing where green button is located in the GitHub homepage"
                         className={`cursor-pointer p-2 border border-black image-toggled-off`}
                         onClick={e => toggleImage(e)}
                     />
@@ -55,7 +55,7 @@ export default function CreateRepo() {
                 <div className={`flex justify-center primary-radius w-auto`}>
                     <img
                         src={newRepoForm}
-                        alt="VS Code Interface from Microsoft's website"
+                        alt="Form to fill to create repository"
                         className={`cursor-pointer p-2 border border-black image-toggled-off`}
                         onClick={e => toggleImage(e)}
                     />
@@ -66,7 +66,7 @@ export default function CreateRepo() {
                 <div className={`flex justify-center primary-radius w-auto`}>
                     <img
                         src={createdRepo}
-                        alt="VS Code Interface from Microsoft's website"
+                        alt="Repo after being created Interface"
                         className={`cursor-pointer p-2 border border-black image-toggled-off`}
                         onClick={e => toggleImage(e)}
                     />

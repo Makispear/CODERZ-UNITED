@@ -50,8 +50,8 @@ export default function Git() {
       <div className={`flex justify-center primary-radius cursor-pointer`}>
         <img
           src={gitBashInterface}
-          alt="VS Code Interface from Microsoft's website"
-          className={`cursor-pointer p-2 border border-black image-toggled-off`}
+          alt="GitBash's User Interface"
+          className={`cursor-pointer p-2 image-toggled-off`}
           onClick={e => toggleImage(e)}
         />
       </div>

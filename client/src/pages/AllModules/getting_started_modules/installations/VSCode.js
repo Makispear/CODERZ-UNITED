@@ -43,11 +43,11 @@ export default function VSCode() {
         <p>
           Let's download Visual Studio Code (also known as VS Code). VS Code is a code editor owned by Microsoft and is one of the best if not the best Code Editor web developers use. It's also free and has a ton of great features. Let's go ahead and download it now. Here is the link to <a className="link" target="_blank" rel="noopener noreferrer" href="https://code.visualstudio.com/download">download VS Code</a>. After installing, launch VS Code and you should see VS Code's <Reference props={{ word: "UI", ref: "User Interface" }} />..
         </p>
-        <div className={`flex justify-center primary-radius cursor-pointer`}>
+        <div className={`flex justify-center primary-radius`}>
           <img
             src="https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/getstarted_page.png"
             alt="VS Code Interface from Microsoft's website"
-            className={`cursor-pointer p-2 border border-black image-toggled-off`}
+            className={`cursor-pointer p-2 image-toggled-off`}
             onClick={e => toggleImage(e)}
           />
         </div>
@@ -59,11 +59,11 @@ export default function VSCode() {
         <p>
           To open the extension section of VS Code, hover over the <span className="keyboard-key">View</span> link on the menu bar and select <span className="keyboard-key">Extensions</span>.
         </p>
-        <div className={`flex justify-center primary-radius cursor-pointer`}>
+        <div className={`flex justify-center primary-radius`}>
           <img
             src={viewBar}
-            alt="Extension search bar in VS Code"
-            className={`cursor-pointer p-2 border border-black image-toggled-off`}
+            alt="Open Extension option shown on menu bar"
+            className={`cursor-pointer p-2 image-toggled-off`}
             onClick={e => toggleImage(e)}
           />
         </div>
@@ -72,11 +72,11 @@ export default function VSCode() {
           Or you can press <span className="keyboard-key">Ctrl + Shift + x</span> in Windows or <span className="keyboard-key">Command + Option + x</span> in Mac. A search bar will appear on the top left corner of VS Code:
         </p>
 
-        <div className={`flex justify-center primary-radius cursor-pointer`}>
+        <div className={`flex justify-center primary-radius`}>
           <img
             src={extensionSearchBarPic}
-            alt="Extension search bar in VS Code"
-            className={`cursor-pointer p-2 border border-black image-toggled-off`}
+            alt="The extension search bar in VS Code"
+            className={`cursor-pointer p-2 image-toggled-off`}
             onClick={e => toggleImage(e)}
           />
         </div>
@@ -110,7 +110,7 @@ export default function VSCode() {
           3. Palocode-2020
         </h2>
         <p className="w-full">
-          A good way to capture code snippets. Very helpful when trying to share a piece of code when asking for help. Also used when sharing <Reference props={{ word: "code snippets", ref: "Code blocks / peices of code" }} /> on social media platforms.
+          A good way to capture code snippets. Very helpful when trying to share a piece of code when asking for help. Also used when sharing <Reference props={{ word: "code snippets", ref: "Code blocks / pieces of code" }} /> on social media platforms.
         </p>
       </div>
 
