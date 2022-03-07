@@ -140,6 +140,11 @@ export default function PreModules({ props }) {
 
         <div className="flex justify-between w-full items my-10">
           <NavLink to="/all_modules/" className="bg-transparent text-secondary button-style border border-tertiary hover:border-secondary font-light capitalize">&lt;&lt; Back</NavLink>
+          {lessonsArr.filter(lesson => lesson.isCompleted).length !== lessonsArr.length ?
+            <NavLink title="complete all lessons to unlock" to="#" className="bg-darkGray cursor-not-allowed text-black button-style font-light capitalize"> Next &gt;&gt;</NavLink>
+            :
+            <NavLink to="/all_modules/course_modules/" className="bg-transparent text-secondary button-style border border-tertiary hover:border-secondary font-light capitalize">Next &gt;&gt;</NavLink>
+          }
         </div>
 
       </div>

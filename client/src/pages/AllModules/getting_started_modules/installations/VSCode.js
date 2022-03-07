@@ -14,6 +14,8 @@ export default function VSCode() {
     Lesson_Number: '1.2.1',
     nextLink: "/all_modules/getting_started/installations/github/",
     backLink: "/all_modules/getting_started/",
+    nextPage: 'Sign up to GitHub 1.2.2',
+    previousPage: 'All Lessons'
   }
 
   document.title = `${lessonInfo.Lesson_title} | Getting Started | Lesson ${lessonInfo.Lesson_Number}`

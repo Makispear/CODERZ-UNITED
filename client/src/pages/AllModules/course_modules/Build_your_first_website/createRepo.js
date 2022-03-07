@@ -15,6 +15,8 @@ export default function CreateRepo() {
         Lesson_Number: "2.1.1",
         nextLink: "/all_modules/course_modules/",
         backLink: "/all_modules/course_modules/",
+        nextPage: undefined,
+        previousPage: 'All Lessons'
     }
 
     document.title = `${lessonInfo.Lesson_title} | Getting Started | Lesson ${lessonInfo.Lesson_Number}`

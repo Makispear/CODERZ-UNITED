@@ -5,7 +5,7 @@ import { MARK_COMPLETED_LESSON } from '../../utils/mutations'
 import { GET_COMPLETED_LESSONS } from '../../utils/queries'
 
 export default function BackAndNextButtons({ props }) {
-    const { backLink, nextLink, Lesson_Number, Lesson_title } = props
+    const { backLink, nextLink, Lesson_Number, Lesson_title, nextPage, previousPage } = props
     const { data } = useQuery(GET_COMPLETED_LESSONS)
     const [markComplete, { error }] = useMutation(MARK_COMPLETED_LESSON)
     // buttons show depending on these 2 values below
@@ -73,17 +73,20 @@ export default function BackAndNextButtons({ props }) {
 
     return (
         <div className="flex my-1 justify-between w-full items p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900">
+            <div className='back-button' data-link-to={previousPage}>
+                <NavLink to={backLink} className=" bg-transparent text-black button-style border border-tertiary hover:border-black font-light capitalize">&lt;&lt; Back</NavLink>
+            </div>
 
-            <NavLink to={backLink} className="bg-transparent text-black button-style border border-tertiary hover:border-black font-light capitalize">&lt;&lt; Back</NavLink>
-
-            {showMarkCompleteButton && showButton &&
-                <div className='flex'>
-                    <button className="bg-tertiary font-bold text-white button-style border-2 border-secondary hover:border-tertiary capitalize tracking-wider" onClick={event => completeLesson(event.target)}>Complete &amp; next </button>
-                </div>
-            }
-            {!showMarkCompleteButton && showButton &&
-                <NavLink to={nextLink} className="bg-transparent text-black button-style border border-tertiary hover:border-black font-light capitalize">next &gt;&gt;</NavLink>
-            }
+            <div className='next-button' data-link-to={nextPage}>
+                {showMarkCompleteButton && showButton &&
+                    <div className='flex'>
+                        <button className="bg-tertiary font-bold text-white button-style border-2 border-white hover:border-tertiary capitalize tracking-wider" onClick={event => completeLesson(event.target)}>Next &gt;&gt;</button>
+                    </div>
+                }
+                {!showMarkCompleteButton && showButton &&
+                    <NavLink to={nextLink} className="bg-transparent text-black button-style border border-tertiary hover:border-black font-light capitalize">next &gt;&gt;</NavLink>
+                }
+            </div>
         </div>
     )
 }

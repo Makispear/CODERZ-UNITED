@@ -13,6 +13,8 @@ export default function Git() {
     Lesson_Number: '1.2.4',
     nextLink: "/all_modules/getting_started/",
     backLink: "/all_modules/getting_started/installations/chrome/",
+    nextPage: "Finish",
+    previousPage: 'Install Google Chrome 1.2.3'
   }
 
   document.title = `${lessonInfo.Lesson_title} | Getting Started | Lesson ${lessonInfo.Lesson_Number}`

@@ -11,6 +11,8 @@ export default function Installations() {
     Lesson_Number: "1.1.1",
     nextLink: "/all_modules/getting_started/",
     backLink: "/all_modules/getting_started/",
+    nextPage: "Finish Lesson",
+    previousPage: "All Lessons"
   }
 
   document.title = `${lessonInfo.Lesson_title} | Getting Started | Lesson ${lessonInfo.Lesson_Number}`

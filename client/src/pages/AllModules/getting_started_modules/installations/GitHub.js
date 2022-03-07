@@ -10,6 +10,8 @@ export default function GitHub() {
     Lesson_Number: '1.2.2',
     nextLink: "/all_modules/getting_started/installations/chrome/",
     backLink: "/all_modules/getting_started/installations/vs_code/",
+    nextPage: 'Install Google Chrome 1.2.3',
+    previousPage: 'Install VS Code 1.2.1'
   }
 
   document.title = `${lessonInfo.Lesson_title} | Getting Started | Lesson ${lessonInfo.Lesson_Number}`

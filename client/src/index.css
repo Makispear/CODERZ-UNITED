@@ -51,6 +51,7 @@ body {
 }
 
 * {
+	position: relative;
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
@@ -66,7 +67,7 @@ body {
 }
 
 .underline-dots {
-	border-bottom: 2px dotted rgb(var(--tertiary-color));
+	border-bottom: 1px dotted rgb(var(--tertiary-color));
 }
 
 .underline-dots:hover {
@@ -77,12 +78,43 @@ body {
 	position: absolute;
 	content: "";
 	color: black;
+	font-weight: bold;
 	height: 0;
 	white-space: nowrap;
 	width: 100;
 	bottom: 25px;
 	left: 10%;
 	overflow: hidden;
+	transition: height 0.1s;
+	background-color: rgb(var(--white));
+	box-shadow: 3px 3px 3px rgb(194, 193, 193);
+}
+
+.back-button[data-link-to]:hover::after {
+	position: absolute;
+	content: attr(data-link-to);
+	padding: 2px;
+	color: black;
+	white-space: nowrap;
+	width: 100;
+	font-size: xx-small;
+	overflow: hidden;
+	left: 102%;
+	border: 1px solid rgb(var(--tertiary-color));
+	transition: height 0.1s;
+	background-color: rgb(var(--white));
+}
+
+.next-button[data-link-to]:hover::after {
+	position: absolute;
+	content: attr(data-link-to);
+	padding: 2px;
+	color: black;
+	white-space: nowrap;
+	font-size: xx-small;
+	overflow: hidden;
+	right: 102%;
+	border: 1px solid rgb(var(--tertiary-color));
 	transition: height 0.1s;
 	background-color: rgb(var(--white));
 }
