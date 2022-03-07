@@ -53,20 +53,20 @@ export default function Footer() {
           {/* social media  */}
           <div>
             <h2 className="text-white h3-style capitalize">Follow us on social media</h2>
-            <ul className="text-darkGray  flex mt-3">
-              <NavLink to={"#"} className="mr-3 font-lighter link-dark">LinkedIn</NavLink >
-              <NavLink to={"#"} className="mr-3 font-lighter link-dark">Instagram</NavLink >
-              <NavLink to={"#"} className="mr-3 font-lighter link-dark">Facebook</NavLink >
-              <NavLink to={"#"} className="mr-3 font-lighter link-dark">YouTube</NavLink >
+            <ul className="text-darkGray flex justify-start gap-2 flex-wrap mt-3">
+              <NavLink to={"#"} className="link">LinkedIn</NavLink >
+              <NavLink to={"#"} className="link">Instagram</NavLink >
+              <NavLink to={"#"} className="link">Facebook</NavLink >
+              <NavLink to={"#"} className="link">YouTube</NavLink >
             </ul>
           </div>
           {/* contact  */}
           <div className="mt-14 ">
             <h2 className="text-white h3-style capitalize">Contact us</h2>
-            <ul className="text-darkGray  flex flex-col">
-              <NavLink to={"#"} className="mt-3 link-dark">Email</NavLink >
-              <NavLink to={"#"} className="mt-3 link-dark">Whatsapp</NavLink >
-              <NavLink to={"#"} className="mt-3 link-dark">SMS</NavLink >
+            <ul className="text-darkGray flex justify-start gap-2 flex-wrap mt-3">
+              <NavLink to={"#"} className="link">Email</NavLink >
+              <NavLink to={"#"} className="link">Whatsapp</NavLink >
+              <NavLink to={"#"} className="link">SMS</NavLink >
             </ul>
           </div>
         </div>

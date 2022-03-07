@@ -1,15 +1,25 @@
 	/* =========================== IMPORTS ========================= */
+/* tailwind CSS imports  */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* Nunito font  */
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
-/* EB garamound font  */
+/* EB Garamond font  */
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
+
+/* Raleway font  */
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
+/* Fredericka (Chalkboard) font  */
 @import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap");
+
+/* Abril (Design) font */
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lobster&family=Nunito&display=swap");
+
+/* todo:  font for consideration*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 /* ==================== CUSTOMIZATIONS ======================== */
 :root {
 	/* colors  */
@@ -24,6 +34,7 @@
 	--highlight: 255, 255, 0;
 	/* fonts  */
 	--primary-font: "Raleway", sans-serif;
+	/* --primary-font: 'Open Sans', sans-serif; */
 	--logo-font: "EB garamond", sans-serif;
 }
 /* ====================== GENERIC STYLES ======================= */

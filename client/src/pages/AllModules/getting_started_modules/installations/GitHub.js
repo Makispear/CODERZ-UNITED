@@ -16,7 +16,7 @@ export default function GitHub() {
 
 
   return (
-    <section className="style-module-section highlight">
+    <section className="style-module-section">
 
       <div className="p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 flex flex-col gap-5">
         <div className="w-full flex lg:w-900 justify-start mt-10 text-secondary">

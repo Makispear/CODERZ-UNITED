@@ -22,7 +22,7 @@ export default function VSCode() {
 
 
   return (
-    <section className="style-module-section highlight">
+    <section className="style-module-section">
 
       <div className="w-full flex justify-center font-bold p-10 text-center capitalize bg-blackGradient bg-no-repeat bg-cover bg-center">
         <h1>Installations</h1>

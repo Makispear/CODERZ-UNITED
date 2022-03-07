@@ -14,7 +14,7 @@ export default function Copyright() {
 
   return (
     <p className="bg-transparent text-secondary text-xsm">
-      Copyright<span className="font-bold"> &copy;</span>Jan, 2022{getYearNow(theYearToday)} <span className="text-white">{BrandName.toUpperCase()}</span> All Rights Reserved.
+      Copyright<span className="font-bold"> &copy;</span> Jan, 2022{getYearNow(theYearToday)} <span className="text-white">{BrandName.toUpperCase()}</span> All Rights Reserved.
     </p>
   )
 }
