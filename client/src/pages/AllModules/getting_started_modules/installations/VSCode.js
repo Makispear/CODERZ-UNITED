@@ -54,6 +54,10 @@ export default function VSCode() {
           />
         </div>
 
+        <h2 className="my-5">
+          VS Code Extensions
+        </h2>
+
         <p>
           VS Code offers a lot of extensions you can download that enhance your coding experience. We recommend you take some time to tailor your version of VS Code to your preference.
         </p>

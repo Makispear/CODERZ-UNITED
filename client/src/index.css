@@ -78,7 +78,6 @@ body {
 	position: absolute;
 	content: "";
 	color: black;
-	font-weight: bold;
 	height: 0;
 	white-space: nowrap;
 	width: 100;
@@ -87,36 +86,27 @@ body {
 	overflow: hidden;
 	transition: height 0.1s;
 	background-color: rgb(var(--white));
-	box-shadow: 3px 3px 3px rgb(194, 193, 193);
+}
+
+.back-button[data-link-to]:hover::after, .next-button[data-link-to]:hover::after {
+	position: absolute;
+	content: attr(data-link-to);
+	padding: 2px;
+	color: black;
+	white-space: nowrap;
+	font-size: xx-small;
+	overflow: hidden;
+	border: 1px solid rgb(var(--tertiary-color));
+	transition: height 0.1s;
+	background-color: rgb(var(--white));
 }
 
 .back-button[data-link-to]:hover::after {
-	position: absolute;
-	content: attr(data-link-to);
-	padding: 2px;
-	color: black;
-	white-space: nowrap;
-	width: 100;
-	font-size: xx-small;
-	overflow: hidden;
 	left: 102%;
-	border: 1px solid rgb(var(--tertiary-color));
-	transition: height 0.1s;
-	background-color: rgb(var(--white));
 }
 
 .next-button[data-link-to]:hover::after {
-	position: absolute;
-	content: attr(data-link-to);
-	padding: 2px;
-	color: black;
-	white-space: nowrap;
-	font-size: xx-small;
-	overflow: hidden;
 	right: 102%;
-	border: 1px solid rgb(var(--tertiary-color));
-	transition: height 0.1s;
-	background-color: rgb(var(--white));
 }
 
 .underline-dots:hover + .reference {

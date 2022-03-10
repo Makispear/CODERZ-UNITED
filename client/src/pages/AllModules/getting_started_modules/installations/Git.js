@@ -57,10 +57,16 @@ export default function Git() {
         />
       </div>
       <div className="p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 flex flex-col gap-5">
-        <InfoMessage props={{ name: "Note", note: "The picture might look slightly different depending on the version you downloaded. To check which version of Git Bash you have, type in 'git --version' and press Enter." }} />
+        <InfoMessage props={{ name: "Note", note: "The picture might look slightly different depending on the version you downloaded. To check which version of Git Bash you have, type in 'git --version' and press 'Enter'. This picture is for git version 2.35.1.windows.2" }} />
       </div>
 
+
+
+
       <div className="p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 flex flex-col gap-5">
+        <h2>
+          Set up Git Configurations
+        </h2>
         <p>Before we move on, you'll need to set up GitBash. This is because every <Reference props={{ word: "command", ref: "Code that tells Git what to do" }} /> you type will be linked to your information. To do this, you need to provide GitBash with your name and email. To do this type in the following commands in GitBash:
         </p>
         <p>
@@ -75,7 +81,7 @@ export default function Git() {
         <p>To check if you did it correctly, open the config setting by typing in
 
 
-          <span className="git-dollar-sign">$</span><span className="code">git config --list</span> and look for the line with <span className="keyboard-key">user.name</span> and <span className="keyboard-key">user.email</span>. They should be equal to what your input was. To escape the list press <span className="keyboard-key">Q</span>
+          <span className="git-dollar-sign">$</span><span className="code">git config --list</span> and look for the line with <span className="keyboard-key">user.name</span> and <span className="keyboard-key">user.email</span>. They should be equal to what your input was. To escape the list press <span className="keyboard-key">Q</span>.
         </p>
 
         <InfoMessage props={{ name: "Info", note: "Quotation marks are required if you are typing more than one word. That's why the command for email doesn't have quotations." }} />
