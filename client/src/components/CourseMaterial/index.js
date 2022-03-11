@@ -16,6 +16,11 @@ export default function CourseMaterial() {
             isCompleted: false,
             isLocked: false
         },
+        {
+            lessonName: 'Clone your Repo',
+            isCompleted: false,
+            isLocked: true
+        },
     ]
 
     markComplete(myData, lessonsArr)
@@ -63,6 +68,12 @@ export default function CourseMaterial() {
                             <CheckMark props={{ marked: lessonsArr[0].isCompleted }} />
                         </div>
                         {lessonsArr[0].lessonName}
+                    </NavLink>
+                    <NavLink to={"/all_modules/course_modules/clone_your_repo/"} className="flex justify-start py-3 pl-10 primary-radius bg-secondary text-black hover:bg-white">
+                        <div className="mr-1 scale-75 brightness-100">
+                            <CheckMark props={{ marked: lessonsArr[1].isCompleted }} />
+                        </div>
+                        {lessonsArr[1].lessonName}
                     </NavLink>
                 </div>
 

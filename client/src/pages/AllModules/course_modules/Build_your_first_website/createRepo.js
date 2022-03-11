@@ -13,9 +13,9 @@ export default function CreateRepo() {
     const lessonInfo = {
         Lesson_title: "Create your first Repo",
         Lesson_Number: "2.1.1",
-        nextLink: "/all_modules/course_modules/",
+        nextLink: "/all_modules/course_modules/clone_your_repo/",
         backLink: "/all_modules/course_modules/",
-        nextPage: undefined,
+        nextPage: "Clone your Repo",
         previousPage: 'All Lessons'
     }
 
