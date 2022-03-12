@@ -14,12 +14,14 @@ export default function CourseMaterial() {
         {
             lessonName: 'Create your first Repo',
             isCompleted: false,
-            isLocked: false
+            isLocked: false,
+            section: 'create your first website',
         },
         {
             lessonName: 'Clone your Repo',
             isCompleted: false,
-            isLocked: true
+            isLocked: true,
+            section: 'create your first website',
         },
     ]
 
@@ -56,7 +58,7 @@ export default function CourseMaterial() {
                                         <span className="createRepo-lessons-expander">➤</span> Build Your first Website
                                     </button>
                                 </div>
-                                {lessonsArr[0].isCompleted ? <CheckMark props={{ marked: true }} /> : <CheckMark props={{ marked: false }} />}
+                                {lessonsArr.filter(lesson => lesson.section === 'create your first website').length === lessonsArr.filter(lesson => lesson.isCompleted === true && lesson.section === "create your first website").length ? <CheckMark props={{ marked: true }} /> : <CheckMark props={{ marked: false }} />}
                             </div>
                         </div>
 
