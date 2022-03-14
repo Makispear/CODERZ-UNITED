@@ -53,6 +53,7 @@ export default function VSCode() {
             onClick={e => toggleImage(e)}
           />
         </div>
+        <hr></hr>
 
         <h2 className="my-5">
           VS Code Extensions

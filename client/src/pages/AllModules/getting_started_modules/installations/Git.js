@@ -64,6 +64,8 @@ export default function Git() {
 
 
       <div className="p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 flex flex-col gap-5">
+        <hr></hr>
+
         <h2>
           Set up Git Configurations
         </h2>

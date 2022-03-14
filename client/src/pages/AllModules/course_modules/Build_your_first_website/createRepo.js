@@ -47,7 +47,7 @@ export default function CreateRepo() {
                     <img
                         src={NewRepoButton}
                         alt="Showing where green button is located in the GitHub homepage"
-                        className={`cursor-pointer p-2 border border-black image-toggled-off`}
+                        className={`cursor-pointer  border border-black primary-radius image-toggled-off`}
                         onClick={e => toggleImage(e)}
                     />
                 </div>
@@ -58,7 +58,7 @@ export default function CreateRepo() {
                     <img
                         src={newRepoForm}
                         alt="Form to fill to create repository"
-                        className={`cursor-pointer p-2 border border-black image-toggled-off`}
+                        className={`cursor-pointer  border border-black primary-radius image-toggled-off`}
                         onClick={e => toggleImage(e)}
                     />
                 </div>
@@ -69,10 +69,12 @@ export default function CreateRepo() {
                     <img
                         src={createdRepo}
                         alt="Repo after being created Interface"
-                        className={`cursor-pointer p-2 border border-black image-toggled-off`}
+                        className={`cursor-pointer  border border-black primary-radius image-toggled-off`}
                         onClick={e => toggleImage(e)}
                     />
                 </div>
+                <hr></hr>
+
 
                 <p><span className='font-bold'>Congratulations</span> on creating your very first GitHub repo. Now that you have a place to store your code, you can start your first project.</p>
 
