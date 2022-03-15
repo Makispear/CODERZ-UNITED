@@ -47,7 +47,7 @@ export default function CreateRepo() {
                     <img
                         src={NewRepoButton}
                         alt="Showing where green button is located in the GitHub homepage"
-                        className={`cursor-pointer  border border-black primary-radius image-toggled-off`}
+                        className={`cursor-pointer border border-gray-200 primary-radius image-toggled-off`}
                         onClick={e => toggleImage(e)}
                     />
                 </div>
@@ -58,7 +58,7 @@ export default function CreateRepo() {
                     <img
                         src={newRepoForm}
                         alt="Form to fill to create repository"
-                        className={`cursor-pointer  border border-black primary-radius image-toggled-off`}
+                        className={`cursor-pointer border border-gray-200 primary-radius image-toggled-off`}
                         onClick={e => toggleImage(e)}
                     />
                 </div>
@@ -69,7 +69,7 @@ export default function CreateRepo() {
                     <img
                         src={createdRepo}
                         alt="Repo after being created Interface"
-                        className={`cursor-pointer  border border-black primary-radius image-toggled-off`}
+                        className={`cursor-pointer border border-gray-200 primary-radius image-toggled-off`}
                         onClick={e => toggleImage(e)}
                     />
                 </div>

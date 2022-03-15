@@ -1,10 +1,7 @@
 import BreadCrumb from '../../../../components/BreadCrumb'
 import PageTracker from '../../../../components/PageTracker'
 import BackAndNextButtons from '../../../../components/NextAndBackButtons'
-import NewRepoButton from "../../../../assets/images/github_new_repo_button.png"
-import newRepoForm from "../../../../assets/images/new_repo_form.png"
 import InfoMessage from '../../../../components/InfoMessage'
-import createdRepo from "../../../../assets/images/created_repo.png"
 import httpsCode from "../../../../assets/images/https_link.png"
 import Reference from '../../../../utils/Reference'
 import pwdCommandPic from "../../../../assets/images/pwd_command.png"
@@ -132,13 +129,17 @@ export default function CloneYourRepo() {
                 </p>
 
                 <p>
-                    <span className="git-dollar-sign">$</span><span className="code">git clone <span className='keyboard-key custom-info'>paste HTTPS link</span></span> then press <span className="keyboard-key">Enter</span>. This should do the trick! Now you should have the project on your local computer in your <span className='keyboard-key'>Projects</span> folder. Confirm this with <span className='keyboard-key'>ls</span>. To clear the terminal simply type in <span className='keyboard-key'>clear</span> and press <span className='keyboard-key'>Enter</span>.
+                    <span className="git-dollar-sign">$</span><span className="code">git clone <span className='keyboard-key custom-info'>paste HTTPS link</span></span> then press <span className="keyboard-key">Enter</span>. This should do the trick!
+
+                    {/* TODO: ssh key here  */}
+
+                    Now you should have the project on your local computer in your <span className='keyboard-key'>Projects</span> folder. Confirm this with <span className='keyboard-key'>ls</span>. To clear the terminal simply type in <span className='keyboard-key'>clear</span> and press <span className='keyboard-key'>Enter</span>.
                 </p>
 
                 <hr></hr>
 
                 <p>
-                    <span className='font-bold'>Congratulations</span> on cloning your repo. It might feel like a lot to take in, but it will soon become second nature the more you use them on a day-to-day basis. You don't have to memorize all these commands all at once. We will remind you of them as we need them.
+                    <span className='font-bold'>That's it!</span> It might feel like a lot to take in, but it will soon become second nature the more you use them on a day-to-day basis. You don't have to memorize all these commands all at once. We will remind you of them as we need them.
                 </p>
 
 

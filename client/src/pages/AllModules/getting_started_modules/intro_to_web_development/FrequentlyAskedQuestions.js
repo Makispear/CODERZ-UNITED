@@ -1,8 +1,8 @@
-import BreadCrumb from '../../../components/BreadCrumb'
-import NoteMessage from '../../../components/NoteMessage'
-import PageTracker from '../../../components/PageTracker'
-import Reference from '../../../utils/Reference'
-import BackAndNextButtons from '../../../components/NextAndBackButtons'
+import BreadCrumb from '../../../../components/BreadCrumb'
+import NoteMessage from '../../../../components/NoteMessage'
+import PageTracker from '../../../../components/PageTracker'
+import Reference from '../../../../utils/Reference'
+import BackAndNextButtons from '../../../../components/NextAndBackButtons'
 
 export default function Installations() {
 

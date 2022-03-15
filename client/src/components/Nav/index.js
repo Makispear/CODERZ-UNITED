@@ -10,8 +10,30 @@ export default function Nav() {
     Auth.logout();
   };
 
+
+  // TODO Ukraine hopefully temporary
+  const remove = () => {
+    document.querySelector('.ukraine-colors').remove()
+  }
+
   return (
     <header>
+
+
+      {/* // TODO Ukraine hopefully temporary */}
+      <div className=" relative w-full font-extrabold grid place-items-center ukraine-colors h-10">
+        <p className="px-3 capitalize text-sm text-white self-end">
+          We are united against wars
+        </p>
+        <div className="absolute bg-white px-3 right-0 top-0 bottom-0 grid place-content-center cursor-pointer close-btn" onClick={remove}>
+          X
+        </div>
+      </div>
+
+
+
+
+
       <nav className="w-full flex justify-between align-center p-4 sm:p-6 md:p-12 bg-black">
         {/* Logo  */}
         {/* <div > */}

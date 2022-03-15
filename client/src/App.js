@@ -18,7 +18,7 @@ import AllModules from "./pages/AllModules/AllModules";
 import GettingStarted from "./pages/AllModules/getting_started_modules/GettingStarted"
 // >>> 
 //1.1.0
-import FrequentlyAskedQuestions from "./pages/AllModules/getting_started_modules/FrequentlyAskedQuestions"
+import FrequentlyAskedQuestions from "./pages/AllModules/getting_started_modules/intro_to_web_development/FrequentlyAskedQuestions"
 //1.1.2
 import VSCode from "./pages/AllModules/getting_started_modules/installations/VSCode";
 import GitHub from "./pages/AllModules/getting_started_modules/installations/GitHub";

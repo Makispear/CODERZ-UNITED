@@ -1,4 +1,11 @@
-	/* =========================== IMPORTS ========================= */
+/* Temporary  */
+.ukraine-colors {
+	background: rgb(0,91,187);
+	background: linear-gradient(0deg, rgba(0,91,187,1) 49%, rgba(255,213,0,1) 51%);
+}
+	
+	
+/* =========================== IMPORTS ========================= */
 /* tailwind CSS imports  */
 @tailwind base;
 @tailwind components;
@@ -49,6 +56,9 @@ body {
 .logo-font {
 	font-family: var(--logo-font);
 }
+
+
+
 
 * {
 	position: relative;
