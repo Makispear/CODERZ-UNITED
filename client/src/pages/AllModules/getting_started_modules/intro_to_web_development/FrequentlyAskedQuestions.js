@@ -100,7 +100,7 @@ export default function Installations() {
         <NoteMessage
           props={{
             name: "Notice",
-            note: "Although you'll be designing websites, that won't be our primary focus!"
+            note: "Although you'll be designing websites, that won't be the primary focus!"
           }}
         />
       </div>

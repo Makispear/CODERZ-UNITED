@@ -31,7 +31,7 @@ export default function GitHub() {
 
       <div className="p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 flex flex-col gap-5">
         <p>
-          Next is signing up to GitHub. GitHub is a website where we can store our code as we write it. It also helps in collaboration, version control, and much more. Why use GitHub if you can save your code on your computer? There are benefits when you store your code in a cloud instead of locally. As the name implies, it's the central hub where people save code, transfer code, and collaborate.
+          Next is signing up to GitHub. GitHub is a website where you can store your code as you write it. It also helps in collaboration, version control, and much more. Why use GitHub if you can save your code on your computer? There are benefits when you store your code in a cloud instead of locally. As the name implies, it's the central hub where people save code, transfer code, and collaborate.
         </p>
 
         <h3 className="font-bold">
@@ -45,7 +45,7 @@ export default function GitHub() {
           </li>
           <li>
             <p>
-              2. It's easier to transfer and share code. Instead of exporting your code to a hard disk or a memory card, we can upload our progress to GitHub, and every team member can download it down to their local computer.
+              2. It's easier to transfer and share code. Instead of exporting your code to a hard disk or a memory card, you can upload your progress to GitHub, and every team member can download it down to their local computer.
             </p>
           </li>
         </ol>

@@ -3,6 +3,9 @@ import { NavLink } from "react-router-dom";
 import logo from "../../assets/images/blue(1).svg"
 import Auth from "../../utils/auth";
 import { BrandName } from "../../utils/BrandName";
+import { GET_COMPLETED_LESSONS } from "../../utils/queries";
+import { useQuery } from "@apollo/client";
+import WelcomeTip from "../WelcomeTips";
 
 export default function Nav() {
   const logout = (event) => {
@@ -10,22 +13,34 @@ export default function Nav() {
     Auth.logout();
   };
 
+  const { data } = useQuery(GET_COMPLETED_LESSONS)
 
   // TODO Ukraine hopefully temporary
-  const remove = () => {
-    document.querySelector('.ukraine-colors').remove()
+  const removeBanner = () => {
+    document.querySelector('.war-banner').remove()
   }
 
   return (
     <header>
 
+      {/* show tips on how to navigate if first time logging in  */}
+      {
+        data?.getCompletedLessons.logins.length <= 1 &&
+        <WelcomeTip props={data} />
+      }
 
-      {/* // TODO Ukraine hopefully temporary */}
-      <div className=" relative w-full font-extrabold grid place-items-center ukraine-colors h-10">
-        <p className="px-3 capitalize text-sm text-white self-end">
-          We are united against wars
+
+
+      {/*  Ukraine and Palestine War banner  (hopefully temporary) */}
+      <div className="war-banner relative w-full font-extrabold grid text-center place-items-center cursor-default">
+        <p className="px-3 text-sm text-white font-light">
+          We are united #Against_wars in
         </p>
-        <div className="absolute bg-white px-3 right-0 top-0 bottom-0 grid place-content-center cursor-pointer close-btn" onClick={remove}>
+        <p className="px-3 text-sm text-white font-light">
+          <span className="ukraine-text font-bold"> Ukraine </span>
+          | <span className="palestine-text font-bold"> Palestine </span>
+        </p>
+        <div className="absolute bg-white hover:bg-secondary  px-1 right-0 top-0 grid place-content-center cursor-pointer close-btn" onClick={removeBanner}>
           X
         </div>
       </div>
@@ -67,6 +82,15 @@ export default function Nav() {
           </ul>
         </div>
       </nav>
+
+
+
+
+
+
+
+
+
     </header>
   )
 }; 

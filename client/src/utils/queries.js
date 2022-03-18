@@ -20,6 +20,10 @@ export const GET_COMPLETED_LESSONS = gql`
         lessonName
         lessonNumber
       }
+      firstName
+      logins {
+        loginTime
+      }
     }
   }
 `;

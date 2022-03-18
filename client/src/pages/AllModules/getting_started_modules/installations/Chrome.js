@@ -34,7 +34,7 @@ export default function Chrome() {
 
         <InfoMessage props={{
           name: "Notice",
-          note: "It is okay if you want to use other web browsers. Since most of your potential visitors will be on Chrome, it's best to test how our code works with it."
+          note: "It is okay if you want to use other web browsers. Since most of your potential visitors will be on Chrome, it's best to test how your code works with it."
         }} />
 
         <p>Here is the link to <a href="https://www.google.com/chrome/" target="_blank" rel="noopener noreferrer" className="link">download Google Chrome</a>.

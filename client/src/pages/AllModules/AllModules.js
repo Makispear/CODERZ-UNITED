@@ -3,10 +3,13 @@ import { useEffect } from "react";
 import CheckMark from "../../components/CheckMark";
 import WelcomeUser from "../../components/WelcomeUser"
 import Reference from "../../utils/Reference";
+import lessonNumberPic from "../../assets/images/lesson_number.png"
+import breadCrumbsPic from "../../assets/images/breadcrumb.png"
 import { BrandName } from "../../utils/BrandName";
 import { useQuery } from "@apollo/client";
 import { GET_COMPLETED_LESSONS } from "../../utils/queries";
 import { markComplete } from "../../utils/markComplete";
+import { toggleImage } from "../../utils/toggleImage";
 
 export default function Modules() {
   useEffect(() => {
@@ -70,8 +73,6 @@ export default function Modules() {
   markComplete(myData, lessonsArr)
 
 
-
-
   return (
     <main>
 
@@ -97,7 +98,10 @@ export default function Modules() {
 
         {/* Modules  */}
         <div className="w-full mt-10 flex sm:w-600 md:w-700 lg:w-900 flex-col bg-black gap-4 text-black">
-
+          {/* Link to last lesson user was at  */}
+          {/* <a href="#" className="text-tertiary ml-auto text-sm">
+            Continue where you left off
+          </a> */}
           <NavLink to={"/all_modules/getting_started/"}>
             <div>
               <div>
@@ -117,8 +121,8 @@ export default function Modules() {
           {<NavLink to={`${lessonsArr.filter(lesson => lesson.module === "Getting Started" && lesson.isCompleted).length === lessonsArr.length ? "/all_modules/course_modules/" : "#"}`}>
             <div className={`${lessonsArr.filter(lesson => lesson.module === "Getting Started" && lesson.isCompleted).length === lessonsArr.length ? "flex justify-between items-center p-5 primary-radius border-2 text-black bg-secondary hover:bg-white" : "locked flex justify-between items-center p-5 primary-radius bg-darkGray brightness-75"}`}>
               <div>
-                <p>
-                  <span className="font-bold capitalize">2. Course Modules - </span> Lets start Coding.
+                <p className="font-bold capitalize">
+                  2. Courses
                 </p>
               </div>
               <CheckMark props={{ marked: false }} />
@@ -129,7 +133,18 @@ export default function Modules() {
 
 
       </section >
-    </main>
+
+
+
+
+
+
+
+
+      {/* POPUP WELCOMING USER  */}
+
+
+    </main >
   )
 }
 

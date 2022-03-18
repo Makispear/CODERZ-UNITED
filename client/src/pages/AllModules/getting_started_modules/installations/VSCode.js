@@ -40,7 +40,7 @@ export default function VSCode() {
 
       <div className="p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 flex flex-col gap-5">
         <p>
-          As web developers, Coding is the essence of our work. Thus it's best to have the best coding tools. We can write our code anywhere; a word document, a text file, or even a notepad. A better choice is using a code editor. A code editor is a text editor used for writing code. Code editors have many features like color-coding to assist us in visualizing our code and offer us many extensions to help us with efficiency. We will look into the features it provides us with later in the course.
+          As a web developer, Coding will be the essence of your work. Thus it's best to have the best coding tools. you can write your code anywhere; a word document, a text file, or even a notepad. A better choice is using a code editor. A code editor is a text editor used for writing code. Code editors have many features like color-coding to assist you in visualizing your code and offer many extensions to help with efficiency. We will look into the features it provides later in the course.
         </p>
         <p>
           Let's download Visual Studio Code (also known as VS Code). VS Code is a code editor owned by Microsoft and is one of the best if not the best Code Editor web developers use. It's also free and has a ton of great features. Let's go ahead and download it now. Here is the link to <a className="link" target="_blank" rel="noopener noreferrer" href="https://code.visualstudio.com/download">download VS Code</a>. After installing, launch VS Code and you should see VS Code's <Reference props={{ word: "UI", ref: "User Interface" }} />..
@@ -126,7 +126,7 @@ export default function VSCode() {
           4. Better Comments
         </h2>
         <p className="w-full">
-          Highlights your TODO <Reference props={{ word: "comments", ref: "Code comments. Stay tuned" }} /> and more.
+          Highlights your TODOs <Reference props={{ word: "comments", ref: "Code comments. Stay tuned" }} /> and more.
         </p>
       </div>
 

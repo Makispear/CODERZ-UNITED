@@ -1,10 +1,22 @@
-/* Temporary  */
-.ukraine-colors {
-	background: rgb(0,91,187);
-	background: linear-gradient(0deg, rgba(0,91,187,1) 49%, rgba(255,213,0,1) 51%);
+/* =================== TEMPORARY =================================  */
+.ukraine-text {
+	background-image: linear-gradient(45deg, rgba(0,91,187,1) 30%, rgba(255,213,0,1) 70%);
+	-webkit-background-clip: text;
+	color: transparent;
 }
-	
-	
+
+.palestine-text {
+	background: linear-gradient(90deg, rgba(228,49,43,1) 0%, rgba(255,255,255,1) 50%, rgba(20,153,84,1) 100%);
+	-webkit-background-clip: text;
+	color: transparent;
+}
+
+.war-banner {
+	background: rgb(52,50,50);
+	background: linear-gradient(90deg, rgba(52,50,50,1) 0%, rgba(29,41,55,1) 100%);
+}
+
+
 /* =========================== IMPORTS ========================= */
 /* tailwind CSS imports  */
 @tailwind base;
@@ -57,7 +69,9 @@ body {
 	font-family: var(--logo-font);
 }
 
-
+.none {
+	display: none;
+}
 
 
 * {
@@ -69,8 +83,28 @@ body {
 
 
 	/* ============== Uncomment for wire frame =============*/
-	/* outline: 2px solid green; */
+	/* outline: 2px solid red; */
 }
+
+
+.background-blur {
+	background-color: rgb(52,50,50, 0.7);
+	backdrop-filter: blur(10px);
+}
+
+.single-tip {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: min(90vw, 700px);
+	height: auto;
+
+	/* bring your own prefixes */
+	transform: translate(-50%, -50%);
+	background-color: rgb(var(--tertiary-color));
+	z-index: 51;
+}
+
 
 .primary-radius {
 	border-radius: 2px;
@@ -82,6 +116,8 @@ body {
 
 .underline-dots:hover {
 	border-bottom: 2px solid rgb(var(--tertiary-color));
+	cursor: default;
+
 }
 
 .underline-dots + .reference {
@@ -144,6 +180,7 @@ body {
 	background-size: cover;
 	background-position: top;
 }
+
 /* ===================== TEXT STYLES ========================= */
 h1,
 .h1-style {
@@ -244,7 +281,6 @@ li {
 /* ================== MODULES STYLINGS ======================= */
 .style-page-section {
 	color: rgb(var(--white));
-	z-index: 50;
 	width: 100%;
 	background-color: rgb(var(--black));
 	display: flex;

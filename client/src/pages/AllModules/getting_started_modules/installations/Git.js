@@ -38,7 +38,7 @@ export default function Git() {
         </p>
 
         <p>
-          Git helps us control our codebase versions. Git comes in handy if we ever break our code. Then we can roll back to the older version of the code and start over. Sometimes when the code breaks, it's easier to find where it happened when you can look at different versions of that code. We'll look more into Git after <Reference props={{ word: "this", ref: "Getting Started Module" }} /> module.
+          Git helps us control our codebase versions. Git comes in handy if you ever break your code. Then you can roll back to the older version of the code and start over. Sometimes when the code breaks, it's easier to find where it happened when you can look at different versions of that code. We'll look more into Git after <Reference props={{ word: "this", ref: "Getting Started Module" }} /> module.
         </p>
 
         <p>
@@ -69,7 +69,7 @@ export default function Git() {
         <h2>
           Set up Git Configurations
         </h2>
-        <p>Before we move on, you'll need to set up GitBash. This is because every <Reference props={{ word: "command", ref: "Code that tells Git what to do" }} /> you type will be linked to your information. To do this, you need to provide GitBash with your name and email. To do this type in the following commands in GitBash:
+        <p>Before moving on, you'll need to set up GitBash. This is because every <Reference props={{ word: "command", ref: "Code that tells Git what to do" }} /> you type will be linked to your information. To do this, you need to provide GitBash with your name and email. To do this type in the following commands in GitBash:
         </p>
         <p>
           <span className="git-dollar-sign">$</span><span className="code">git config --global user.name "<span className="keyboard-key custom-info">First &amp; last name here</span>"</span> then press <span className="keyboard-key">Enter</span>.

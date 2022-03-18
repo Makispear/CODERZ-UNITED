@@ -18,7 +18,7 @@ const resolvers = {
 
     getCompletedLessons: async (_, __, context) => {
       if (context.user) {
-        const userData = await User.findOne({ _id: context.user._id }).populate('completedLessons')
+        const userData = await User.findOne({ _id: context.user._id }).populate('completedLessons').populate('logins')
         return userData
       }
       throw new AuthenticationError("Please login to continue.");
