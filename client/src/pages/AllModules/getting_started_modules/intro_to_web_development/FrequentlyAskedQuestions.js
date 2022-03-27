@@ -3,6 +3,9 @@ import NoteMessage from '../../../../components/NoteMessage'
 import PageTracker from '../../../../components/PageTracker'
 import Reference from '../../../../utils/Reference'
 import BackAndNextButtons from '../../../../components/NextAndBackButtons'
+import WelcomeTip from '../../../../components/WelcomeTips'
+import { GET_TUTORIAL_TIP_STATUS } from '../../../../utils/queries'
+import { useQuery } from '@apollo/client'
 
 export default function Installations() {
 
@@ -17,8 +20,20 @@ export default function Installations() {
 
   document.title = `${lessonInfo.Lesson_title} | Getting Started | Lesson ${lessonInfo.Lesson_Number}`
 
+  const { data } = useQuery(GET_TUTORIAL_TIP_STATUS)
+  let isTutorialComplete = data?.getTutorialTipStatus.tutorialCompleted
+
+
+
   return (
     <section className="style-module-section">
+
+
+      {/* show tips on how to navigate if first time logging in  */}
+      {
+        data?.getTutorialTipStatus.tutorialCompleted === false &&
+        <WelcomeTip props={data} />
+      }
 
 
       <div className="w-full flex justify-center font-bold p-10 text-center capitalize bg-blackGradient bg-no-repeat bg-cover bg-center">

@@ -22,6 +22,14 @@ const resolvers = {
         return userData
       }
       throw new AuthenticationError("Please login to continue.");
+    },
+
+    getTutorialTipStatus: async (_, __, context) => {
+      if (context.user) {
+        const userData = await User.findOne({ _id: context.user._id })
+        return userData
+      }
+      throw new AuthenticationError('Please Login to continue')
     }
   },
 
@@ -88,6 +96,18 @@ const resolvers = {
         return updatedUser
       }
     },
+
+    completeTutorialTips: async (_, __, context) => {
+      if (context.user) {
+        const updatedUser = await User.findOneAndUpdate(
+          { email: context.user.email },
+          { $set: { tutorialCompleted: true } },
+          { new: true }
+        )
+        return updatedUser
+      }
+      throw new AuthenticationError('Please login to continue.')
+    }
 
   }
 }

@@ -58,3 +58,10 @@ export const Leave_News_Letter = gql`
   }
 `;
 
+export const COMPLETE_TUTORIAL_TIP = gql`
+  mutation CompleteTutorialTips($tutorialCompleted: Boolean) {
+    completeTutorialTips(tutorialCompleted: $tutorialCompleted) {
+      tutorialCompleted
+    }
+  }
+`

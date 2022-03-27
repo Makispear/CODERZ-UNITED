@@ -65,7 +65,11 @@ const userSchema = new Schema(
     ],
     logins: [
       loginSchema
-    ]
+    ],
+    tutorialCompleted: {
+      type: Boolean,
+      default: false
+    }
   },
   {
     toJSON: { virtuals: true },

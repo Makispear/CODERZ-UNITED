@@ -21,12 +21,14 @@ const typeDefs = gql`
     isNewsLetter: Boolean
     completedLessons : [CompletedLessons]
     logins : [Logins]
+    tutorialCompleted: Boolean
   }
   
   type Query {
     users: [User]
     me: User
     getCompletedLessons: User
+    getTutorialTipStatus: User
   }
 
   type Auth {
@@ -52,6 +54,7 @@ const typeDefs = gql`
 
     joinNewsLetter(email: String): User
 
+    completeTutorialTips(tutorialCompleted: Boolean): User
 
   }
 `

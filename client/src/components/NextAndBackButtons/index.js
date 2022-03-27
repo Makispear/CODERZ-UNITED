@@ -1,13 +1,15 @@
 import { useMutation, useQuery } from '@apollo/client'
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import { MARK_COMPLETED_LESSON } from '../../utils/mutations'
+import { COMPLETE_TUTORIAL_TIP, MARK_COMPLETED_LESSON } from '../../utils/mutations'
 import { GET_COMPLETED_LESSONS } from '../../utils/queries'
 
 export default function BackAndNextButtons({ props }) {
     const { backLink, nextLink, Lesson_Number, Lesson_title, nextPage, previousPage } = props
     const { data } = useQuery(GET_COMPLETED_LESSONS)
     const [markComplete, { error }] = useMutation(MARK_COMPLETED_LESSON)
+
+
     // buttons show depending on these 2 values below
     let showMarkCompleteButton = false
     let showButton = false

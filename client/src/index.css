@@ -1,22 +1,3 @@
-/* =================== TEMPORARY =================================  */
-.ukraine-text {
-	background-image: linear-gradient(45deg, rgba(0,91,187,1) 30%, rgba(255,213,0,1) 70%);
-	-webkit-background-clip: text;
-	color: transparent;
-}
-
-.palestine-text {
-	background: linear-gradient(90deg, rgba(228,49,43,1) 0%, rgba(255,255,255,1) 50%, rgba(20,153,84,1) 100%);
-	-webkit-background-clip: text;
-	color: transparent;
-}
-
-.war-banner {
-	background: rgb(52,50,50);
-	background: linear-gradient(90deg, rgba(52,50,50,1) 0%, rgba(29,41,55,1) 100%);
-}
-
-
 /* =========================== IMPORTS ========================= */
 /* tailwind CSS imports  */
 @tailwind base;

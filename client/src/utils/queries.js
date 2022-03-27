@@ -27,3 +27,12 @@ export const GET_COMPLETED_LESSONS = gql`
     }
   }
 `;
+
+export const GET_TUTORIAL_TIP_STATUS = gql`
+  query GetTutorialTipStatus {
+    getTutorialTipStatus {
+      tutorialCompleted
+      firstName
+    }
+  }
+`
