@@ -40,7 +40,7 @@ export default function CloneYourRepo() {
 
             <div className="p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 flex flex-col gap-5">
                 <p>
-                    Now that you have your project on remote, you need to make it available on your local computer. Before you do that, you'll need to get familiar with using your terminal and know a couple of git commands. Let's do that now.
+                    Now that you have your portfolio project on remote, you need to make it available on your local computer. Before you do that, you'll need to get familiar with using your terminal and know a couple of git commands. Let's do that now.
                 </p>
 
                 <p>
@@ -105,8 +105,9 @@ export default function CloneYourRepo() {
                 </p>
 
                 <p>
-                    Go into <span className='keyboard-key'>Projects</span>. Remember how? Yes, with  <span className='keyboard-key'>cd Projects</span>.
+                    Go into <span className='keyboard-key'>Projects</span>. Remember how? Yes, with <span className="git-dollar-sign">$</span><span className="code">cd Projects</span>.
                 </p>
+
                 <InfoMessage props={{ name: "Note", note: 'To go one level above (out of a directory), "cd .." will do the trick. To go two levels above then cd ../../ will do it and so on.' }} />
 
                 <p>

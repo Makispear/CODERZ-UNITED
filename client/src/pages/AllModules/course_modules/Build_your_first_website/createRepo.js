@@ -41,7 +41,10 @@ export default function CreateRepo() {
 
 
             <div className="p-3 sm:p-10 sm:w-600 md:w-700 lg:w-900 flex flex-col gap-5">
-                <p>Let's create our first project. To start a project, You need to create a  <Reference props={{ word: "repo", ref: "Repository" }} />. A repo contains all your projects files. To make a repo, log in to GitHub, and on the homepage, press the green <span className='keyboard-key'>New</span> button on the left corner.</p>
+                <p>Let's start your first project; <strong>a portfolio</strong>. A portfolio is a webpage that showcases your projects, experience, and qualifications. After completing this project, you'll have a place to showcase the other projects that are to come.
+                </p>
+
+                <p>To start a project, You need to create a  <Reference props={{ word: "repo", ref: "Repository" }} />. A repo contains all your projects files. To make a repo, log in to GitHub, and on the homepage, press the green <span className='keyboard-key'>New</span> button on the left corner.</p>
 
                 <div className={`flex justify-center primary-radius w-auto`}>
                     <img
@@ -52,7 +55,7 @@ export default function CreateRepo() {
                     />
                 </div>
 
-                <p>Fill in the <span className='keyboard-key'>Repository name</span> and make the repo public. You're also going to <span className='keyboard-key'>add a README file</span>, so make sure you tick that as well.</p>
+                <p>Fill in the <span className='keyboard-key'>Repository name</span>. It should include your first and last name. for example: <i>Joe Smith's Professional portfolio</i> and make the repo public. You're also going to <span className='keyboard-key'>add a README file</span>, so make sure you tick that as well.</p>
 
                 <div className={`flex justify-center primary-radius w-auto`}>
                     <img
@@ -76,7 +79,7 @@ export default function CreateRepo() {
                 <hr></hr>
 
 
-                <p><span className='font-bold'>Congratulations</span> on creating your very first GitHub repo. Now that you have a place to store your code, you can start your first project.</p>
+                <p><span className='font-bold'>Congratulations</span> on creating your very first GitHub repo. Now that you have a place to store your code, you can start your first ever project.</p>
 
                 <p>Your project is now stored remotely in GitHub. Remote is where the project is initially stored. The next step is to <Reference props={{ word: "pull", ref: "Download" }} /> your project from <Reference props={{ word: "remote", ref: "GitHub" }} />.</p>
 
