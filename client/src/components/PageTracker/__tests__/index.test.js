@@ -1,5 +1,5 @@
 import PageTracker from "..";
-import { render, cleanup } from '@testing-library/react';
+import { render, cleanup, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
 afterEach(cleanup)
@@ -12,8 +12,8 @@ describe("'PageTracker' Component", () => {
     });
 
     it("has classNames 'text-tertiary p-style'", () => {
-        const { getByTestId } = render(<PageTracker props={{ page: pageNumber }} />)
-        const testId = getByTestId('pageTracker')
+        render(<PageTracker props={{ page: pageNumber }} />)
+        const testId = screen.getByTestId('pageTracker')
 
         expect(testId).toHaveClass('text-tertiary p-style')
     })
