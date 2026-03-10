@@ -21,8 +21,6 @@ export default function Installations() {
   document.title = `${lessonInfo.Lesson_title} | Getting Started | Lesson ${lessonInfo.Lesson_Number}`
 
   const { data } = useQuery(GET_TUTORIAL_TIP_STATUS)
-  let isTutorialComplete = data?.getTutorialTipStatus.tutorialCompleted
-
 
 
   return (
