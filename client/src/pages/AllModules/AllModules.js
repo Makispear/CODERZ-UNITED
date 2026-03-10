@@ -3,13 +3,13 @@ import { useEffect } from "react";
 import CheckMark from "../../components/CheckMark";
 import WelcomeUser from "../../components/WelcomeUser"
 import Reference from "../../utils/Reference";
-import lessonNumberPic from "../../assets/images/lesson_number.png"
-import breadCrumbsPic from "../../assets/images/breadcrumb.png"
+// import lessonNumberPic from "../../assets/images/lesson_number.png"
+// import breadCrumbsPic from "../../assets/images/breadcrumb.png"
 import { BrandName } from "../../utils/BrandName";
 import { useQuery } from "@apollo/client";
 import { GET_COMPLETED_LESSONS } from "../../utils/queries";
 import { markComplete } from "../../utils/markComplete";
-import { toggleImage } from "../../utils/toggleImage";
+// import { toggleImage } from "../../utils/toggleImage";
 
 export default function Modules() {
   useEffect(() => {
